@@ -45,7 +45,7 @@ Guidelines:
 - Be practical, clear, and specific. Avoid overly abstract or unusual career titles.
 - Assume the user is aged 14–24 and in an early exploration phase.
 - End the report with this line:
-*For a bespoke, in-depth analysis tailored to your age, strengths and future goals, unlock your full CareerDNA report, including a detailed career map, development tips and access to our personalised coaching service.*
+* For a bespoke, in-depth analysis tailored to your age, strengths and future goals, unlock your full CareerDNA report, including a detailed career map, development tips and access to our personalised coaching service.*
 - Output markdown only. No extra notes or sections. Keep tone warm, motivational, and age-appropriate.
 `.trim();
 
