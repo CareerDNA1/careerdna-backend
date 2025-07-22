@@ -1,3 +1,6 @@
+app.get('/', (req, res) => {
+  res.send('✅ CareerDNA backend is live.');
+});
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
