@@ -1,6 +1,3 @@
-app.get('/', (req, res) => {
-  res.send('✅ CareerDNA backend is live.');
-});
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -11,6 +8,11 @@ const port = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
+// ✅ Add this route *after* defining `app`
+app.get('/', (req, res) => {
+  res.send('✅ CareerDNA backend is live.');
+});
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
