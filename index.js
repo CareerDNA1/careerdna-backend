@@ -9,131 +9,268 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// ✅ Add this route *after* defining `app`
 app.get('/', (req, res) => {
   res.send('✅ CareerDNA backend is live.');
 });
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-// ✅ Archetype descriptions
 const archetypeDescriptions = {
-  Achiever: `Ambitious, driven, and focused on results. Achievers set high standards, work hard to meet goals, and thrive where performance is recognised.`,
-  Connector: `People-focused, empathetic, and collaborative. Connectors love supporting others and excel at building relationships and community.`,
-  Creator: `Imaginative, expressive, and hands-on. Creators enjoy turning ideas into reality through art, design, technology, or storytelling.`,
-  Explorer: `Curious, adventurous, and driven by discovery. Explorers love trying new things and learning through real-world experiences.`,
-  Organizer: `Structured, dependable, and detail-oriented. Organizers bring order to chaos and thrive on planning, systems, and reliability.`,
-  Thinker: `Analytical, logical, and reflective. Thinkers enjoy solving complex problems and working independently with intellectual depth.`,
-  Visionary: `Future-focused, bold, and full of ideas. Visionaries are inspired by big-picture thinking and love leading innovation and change.`,
+  Achiever: 'Ambitious, driven, and focused on results. Achievers set high standards, work hard to meet goals, and thrive where performance is recognised.',
+  Connector: 'People-focused, empathetic, and collaborative. Connectors love supporting others and excel at building relationships and community.',
+  Creator: 'Imaginative, expressive, and hands-on. Creators enjoy turning ideas into reality through art, design, technology, or storytelling.',
+  Explorer: 'Curious, adventurous, and driven by discovery. Explorers love trying new things and learning through real-world experiences.',
+  Organizer: 'Structured, dependable, and detail-oriented. Organizers bring order to chaos and thrive on planning, systems, and reliability.',
+  Thinker: 'Analytical, logical, and reflective. Thinkers enjoy solving complex problems and working independently with intellectual depth.',
+  Visionary: 'Future-focused, bold, and full of ideas. Visionaries are inspired by big-picture thinking and love leading innovation and change.',
 };
 
-// ✅ Shared markdown report instructions (updated)
-const REPORT_INSTRUCTIONS = `
-FORMAT: Use this exact markdown structure:
+function getReportInstructions(status) {
+  const baseInstructions = `
+Output markdown only. 
+No extra notes or titles outside the structure. 
+Follow the exact markdown format below, including headers and bullets. 
+Do not use dashes in any of the text
 
-### 1. Summary
-### 2. Strengths
-### 3. Ideal Environments
-### 4. Career Fit Areas
-### 5. Career Role Ideas
+Each section must contain the **exact number of items**:
+- Summary: 4-5 lines, with a positive narrative on the meaning of their mix of archetypes potential. Mention their subject of study/interest only briefly (if they have selected any).
+- Strengths: exactly 5, of which minimum 2 should refer to their top archetype. Must be based **entirely on archetypes**, not subject interests. You should also refer to combinations of archetypes where possible/appropriate.
+- Ideal Environments: exactly 5. Must be based **entirely on archetypes**, not subject interests.Ideal environments must reflect genuine types of work environments rather than types of companies/organisations.
+- University Subject Suggestions (school users): exactly 6 suggestions. For University subjects, you must select only real UK degree subjects (UCAS categories), and only the most relevant ones for this user's profile. Consider relevance from a wide aray of topics/sciences including social sciences, life sciences, earth science, physical science, business, arts etc with emphasis on the most in demand for the future. If they have selected subjects of interest, match at least 2 suggestions to those. Each subject must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
+- Career Fit Areas (school users): exactly 5 general areas. A maximum of 2 should be based on subjects of interest (if they have selected any). The rest should be based optimally on their weighted mix of archetypes with at least two being based on their top archetype. Each area must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
+- Graduate Role Ideas (school users): 5 classic roles and 5 emerging roles, optimally based on weigthted archetype mix and subjects of interest (if any declared). All roles should be of University graduate level or above. Each role must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
+- Career Role Ideas (non-school users): 5 classic roles and 5 emerging roles, optimally based on weigthted archetype mix and subject of study. Each role must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
 
-Guidelines:
-- Base all content on the user's top 3 archetypes only.
-- In “Career Fit Areas”, list exactly **5** career domains (e.g. psychology, science, design, finance, politics, healthcare, etc.) and explain **why** each aligns with the user's traits, motivations, and energy drivers. Keep explanations to 1–2 short sentences.
-- In “Career Role Ideas”, split into two subgroups:
-  - **Classic & Well-Known Roles**: List **exactly 5** popular, widely recognised roles. These should feel familiar, aspirational, and accessible.
-  - **Emerging & Future-Oriented Roles**: List **exactly 5** modern or evolving roles with strong trait fit. Avoid futuristic or far-fetched options unless clearly justified.
-- For each role, include a short 1–2 sentence explanation and a [sector] tag (e.g., [healthcare], [education], [design]).
-- At least 3 classic roles must be mainstream and grounded (e.g. teacher, financial analyst, marketing manager, UX designer).
-- Be practical, clear, and specific. Avoid overly abstract or unusual career titles.
-- Assume the user is aged 14–24 and in an early exploration phase.
-- End the report with this line:
-* For a bespoke, in-depth analysis tailored to your age, strengths and future goals, unlock your full CareerDNA report, including a detailed career map, development tips and access to our personalised coaching service.*
-- Output markdown only. No extra notes or sections. Keep tone warm, motivational, and age-appropriate.
+When generating suggestions do not base them only on individual archetype traits. Consider how the top 3 archetypes and their weights combine to create a unique cognitive and motivational profile. Subjects and domains should reflect **intersections** — not just one-to-one archetype matches.For example, if a user scores highly in both Visionary and Thinker, they may thrive in **technological innovation**, **futuristic design**, or **systems architecture**. If they are Connector + Creator + Explorer, they may be suited for **education technology**, **experiential marketing**, or **interactive media**. List these in order of compatibility.
+
+NEVER use placeholder labels like "Subject 1", "Role 2", "Domain 3", or "Other 1". Always replace bullet labels with real, meaningful titles (e.g. **Financial Analyst**, **Creative Collaboration Spaces**, etc.).
+Every bullet point must include a 1–2 sentence rationale explaining how it connects to the user’s top archetypes and/or subject interests.
+
+Subheadings like **Other Ideas You May Consider**, **Classic & Well-Known Roles**, and **Emerging & Future-Oriented Roles** must:
+- Be standalone bold lines
+- Not be bulleted or merged into sentences
+- Be preceded by two line breaks (\\n\\n)
+
+The closing line must be italicised, on its own line, and not bulleted:
+*To unlock your full CareerDNA profile with development advice, subject deep dives and mapping tools, check out CareerDNA+.*
 `.trim();
 
-// ✅ Generate prompt from archetype scores
-function generatePrompt(archetypes) {
+  if (status === 'school') {
+    return `${baseInstructions}
+
+### 3. University Subject Suggestions
+- **[Subject Title 1]**: Rationale.
+- **[Subject Title 2]**: ...
+- **[Subject Title 3]**: ...
+- **[Subject Title 4]**: ...
+- **[Subject Title 5]**: ...
+- **[Subject Title 6]**: ...
+
+
+### 4. Ideal Environments
+- **[Environment 1]**: Rationale
+- **[Environment 2]**: ...
+- **[Environment 3]**: ...
+- **[Environment 4]**: ...
+- **[Environment 5]**: ...
+
+### 5. Career Fit Areas
+- **[Domain 1]**: Rationale
+- **[Domain 2]**: ...
+- **[Domain 3]**: ...
+- **[Domain 4]**: ...
+- **[Domain 5]**: ...
+
+### 6. Graduate Role Ideas
+
+**Classic & Well-Known Roles**
+- **[Role 1]**: Rationale
+- **[Role 2]**: ...
+- **[Role 3]**: ...
+- **[Role 4]**: ...
+- **[Role 5]**: ...
+
+**Emerging & Future-Oriented Roles**
+- **[Emerging Role 1]**: Rationale
+- **[Emerging Role 2]**: ...
+- **[Emerging Role 3]**: ...
+- **[Emerging Role 4]**: ...
+- **[Emerging Role 5]**: ...
+
+*To unlock your full CareerDNA profile with development advice, subject deep dives and mapping tools, check out CareerDNA+.*`;
+  } else {
+    return `${baseInstructions}
+
+### 3. Ideal Environments
+- **[Environment 1]**: Rationale
+- **[Environment 2]**: ...
+- **[Environment 3]**: ...
+- **[Environment 4]**: ...
+- **[Environment 5]**: ...
+
+
+### 4. Career Role Ideas
+
+**Classic & Well-Known Roles**
+- **[Role 1]**: Rationale
+- **[Role 2]**: ...
+- **[Role 3]**: ...
+- **[Role 4]**: ...
+-**[Role 5]**: ...
+
+**Emerging & Future-Oriented Roles**
+- **[Emerging Role 1]**: Rationale
+- **[Emerging Role 2]**: ...
+- **[Emerging Role 3]**: ...
+- **[Emerging Role 4]**: ...
+-- **[Emerging Role 5]**: ...
+
+
+
+*To unlock your full CareerDNA profile with development advice and role deep dives, check out CareerDNA+.*`;
+  }
+}
+
+
+function generatePrompt({ archetypes, age, status, subjects }) {
   const sorted = Object.entries(archetypes)
     .sort(([, a], [, b]) => b - a)
-    .slice(0, 3)
     .map(([name, score]) => ({
       name,
       score,
       description: archetypeDescriptions[name] || 'No description available.',
     }));
 
-  const topDescriptions = sorted
-    .map(a => `- **${a.name}** (${a.score}%): ${a.description}`)
+  const topThree = sorted.slice(0, 3);
+  const [dominant, second, third] = topThree;
+
+  // Calculate normalized weights for top 3
+  const totalTopScore = topThree.reduce((sum, a) => sum + a.score, 0);
+  const weightedList = topThree.map(a => ({
+    ...a,
+    weight: parseFloat((a.score / totalTopScore).toFixed(3))
+  }));
+
+  const weightedSummary = weightedList
+    .map(a => `- **${a.name}** (${a.score}% | Weight: ${(a.weight * 100).toFixed(1)}%): ${a.description}`)
     .join('\n');
 
-  const dominant = sorted[0];
-  const emphasisNote = `The highest-scoring archetype is **${dominant.name}**, so give slightly more weight to its traits when interpreting fit.\n`;
+  // Dynamic guidance based on score gaps
+  let emphasisNote = '';
+  const scoreGap = dominant.score - second.score;
+  const scoreRange = dominant.score - third.score;
+
+  if (scoreGap > 10) {
+    emphasisNote = `The user's top archetype is **${dominant.name}**, with a significantly higher score (${dominant.score}%). Its traits should be prioritised in shaping the report.`;
+  } else if (scoreRange <= 5) {
+    emphasisNote = `The user's top 3 archetypes are closely matched (${dominant.score}%, ${second.score}%, ${third.score}%), so they should be given roughly equal emphasis.`;
+  } else {
+    emphasisNote = `All three top archetypes are important, but slightly more emphasis should be placed on **${dominant.name}**.`;
+  }
+
+  const stageNote =
+    status === 'school'
+      ? `They are still at school (approx. age ${age || 'unknown'}) and are exploring subject interests.`
+      : status === 'undergraduate'
+      ? `They are currently an undergraduate student.`
+      : status === 'postgraduate'
+      ? `They are currently pursuing postgraduate study.`
+      : `The user's current education status is ${status || 'unknown'}.`;
+
+  const subjectNote = subjects?.length
+    ? `They are interested in or currently studying: ${subjects.join(', ')}.`
+    : '';
 
   return `
-Top Archetypes:
+  Please follow the formatting and output structure described above.
 
-${topDescriptions}
+User Context:
+- Age: ${age || 'Not provided'}
+- Status: ${status}
+- ${stageNote}
+${subjectNote ? `- Subjects: ${subjectNote}` : ''}
+
+Top Archetypes (with weighted influence):
+${weightedSummary}
 
 ${emphasisNote}
-Instructions:
-${REPORT_INSTRUCTIONS}
 
-VERSION: V7_${Date.now()}
+Use the weights to proportionally guide how much influence each archetype should have in the report. If one archetype is clearly dominant, prioritise it in the narrative, strengths, and role suggestions. Be sure each bullet point is connected to one or more of the user's top archetypes.
+
+First, reason step-by-step: Identify top archetypes and subjects. Generate content for each section, ensuring every list item has a rationale. Ensure subheadings like 'Other Ideas You May Consider' are standalone bold text on their own line with line breaks, not bulleted or merged. Then, format exactly as in the instructions.
+
+VERSION: V16_${Date.now()}
 `.trim();
 }
 
-// ✅ API endpoint
-app.post("/api/summary", async (req, res) => {
-  const archetypes = req.body;
 
-  if (
-    !archetypes ||
-    typeof archetypes !== "object" ||
-    Array.isArray(archetypes) ||
-    Object.keys(archetypes).length === 0
-  ) {
+// 🚀 API route
+app.post("/api/summary", async (req, res) => {
+  console.log("📥 Incoming payload:", req.body);
+
+  const { archetypes, age, status, schoolSubjects, uniSubject } = req.body;
+
+  const validStatuses = ['school', 'undergraduate', 'postgraduate'];
+  const validAgeRanges = ['13-15', '16-18', '19-21', '22-24', '25+'];
+
+  if (!archetypes || typeof archetypes !== "object") {
     return res.status(400).json({ summary: "⚠️ Invalid or missing archetype data." });
   }
 
-  console.log("✅ Received archetype scores:", archetypes);
+  if (!status || !validStatuses.includes(status)) {
+    return res.status(400).json({ summary: "⚠️ Invalid or missing status." });
+  }
 
-  const prompt = generatePrompt(archetypes);
-  console.log("🧠 Prompt being sent to OpenAI:\n", prompt);
+  if (age && !validAgeRanges.includes(age)) {
+    return res.status(400).json({ summary: "⚠️ Invalid age value." });
+  }
+
+  let subjects = [];
+
+  if (status === 'school') {
+    if (!Array.isArray(schoolSubjects)) {
+      console.log("❌ schoolSubjects was not an array:", schoolSubjects);
+      return res.status(400).json({ summary: "⚠️ School subjects must be an array of strings." });
+    }
+    subjects = schoolSubjects;
+  }
+
+  if ((status === 'undergraduate' || status === 'postgraduate')) {
+    if (typeof uniSubject !== 'string' || !uniSubject.trim()) {
+      return res.status(400).json({ summary: "⚠️ University subject must be a non-empty string." });
+    }
+    subjects = [uniSubject];
+  }
+
+  const prompt = generatePrompt({ archetypes, age, status, subjects });
+
+  if (process.env.NODE_ENV !== 'production') {
+    console.log("🧠 Prompt to OpenAI:\n", prompt);
+  }
 
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4-1106-preview",
       temperature: 0.7,
-      user: "career-dna-v7",
+      user: "career-dna-v16",
       messages: [
         {
           role: "system",
-          content: `
-You are a career development AI trained to help 14–24-year-olds explore their top 3 career archetypes and discover aligned fields and job ideas.
-
-${REPORT_INSTRUCTIONS}
-`.trim(),
+          content: `You are a career development coach that produces highly tailored, age-appropriate reports for young users aged 14–24 using their top archetypes and subject interests or study background. Adjust your tone and vocabulary based on whether the user is at school, undergraduate, or postgraduate level.\n\n${getReportInstructions(status)}`
         },
-        {
-          role: "user",
-          content: prompt,
-        },
+        { role: "user", content: prompt },
       ],
     });
 
-    const aiText = completion.choices?.[0]?.message?.content || "⚠️ No summary generated.";
-    res.json({ summary: aiText });
+    const summary = completion.choices?.[0]?.message?.content || "⚠️ No summary generated.";
+    res.json({ summary });
 
   } catch (err) {
-    console.error("❌ OpenAI API error:", err?.response?.data || err.message);
+    console.error("❌ OpenAI error:", err);
     res.status(500).json({ summary: "⚠️ Failed to generate summary." });
   }
 });
 
-// ✅ Start server
 app.listen(port, () => {
   console.log(`🚀 CareerDNA backend running at http://localhost:${port}`);
 });
