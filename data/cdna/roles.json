@@ -1,0 +1,452 @@
+[
+  {
+    "fit_area": "Mathematics, Data & Analytics",
+    "classic": [
+      {"title": "Data Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Business Intelligence Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Insight Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Quantitative Analyst","archetypes": ["Thinker","Achiever"]},
+      {"title": "Actuary","archetypes": ["Thinker","Organizer"]},
+      {"title": "Risk Analyst","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Data Scientist","archetypes": ["Thinker","Visionary"]},
+      {"title": "Machine Learning Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Analytics Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Decision Scientist","archetypes": ["Thinker"]},
+      {"title": "Product Analytics Lead","archetypes": ["Thinker","Achiever"]}
+    ]
+  },
+  {
+    "fit_area": "Computer Science & AI",
+    "classic": [
+      {"title": "Software Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Backend Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Frontend Engineer","archetypes": ["Creator","Thinker"]},
+      {"title": "QA Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Platform Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Data Engineer","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "AI Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Generative AI Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Applied NLP Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "AI Reliability Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "MLOps Engineer","archetypes": ["Organizer","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Physical Sciences (Physics & Materials)",
+    "classic": [
+      {"title": "R&D Scientist (Physics/Materials)","archetypes": ["Thinker"]},
+      {"title": "Materials Scientist","archetypes": ["Thinker","Organizer"]},
+      {"title": "Test Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Process Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Laboratory Scientist","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Battery Research Scientist","archetypes": ["Thinker","Explorer"]},
+      {"title": "Photonics Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Nanofabrication Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Materials Informatics Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Quantum Computing Researcher","archetypes": ["Thinker","Explorer"]}
+    ]
+  },
+  {
+    "fit_area": "Chemical Sciences",
+    "classic": [
+      {"title": "Analytical Chemist","archetypes": ["Thinker","Organizer"]},
+      {"title": "Process Development Chemist","archetypes": ["Thinker","Organizer"]},
+      {"title": "Formulation Scientist","archetypes": ["Organizer","Thinker"]},
+      {"title": "Quality Scientist","archetypes": ["Organizer","Thinker"]},
+      {"title": "R&D Chemist","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Bioprocess Scientist","archetypes": ["Thinker","Organizer"]},
+      {"title": "Computational Chemist","archetypes": ["Thinker","Creator"]},
+      {"title": "Electrochemistry Scientist","archetypes": ["Thinker","Explorer"]},
+      {"title": "Green Chemistry Specialist","archetypes": ["Thinker","Visionary"]},
+      {"title": "Polymer Informatics Analyst","archetypes": ["Thinker","Organizer"]}
+    ]
+  },
+  {
+    "fit_area": "Biological & Biomedical Sciences",
+    "classic": [
+      {"title": "Biomedical Scientist","archetypes": ["Organizer","Thinker"]},
+      {"title": "Research Scientist (Biology)","archetypes": ["Thinker","Organizer"]},
+      {"title": "Clinical Trials Coordinator","archetypes": ["Organizer","Connector"]},
+      {"title": "Bioinformatician","archetypes": ["Thinker","Organizer"]},
+      {"title": "Regulatory Affairs Specialist","archetypes": ["Organizer"]},
+      {"title": "Microbiologist","archetypes": ["Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Genomics Data Scientist","archetypes": ["Thinker","Visionary"]},
+      {"title": "Cell Therapy Scientist","archetypes": ["Organizer","Achiever"]},
+      {"title": "Synthetic Biology Scientist","archetypes": ["Thinker","Creator"]},
+      {"title": "Digital Pathology Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Clinical AI Specialist","archetypes": ["Thinker","Visionary"]}
+    ]
+  },
+  {
+    "fit_area": "Earth, Environmental & Climate Science",
+    "classic": [
+      {"title": "Environmental Scientist","archetypes": ["Explorer","Thinker"]},
+      {"title": "Environmental Consultant","archetypes": ["Thinker","Organizer"]},
+      {"title": "GIS Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Sustainability Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Hydrologist","archetypes": ["Explorer","Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Climate Risk Analyst","archetypes": ["Thinker","Visionary"]},
+      {"title": "Carbon Accounting Specialist","archetypes": ["Organizer","Thinker"]},
+      {"title": "Remote Sensing Analyst","archetypes": ["Thinker","Creator"]},
+      {"title": "Biodiversity Data Scientist","archetypes": ["Thinker","Explorer"]},
+      {"title": "Nature-based Solutions Analyst","archetypes": ["Visionary","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Psychology & Behavioural Science",
+    "classic": [
+      {"title": "Behavioural Science Researcher","archetypes": ["Thinker","Connector"]},
+      {"title": "People Analytics Specialist","archetypes": ["Thinker","Organizer"]},
+      {"title": "User Researcher","archetypes": ["Connector","Thinker"]},
+      {"title": "Wellbeing Coordinator","archetypes": ["Connector","Organizer"]},
+      {"title": "Counselling Support Practitioner","archetypes": ["Connector"]}
+    ],
+    "emerging": [
+      {"title": "Behavioural Data Scientist","archetypes": ["Thinker","Creator"]},
+      {"title": "Human Factors Specialist","archetypes": ["Thinker","Connector"]},
+      {"title": "Digital Therapeutics Designer","archetypes": ["Creator","Connector"]},
+      {"title": "AI Companion Designer","archetypes": ["Creator","Connector"]}
+    ]
+  },
+  {
+    "fit_area": "Humanities, Languages & Culture",
+    "classic": [
+      {"title": "Communications Officer","archetypes": ["Connector","Creator"]},
+      {"title": "Editor","archetypes": ["Creator","Thinker"]},
+      {"title": "Cultural Programmes Officer","archetypes": ["Connector","Creator"]},
+      {"title": "Localisation Specialist","archetypes": ["Connector","Thinker"]},
+      {"title": "Museum or Gallery Officer","archetypes": ["Connector","Creator"]}
+    ],
+    "emerging": [
+      {"title": "Cultural Data Analyst","archetypes": ["Thinker","Creator"]},
+      {"title": "Digital Humanities Researcher","archetypes": ["Thinker","Creator"]},
+      {"title": "Community Content Lead","archetypes": ["Connector","Creator"]},
+      {"title": "Language Technology Specialist","archetypes": ["Thinker","Creator"]}
+    ]
+  },
+  {
+    "fit_area": "Mechanical & Manufacturing Engineering",
+    "classic": [
+      {"title": "Manufacturing Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Process Improvement Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Quality Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Mechanical Design Engineer","archetypes": ["Creator","Thinker"]},
+      {"title": "Production Planner","archetypes": ["Organizer","Achiever"]},
+      {"title": "Maintenance Engineer","archetypes": ["Organizer","Explorer"]}
+    ],
+    "emerging": [
+      {"title": "Robotics Engineer","archetypes": ["Creator","Organizer"]},
+      {"title": "Industrial IoT Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Additive Manufacturing Engineer","archetypes": ["Creator","Thinker"]},
+      {"title": "Digital Twin Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Sustainable Manufacturing Analyst","archetypes": ["Thinker","Visionary"]}
+    ]
+  },
+  {
+    "fit_area": "Electrical, Electronic & Robotics Engineering",
+    "classic": [
+      {"title": "Electronics Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Embedded Systems Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Test and Validation Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Controls Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Hardware Design Engineer","archetypes": ["Creator","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Autonomous Systems Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Edge AI Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "Human–Robot Interaction Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Power Electronics Engineer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Wearables Hardware Engineer","archetypes": ["Creator","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Civil, Infrastructure & Transport",
+    "classic": [
+      {"title": "Civil Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Transport Planner","archetypes": ["Thinker","Organizer"]},
+      {"title": "Site Engineer","archetypes": ["Organizer","Achiever"]},
+      {"title": "Highways/Structures Engineer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Health and Safety Officer","archetypes": ["Organizer"]},
+      {"title": "Asset Management Analyst","archetypes": ["Organizer","Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Sustainable Urban Mobility Analyst","archetypes": ["Visionary","Thinker"]},
+      {"title": "Smart Infrastructure Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "EV Charging Network Planner","archetypes": ["Organizer","Thinker"]},
+      {"title": "Resilience and Adaptation Analyst","archetypes": ["Visionary","Thinker"]},
+      {"title": "Digital Construction Specialist","archetypes": ["Creator","Organizer"]}
+    ]
+  },
+  {
+    "fit_area": "Built Environment & Architecture",
+    "classic": [
+      {"title": "Architectural Designer","archetypes": ["Creator","Organizer"]},
+      {"title": "Planning Officer","archetypes": ["Organizer","Connector"]},
+      {"title": "Building Surveyor","archetypes": ["Organizer","Thinker"]},
+      {"title": "CAD Designer","archetypes": ["Creator","Organizer"]},
+      {"title": "Urban Designer","archetypes": ["Creator","Visionary"]},
+      {"title": "Building Performance Analyst","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Smart Buildings Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Low-Carbon Retrofit Specialist","archetypes": ["Visionary","Organizer"]},
+      {"title": "Parametric Design Technologist","archetypes": ["Creator","Thinker"]},
+      {"title": "Digital Twin Analyst","archetypes": ["Thinker","Creator"]},
+      {"title": "Healthy Buildings Consultant","archetypes": ["Connector","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Clinical & Allied Health",
+    "classic": [
+      {"title": "Healthcare Support Worker","archetypes": ["Connector","Organizer"]},
+      {"title": "Physiotherapy Support Practitioner","archetypes": ["Connector","Explorer"]},
+      {"title": "Clinical Administrator","archetypes": ["Organizer","Thinker"]},
+      {"title": "Radiography Technologist","archetypes": ["Organizer","Explorer"]},
+      {"title": "Pharmacy Technician","archetypes": ["Organizer","Thinker"]},
+      {"title": "Public Health Officer","archetypes": ["Connector","Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Digital Health Coordinator","archetypes": ["Organizer","Connector"]},
+      {"title": "Clinical AI Specialist","archetypes": ["Thinker","Visionary"]},
+      {"title": "Telehealth Operations Lead","archetypes": ["Organizer","Connector"]},
+      {"title": "Health Informatics Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Digital Therapeutics Coach","archetypes": ["Connector","Creator"]}
+    ]
+  },
+  {
+    "fit_area": "Public & Global Health",
+    "classic": [
+      {"title": "Health Promotion Officer","archetypes": ["Connector","Thinker"]},
+      {"title": "Epidemiology Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Community Health Coordinator","archetypes": ["Connector","Organizer"]},
+      {"title": "Programme Officer","archetypes": ["Connector","Achiever"]},
+      {"title": "Health Policy Analyst","archetypes": ["Thinker","Connector"]},
+      {"title": "Monitoring and Evaluation Analyst","archetypes": ["Organizer","Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Population Health Data Scientist","archetypes": ["Thinker","Visionary"]},
+      {"title": "Digital Epidemiology Analyst","archetypes": ["Thinker","Creator"]},
+      {"title": "Global Health Partnerships Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Climate and Health Analyst","archetypes": ["Visionary","Thinker"]},
+      {"title": "One Health Researcher","archetypes": ["Thinker","Explorer"]}
+    ]
+  },
+  {
+    "fit_area": "Law, Regulation & Compliance",
+    "classic": [
+      {"title": "Paralegal","archetypes": ["Organizer","Thinker"]},
+      {"title": "Compliance Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Contracts Manager","archetypes": ["Organizer","Thinker"]},
+      {"title": "Legal Operations Analyst","archetypes": ["Organizer","Achiever"]},
+      {"title": "Regulatory Affairs Specialist","archetypes": ["Organizer","Thinker"]},
+      {"title": "Company Secretarial Officer","archetypes": ["Organizer","Thinker"]}
+    ],
+    "emerging": [
+      {"title": "Privacy and Data Protection Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "RegTech Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "AI Governance Associate","archetypes": ["Visionary","Organizer"]},
+      {"title": "ESG Regulation Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Legal Technologist","archetypes": ["Thinker","Creator"]}
+    ]
+  },
+  {
+    "fit_area": "Public Policy, Government & Civic Tech",
+    "classic": [
+      {"title": "Policy Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Constituency or Parliamentary Officer","archetypes": ["Connector","Organizer"]},
+      {"title": "Civil Service Analyst","archetypes": ["Thinker","Organizer"]},
+      {"title": "Public Affairs Executive","archetypes": ["Connector","Achiever"]},
+      {"title": "Grants and Programmes Officer","archetypes": ["Organizer","Connector"]},
+      {"title": "Local Government Analyst","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Digital Policy Analyst","archetypes": ["Thinker","Visionary"]},
+      {"title": "Civic Tech Product Manager","archetypes": ["Visionary","Achiever"]},
+      {"title": "Open Data Officer","archetypes": ["Thinker","Organizer"]},
+      {"title": "Policy Evaluation Data Scientist","archetypes": ["Thinker","Organizer"]},
+      {"title": "AI and Society Researcher","archetypes": ["Thinker","Visionary"]}
+    ]
+  },
+  {
+    "fit_area": "Education, Learning & EdTech",
+    "classic": [
+      {"title": "Learning Support Practitioner","archetypes": ["Connector"]},
+      {"title": "Education Administrator","archetypes": ["Organizer"]},
+      {"title": "Instructional Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Assessment and Quality Officer","archetypes": ["Organizer","Thinker"]},
+      {"title": "Student Experience Officer","archetypes": ["Connector"]},
+      {"title": "Outreach and Participation Officer","archetypes": ["Connector","Visionary"]}
+    ],
+    "emerging": [
+      {"title": "Learning Experience Designer","archetypes": ["Creator","Connector"]},
+      {"title": "EdTech Product Manager","archetypes": ["Achiever","Visionary","Connector"]},
+      {"title": "AI Tutoring Content Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Learning Analytics Lead","archetypes": ["Thinker","Organizer"]},
+      {"title": "Accessibility and Inclusive Design Lead","archetypes": ["Connector","Organizer"]},
+      {"title": "Education Data Analyst","archetypes": ["Thinker","Organizer"]}
+    ]
+  },
+  {
+    "fit_area": "Design, UX & Human-Centred Innovation",
+    "classic": [
+      {"title": "UX Researcher","archetypes": ["Connector","Thinker"]},
+      {"title": "UX/UI Designer","archetypes": ["Creator","Connector"]},
+      {"title": "Content Designer","archetypes": ["Creator","Connector"]},
+      {"title": "Interaction Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Design Researcher","archetypes": ["Thinker","Creator"]},
+      {"title": "Information Architect","archetypes": ["Thinker","Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Human-AI Interaction Designer","archetypes": ["Creator","Thinker","Visionary"]},
+      {"title": "Design Systems Designer","archetypes": ["Creator","Organizer"]},
+      {"title": "Accessibility Specialist","archetypes": ["Connector","Organizer"]},
+      {"title": "Conversation Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "AR/VR Experience Designer","archetypes": ["Creator","Explorer"]}
+    ]
+  },
+  {
+    "fit_area": "Media, Content & Creative Industries",
+    "classic": [
+      {"title": "Content Producer","archetypes": ["Creator","Connector"]},
+      {"title": "Video Editor","archetypes": ["Creator"]},
+      {"title": "Graphic Designer","archetypes": ["Creator"]},
+      {"title": "Audio Producer","archetypes": ["Creator"]},
+      {"title": "Social Media Producer","archetypes": ["Creator","Connector"]},
+      {"title": "Copywriter","archetypes": ["Creator"]}
+    ],
+    "emerging": [
+      {"title": "Podcast Producer","archetypes": ["Creator"]},
+      {"title": "Motion Graphics Designer","archetypes": ["Creator"]},
+      {"title": "Immersive Content Designer","archetypes": ["Creator","Explorer"]},
+      {"title": "Creator Partnerships Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Brand Partnerships Producer","archetypes": ["Connector","Achiever"]},
+      {"title": "AI Content Workflow Designer","archetypes": ["Creator","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Industrial/Product Design & Prototyping",
+    "classic": [
+      {"title": "Industrial Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Design Engineer","archetypes": ["Thinker","Creator"]},
+      {"title": "CAD Designer","archetypes": ["Organizer","Creator"]},
+      {"title": "Prototype Engineer","archetypes": ["Explorer","Creator"]},
+      {"title": "Design Researcher","archetypes": ["Thinker","Creator"]},
+      {"title": "Manufacturing Designer","archetypes": ["Organizer","Creator"]}
+    ],
+    "emerging": [
+      {"title": "UX for Physical Products Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Design for Additive Manufacturing Specialist","archetypes": ["Creator","Thinker"]},
+      {"title": "Sustainable Materials Designer","archetypes": ["Creator","Visionary"]},
+      {"title": "Smart/Connected Product Designer","archetypes": ["Creator","Thinker"]},
+      {"title": "Human Factors Engineer","archetypes": ["Thinker","Connector"]}
+    ]
+  },
+  {
+    "fit_area": "Strategy, Research & Consulting",
+    "classic": [
+      {"title": "Strategy Analyst","archetypes": ["Thinker","Achiever"]},
+      {"title": "Management Consultant","archetypes": ["Thinker","Achiever","Connector"]},
+      {"title": "Operations Consultant","archetypes": ["Organizer","Thinker"]},
+      {"title": "Deal Advisory Analyst","archetypes": ["Achiever","Thinker"]},
+      {"title": "Customer Insights Analyst","archetypes": ["Thinker","Connector"]},
+      {"title": "PMO Analyst","archetypes": ["Organizer","Achiever"]}
+    ],
+    "emerging": [
+      {"title": "AI Strategy Consultant","archetypes": ["Visionary","Thinker","Achiever"]},
+      {"title": "Sustainability/ESG Consultant","archetypes": ["Visionary","Thinker","Connector"]},
+      {"title": "Digital Transformation Analyst","archetypes": ["Visionary","Achiever","Thinker"]},
+      {"title": "Service Design Consultant","archetypes": ["Creator","Connector"]},
+      {"title": "Data Strategy Consultant","archetypes": ["Thinker","Organizer"]},
+      {"title": "Change Analytics Specialist","archetypes": ["Thinker","Organizer"]}
+    ]
+  },
+  {
+    "fit_area": "Operations, Supply Chain & Quality",
+    "classic": [
+      {"title": "Operations Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Supply Chain Planner","archetypes": ["Organizer","Thinker"]},
+      {"title": "Logistics Coordinator","archetypes": ["Organizer","Achiever"]},
+      {"title": "Quality Specialist","archetypes": ["Organizer","Thinker"]},
+      {"title": "Procurement Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Production Planner","archetypes": ["Organizer"]}
+    ],
+    "emerging": [
+      {"title": "Supply Chain Data Scientist","archetypes": ["Thinker","Organizer"]},
+      {"title": "Automation/Robotics Coordinator","archetypes": ["Creator","Organizer"]},
+      {"title": "Sustainable Supply Chain Lead","archetypes": ["Organizer","Visionary"]},
+      {"title": "Last-mile Optimisation Lead","archetypes": ["Organizer","Achiever"]},
+      {"title": "Inventory Analytics Lead","archetypes": ["Thinker","Organizer"]},
+      {"title": "Supplier Risk Analyst","archetypes": ["Organizer","Thinker"]}
+    ]
+  },
+  {
+    "fit_area": "Finance, Economics & FinTech",
+    "classic": [
+      {"title": "Investment Banker","archetypes": ["Achiever","Connector"]},
+      {"title": "Wealth Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Equity Research Analyst","archetypes": ["Thinker","Achiever"]},
+      {"title": "Corporate Finance Analyst","archetypes": ["Achiever","Thinker"]},
+      {"title": "Risk Manager","archetypes": ["Organizer","Thinker"]},
+      {"title": "Financial Accountant","archetypes": ["Organizer","Thinker"]},
+      {"title": "Operations Analyst","archetypes": ["Organizer"]}
+    ],
+    "emerging": [
+      {"title": "FinTech Product Manager","archetypes": ["Achiever","Visionary","Thinker"]},
+      {"title": "Quant Developer","archetypes": ["Thinker","Creator"]},
+      {"title": "Sustainable Finance Analyst","archetypes": ["Thinker","Visionary"]},
+      {"title": "Blockchain/DeFi Analyst","archetypes": ["Visionary","Thinker"]},
+      {"title": "Financial Crime Analyst","archetypes": ["Organizer","Thinker"]},
+      {"title": "Payments Operations Lead","archetypes": ["Organizer","Achiever"]}
+    ]
+  },
+  {
+    "fit_area": "Marketing, Brand & Growth",
+    "classic": [
+      {"title": "Marketing Executive","archetypes": ["Achiever","Connector","Creator"]},
+      {"title": "Brand Manager","archetypes": ["Creator","Achiever"]},
+      {"title": "Content Marketer","archetypes": ["Creator","Connector"]},
+      {"title": "Market Researcher","archetypes": ["Thinker","Connector"]},
+      {"title": "Performance Marketing Analyst","archetypes": ["Achiever","Thinker"]},
+      {"title": "PR Executive","archetypes": ["Connector","Creator"]}
+    ],
+    "emerging": [
+      {"title": "Growth Marketer","archetypes": ["Achiever","Connector"]},
+      {"title": "Product Marketing Manager","archetypes": ["Achiever","Creator","Connector"]},
+      {"title": "Influencer Partnerships Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Marketing Data Scientist","archetypes": ["Thinker","Achiever"]},
+      {"title": "Community Manager","archetypes": ["Connector"]},
+      {"title": "SEO/Content Strategist","archetypes": ["Thinker","Creator"]}
+    ]
+  },
+  {
+    "fit_area": "Entrepreneurship & Venture Creation",
+    "classic": [
+      {"title": "Founder/Co-founder","archetypes": ["Visionary","Achiever","Explorer"]},
+      {"title": "Venture Operations Lead","archetypes": ["Organizer","Achiever"]},
+      {"title": "Business Development Manager","archetypes": ["Achiever","Connector"]},
+      {"title": "Partnerships Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Product Designer","archetypes": ["Creator","Explorer"]},
+      {"title": "Generalist Analyst","archetypes": ["Thinker","Achiever"]}
+    ],
+    "emerging": [
+      {"title": "Growth Lead","archetypes": ["Achiever","Connector"]},
+      {"title": "No-code Developer","archetypes": ["Creator","Thinker"]},
+      {"title": "AI Venture Builder","archetypes": ["Visionary","Thinker","Creator"]},
+      {"title": "Community-led Product Manager","archetypes": ["Connector","Achiever"]},
+      {"title": "Revenue Operations Lead","archetypes": ["Organizer","Achiever"]},
+      {"title": "AI Automation Consultant","archetypes": ["Thinker","Achiever"]}
+    ]
+  }
+]

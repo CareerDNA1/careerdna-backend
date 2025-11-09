@@ -1,0 +1,40 @@
+[
+  { "title": "Business and Management", "archetypes": ["Achiever", "Organizer", "Connector"] },
+  { "title": "Accounting and Finance", "archetypes": ["Thinker", "Organizer", "Achiever"] },
+  { "title": "Economics", "archetypes": ["Thinker", "Achiever"] },
+  { "title": "Marketing", "archetypes": ["Creator", "Connector", "Achiever"] },
+  { "title": "Entrepreneurship and Innovation", "archetypes": ["Visionary", "Achiever", "Explorer"] },
+
+  { "title": "Computer Science", "archetypes": ["Thinker", "Creator", "Explorer"] },
+  { "title": "Data Science and Artificial Intelligence", "archetypes": ["Thinker", "Organizer", "Creator"] },
+  { "title": "Cyber Security", "archetypes": ["Organizer", "Thinker", "Explorer"] },
+  { "title": "Engineering", "archetypes": ["Thinker", "Organizer", "Achiever"] },
+  { "title": "Architecture", "archetypes": ["Creator", "Visionary", "Organizer"] },
+
+  { "title": "Mathematics", "archetypes": ["Thinker", "Organizer"] },
+  { "title": "Physics", "archetypes": ["Thinker", "Explorer"] },
+  { "title": "Chemistry", "archetypes": ["Thinker", "Organizer"] },
+  { "title": "Biological and Biomedical Sciences", "archetypes": ["Thinker", "Connector", "Organizer"] },
+  { "title": "Medicine", "archetypes": ["Achiever", "Connector", "Thinker"] },
+  { "title": "Public Health", "archetypes": ["Connector", "Thinker", "Visionary"] },
+  { "title": "Food Science and Nutrition", "archetypes": ["Thinker", "Achiever", "Connector"] },
+  { "title": "Biomedical Engineering", "archetypes": ["Thinker", "Organizer", "Connector"] },
+
+  { "title": "Psychology", "archetypes": ["Connector", "Thinker", "Visionary"] },
+  { "title": "Law", "archetypes": ["Organizer", "Thinker", "Visionary"] },
+  { "title": "Politics and International Relations", "archetypes": ["Visionary", "Connector", "Thinker"] },
+  { "title": "Sociology", "archetypes": ["Connector", "Visionary"] },
+  { "title": "Education", "archetypes": ["Connector", "Visionary"] },
+
+  { "title": "Media and Communications", "archetypes": ["Creator", "Connector"] },
+  { "title": "Design and Creative Media", "archetypes": ["Creator", "Connector", "Explorer"] },
+  { "title": "Product Design and Innovation", "archetypes": ["Creator", "Achiever", "Organizer"] },
+  { "title": "Game Design and Development", "archetypes": ["Creator", "Explorer", "Thinker"] },
+  { "title": "Environmental and Climate Science", "archetypes": ["Explorer", "Visionary", "Thinker"] },
+  { "title": "Sustainability and Environmental Management", "archetypes": ["Visionary", "Connector", "Explorer"] },
+  { "title": "Sport and Exercise Science", "archetypes": ["Achiever", "Explorer", "Connector"] },
+  { "title": "Construction Project Management", "archetypes": ["Organizer", "Achiever", "Thinker"] }
+]
+
+
+

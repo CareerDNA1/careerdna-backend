@@ -1,287 +1,516 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const OpenAI = require('openai');
+// index.js — weighted scoring + section-aware subdim hints (1 per item)
+require("dotenv").config({ override: true });
+const express = require("express");
+const cors = require("cors");
+const OpenAI = require("openai");
+const { randomUUID } = require("crypto");
 
+const { loadCdnaLibrary } = require("./src/lib/cdnaLibrary");
+const {
+  rankBank,
+  selectStrengths,
+  selectEnvironments,
+  selectFitAreas,
+  selectSubjects,
+  scoreItemByArchetypeOrder,
+} = require("./src/lib/cdnaSelect");
+const { buildReportPrompt } = require("./src/lib/cdnaProse");
+const { initPickSubdims, deriveHintsForItem } = require("./src/lib/cdnaPickSubdims");
+
+// ===== express / server setup =====
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
-app.use(express.json());
+const corsOptions = {
+  origin: (_origin, cb) => cb(null, true),
+  credentials: true,
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  maxAge: 86400,
+};
+app.use(cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
+app.use(express.json({ limit: "2mb" }));
 
-app.get('/', (req, res) => {
-  res.send('✅ CareerDNA backend is live.');
-});
+// ===== globals =====
+const VERBOSE = String(process.env.VERBOSE_LOGGING).toLowerCase() === "true";
+const LOG_SUMMARY = String(process.env.CDNA_LOG_SUMMARY).toLowerCase() === "true";
+const DEV_NO_LLM = String(process.env.CDNA_DEV_NO_LLM).toLowerCase() === "true";
+const MAX_LOG_ITEMS_PER_SECTION = 7;
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-// Prefer env override, then sane fallbacks
-const MODEL_CHAIN = [
-  process.env.OPENAI_MODEL,       // optional
-  "gpt-5-chat-latest",
-  "gpt-4o",
-  "gpt-4o-mini"
-].filter(Boolean);
-
-/* ---------- Your existing content ---------- */
-const archetypeDescriptions = {
-  Achiever: 'Ambitious, driven, and focused on results. Achievers set high standards, work hard to meet goals, and thrive where performance is recognised.',
-  Connector: 'People-focused, empathetic, and collaborative. Connectors love supporting others and excel at building relationships and community.',
-  Creator: 'Imaginative, expressive, and hands-on. Creators enjoy turning ideas into reality through art, design, technology, or storytelling.',
-  Explorer: 'Curious, adventurous, and driven by discovery. Explorers love trying new things and learning through real-world experiences.',
-  Organizer: 'Structured, dependable, and detail-oriented. Organizers bring order to chaos and thrive on planning, systems, and reliability.',
-  Thinker: 'Analytical, logical, and reflective. Thinkers enjoy solving complex problems and working independently with intellectual depth.',
-  Visionary: 'Future-focused, bold, and full of ideas. Visionaries are inspired by big-picture thinking and love leading innovation and change.',
+const VLOG = (...args) => {
+  if (VERBOSE) console.log(...args);
 };
 
-function getReportInstructions(status) {
-  const baseInstructions = `
-Output markdown only. 
-No extra notes or titles outside the structure. 
-Follow the exact markdown format below, including headers and bullets. 
-Do not use dashes in any of the text
+const norm = (s = "") =>
+  String(s)
+    .toLowerCase()
+    .replace(/\s*&\s*/g, " & ")
+    .replace(/\s+/g, " ")
+    .trim();
 
-Each section must contain the **exact number of items**:
-- Summary: 5-6 lines, with a positive narrative on the meaning of their mix of archetypes potential. Mention their subject of study/interest only briefly (if they have selected any).
-- Strengths: exactly 5. Must be based **entirely on archetypes**, not subject interests. Of those a minimum of 2 should refer to their top archetype. You should also refer to combinations of archetypes where possible/appropriate. 
-- Ideal Environments: exactly 5. Must be based **entirely on archetypes**, not subject interests. Ideal environments must reflect genuine types of work environments rather than roles or types of companies/organisations.
-- University Subject Suggestions (school users): exactly 6 suggestions. For University subjects, you must select only real UK degree subjects (UCAS categories), and only the top most relevant ones for this user's profile. Consider relevance from a wide array of topics/sciences including social sciences, life sciences, earth science, physical science, business, arts etc with emphasis on the most relevant to their top archetypes and also most in demand in the future of work. If they have selected subjects of interest, match 2-3 suggestions to those. The rest should be the absolute top matches to their archetype mix outside their subjects of interest. Each suggestion must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
-- Career Fit Areas (school users): exactly 5 general areas linked to the University subject suggestions proposed. A maximum of 3 should be based on subjects of interest (if they have selected any). The rest should be based optimally on their weighted mix of archetypes with at least two being based on their top archetype. Each area must include a rationale that clearly shows how it connects to their top archetype or their unique combination and weight of archetypes.
-- Graduate Role Ideas (school users): 4 classic roles and 4 emerging roles linked to the University subject suggestions, optimally based on weighted archetype mix and subjects of interest (if any declared). 4 (2 classic and 2 emerging) should be based on their subjects of interest if any declared. All roles should be of University graduate level or above. Each role must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
-- Career Role Ideas (non-school users): 5 classic roles and 5 emerging roles, optimally based on weigthted archetype mix and subject of study. Each role must include a rationale that clearly shows how it connects to the unique combination and weight of archetypes.
+// canonicalise subdim names
+function canonSubdimName(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/\s*&\s*/g, " & ")
+    .replace(/\s*\/\s*/g, "/")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-When generating suggestions do not base them only on individual archetype traits. Consider how the top 3 archetypes and their weights combine to create a unique cognitive and motivational profile. Subjects and domains should reflect **intersections** — not just one-to-one archetype matches.For example, if a user scores highly in both Visionary and Thinker, they may thrive in **technological innovation**, **futuristic design**, or **systems architecture**. If they are Connector + Creator + Explorer, they may be suited for **education technology**, **experiential marketing**, or **interactive media**. List these in order of compatibility.
+// ===== dimension-aware subdim groups (24 from your matrix) =====
+const SUBDIM_GROUPS = {
+  whoYouAre: [
+    "Curiosity & Openness",
+    "Reliability & Focus",
+    "Emotional Stability",
+    "Uncertainty Tolerance",
+    "Perseverance",
+    "Sociability & Extroversion",
+  ].map(canonSubdimName),
+  whatYouLove: [
+    "Investigative Curiosity",
+    "Creative Expression",
+    "Helping Orientation",
+    "Entrepreneurial Drive",
+    "Hands-On Engagement",
+    "Novelty & Variety Seeking",
+  ].map(canonSubdimName),
+  whatMatters: [
+    "Purpose & Impact",
+    "Independence & Autonomy",
+    "Stability & Predictability",
+    "Recognition & Visibility",
+    "Financial Ambition",
+    "Belonging & Connection",
+  ].map(canonSubdimName),
+  howYouWorkBest: [
+    "Pace & Intensity Preference",
+    "Organisation & Systems Orientation",
+    "Clarity & Structure Preference",
+    "Team Collaboration",
+    "Independent Working Approach",
+    "Attention to Detail",
+  ].map(canonSubdimName),
+};
 
-NEVER use placeholder labels like "Subject 1", "Role 2", "Domain 3", or "Other 1". Always replace bullet labels with real, meaningful titles (e.g. **Financial Analyst**, **Creative Collaboration Spaces**, etc.).
-Every bullet point must include a 1–2 sentence rationale explaining how it connects to the user’s top archetypes and/or subject interests.
-
-Subheadings like **Other Ideas You May Consider**, **Classic & Well-Known Roles**, and **Emerging & Future-Oriented Roles** must:
-- Be standalone bold lines
-- Not be bulleted or merged into sentences
-- Be preceded by two line breaks (\\n\\n)
-
-The closing line must be italicised, on its own line, and not bulleted:
-*To unlock your full CareerDNA profile with development advice, subject deep dives and mapping tools, check out CareerDNA+.*
-`.trim();
-
-  if (status === 'school') {
-    return `${baseInstructions}
-
-### 3. University Subject Suggestions
-- **[Subject Title 1]**: Rationale.
-- **[Subject Title 2]**: ...
-- **[Subject Title 3]**: ...
-- **[Subject Title 4]**: ...
-- **[Subject Title 5]**: ...
-- **[Subject Title 6]**: ...
-
-### 4. Ideal Environments
-- **[Environment 1]**: Rationale
-- **[Environment 2]**: ...
-- **[Environment 3]**: ...
-- **[Environment 4]**: ...
-- **[Environment 5]**: ...
-
-### 5. Career Fit Areas
-- **[Domain 1]**: Rationale
-- **[Domain 2]**: ...
-- **[Domain 3]**: ...
-- **[Domain 4]**: ...
-- **[Domain 5]**: ...
-
-### 6. Graduate Role Ideas
-
-**Classic & Well-Known Roles**
-- **[Role 1]**: Rationale
-- **[Role 2]**: ...
-- **[Role 3]**: ...
-- **[Role 4]**: ...
-
-**Emerging & Future-Oriented Roles**
-- **[Emerging Role 1]**: Rationale
-- **[Emerging Role 2]**: ...
-- **[Emerging Role 3]**: ...
-- **[Emerging Role 4]**: ...
-
-*To unlock your full CareerDNA profile with development advice, subject deep dives and mapping tools, check out CareerDNA+.*`;
-  } else {
-    return `${baseInstructions}
-
-### 3. Ideal Environments
-- **[Environment 1]**: Rationale
-- **[Environment 2]**: ...
-- **[Environment 3]**: ...
-- **[Environment 4]**: ...
-- **[Environment 5]**: ...
-
-### 4. Career Role Ideas
-
-**Classic & Well-Known Roles**
-- **[Role 1]**: Rationale
-- **[Role 2]**: ...
-- **[Role 3]**: ...
-- **[Role 4]**: ...
--**[Role 5]**: ...
-
-**Emerging & Future-Oriented Roles**
-- **[Emerging Role 1]**: Rationale
-- **[Emerging Role 2]**: ...
-- **[Emerging Role 3]**: ...
-- **[Emerging Role 4]**: ...
--- **[Emerging Role 5]**: ...
-
-*To unlock your full CareerDNA profile with development advice and role deep dives, check out CareerDNA+.*`;
+// keep order of groups: first match wins
+function filterSubdimsByGroupsOrdered(allSubdims, groupNames) {
+  const out = [];
+  for (const g of groupNames) {
+    const groupList = SUBDIM_GROUPS[g] || [];
+    for (const sd of allSubdims) {
+      if (groupList.includes(sd) && !out.includes(sd)) {
+        out.push(sd);
+      }
+    }
   }
+  return out;
 }
 
-function generatePrompt({ archetypes, age, status, subjects }) {
-  const sorted = Object.entries(archetypes)
-    .sort(([, a], [, b]) => b - a)
-    .map(([name, score]) => ({
-      name,
-      score,
-      description: archetypeDescriptions[name] || 'No description available.',
-    }));
+// ===== per-request logging middleware =====
+app.use((req, res, next) => {
+  const rid = randomUUID();
+  const started = Date.now();
+  req._rid = rid;
+  console.log(
+    `➡️  [${rid}] ${req.method} ${req.path} (origin=${req.get("origin") || "-"} referer=${
+      req.get("referer") || "-"
+    })`
+  );
+  res.on("finish", () => {
+    const ms = Date.now() - started;
+    console.log(`⬅️  [${rid}] ${req.method} ${req.path} ${res.statusCode} (${ms}ms)`);
+  });
+  next();
+});
 
-  const topThree = sorted.slice(0, 3);
-  const [dominant, second, third] = topThree;
-
-  const totalTopScore = topThree.reduce((sum, a) => sum + a.score, 0) || 1;
-  const weightedList = topThree.map(a => ({
-    ...a,
-    weight: parseFloat((a.score / totalTopScore).toFixed(3))
-  }));
-
-  const weightedSummary = weightedList
-    .map(a => `- **${a.name}** (${a.score}% | Weight: ${(a.weight * 100).toFixed(1)}%): ${a.description}`)
-    .join('\n');
-
-  let emphasisNote = '';
-  const scoreGap = (dominant?.score ?? 0) - (second?.score ?? 0);
-  const scoreRange = (dominant?.score ?? 0) - (third?.score ?? 0);
-
-  if (scoreGap > 10) {
-    emphasisNote = `The user's top archetype is **${dominant.name}**, with a significantly higher score (${dominant.score}%). Its traits should be prioritised in shaping the report.`;
-  } else if (scoreRange <= 5) {
-    emphasisNote = `The user's top 3 archetypes are closely matched (${dominant?.score ?? 0}%, ${second?.score ?? 0}%, ${third?.score ?? 0}%), so they should be given roughly equal emphasis.`;
-  } else {
-    emphasisNote = `All three top archetypes are important, but slightly more emphasis should be placed on **${dominant?.name ?? ''}**.`;
-  }
-
-  const stageNote =
-    status === 'school'
-      ? `They are still at school (approx. age ${age || 'unknown'}) and are exploring subject interests.`
-      : status === 'undergraduate'
-      ? `They are currently an undergraduate student.`
-      : status === 'postgraduate'
-      ? `They are currently pursuing postgraduate study.`
-      : `The user's current education status is ${status || 'unknown'}.`;
-
-  const subjectNote = subjects?.length
-    ? `They are interested in or currently studying: ${subjects.join(', ')}.`
-    : '';
-
-  return `
-  Please follow the formatting and output structure described above.
-
-User Context:
-- Age: ${age || 'Not provided'}
-- Status: ${status}
-- ${stageNote}
-${subjectNote ? `- Subjects: ${subjectNote}` : ''}
-
-Top Archetypes (with weighted influence):
-${weightedSummary}
-
-${emphasisNote}
-
-Use the weights to proportionally guide how much influence each archetype should have in the report. If one archetype is clearly dominant, prioritise it in the narrative, strengths, and role suggestions. Be sure each bullet point is connected to one or more of the user's top archetypes.
-
-First, reason step-by-step: Identify top archetypes and subjects. Generate content for each section, ensuring every list item has a rationale. Ensure subheadings like 'Other Ideas You May Consider' are standalone bold text on their own line with line breaks, not bulleted or merged. Then, format exactly as in the instructions.
-
-VERSION: V16_${Date.now()}
-`.trim();
-}
-
-/* ---------- Minimal, robust utils ---------- */
-function normalizeSubjects(input) {
-  if (input == null) return [];
-  if (Array.isArray(input)) return input.map(x => String(x).trim()).filter(Boolean);
-  if (typeof input === 'string') return [input.trim()].filter(Boolean);
-  return [];
-}
+// ===== model setup =====
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const MODEL_CHAIN = Array.from(
+  new Set([process.env.OPENAI_MODEL, "gpt-4o-mini", "gpt-4o"].filter(Boolean))
+);
+const modelSupportsTemperature = (model) => !/^gpt-5($|[-_])/.test(model);
 
 async function callModels(messages) {
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn("OPENAI_API_KEY missing — returning placeholder summary.");
+    return "# Summary\n\n1) Placeholder summary while developing without an API key.";
+  }
   let lastErr;
   for (const model of MODEL_CHAIN) {
     try {
-      const resp = await openai.chat.completions.create({
+      const payload = {
         model,
-        temperature: 0.7,
-        messages
-      });
-      const content = resp.choices?.[0]?.message?.content?.trim();
+        messages,
+        ...(modelSupportsTemperature(model) ? { temperature: 0.7 } : {}),
+      };
+      const resp = await openai.chat.completions.create(payload);
+      const content = resp?.choices?.[0]?.message?.content?.trim();
       if (!content) throw new Error("Empty content from model");
       return content;
     } catch (err) {
       lastErr = err;
-      console.error(`⚠️ Model ${model} failed:`, err?.status || "", err?.message || err);
-      // try next
+      console.error(`⚠️ Model failed: ${model}`, err?.status || "", err?.message || err);
     }
   }
   throw lastErr || new Error("All models failed");
 }
 
-/* ---------- Route ---------- */
+// ===== helpers =====
+function normalizeSubjects(input) {
+  if (input == null) return [];
+  if (Array.isArray(input)) return input.map((x) => String(x).trim()).filter(Boolean);
+  if (typeof input === "string") return [input.trim()].filter(Boolean);
+  return [];
+}
+
+function normalizeStatus(raw) {
+  const s = String(raw || "").trim().toLowerCase();
+  if (["school", "undergraduate", "postgraduate"].includes(s)) return s;
+  if (["gcse", "a-level", "alevel", "sixth form", "sixth-form"].includes(s)) return "school";
+  if (["undergrad", "ug"].includes(s)) return "undergraduate";
+  if (["postgrad", "pg", "masters", "master", "msc", "mba"].includes(s)) return "postgraduate";
+  return "";
+}
+
+function pickIncludedArchetypes(archetypes = {}) {
+  const sorted = Object.entries(archetypes)
+    .map(([name, score]) => ({ name, score: Number.parseFloat(score) || 0 }))
+    .filter((a) => !Number.isNaN(a.score))
+    .sort((a, b) => b.score - a.score);
+
+  const included = sorted
+    .filter((a) => a.score >= 60)
+    .slice(0, 3)
+    .map((a) => a.name);
+
+  if (included.length === 0 && sorted.length) included.push(sorted[0].name);
+
+  VLOG("Sorted archetypes:", JSON.stringify(sorted.slice(0, 10), null, 2));
+  VLOG("Included archetypes:", included);
+  return { included, sorted };
+}
+
+// allow maxPerItem, we’ll pass 1
+function buildItemSubdimHintsWithPicker(items, allowedSubdims, includedSet, maxPerItem = 1) {
+  const out = {};
+  for (const it of items || []) {
+    const tags = Array.isArray(it.archetypes) ? it.archetypes : [];
+    const hints = deriveHintsForItem(tags, allowedSubdims, includedSet, maxPerItem);
+    out[it.title] = Array.isArray(hints) ? hints.slice(0, maxPerItem) : [];
+  }
+  return out;
+}
+
+function buildItemArchetypeMap(list, includedList) {
+  const inc = new Set(includedList || []);
+  const out = {};
+  for (const it of list || []) {
+    const tags = Array.isArray(it.archetypes) ? it.archetypes : [];
+    const matched = tags.filter((t) => inc.has(t));
+    out[it.title] = matched;
+  }
+  return out;
+}
+
+// ===== routes =====
+app.get("/", (_req, res) => res.send("✅ CareerDNA backend is live."));
+app.get("/api/ping", (_req, res) => res.json({ ok: true }));
+
 app.post("/api/summary", async (req, res) => {
+  const rid = req._rid;
   try {
-    const { archetypes, age, status, schoolSubjects, uniSubject } = req.body;
+    console.log(
+      `[${rid}] ▶ payload bytes=${Buffer.byteLength(JSON.stringify(req.body) || "", "utf8")}`
+    );
 
-    const validStatuses = ['school', 'undergraduate', 'postgraduate'];
-    const validAgeRanges = ['13-15', '16-18', '19-21', '22-24', '25+'];
+    const {
+      archetypes,
+      age,
+      status: rawStatus,
+      schoolSubjects,
+      uniSubject,
+      subdims,
+      subdimensions,
+    } = req.body;
 
+    const status = normalizeStatus(rawStatus);
     if (!archetypes || typeof archetypes !== "object") {
       return res.status(400).json({ summary: "⚠️ Invalid or missing archetype data." });
     }
-    if (!status || !validStatuses.includes(status)) {
+    if (!status) {
       return res.status(400).json({ summary: "⚠️ Invalid or missing status." });
     }
-    if (age && !validAgeRanges.includes(age)) {
-      return res.status(400).json({ summary: "⚠️ Invalid age value." });
-    }
 
-    // Looser, user-friendly normalization
+    // subjects
     let subjects = [];
-    if (status === 'school') {
-      subjects = normalizeSubjects(schoolSubjects); // allow [], "Maths", or ["Maths","CS"]
+    if (status === "school") {
+      subjects = normalizeSubjects(schoolSubjects);
     } else {
-      const uni = typeof uniSubject === 'string' ? uniSubject.trim() : "";
-      if (!uni) return res.status(400).json({ summary: "⚠️ University subject must be a non-empty string." });
+      const uni = typeof uniSubject === "string" ? uniSubject.trim() : "";
+      if (!uni) {
+        return res
+          .status(400)
+          .json({ summary: "⚠️ University subject must be a non-empty string." });
+      }
       subjects = [uni];
     }
 
-    const prompt = generatePrompt({ archetypes, age, status, subjects });
-
-    if (process.env.NODE_ENV !== 'production') {
-      console.log("🧠 Prompt to OpenAI:\n", prompt.slice(0, 2000)); // avoid huge log spam
+    // archetypes
+    const { included, sorted } = pickIncludedArchetypes(archetypes);
+    const includedWeights = {};
+    for (const name of included) {
+      const raw = Number.parseFloat(archetypes[name]) || 0;
+      includedWeights[name] = raw > 1 ? raw / 100 : raw;
     }
 
-    const messages = [
-      {
-        role: "system",
-        content: `You are a career development coach that produces highly tailored, age-appropriate reports for young users aged 14–24 using their top archetypes and subject interests or study background. Adjust your tone and vocabulary based on whether the user is at school, undergraduate, or postgraduate level.\n\n${getReportInstructions(status)}`
-      },
-      { role: "user", content: prompt },
-    ];
+    // user subdims
+    const userSubdimMap = new Map();
+    const incomingSubdims = Array.isArray(subdims) && subdims.length ? subdims : subdimensions;
+    if (Array.isArray(incomingSubdims)) {
+      for (const row of incomingSubdims) {
+        if (!row) continue;
+        const key = canonSubdimName(row.name || row.title || row.subdim);
+        if (!key) continue;
+        const val = Number.parseFloat(row.score) || 0;
+        userSubdimMap.set(key, val);
+      }
+    }
 
-    const summary = await callModels(messages);
+    // init picker
+    const pickCtx = initPickSubdims(archetypes, incomingSubdims || []);
+    const { allowedSubdims, includedSet } = pickCtx;
+
+    // prefer ≥60
+    const allowedSubdims60 = allowedSubdims.filter((sd) => (userSubdimMap.get(sd) || 0) >= 60);
+    const finalAllowedSubdims = allowedSubdims60.length ? allowedSubdims60 : allowedSubdims;
+
+    const ctx = {
+      includedArchetypes: included,
+      includedWeights,
+      fullArchetypes: sorted,
+    };
+
+    // load library
+    const lib = loadCdnaLibrary();
+
+    // 1) strengths
+    const topStrengths = selectStrengths(lib.strengths, ctx, 5);
+
+    // 2) environments (7)
+    const topEnvironments = selectEnvironments(lib.environments, ctx, 6);
+
+    // 3) fit areas (7)
+    const topFitAreas = selectFitAreas(lib.fit_areas, ctx, {
+      userSubjects: subjects,
+      libSubjects: lib.subjects,
+      total: 6,
+      subjectSlots: 3,
+    });
+
+    const selectedAreaTitles = new Set(topFitAreas.map((x) => x.title));
+    const selectedAreaTitlesArr = Array.from(selectedAreaTitles);
+
+    // 4) subjects for school (7 total, only reserve 3 if user actually gave some)
+    let topSubjects = [];
+    if (status === "school" && Array.isArray(lib.subjects)) {
+      const userHasSubjects = Array.isArray(subjects) && subjects.length > 0;
+      topSubjects = selectSubjects(lib.subjects, ctx, {
+        userSubjects: subjects,
+        total: 6,
+        subjectSlots: userHasSubjects ? 3 : 0,
+      });
+    }
+
+    // 5) roles for non-school
+    let classicRankedItems = [];
+    let emergingRankedItems = [];
+    if (status !== "school") {
+      const selectedNorm = new Set(selectedAreaTitlesArr.map((t) => norm(t)));
+      const rolesFiltered = (lib.roles || []).filter((r) => {
+        const fa = r.fit_area ? norm(r.fit_area) : "";
+        return fa && selectedNorm.has(fa);
+      });
+
+      const classicRoles = rolesFiltered.flatMap((r) =>
+        (r.classic || []).map((item) => ({ ...item, type: "classic" }))
+      );
+      const emergingRoles = rolesFiltered.flatMap((r) =>
+        (r.emerging || []).map((item) => ({ ...item, type: "emerging" }))
+      );
+
+      classicRankedItems = rankBank(classicRoles, ctx, 5);
+      emergingRankedItems = rankBank(emergingRoles, ctx, 5);
+    }
+
+    // console scoring
+    const userArcArr = included;
+    const printScored = (label, items) => {
+      console.log(`\n=== ${label} (scored) ===`);
+      items.forEach((it) => {
+        const score = scoreItemByArchetypeOrder(it, userArcArr, includedWeights, sorted);
+        console.log(
+          `- ${it.title} | score=${score.toFixed(3)} | tags=[${
+            Array.isArray(it.archetypes) ? it.archetypes.join(", ") : ""
+          }]`
+        );
+      });
+    };
+
+    printScored("STRENGTHS", topStrengths);
+    printScored("ENVIRONMENTS", topEnvironments);
+    printScored("FIT AREAS", topFitAreas);
+    if (status === "school" && topSubjects.length) {
+      printScored("SUBJECTS", topSubjects);
+    }
+    if (classicRankedItems.length) printScored("ROLES (classic)", classicRankedItems);
+    if (emergingRankedItems.length) printScored("ROLES (emerging)", emergingRankedItems);
+
+    // deduped lists for prompt
+    const uniq = (arr) => Array.from(new Set(arr));
+    const strengthsFixed = uniq(topStrengths.map((x) => x.title)).slice(
+      0,
+      MAX_LOG_ITEMS_PER_SECTION
+    );
+    const envsFixed = uniq(topEnvironments.map((x) => x.title)).slice(
+      0,
+      MAX_LOG_ITEMS_PER_SECTION
+    );
+    const areasFixed = uniq(topFitAreas.map((x) => x.title)).slice(0, MAX_LOG_ITEMS_PER_SECTION);
+    const rolesClassicFixed = uniq(classicRankedItems.map((x) => x.title)).slice(
+      0,
+      MAX_LOG_ITEMS_PER_SECTION
+    );
+    const rolesEmergingFixed = uniq(emergingRankedItems.map((x) => x.title)).slice(
+      0,
+      MAX_LOG_ITEMS_PER_SECTION
+    );
+    const subjectsFixed = uniq(topSubjects.map((x) => x.title)).slice(
+      0,
+      MAX_LOG_ITEMS_PER_SECTION
+    );
+
+    // item archetypes
+    const itemArchetypes = {
+      strengths: buildItemArchetypeMap(topStrengths, included),
+      environments: buildItemArchetypeMap(topEnvironments, included),
+      fit_areas: buildItemArchetypeMap(topFitAreas, included),
+      subjects: buildItemArchetypeMap(topSubjects, included),
+      roles_classic: buildItemArchetypeMap(classicRankedItems, included),
+      roles_emerging: buildItemArchetypeMap(emergingRankedItems, included),
+    };
+
+    // SECTION-AWARE subdim pools
+    const strengthSubdims = filterSubdimsByGroupsOrdered(
+      finalAllowedSubdims,
+      ["whoYouAre", "whatYouLove", "whatMatters"]
+    );
+    const envSubdims = filterSubdimsByGroupsOrdered(
+      finalAllowedSubdims,
+      ["howYouWorkBest", "whatMatters"]
+    );
+    const fitAreaSubdims = filterSubdimsByGroupsOrdered(
+      finalAllowedSubdims,
+      ["whatYouLove", "whatMatters"]
+    );
+    const subjectSubdims = filterSubdimsByGroupsOrdered(
+      finalAllowedSubdims,
+      ["whatYouLove", "whoYouAre"]
+    );
+    const roleSubdims = filterSubdimsByGroupsOrdered(
+      finalAllowedSubdims,
+      ["whatYouLove", "howYouWorkBest", "whatMatters"]
+    );
+
+    // item subdim hints — NO cross-item de-dup, max 1 per item
+    const itemSubdimHints = {
+      strengths: buildItemSubdimHintsWithPicker(topStrengths, strengthSubdims, includedSet, 1),
+      environments: buildItemSubdimHintsWithPicker(topEnvironments, envSubdims, includedSet, 1),
+      fit_areas: buildItemSubdimHintsWithPicker(topFitAreas, fitAreaSubdims, includedSet, 1),
+      subjects: buildItemSubdimHintsWithPicker(topSubjects, subjectSubdims, includedSet, 1),
+      roles_classic: buildItemSubdimHintsWithPicker(
+        classicRankedItems,
+        roleSubdims,
+        includedSet,
+        1
+      ),
+      roles_emerging: buildItemSubdimHintsWithPicker(
+        emergingRankedItems,
+        roleSubdims,
+        includedSet,
+        1
+      ),
+    };
+
+    // debug: see what we actually handed to the LLM
+    if (VERBOSE) {
+      console.log("itemSubdimHints:", JSON.stringify(itemSubdimHints, null, 2));
+    }
+
+    // flattened list to show the LLM what it's allowed to use
+    const allowedSubdimsFlattened = Array.from(
+      new Set(
+        Object.values(itemSubdimHints)
+          .flatMap((obj) => Object.values(obj))
+          .flat()
+      )
+    );
+
+    if (DEV_NO_LLM) {
+      return res.json({
+        summary: "# Summary\n\n1) Dev mode: LLM skipped.",
+        diagnostics: {
+          included,
+          strengths: strengthsFixed,
+          environments: envsFixed,
+          fit_areas: areasFixed,
+          roles_classic: rolesClassicFixed,
+          roles_emerging: rolesEmergingFixed,
+          subjects: subjectsFixed,
+          itemArchetypes,
+          itemSubdimHints,
+          allowedSubdims: allowedSubdimsFlattened,
+        },
+      });
+    }
+
+    const prompt = buildReportPrompt({
+      showSubdimScores: false,
+      archetypes,
+      age,
+      status,
+      subjects,
+      allowedArchetypes: included,
+      allowedSubdims: allowedSubdimsFlattened,
+      strengthsFixed,
+      envsFixed,
+      areasFixed,
+      rolesClassicFixed,
+      rolesEmergingFixed,
+      subjectsFixed,
+      itemArchetypes,
+      itemSubdimHints,
+      subdimScores: [],
+    });
+
+const messages = [{ role: "user", content: prompt }];
+
+const summary = await callModels(messages);
+
+    if (LOG_SUMMARY) {
+      console.log(`[${rid}] Full Prose Summary:\n${summary}`);
+    }
+
     return res.json({ summary });
-
   } catch (err) {
     const status = err.status || err.response?.status || 500;
     const data = err.response?.data || err.message || String(err);
-    console.error("❌ Server error:", status, data);
-    return res.status(500).json({ summary: "⚠️ Failed to generate summary.", error: data });
+    console.error(`❌ [${rid}] Server error:`, status, data, err.stack);
+    return res
+      .status(status)
+      .json({ summary: "⚠️ Failed to generate summary.", error: data, requestId: req._rid });
   }
 });
 

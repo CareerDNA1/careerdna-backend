@@ -1,0 +1,21 @@
+[
+  { "title": "Structured and process-oriented", "archetypes": ["Organizer", "Achiever"] },
+  { "title": "Analytical and research-focused", "archetypes": ["Thinker", "Organizer"] },
+  { "title": "Precision and quality-driven", "archetypes": ["Organizer", "Thinker"] },
+  { "title": "Corporate and goal-driven", "archetypes": ["Achiever", "Organizer"] },
+  { "title": "Strategic and commercial", "archetypes": ["Visionary", "Achiever"] },
+  { "title": "Dynamic and fast-paced", "archetypes": ["Achiever", "Explorer"] },
+  { "title": "Change and transformation", "archetypes": ["Visionary", "Achiever"] },
+  { "title": "Flexible and autonomous", "archetypes": ["Explorer", "Thinker"] },
+  { "title": "Creative and design-driven", "archetypes": ["Creator", "Visionary"] },
+  { "title": "Innovation and start-up", "archetypes": ["Visionary", "Creator", "Achiever"] },
+  { "title": "Hands-on and practical", "archetypes": ["Creator", "Organizer"] },
+  { "title": "Collaborative and team-oriented", "archetypes": ["Connector", "Organizer"] },
+  { "title": "Supportive and people-focused", "archetypes": ["Connector", "Visionary"] },
+  { "title": "Service and social-impact", "archetypes": ["Connector", "Visionary"] },
+  { "title": "Public and policy", "archetypes": ["Thinker", "Visionary"] },
+  { "title": "Learning and growth-oriented", "archetypes": ["Thinker", "Connector", "Visionary"] },
+  { "title": "Independent and remote", "archetypes": ["Thinker", "Explorer"] },
+  { "title": "Exploratory and field-based", "archetypes": ["Explorer", "Achiever"] },
+  { "title": "Purpose-driven and mission-led", "archetypes": ["Visionary", "Connector"] }
+]

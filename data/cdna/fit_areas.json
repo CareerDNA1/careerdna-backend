@@ -1,0 +1,29 @@
+[
+  { "title": "Mathematics, Data & Analytics", "archetypes": ["Thinker", "Organizer", "Achiever"] },
+  { "title": "Computer Science & AI", "archetypes": ["Thinker", "Creator", "Explorer"] },
+  { "title": "Physical & Chemical Sciences", "archetypes": ["Thinker", "Organizer", "Explorer"] },
+  { "title": "Biological, Biomedical & Health Sciences", "archetypes": ["Thinker", "Connector", "Organizer"] },
+  { "title": "Earth, Environmental & Climate", "archetypes": ["Explorer", "Visionary"] },
+
+  { "title": "Psychology, Behavioural & Social Sciences", "archetypes": ["Connector", "Thinker"] },
+  { "title": "Humanities, Languages & Communication", "archetypes": ["Connector", "Creator"] },
+
+  { "title": "Engineering, Manufacturing & Systems", "archetypes": ["Organizer", "Thinker", "Achiever"] },
+  { "title": "Architecture, Design & Built Environments", "archetypes": ["Creator", "Organizer", "Visionary"] },
+
+  { "title": "Public Policy, Government & Civic Innovation", "archetypes": ["Visionary", "Connector"] },
+  { "title": "Law, Regulation & Compliance", "archetypes": ["Organizer", "Thinker"] },
+  { "title": "Education, Learning & Development", "archetypes": ["Connector", "Visionary"] },
+  { "title": "People, HR & Organisational Development", "archetypes": ["Connector", "Organizer", "Achiever"] },
+
+  { "title": "Design, UX & Human-Centred Innovation", "archetypes": ["Creator", "Connector"] },
+  { "title": "Media, Content & Creative Industries", "archetypes": ["Creator", "Connector", "Visionary"] },
+  { "title": "Marketing, Brand & Growth", "archetypes": ["Achiever", "Connector", "Creator"] },
+  { "title": "Entrepreneurship & Venture Creation", "archetypes": ["Visionary", "Achiever", "Explorer"] },
+
+  { "title": "Strategy, Research & Consulting", "archetypes": ["Thinker", "Visionary", "Achiever"] },
+  { "title": "Finance, Economics & FinTech", "archetypes": ["Achiever", "Organizer", "Thinker"] },
+  { "title": "Operations, Supply Chain & Quality", "archetypes": ["Organizer", "Achiever", "Thinker"] },
+  { "title": "Technology, Systems & Infrastructure", "archetypes": ["Organizer", "Creator"] },
+  { "title": "Social Impact, Sustainability & ESG", "archetypes": ["Visionary", "Connector", "Explorer"] }
+]
