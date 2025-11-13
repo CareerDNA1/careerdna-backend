@@ -25,6 +25,12 @@ GENERAL LANGUAGE RULES
 - Do not invent activities or achievements; describe tendencies.
 - ALWAYS ground the explanation in the archetypes passed for that item.
 - NEVER use the word "energy". Use "blend", "traits", "profile", or "style".
+- Do NOT claim intense emotions or motives such as "passion", "love", "deep desire", or
+  "obsession". Instead use softer language like "may enjoy", "could find satisfying",
+  "often suits people who...", or "could be a good match if you enjoy...".
+- Do NOT label the user directly as "innovative", "a natural leader", etc. unless that exact
+  word appears either in the item title (e.g. "Innovation") or in the definitions in META.
+  Prefer phrasing like "this path often suits people who like to experiment and try new ideas".
 
 VARIETY RULES
 - Do NOT start two bullets in a row with the same word.

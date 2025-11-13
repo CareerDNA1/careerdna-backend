@@ -1,6 +1,7 @@
 // data/subdim_matrix.js
 // Central CareerDNA subdimension ↔ archetype weight matrix (0–1 scale)
 // Source of truth: utils/archetypeWeights.js (24 subdimensions × 7 archetypes)
+// NOTE: This file mirrors utils/archetypeWeights.js exactly. Keep them in sync.
 
 module.exports = {
   // WHO YOU ARE
@@ -10,8 +11,8 @@ module.exports = {
     Creator: 0.6,
     Explorer: 1.0,
     Organizer: 0,
-    Thinker: 0.3,
-    Visionary: 0.5
+    Thinker: 0,
+    Visionary: 0.8
   },
   "Reliability & Focus": {
     Achiever: 0.8,
@@ -19,12 +20,12 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 1.0,
-    Thinker: 0.4,
+    Thinker: 0.5,
     Visionary: 0
   },
   "Emotional Stability": {
     Achiever: 0,
-    Connector: 0.7,
+    Connector: 0.5,
     Creator: 0,
     Explorer: 0,
     Organizer: 0.5,
@@ -34,7 +35,7 @@ module.exports = {
   "Uncertainty Tolerance": {
     Achiever: 0.5,
     Connector: 0,
-    Creator: 0,
+    Creator: 0.5,
     Explorer: 1.0,
     Organizer: 0.0,
     Thinker: 0,
@@ -46,7 +47,7 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 0.5,
-    Thinker: 0.3,
+    Thinker: 0,
     Visionary: 0
   },
   "Sociability & Extroversion": {
@@ -88,10 +89,10 @@ module.exports = {
     Visionary: 0
   },
   "Entrepreneurial Drive": {
-    Achiever: 0.3,
+    Achiever: 0,
     Connector: 0,
     Creator: 0,
-    Explorer: 0.3,
+    Explorer: 0,
     Organizer: 0,
     Thinker: 0,
     Visionary: 1.0
@@ -101,7 +102,7 @@ module.exports = {
     Connector: 0,
     Creator: 1.0,
     Explorer: 0.5,
-    Organizer: 0.3,
+    Organizer: 0,
     Thinker: 0,
     Visionary: 0
   },
@@ -122,14 +123,14 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 0,
-    Thinker: 0.4,
+    Thinker: 0,
     Visionary: 1.0
   },
   "Independence & Autonomy": {
     Achiever: 0.5,
     Connector: 0,
-    Creator: 0.5,
-    Explorer: 0.3,
+    Creator: 0.8,
+    Explorer: 0.5,
     Organizer: 0,
     Thinker: 0.5,
     Visionary: 1.0
@@ -179,7 +180,7 @@ module.exports = {
     Explorer: 0,
     Organizer: 0.5,
     Thinker: 0,
-    Visionary: 0
+    Visionary: 0.5
   },
   "Organisation & Systems Orientation": {
     Achiever: 0,
@@ -214,7 +215,7 @@ module.exports = {
     Creator: 0.5,
     Explorer: 1.0,
     Organizer: 0,
-    Thinker: 0.3,
+    Thinker: 0.5,
     Visionary: 0.5
   },
   "Attention to Detail": {

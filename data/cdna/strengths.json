@@ -1,34 +1,39 @@
 [
-  { "title": "Analytical thinking", "archetypes": ["Thinker"] },
-  { "title": "Critical thinking", "archetypes": ["Thinker", "Visionary"] },
+{ "title": "Analytical thinking", "archetypes": ["Thinker"] },
+{ "title": "Critical thinking", "archetypes": ["Thinker", "Visionary"] },
+{ "title": "Problem-solving", "archetypes": ["Thinker", "Achiever"] },
+{ "title": "Attention to detail", "archetypes": ["Organizer", "Thinker"] },
+{ "title": "Process improvement", "archetypes": ["Organizer", "Thinker"] },
+{ "title": "Reliability", "archetypes": ["Organizer", "Achiever", "Connector"] },
 
-  { "title": "Problem-solving", "archetypes": ["Thinker", "Achiever"] },
-  { "title": "Attention to detail", "archetypes": ["Organizer", "Thinker"] },
-  { "title": "Process improvement", "archetypes": ["Organizer", "Thinker"] },
-  { "title": "Reliability", "archetypes": ["Organizer", "Achiever", "Connector"] },
 
-  { "title": "Communication", "archetypes": ["Connector", "Visionary"] },
-  { "title": "Collaboration", "archetypes": ["Connector", "Organizer"] },
-  { "title": "Stakeholder management", "archetypes": ["Connector", "Achiever", "Organizer"] },
-  { "title": "Empathy", "archetypes": ["Connector", "Visionary"] },
-  { "title": "Emotional intelligence", "archetypes": ["Connector", "Organizer"] },
+{ "title": "Communication", "archetypes": ["Connector", "Visionary"] },
+{ "title": "Collaboration", "archetypes": ["Connector", "Organizer"] },
+{ "title": "Stakeholder management", "archetypes": ["Connector", "Achiever", "Organizer"] },
+{ "title": "Empathy", "archetypes": ["Connector", "Visionary"] },
+{ "title": "Emotional intelligence", "archetypes": ["Connector", "Organizer"] },
 
-  { "title": "Planning & organisation", "archetypes": ["Organizer", "Achiever"] },
-  { "title": "Time management", "archetypes": ["Organizer", "Achiever"] },
 
-  { "title": "Ownership & drive", "archetypes": ["Achiever", "Visionary"] },
-  { "title": "Initiative", "archetypes": ["Achiever", "Explorer", "Visionary"] },
-  { "title": "Resilience", "archetypes": ["Achiever", "Organizer", "Connector"] },
+{ "title": "Planning & organisation", "archetypes": ["Organizer", "Achiever"] },
+{ "title": "Time management", "archetypes": ["Organizer", "Achiever"] },
 
-  { "title": "Learning agility", "archetypes": ["Explorer", "Thinker"] },
-  { "title": "Curiosity", "archetypes": ["Explorer", "Thinker", "Visionary"] },
-  { "title": "Adaptability", "archetypes": ["Explorer", "Visionary"] },
 
-  { "title": "Creativity", "archetypes": ["Creator", "Visionary"] },
-  { "title": "Innovation", "archetypes": ["Creator", "Achiever", "Visionary", "Explorer"] },
-  { "title": "Design thinking", "archetypes": ["Creator", "Thinker", "Explorer"] },
+{ "title": "Ownership & drive", "archetypes": ["Achiever", "Visionary"] },
+{ "title": "Initiative", "archetypes": ["Achiever", "Explorer", "Visionary"] },
+{ "title": "Resilience", "archetypes": ["Achiever", "Organizer", "Connector"] },
 
-  { "title": "Strategic thinking", "archetypes": ["Visionary", "Thinker"] },
-  { "title": "Leadership & influence", "archetypes": ["Achiever", "Visionary", "Connector"] },
-  { "title": "Commercial acumen", "archetypes": ["Achiever", "Visionary"] }
+
+{ "title": "Learning agility", "archetypes": ["Explorer", "Thinker"] },
+{ "title": "Curiosity", "archetypes": ["Explorer", "Thinker", "Visionary"] },
+{ "title": "Adaptability", "archetypes": ["Explorer", "Visionary"] },
+
+
+{ "title": "Creativity", "archetypes": ["Creator", "Visionary"] },
+{ "title": "Innovation", "archetypes": ["Creator", "Explorer", "Visionary"] },
+{ "title": "Design thinking", "archetypes": ["Creator", "Connector", "Thinker", "Explorer"] },
+
+
+{ "title": "Strategic thinking", "archetypes": ["Visionary", "Thinker"] },
+{ "title": "Leadership & influence", "archetypes": ["Achiever", "Visionary", "Connector"] },
+{ "title": "Commercial acumen", "archetypes": ["Achiever", "Visionary"] }
 ]
