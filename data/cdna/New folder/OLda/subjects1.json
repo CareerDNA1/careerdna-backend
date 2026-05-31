@@ -1,0 +1,2873 @@
+[
+  {
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "careerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Organizer",
+    "secondaryArchetype": "Achiever",
+    "archetypes": [
+      "Thinker",
+      "Organizer",
+      "Achiever"
+    ],
+    "description": "For people drawn to evidence, numbers, modelling, forecasting, optimisation, and structured decision-making.",
+    "subjects": [
+      {
+        "id": "sub_mathematics_and_statistics",
+        "title": "Mathematics and Statistics",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Data, Analytics & Quantitative Insight career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_finance_economics_investment"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Independent Working Approach",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "quantitative-analysis",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever"
+      },
+      {
+        "id": "sub_data_science_and_analytics",
+        "title": "Data Science and Analytics",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Data, Analytics & Quantitative Insight career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Clarity & Structure Preference",
+          "Independent Working Approach",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "quantitative-analysis",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Clarity & Structure Preference"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_economics_and_statistics",
+        "title": "Economics and Statistics",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Data, Analytics & Quantitative Insight career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_finance_economics_investment"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Attention to Detail",
+          "Independent Working Approach",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "quantitative-analysis",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Curiosity & Openness"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_actuarial_science",
+        "title": "Actuarial Science",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Data, Analytics & Quantitative Insight career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_finance_economics_investment"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus",
+          "Financial Ambition",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "quantitative-analysis",
+        "coreSubdimensions": [
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Financial Ambition",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "careerWorldTitle": "Software, AI & Digital Systems",
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Creator",
+    "secondaryArchetype": "Explorer",
+    "archetypes": [
+      "Thinker",
+      "Creator",
+      "Explorer"
+    ],
+    "description": "For people who like building digital tools, coding systems, solving technical problems, and creating intelligent products.",
+    "subjects": [
+      {
+        "id": "sub_computer_science_and_artificial_intelligence",
+        "title": "Computer Science",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Software, AI & Digital Systems career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Novelty & Variety Seeking"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "software-computing",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Clarity & Structure Preference",
+          "Attention to Detail",
+          "Novelty & Variety Seeking"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_computer_science_with_cyber_security",
+        "title": "Cyber Security",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Software, AI & Digital Systems career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "software-computing",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Independent Working Approach",
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Creator"
+      },
+      {
+        "id": "sub_software_engineering",
+        "title": "Software Engineering",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Software, AI & Digital Systems career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Hands-On Engagement",
+          "Clarity & Structure Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "software-computing",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Clarity & Structure Preference",
+          "Attention to Detail",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Creator"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "careerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primaryArchetype1": "Organizer",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Explorer",
+    "archetypes": [
+      "Organizer",
+      "Thinker",
+      "Explorer"
+    ],
+    "description": "For people who enjoy designing, improving, and delivering reliable physical systems, processes, machines, and infrastructure.",
+    "subjects": [
+      {
+        "id": "sub_mechanical_engineering",
+        "title": "Mechanical Engineering",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Engineering, Manufacturing & Infrastructure career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Hands-On Engagement",
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "engineering-systems",
+        "coreSubdimensions": [
+          "Hands-On Engagement",
+          "Investigative Curiosity",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_civil_engineering",
+        "title": "Civil Engineering",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Engineering, Manufacturing & Infrastructure career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_architecture_built_environment_spatial_design"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "civil-infrastructure",
+        "coreSubdimensions": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_electrical_and_electronic_engineering",
+        "title": "Electrical and Electronic Engineering",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Engineering, Manufacturing & Infrastructure career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "engineering-systems",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Creator"
+      },
+      {
+        "id": "sub_chemical_engineering",
+        "title": "Chemical Engineering",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Engineering, Manufacturing & Infrastructure career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Organisation & Systems Orientation",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "engineering-systems",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Organisation & Systems Orientation"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_aeronautical_and_aerospace_engineering",
+        "title": "Aeronautical and Aerospace Engineering",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Engineering, Manufacturing & Infrastructure career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "engineering-systems",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "careerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primaryArchetype1": "Creator",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "Organizer",
+    "archetypes": [
+      "Creator",
+      "Visionary",
+      "Organizer"
+    ],
+    "description": "For people drawn to shaping spaces, buildings, and places through a blend of design imagination, long-term thinking, and practical structure.",
+    "subjects": [
+      {
+        "id": "sub_architecture",
+        "title": "Architecture",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Architecture, Built Environment & Spatial Design career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_creative_arts_design_experience"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Organisation & Systems Orientation",
+          "Purpose & Impact",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "architecture-spatial-design",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Organisation & Systems Orientation",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_architecture_and_planning",
+        "title": "Urban Planning",
+        "archetypes": [
+          "Visionary",
+          "Organizer",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Architecture, Built Environment & Spatial Design career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_creative_arts_design_experience"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Purpose & Impact",
+          "Organisation & Systems Orientation",
+          "Belonging & Connection",
+          "Clarity & Structure Preference",
+          "Investigative Curiosity"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "architecture-spatial-design",
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Organisation & Systems Orientation",
+          "Belonging & Connection"
+        ],
+        "secondarySubdimensions": [
+          "Clarity & Structure Preference",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_architectural_technology",
+        "title": "Architectural Technology",
+        "archetypes": [
+          "Organizer",
+          "Creator",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Architecture, Built Environment & Spatial Design career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Organisation & Systems Orientation",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Creative Expression",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "architecture-spatial-design",
+        "coreSubdimensions": [
+          "Organisation & Systems Orientation",
+          "Attention to Detail",
+          "Hands-On Engagement"
+        ],
+        "secondarySubdimensions": [
+          "Creative Expression",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_construction_management",
+        "title": "Construction Management",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Architecture, Built Environment & Spatial Design career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "construction-delivery",
+        "coreSubdimensions": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Pace & Intensity Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Thinker"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "careerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Explorer",
+    "secondaryArchetype": "Organizer",
+    "archetypes": [
+      "Thinker",
+      "Explorer",
+      "Organizer"
+    ],
+    "description": "For people motivated by discovery, experimentation, evidence, and deep understanding in scientific or laboratory settings.",
+    "subjects": [
+      {
+        "id": "sub_biomedical_science",
+        "title": "Biomedical Science",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Science, Research & Laboratory Innovation career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_health_care_clinical_practice"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Reliability & Focus",
+          "Helping Orientation",
+          "Clarity & Structure Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Helping Orientation",
+          "Clarity & Structure Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_biotechnology",
+        "title": "Biotechnology",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Science, Research & Laboratory Innovation career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_software_ai_digital_systems",
+          "cw_health_care_clinical_practice"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Hands-On Engagement",
+          "Novelty & Variety Seeking",
+          "Attention to Detail"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Hands-On Engagement"
+        ],
+        "secondarySubdimensions": [
+          "Novelty & Variety Seeking",
+          "Attention to Detail"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Creator"
+      },
+      {
+        "id": "sub_chemistry",
+        "title": "Chemistry",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Science, Research & Laboratory Innovation career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus",
+          "Hands-On Engagement"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Hands-On Engagement"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_biology",
+        "title": "Biology",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Science, Research & Laboratory Innovation career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_health_care_clinical_practice"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_physics",
+        "title": "Physics",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Science, Research & Laboratory Innovation career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Attention to Detail",
+          "Uncertainty Tolerance"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Uncertainty Tolerance"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Organizer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "careerWorldTitle": "Health, Care & Clinical Practice",
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Organizer",
+    "archetypes": [
+      "Connector",
+      "Thinker",
+      "Organizer"
+    ],
+    "description": "For people who want to support health and wellbeing through compassionate, evidence-informed, and dependable practice.",
+    "subjects": [
+      {
+        "id": "sub_medicine",
+        "title": "Medicine",
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Perseverance",
+          "Attention to Detail",
+          "Emotional Stability",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Perseverance",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Emotional Stability",
+          "Pace & Intensity Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Achiever",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_dentistry",
+        "title": "Dentistry",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus",
+          "Hands-On Engagement",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Pace & Intensity Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Achiever",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_pharmacy",
+        "title": "Pharmacy",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Helping Orientation",
+          "Reliability & Focus",
+          "Clarity & Structure Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Helping Orientation"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Clarity & Structure Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_paramedic_science",
+        "title": "Paramedic Science",
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Emotional Stability",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Emotional Stability",
+          "Pace & Intensity Preference"
+        ],
+        "secondarySubdimensions": [
+          "Team Collaboration",
+          "Reliability & Focus"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Achiever",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_radiography",
+        "title": "Radiography",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus",
+          "Hands-On Engagement",
+          "Investigative Curiosity"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_optometry",
+        "title": "Optometry",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Health, Care & Clinical Practice career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus",
+          "Investigative Curiosity",
+          "Clarity & Structure Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Investigative Curiosity",
+          "Clarity & Structure Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_nursing",
+        "title": "Nursing",
+        "archetypes": [
+          "Connector",
+          "Organizer",
+          "Thinker"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Core undergraduate healthcare route for students drawn to sustained care, teamwork, and dependable practice.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Team Collaboration",
+          "Emotional Stability",
+          "Reliability & Focus",
+          "Attention to Detail"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to capture the psychological demands of ongoing care, teamwork, and practical responsibility.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Team Collaboration",
+          "Emotional Stability"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Attention to Detail",
+          "Pace & Intensity Preference"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_physiotherapy",
+        "title": "Physiotherapy",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Distinct allied-health route combining patient support, practical rehabilitation, and structured clinical reasoning.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Team Collaboration",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to reflect practical rehabilitation, person-centred work, and structured care delivery.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Team Collaboration",
+          "Reliability & Focus",
+          "Emotional Stability"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_occupational_therapy",
+        "title": "Occupational Therapy",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Allied-health degree focused on helping people function, adapt, and regain independence in everyday life.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Hands-On Engagement",
+          "Belonging & Connection",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to reflect functional problem-solving, practical support, and person-centred rehabilitation.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "clinical-practice",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Hands-On Engagement",
+          "Belonging & Connection"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Reliability & Focus",
+          "Team Collaboration"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Organizer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "careerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Visionary",
+    "archetypes": [
+      "Connector",
+      "Thinker",
+      "Visionary"
+    ],
+    "description": "For people interested in understanding how people think, feel, behave, and change across individual, group, or societal contexts.",
+    "subjects": [
+      {
+        "id": "sub_psychology",
+        "title": "Psychology",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Psychology, Behaviour & Human Insight career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "psychology-behaviour",
+        "subjectFamily": "psychology",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Helping Orientation",
+          "Belonging & Connection"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_education_coaching_people_development",
+    "careerWorldTitle": "Education, Coaching & Learning Development",
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "Organizer",
+    "archetypes": [
+      "Connector",
+      "Visionary",
+      "Organizer"
+    ],
+    "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+    "subjects": [
+      {
+        "id": "sub_education",
+        "title": "Education Studies",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Education, Coaching & People Development career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Purpose & Impact",
+          "Team Collaboration",
+          "Belonging & Connection",
+          "Emotional Stability"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-development",
+        "subjectFamily": "education-learning",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Purpose & Impact",
+          "Team Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Belonging & Connection",
+          "Emotional Stability"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_social_work",
+        "title": "Social Work",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Education, Coaching & People Development career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Team Collaboration",
+          "Purpose & Impact",
+          "Emotional Stability"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "helping-development",
+        "subjectFamily": "social-support-development",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Team Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Purpose & Impact",
+          "Emotional Stability"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_early_childhood_studies",
+        "title": "Early Childhood Studies",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Undergraduate route focused on child development, learning, support, and educational growth.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Emotional Stability",
+          "Team Collaboration"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to capture learning support, development, and care-oriented educational contexts.",
+        "subjectCluster": "helping-development",
+        "subjectFamily": "education-learning",
+        "coreSubdimensions": [
+          "Helping Orientation",
+          "Purpose & Impact",
+          "Belonging & Connection"
+        ],
+        "secondarySubdimensions": [
+          "Emotional Stability",
+          "Team Collaboration",
+          "Organisation & Systems Orientation"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_law_governance_public_impact",
+    "careerWorldTitle": "Law, Governance & Public Impact",
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Organizer",
+    "secondaryArchetype": "Visionary",
+    "archetypes": [
+      "Thinker",
+      "Organizer",
+      "Visionary"
+    ],
+    "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
+    "subjects": [
+      {
+        "id": "sub_law",
+        "title": "Law",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Law, Governance & Public Impact career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Clarity & Structure Preference",
+          "Attention to Detail",
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "policy-governance",
+        "subjectFamily": "law-policy-public",
+        "coreSubdimensions": [
+          "Clarity & Structure Preference",
+          "Attention to Detail",
+          "Investigative Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_politics",
+        "title": "Politics",
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Law, Governance & Public Impact career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Belonging & Connection",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "policy-governance",
+        "subjectFamily": "law-policy-public",
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Independent Working Approach"
+        ],
+        "secondarySubdimensions": [
+          "Belonging & Connection",
+          "Curiosity & Openness"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_criminology",
+        "title": "Criminology",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Law, Governance & Public Impact career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Independent Working Approach",
+          "Clarity & Structure Preference",
+          "Belonging & Connection"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "policy-governance",
+        "subjectFamily": "law-policy-public",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Independent Working Approach"
+        ],
+        "secondarySubdimensions": [
+          "Clarity & Structure Preference",
+          "Belonging & Connection"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_international_relations",
+        "title": "International Relations",
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Law, Governance & Public Impact career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Purpose & Impact",
+          "Curiosity & Openness",
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "policy-governance",
+        "subjectFamily": "law-policy-public",
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Curiosity & Openness",
+          "Belonging & Connection"
+        ],
+        "secondarySubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Thinker"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "careerWorldTitle": "Business, Management & Commercial Strategy",
+    "primaryArchetype1": "Achiever",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "Thinker",
+    "archetypes": [
+      "Achiever",
+      "Visionary",
+      "Thinker"
+    ],
+    "description": "For people who enjoy commercial decision-making, cross-functional management, business performance, and leading growth and change.",
+    "subjects": [
+      {
+        "id": "sub_business_management",
+        "title": "Business Management",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Business, Management & Commercial Leadership career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_finance_economics_investment"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Entrepreneurial Drive",
+          "Financial Ambition",
+          "Team Collaboration",
+          "Organisation & Systems Orientation",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "business-management-services",
+        "coreSubdimensions": [
+          "Organisation & Systems Orientation",
+          "Team Collaboration",
+          "Pace & Intensity Preference"
+        ],
+        "secondarySubdimensions": [
+          "Recognition & Visibility",
+          "Financial Ambition",
+          "Reliability & Focus",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Achiever",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_business_analytics",
+        "title": "Business Analytics",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Business, Management & Commercial Leadership career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Organisation & Systems Orientation",
+          "Attention to Detail",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "business-management-services",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Organisation & Systems Orientation",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Financial Ambition",
+          "Clarity & Structure Preference",
+          "Reliability & Focus",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Organizer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_finance_economics_investment",
+    "careerWorldTitle": "Finance, Economics & Investment",
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Achiever",
+    "secondaryArchetype": "Organizer",
+    "archetypes": [
+      "Thinker",
+      "Achiever",
+      "Organizer"
+    ],
+    "description": "For people interested in financial systems, markets, value, risk, incentives, and rigorous decision-making with real-world impact.",
+    "subjects": [
+      {
+        "id": "sub_finance",
+        "title": "Finance",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Finance, Economics & Investment career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Pace & Intensity Preference",
+          "Attention to Detail",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "finance-economics",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Pace & Intensity Preference",
+          "Clarity & Structure Preference",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_accounting_and_finance",
+        "title": "Accounting and Finance",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Finance, Economics & Investment career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Organisation & Systems Orientation",
+          "Financial Ambition"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "finance-economics",
+        "coreSubdimensions": [
+          "Attention to Detail",
+          "Financial Ambition",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Investigative Curiosity",
+          "Clarity & Structure Preference",
+          "Pace & Intensity Preference",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "balanced",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever"
+      },
+      {
+        "id": "sub_economics",
+        "title": "Economics",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Finance, Economics & Investment career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight",
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Financial Ambition",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "finance-economics",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Financial Ambition",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Recognition & Visibility"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_accounting",
+        "title": "Accounting",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Thinker"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Distinct undergraduate route for students drawn to precision, structure, reporting, and financial control.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus",
+          "Organisation & Systems Orientation",
+          "Financial Ambition"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to reflect structured, accuracy-driven financial work.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "finance-economics",
+        "coreSubdimensions": [
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Reliability & Focus"
+        ],
+        "secondarySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Financial Ambition",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Thinker"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "careerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Achiever",
+    "secondaryArchetype": "Explorer",
+    "archetypes": [
+      "Visionary",
+      "Achiever",
+      "Explorer"
+    ],
+    "description": "For people who like creating new ideas, launching ventures, building products, and turning opportunities into action.",
+    "subjects": [
+      {
+        "id": "sub_entrepreneurship_and_innovation",
+        "title": "Entrepreneurship and Innovation",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Entrepreneurship, Innovation & Venture Building career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Entrepreneurial Drive",
+          "Novelty & Variety Seeking",
+          "Recognition & Visibility",
+          "Independent Working Approach",
+          "Financial Ambition"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "innovation-commercial",
+        "subjectFamily": "entrepreneurship-innovation",
+        "coreSubdimensions": [
+          "Entrepreneurial Drive",
+          "Independence & Autonomy",
+          "Financial Ambition"
+        ],
+        "secondarySubdimensions": [
+          "Recognition & Visibility",
+          "Novelty & Variety Seeking",
+          "Purpose & Impact",
+          "Curiosity & Openness"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Explorer"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_marketing_media_communication",
+    "careerWorldTitle": "Marketing, Media & Communication",
+    "primaryArchetype1": "Creator",
+    "primaryArchetype2": "Connector",
+    "secondaryArchetype": "Achiever",
+    "archetypes": [
+      "Creator",
+      "Connector",
+      "Achiever"
+    ],
+    "description": "For people who enjoy understanding audiences, shaping messages, building brands, and creating content that connects and influences.",
+    "subjects": [
+      {
+        "id": "sub_marketing",
+        "title": "Marketing",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Marketing, Media & Communication career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Sociability & Extroversion",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "media-marketing-communication",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Recognition & Visibility",
+          "Pace & Intensity Preference"
+        ],
+        "secondarySubdimensions": [
+          "Belonging & Connection",
+          "Sociability & Extroversion",
+          "Financial Ambition",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Achiever"
+      },
+      {
+        "id": "sub_journalism",
+        "title": "Journalism",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Marketing, Media & Communication career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Creative Expression",
+          "Independent Working Approach",
+          "Sociability & Extroversion",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "media-marketing-communication",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Sociability & Extroversion",
+          "Creative Expression"
+        ],
+        "secondarySubdimensions": [
+          "Purpose & Impact",
+          "Recognition & Visibility",
+          "Curiosity & Openness",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Creator"
+      },
+      {
+        "id": "sub_media_and_communications",
+        "title": "Media and Communications",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Marketing, Media & Communication career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs",
+          "cw_creative_arts_design_experience"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Curiosity & Openness",
+          "Recognition & Visibility",
+          "Sociability & Extroversion"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "media-marketing-communication",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Recognition & Visibility",
+          "Sociability & Extroversion"
+        ],
+        "secondarySubdimensions": [
+          "Belonging & Connection",
+          "Curiosity & Openness",
+          "Team Collaboration",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_public_relations_and_communications",
+        "title": "Public Relations and Communications",
+        "archetypes": [
+          "Connector",
+          "Creator",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Marketing, Media & Communication career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_business_strategy_commercial_leadership"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Belonging & Connection",
+          "Sociability & Extroversion",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Team Collaboration"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "media-marketing-communication",
+        "coreSubdimensions": [
+          "Belonging & Connection",
+          "Sociability & Extroversion",
+          "Recognition & Visibility"
+        ],
+        "secondarySubdimensions": [
+          "Team Collaboration",
+          "Creative Expression",
+          "Pace & Intensity Preference",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Achiever"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "careerWorldTitle": "Creative Arts, Design & Experience",
+    "primaryArchetype1": "Creator",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "Explorer",
+    "archetypes": [
+      "Creator",
+      "Visionary",
+      "Explorer"
+    ],
+    "description": "For people drawn to imaginative, expressive, and original work in art, design, storytelling, performance, or experience creation.",
+    "subjects": [
+      {
+        "id": "sub_product_design",
+        "title": "Product Design",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_architecture_built_environment_spatial_design",
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Novelty & Variety Seeking",
+          "Attention to Detail",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "visual-design-arts",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Investigative Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_graphic_design",
+        "title": "Graphic Design",
+        "archetypes": [
+          "Creator",
+          "Thinker",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Recognition & Visibility",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "visual-design-arts",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Attention to Detail",
+          "Recognition & Visibility"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Independence & Autonomy",
+          "Belonging & Connection"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_film_production",
+        "title": "Film Production",
+        "archetypes": [
+          "Creator",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Recognition & Visibility",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "screen-digital-creative",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Recognition & Visibility",
+          "Independent Working Approach",
+          "Perseverance",
+          "Belonging & Connection"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "flagship",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_music",
+        "title": "Music",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Recognition & Visibility",
+          "Perseverance",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "performing-arts",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Perseverance"
+        ],
+        "secondarySubdimensions": [
+          "Recognition & Visibility",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Belonging & Connection"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_photography",
+        "title": "Photography",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Connector"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Recognition & Visibility",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "visual-design-arts",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Recognition & Visibility",
+          "Curiosity & Openness"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Connector"
+      },
+      {
+        "id": "sub_computer_games_and_animation",
+        "title": "Computer Games and Animation",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "screen-digital-creative",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Recognition & Visibility",
+          "Investigative Curiosity",
+          "Novelty & Variety Seeking"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_fashion_design",
+        "title": "Fashion Design",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Achiever"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Creative Arts, Design & Experience career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Novelty & Variety Seeking",
+          "Attention to Detail",
+          "Recognition & Visibility"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "visual-design-arts",
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "secondarySubdimensions": [
+          "Novelty & Variety Seeking",
+          "Recognition & Visibility",
+          "Curiosity & Openness",
+          "Independence & Autonomy"
+        ],
+        "modifierSubdimensions": [],
+        "subjectPriority": "specialist",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Achiever"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "careerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Explorer",
+    "archetypes": [
+      "Visionary",
+      "Thinker",
+      "Explorer"
+    ],
+    "description": "For people motivated by climate, sustainability, environmental systems, and building a more resilient future.",
+    "subjects": [
+      {
+        "id": "sub_geography",
+        "title": "Geography",
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Environment, Sustainability & Planetary Futures career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Curiosity & Openness",
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Hands-On Engagement"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "environment-sustainability",
+        "subjectFamily": "environment-geography",
+        "coreSubdimensions": [
+          "Curiosity & Openness",
+          "Investigative Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Belonging & Connection",
+          "Hands-On Engagement"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Explorer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_environmental_science",
+        "title": "Environmental Science",
+        "archetypes": [
+          "Explorer",
+          "Visionary",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Environment, Sustainability & Planetary Futures career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Hands-On Engagement",
+          "Uncertainty Tolerance"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "environment-sustainability",
+        "subjectFamily": "environment-geography",
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Hands-On Engagement",
+          "Uncertainty Tolerance"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Explorer",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_environmental_and_earth_sciences",
+        "title": "Earth Sciences",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Environment, Sustainability & Planetary Futures career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Hands-On Engagement",
+          "Attention to Detail",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "environment-sustainability",
+        "subjectFamily": "environment-geography",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Hands-On Engagement"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Organizer"
+      },
+      {
+        "id": "sub_agriculture",
+        "title": "Agriculture",
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Environment, Sustainability & Planetary Futures career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Purpose & Impact",
+          "Reliability & Focus",
+          "Investigative Curiosity"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "environment-sustainability",
+        "subjectFamily": "environment-geography",
+        "coreSubdimensions": [
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Reliability & Focus",
+          "Investigative Curiosity"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Explorer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      }
+    ]
+  },
+  {
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "careerWorldTitle": "Languages, Culture & Global Affairs",
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Visionary",
+    "archetypes": [
+      "Connector",
+      "Thinker",
+      "Visionary"
+    ],
+    "description": "For people interested in culture, language, identity, global issues, and understanding how societies communicate and change.",
+    "subjects": [
+      {
+        "id": "sub_sociology",
+        "title": "Sociology",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Society, Culture, Languages & Global Affairs career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight",
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Curiosity & Openness",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "coreSubdimensions": [
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Curiosity & Openness",
+          "Independent Working Approach"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_anthropology",
+        "title": "Anthropology",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Society, Culture, Languages & Global Affairs career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Curiosity & Openness",
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "coreSubdimensions": [
+          "Curiosity & Openness",
+          "Belonging & Connection",
+          "Investigative Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer"
+      },
+      {
+        "id": "sub_history",
+        "title": "History",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Society, Culture, Languages & Global Affairs career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Attention to Detail",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Visionary"
+      },
+      {
+        "id": "sub_modern_languages",
+        "title": "Modern Languages",
+        "archetypes": [
+          "Connector",
+          "Creator",
+          "Thinker"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Society, Culture, Languages & Global Affairs career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": false,
+        "evidenceSubdims": [
+          "Belonging & Connection",
+          "Curiosity & Openness",
+          "Creative Expression",
+          "Independent Working Approach",
+          "Sociability & Extroversion"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "language-communication",
+        "coreSubdimensions": [
+          "Belonging & Connection",
+          "Curiosity & Openness",
+          "Creative Expression"
+        ],
+        "secondarySubdimensions": [
+          "Independent Working Approach",
+          "Sociability & Extroversion"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Thinker"
+      },
+      {
+        "id": "sub_philosophy",
+        "title": "Philosophy",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Creator"
+        ],
+        "signatureSource": "reconciled_master_bank",
+        "signatureRationale": "Curated as a clean undergraduate-style degree title that fits the Society, Culture, Languages & Global Affairs career world and stays distinct from the other subjects in this world.",
+        "adjacentCareerWorldIds": [
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Clarity & Structure Preference",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "reconciled_curated",
+        "evidenceNote": "Evidence subdimensions are curated from the CareerDNA subdimension framework and refined to reflect the psychological profile of this degree title.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "coreSubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness"
+        ],
+        "secondarySubdimensions": [
+          "Clarity & Structure Preference",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Creator"
+      },
+      {
+        "id": "sub_english_literature",
+        "title": "English Literature",
+        "archetypes": [
+          "Creator",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "careerdna_v2_curated",
+        "signatureRationale": "Major humanities route centred on interpretation, communication, culture, and critical analysis.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Curiosity & Openness",
+          "Creative Expression",
+          "Independent Working Approach",
+          "Investigative Curiosity",
+          "Belonging & Connection"
+        ],
+        "subdimensionSource": "careerdna_v2_curated",
+        "evidenceNote": "Curated to reflect interpretive depth, language sensitivity, and original thinking.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "humanities-culture-society",
+        "coreSubdimensions": [
+          "Curiosity & Openness",
+          "Creative Expression",
+          "Independent Working Approach"
+        ],
+        "secondarySubdimensions": [
+          "Investigative Curiosity",
+          "Belonging & Connection",
+          "Purpose & Impact"
+        ],
+        "modifierSubdimensions": [],
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary"
+      }
+    ]
+  }
+]

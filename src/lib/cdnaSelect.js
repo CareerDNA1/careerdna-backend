@@ -1,366 +1,1209 @@
 // src/lib/cdnaSelect.js
-//
-// Pure archetype-based selectors.
-// Now with penalties for low user archetypes AND console logs for those penalties.
-// UPDATED: ensure each included archetype appears at least once per category.
-
 const { bestFuzzyMatch } = require("./cdnaValidate");
+const {
+  resolveAliasCandidates,
+  normalizeSubjectAliasKey,
+  getSubjectAliasConfig,
+} = require("./cdnaSubjectAliases");
+const { CDNA_SCORE_CONFIG } = require("./cdnaScoreConfig");
 
-// ---------- CORE SCORING ----------
+function canonSubdimName(s) {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/\s*&\s*/g, " & ")
+    .replace(/\s*\/\s*/g, "/")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-function scoreItemByArchetypeOrder(
-  item,
-  userArchetypesArr = [],
-  userArchetypePerc = {},
-  fullArchetypes = [] // [{ name, score }]
-) {
+function ensureArray(v) {
+  return Array.isArray(v) ? v : [];
+}
+
+function clamp(min, max, v) {
+  return Math.min(max, Math.max(min, v));
+}
+
+function buildTopSubdimMap(ctx = {}) {
+  const map = new Map();
+  if (ctx.topSubdimMap && typeof ctx.topSubdimMap === "object") {
+    for (const [k, v] of Object.entries(ctx.topSubdimMap)) {
+      const key = canonSubdimName(k);
+      if (!key) continue;
+      map.set(key, Number(v) || 0);
+    }
+  }
+  for (const row of ensureArray(ctx.topSubdimProfile)) {
+    const key = canonSubdimName(row?.name);
+    if (!key) continue;
+    map.set(key, Number(row?.score) || 0);
+  }
+  return map;
+}
+
+function buildFullSubdimMap(ctx = {}) {
+  const map = new Map();
+
+  if (ctx.fullSubdimMap && typeof ctx.fullSubdimMap === "object") {
+    for (const [k, v] of Object.entries(ctx.fullSubdimMap)) {
+      const key = canonSubdimName(k);
+      if (!key) continue;
+      map.set(key, Number(v) || 0);
+    }
+  }
+
+  if (ctx.userSubdimMap instanceof Map) {
+    for (const [k, v] of ctx.userSubdimMap.entries()) {
+      const key = canonSubdimName(k);
+      if (!key) continue;
+      map.set(key, Number(v) || 0);
+    }
+  }
+
+  const topOnly = buildTopSubdimMap(ctx);
+  for (const [k, v] of topOnly.entries()) {
+    if (!map.has(k)) map.set(k, Number(v) || 0);
+  }
+
+  return map;
+}
+
+function uniqCanonicalList(items = []) {
+  const out = [];
+  const seen = new Set();
+  for (const item of items || []) {
+    const key = canonSubdimName(item);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(key);
+  }
+  return out;
+}
+
+function buildWeightedSubdimEntries(item = {}) {
+  const core = uniqCanonicalList([
+    ...ensureArray(item?.coreSubdimensions),
+    ...ensureArray(item?.careerWorldCoreSubdimensions),
+  ]);
+  const secondary = uniqCanonicalList([
+    ...ensureArray(item?.secondarySubdimensions),
+    ...ensureArray(item?.careerWorldSecondarySubdimensions),
+  ]).filter((x) => !core.includes(x));
+
+  if (core.length || secondary.length) {
+    const tierWeights = CDNA_SCORE_CONFIG.subdimension.tierWeights;
+    return [
+      ...core.map((name) => ({ name, weight: tierWeights.core, tier: "core" })),
+      ...secondary.map((name) => ({ name, weight: tierWeights.secondary, tier: "secondary" })),
+    ];
+  }
+
+  const fallback = extractItemKeySubdimensions(item).map(canonSubdimName);
+  const fallbackWeights = CDNA_SCORE_CONFIG.subdimension.fallbackWeights;
+  return fallback.map((name, idx) => ({
+    name,
+    weight: fallbackWeights[idx] ?? fallbackWeights[fallbackWeights.length - 1] ?? 0.16,
+    tier: "fallback",
+  }));
+}
+
+function extractItemKeySubdimensions(item) {
+  const raw = [
+    ...ensureArray(item?.keySubdimensions),
+    ...ensureArray(item?.roleFamilyKeySubdimensions),
+    ...ensureArray(item?.careerWorldKeySubdimensions),
+    ...ensureArray(item?.subdimensions),
+    ...ensureArray(item?.evidenceSubdims),
+  ];
+  const out = [];
+  const seen = new Set();
+  for (const sd of raw) {
+    const key = canonSubdimName(sd);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(key);
+  }
+  return out;
+}
+
+function normalizeProfilePct(pct) {
+  const n = Number(pct);
+  if (!Number.isFinite(n)) return 0;
+  const { minPct, rangePct } = CDNA_SCORE_CONFIG.profileNormalization;
+  return clamp(0, 1, (n - minPct) / rangePct);
+}
+
+function normalizeItemScoreToPct(score = 0, scaleMax = CDNA_SCORE_CONFIG.subdimension.totalScoreScale || 3.2) {
+  const n = Number(score);
+  const max = Number(scaleMax);
+  if (!Number.isFinite(n) || n <= 0 || !Number.isFinite(max) || max <= 0) return 0;
+  return Math.max(0, Math.min(100, Math.round((n / max) * 100)));
+}
+
+function getItemSignalFromBreakdown(breakdown = {}, options = {}) {
+  const signalPct = Math.max(
+    0,
+    Math.min(
+      100,
+      Number.isFinite(Number(breakdown?.rawFitPct))
+        ? Number(breakdown.rawFitPct)
+        : Number.isFinite(Number(breakdown?.absoluteFitPct))
+        ? Number(breakdown.absoluteFitPct)
+        : normalizeItemScoreToPct(breakdown?.totalScore, options?.scaleMax)
+    )
+  );
+
+  const fitPct = Math.max(
+    0,
+    Math.min(
+      100,
+      Number.isFinite(Number(breakdown?.fitStrengthPct))
+        ? Number(breakdown.fitStrengthPct)
+        : Number.isFinite(Number(breakdown?.absoluteFitPct))
+        ? Number(breakdown.absoluteFitPct)
+        : signalPct
+    )
+  );
+
+  const coverageRatio = Math.max(
+    0,
+    Math.min(
+      1,
+      Number.isFinite(Number(breakdown?.coreCoverageRatio))
+        ? Number(breakdown.coreCoverageRatio)
+        : Number.isFinite(Number(breakdown?.coverageRatio))
+        ? Number(breakdown.coverageRatio)
+        : 0
+    )
+  );
+
+  let signalLabel = "Lower";
+  let signalBlocks = 1;
+
+  if (signalPct >= 70) {
+    signalLabel = "Standout";
+    signalBlocks = 4;
+  } else if (signalPct >= 60) {
+    signalLabel = "Strong";
+    signalBlocks = 3;
+  } else if (signalPct >= 50) {
+    signalLabel = "Good";
+    signalBlocks = 2;
+  }
+
+  return {
+    signalPct,
+    fitPct,
+    coverageRatio,
+    coveragePct: Math.round(coverageRatio * 100),
+    signalLabel,
+    signalBlocks,
+  };
+}
+
+function scoreItemByArchetypeOrder(item, userArchetypesArr = [], userArchetypePerc = {}, fullArchetypes = []) {
   const tags = Array.isArray(item?.archetypes) ? item.archetypes : [];
-  const title = item?.title || "(untitled)";
   if (!tags.length) return 0;
 
-  const A1 = userArchetypesArr[0];
-  const A2 = userArchetypesArr[1];
-  const A3 = userArchetypesArr[2];
-
-  const p1 = A1 ? (userArchetypePerc[A1] ?? 1) : 0;
-  const p2 = A2 ? (userArchetypePerc[A2] ?? 1) : 0;
-  const p3 = A3 ? (userArchetypePerc[A3] ?? 1) : 0;
+  const archetypes = ensureArray(userArchetypesArr).slice(0, 5);
+  const cfg = CDNA_SCORE_CONFIG.archetype;
+  const positionWeights = cfg.positionWeights;
 
   let score = 0;
   let matchedCount = 0;
 
-  // ===== POSITIVE PART =====
-  if (A1) {
-    if (tags[0] === A1) {
-      score += 3 * p1;
-      matchedCount++;
-    } else if (tags.includes(A1)) {
-      score += 2 * p1;
-      matchedCount++;
+  archetypes.forEach((arch, idx) => {
+    if (!arch) return;
+    const pct = Number(userArchetypePerc?.[arch] ?? 0) || 0;
+    const pctNorm = clamp(0, 1, pct);
+    const w = positionWeights[idx] ?? cfg.fallbackPositionWeight;
+
+    if (tags[0] === arch) {
+      score += w * Math.max(cfg.minPctFloor, pctNorm);
+      matchedCount += 1;
+    } else if (tags.includes(arch)) {
+      score += w * cfg.secondaryTagMultiplier * Math.max(cfg.minPctFloor, pctNorm);
+      matchedCount += 1;
     }
-  }
+  });
 
-  if (A2) {
-    if (tags[0] === A2) {
-      score += 2 * p2;
-      matchedCount++;
-    } else if (tags.includes(A2)) {
-      score += 1 * p2;
-      matchedCount++;
-    }
-  }
+  if (matchedCount >= 3) score += cfg.matchedCountBonusThreePlus;
+  else if (matchedCount === 2) score += cfg.matchedCountBonusTwo;
+  else if (matchedCount === 1) score += cfg.matchedCountBonusOne;
 
-  if (A3) {
-    if (tags[0] === A3) {
-      score += 1.5 * p3;
-      matchedCount++;
-    } else if (tags.includes(A3)) {
-      score += 0.7 * p3;
-      matchedCount++;
-    }
-  }
-
-  if (matchedCount === 3) score += 0.75;
-  else if (matchedCount === 2) score += 0.4;
-  else if (matchedCount === 1) score += 0.1;
-
-  // ===== NEGATIVE PART + LOGGING =====
   if (Array.isArray(fullArchetypes) && fullArchetypes.length) {
-    const baseBeforePenalties = score;
     const userPctByName = {};
-    for (const a of fullArchetypes) {
-      const pct = typeof a.score === "number" ? a.score : Number(a.score) || 0;
-      userPctByName[a.name] = pct;
-    }
-
-    const posWeights = [1.0, 0.6, 0.4];
-    let anyPenalty = false;
-    let totalPenalty = 0;
-
-    tags.forEach((tag, idx) => {
-      const userPct = userPctByName[tag];
-      if (userPct == null) return;
-
-      let basePenalty = 0;
-      let severity = "";
-
-      if (userPct < 50) {
-        basePenalty = 1.2;
-        severity = "weak<50";
-      } else if (userPct < 60) {
-        basePenalty = 0.8;            // you already reduced this
-        severity = "mid50s";
-      } else {
-        return; // no penalty
-      }
-
-      const posWeight = posWeights[idx] ?? 0.4;
-      let finalPenalty = basePenalty * posWeight;
-
-      totalPenalty += finalPenalty;
-      score -= finalPenalty;
-      anyPenalty = true;
-
-      console.log(
-        `[cdnaSelect] penalty -> item="${title}" tag="${tag}" userPct=${userPct} severity=${severity} pos=${idx} penalty=${finalPenalty.toFixed(
-          3
-        )}`
-      );
-    });
-
-    const MAX_PENALTY = 1.2;
-    if (totalPenalty > MAX_PENALTY) {
-      const diff = totalPenalty - MAX_PENALTY;
-      score += diff;
-      totalPenalty = MAX_PENALTY;
-    }
-
-    if (anyPenalty) {
-      console.log(
-        `[cdnaSelect] item="${title}" base=${baseBeforePenalties.toFixed(
-          3
-        )} penaltyTotal=${totalPenalty.toFixed(3)} final=${score.toFixed(3)}`
-      );
-    }
+    for (const a of fullArchetypes) userPctByName[a.name] = Number(a.score) || 0;
+    const primaryTag = tags[0];
+    const primaryPct = primaryTag ? Number(userPctByName[primaryTag] || 0) : 0;
+    if (primaryPct && primaryPct < cfg.primaryPenaltyLowThreshold) score -= cfg.primaryPenaltyLow;
+    else if (primaryPct && primaryPct < cfg.primaryPenaltyMidThreshold) score -= cfg.primaryPenaltyMid;
   }
 
-  return score;
+  return Math.max(0, score);
 }
 
-// deterministic tie-breaker
+function scoreItemBySubdimensionProfile(item, ctx = {}) {
+  return scoreItemBreakdown(item, ctx).totalScore;
+}
+
+function scoreItemBreakdown(item, ctx = {}) {
+  const subdimMap = buildFullSubdimMap(ctx);
+  const entries = buildWeightedSubdimEntries(item);
+  const cfg = CDNA_SCORE_CONFIG.subdimension;
+  const archetypeScore = scoreItemByArchetypeOrder(
+    item,
+    ctx.includedArchetypes || [],
+    ctx.includedWeights || {},
+    ctx.fullArchetypes || []
+  );
+
+  if (!subdimMap.size || !entries.length) {
+    return {
+      weightedTraitFit: 0,
+      subdimensionScore: 0,
+      fitStrengthPct: 0,
+      rawFitPct: 0,
+      rawFit: 0,
+      coverageRatio: 0,
+      coreCoverageRatio: 0,
+      combinedCoverageRatio: 0,
+      coverageGate: 0,
+      strongestCorePct: 0,
+      absoluteFitPct: 0,
+      archetypeScore,
+      archetypeContribution: 0,
+      totalScore: 0,
+    };
+  }
+
+  const totalWeight = entries.reduce((sum, entry) => sum + (entry.weight || 0), 0) || 1;
+  let weightedSum = 0;
+  let matchedWeight = 0;
+  let coreMatched = 0;
+  let coreTotal = 0;
+  let strongestCore = 0;
+
+  for (const entry of entries) {
+    const pct = Number(subdimMap.get(entry.name));
+    if (!Number.isFinite(pct)) continue;
+
+    const normalized = normalizeProfilePct(pct);
+    let boosted = normalized;
+    if (normalized > 0) {
+      if (pct >= cfg.strongBoostHighThresholdPct) boosted += cfg.strongBoostHigh;
+      else if (pct >= cfg.strongBoostMidThresholdPct) boosted += cfg.strongBoostMid;
+      boosted = clamp(0, 1, boosted);
+      weightedSum += entry.weight * boosted;
+      matchedWeight += entry.weight;
+    }
+
+    if (entry.tier === "core") {
+      coreTotal += 1;
+      if (pct >= cfg.coreMatchThresholdPct) coreMatched += 1;
+      if (pct > strongestCore) strongestCore = pct;
+    }
+  }
+
+  const weightedTraitFit = clamp(0, 1, weightedSum / totalWeight);
+  const coverageRatio = clamp(0, 1, matchedWeight / totalWeight);
+  const coreCoverageRatio = coreTotal ? clamp(0, 1, coreMatched / coreTotal) : coverageRatio;
+  const combinedCoverageRatio = clamp(
+    0,
+    1,
+    coreCoverageRatio * cfg.combinedCoverageCoreWeight + coverageRatio * cfg.combinedCoverageAnyWeight
+  );
+  const coverageGate = clamp(0, 1, cfg.coverageGateBase + cfg.coverageGateWeight * combinedCoverageRatio);
+  const strongestCorePct = Number(strongestCore) || 0;
+
+  const rawFit = clamp(0, 1, weightedTraitFit * coverageGate);
+  const fitStrengthPct = Math.max(0, Math.min(100, Math.round(weightedTraitFit * 100)));
+  const absoluteFitPct = fitStrengthPct;
+  const gatedFitPct = Math.max(0, Math.min(100, Math.round(rawFit * 100)));
+  const subdimensionScore = rawFit * cfg.totalScoreScale;
+  const archetypeContributionWeight = clamp(
+    0,
+    1,
+    Number(CDNA_SCORE_CONFIG.total.archetypeContributionWeight) || 0
+  );
+  const subdimensionContributionWeight = 1 - archetypeContributionWeight;
+  const archetypeContribution = archetypeScore * archetypeContributionWeight;
+  const totalScore =
+    subdimensionScore * subdimensionContributionWeight + archetypeContribution;
+
+  return {
+    weightedTraitFit,
+    subdimensionScore,
+    fitStrengthPct,
+    rawFitPct: gatedFitPct,
+    rawFit,
+    coverageRatio,
+    coreCoverageRatio,
+    combinedCoverageRatio,
+    coverageGate,
+    strongestCorePct,
+    absoluteFitPct,
+    archetypeScore,
+    archetypeContribution,
+    totalScore,
+  };
+}
+
+function scoreItemTotal(item, ctx = {}) {
+  return scoreItemBreakdown(item, ctx).totalScore;
+}
+
+function scoreSharedSubdimensions(a, b) {
+  const aEntries = buildWeightedSubdimEntries(a);
+  const bNames = new Set(buildWeightedSubdimEntries(b).map((x) => x.name));
+  if (!aEntries.length || !bNames.size) return 0;
+  let overlap = 0;
+  for (const entry of aEntries) {
+    if (bNames.has(entry.name)) overlap += entry.weight;
+  }
+  return overlap;
+}
+
 function sortByScoreDesc(itemsWithScores) {
   return itemsWithScores.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
-
     const aTags = Array.isArray(a.item.archetypes) ? a.item.archetypes.length : 999;
     const bTags = Array.isArray(b.item.archetypes) ? b.item.archetypes.length : 999;
     if (aTags !== bTags) return aTags - bTags;
-
     const ta = String(a.item.title || "").toLowerCase();
     const tb = String(b.item.title || "").toLowerCase();
     return ta.localeCompare(tb);
   });
 }
 
-// ---------- COVERAGE HELPER (NEW) ----------
-//
-// ensures each included archetype appears at least once
-// picked: [item, ...]
-// scored: [{ item, score }, ...]  (full list)
-// includedArchetypes: ['Connector','Explorer','Organizer']
-// limit: how many we ultimately want in this category
 function ensureArchetypeCoverage(picked, scored, includedArchetypes = [], limit) {
-  const result = [...picked];
-
-  for (const arch of includedArchetypes) {
-    const hasOne = result.some(
-      (it) => Array.isArray(it.archetypes) && it.archetypes.includes(arch)
-    );
-
-    if (!hasOne) {
-      // find best candidate for this archetype from scored list
-      const candidate = scored
-        .filter(
-          (s) =>
-            Array.isArray(s.item.archetypes) &&
-            s.item.archetypes.includes(arch) &&
-            !result.find((r) => r.title === s.item.title)
-        )
-        .sort((a, b) => b.score - a.score)[0];
-
-      if (candidate) {
-        // replace the lowest-scoring current item
-        // to know which is lowest, we need scores for current items too
-        // so temporarily pair them with scores
-        const currentWithScores = result.map((it) => {
-          // look up its score from scored[]
-          const found = scored.find((s) => s.item.title === it.title);
-          return { item: it, score: found ? found.score : 0 };
-        });
-
-        currentWithScores.sort((a, b) => a.score - b.score);
-        currentWithScores[0] = { item: candidate.item, score: candidate.score };
-
-        // unwrap back to just items
-        const unwrapped = currentWithScores.map((x) => x.item);
-        // update result
-        for (let i = 0; i < result.length; i++) {
-          result[i] = unwrapped[i];
-        }
-      }
-    }
-  }
-
-  // final trim / order not strictly required, but let's keep as original order
-  return result.slice(0, limit);
+  return ensureArray(picked).slice(0, Math.max(0, Number(limit) || 0));
 }
-
-// ---------- SUBJECT MATCHING ----------
 
 function matchUserSubjectsToLibSubjects(userSubjects = [], libSubjects = []) {
-  const titles = libSubjects.map((s) => s.title.toLowerCase());
-  const matched = [];
-  for (const us of userSubjects) {
-    const norm = String(us || "").toLowerCase().trim();
-    if (!norm) continue;
-    const best = bestFuzzyMatch(norm, titles, (x) => x);
-    if (best) {
-      const subjObj = libSubjects.find((s) => s.title.toLowerCase() === best);
-      if (subjObj) matched.push(subjObj);
-    }
-  }
-  return matched;
+  return resolveMultipleSubjectIntents(userSubjects, libSubjects).matchedSubjects;
 }
 
-function filterItemsBySubjectArchetypes(items, subjectObjs) {
-  if (!subjectObjs.length) return [];
-  const subjArcs = new Set();
-  for (const s of subjectObjs) {
-    (s.archetypes || []).forEach((a) => subjArcs.add(a));
-  }
-  return items.filter((it) => (it.archetypes || []).some((a) => subjArcs.has(a)));
+function findBestMatchingSubject(userSubject = "", libSubjects = []) {
+  return makeSubjectIntent(userSubject, libSubjects).bestSubject;
 }
 
 function dedupeByTitle(items) {
   const seen = new Set();
   const out = [];
   for (const it of items) {
-    const t = it.title;
-    if (!seen.has(t)) {
-      seen.add(t);
-      out.push(it);
-    }
+    const key = String(it?.title || "").toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(it);
   }
   return out;
 }
 
-// ---------- SELECTORS ----------
+function normalizedTitle(s) {
+  return normalizeSubjectAliasKey(s);
+}
+
+function findExactTitleSubject(userSubject = "", libSubjects = []) {
+  const norm = normalizedTitle(userSubject);
+  if (!norm) return null;
+  return libSubjects.find((s) => normalizedTitle(s?.title) === norm) || null;
+}
+
+function findFuzzyTitleSubject(userSubject = "", libSubjects = []) {
+  const titles = libSubjects.map((s) => normalizedTitle(s.title));
+  const norm = normalizedTitle(userSubject);
+  if (!norm) return null;
+  const best = bestFuzzyMatch(norm, titles, (x) => x);
+  return best ? libSubjects.find((s) => normalizedTitle(s.title) === best) || null : null;
+}
+
+function resolveAliasTitleMatches(userSubject = "", libSubjects = []) {
+  const aliasCfg = getSubjectAliasConfig(userSubject);
+  const wanted = ensureArray(aliasCfg?.subjectTitles).map((t) => normalizedTitle(t)).filter(Boolean);
+  if (!wanted.length) return [];
+
+  const byNorm = new Map();
+  for (const subj of libSubjects || []) {
+    const norm = normalizedTitle(subj?.title);
+    if (norm) byNorm.set(norm, subj);
+  }
+
+  const out = [];
+  const seen = new Set();
+  for (const title of wanted) {
+    const subj = byNorm.get(title);
+    const key = String(subj?.title || "").toLowerCase();
+    if (!subj || !key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(subj);
+  }
+  return out;
+}
+
+function makeSubjectIntent(userSubject = "", libSubjects = []) {
+  const aliasCfg = getSubjectAliasConfig(userSubject);
+  const aliasTitleMatches = resolveAliasTitleMatches(userSubject, libSubjects);
+  const aliasFallbackMatches = resolveAliasCandidates(userSubject, libSubjects);
+  const exact = findExactTitleSubject(userSubject, libSubjects);
+  const fuzzy = findFuzzyTitleSubject(userSubject, libSubjects);
+
+  let matchedSubjects = [];
+  let bestSubject = null;
+  let matchSource = "none";
+
+  if (aliasTitleMatches.length) {
+    matchedSubjects = aliasTitleMatches;
+    bestSubject = aliasTitleMatches[0] || null;
+    matchSource = "alias_titles";
+  } else if (aliasFallbackMatches.length) {
+    matchedSubjects = aliasFallbackMatches;
+    bestSubject = aliasFallbackMatches[0] || null;
+    matchSource = "alias";
+  } else if (exact) {
+    matchedSubjects = [exact];
+    bestSubject = exact;
+    matchSource = "exact";
+  } else if (fuzzy) {
+    matchedSubjects = [fuzzy];
+    bestSubject = fuzzy;
+    matchSource = "fuzzy";
+  }
+
+  matchedSubjects = dedupeByTitle(matchedSubjects);
+
+  const primaryWorldIds = new Set();
+  const secondaryWorldIds = new Set();
+
+  const explicitPrimary = ensureArray(aliasCfg?.primaryCareerWorldIds || aliasCfg?.careerWorldIds).filter(Boolean);
+  const explicitSecondary = ensureArray(aliasCfg?.secondaryCareerWorldIds).filter(Boolean);
+
+  if (explicitPrimary.length || explicitSecondary.length) {
+    for (const id of explicitPrimary) primaryWorldIds.add(id);
+    for (const id of explicitSecondary) {
+      if (!primaryWorldIds.has(id)) secondaryWorldIds.add(id);
+    }
+  } else if (bestSubject) {
+    const worldId = bestSubject?.careerWorldId;
+    if (worldId) primaryWorldIds.add(worldId);
+    for (const id of ensureArray(bestSubject?.adjacentCareerWorldIds)) {
+      if (id && !primaryWorldIds.has(id)) secondaryWorldIds.add(id);
+    }
+  }
+
+  return {
+    label: userSubject,
+    matchSource,
+    aliasConfig: aliasCfg,
+    matchedSubjects,
+    bestSubject: bestSubject || null,
+    primaryWorldIds: Array.from(primaryWorldIds),
+    secondaryWorldIds: Array.from(secondaryWorldIds).filter((id) => !primaryWorldIds.has(id)),
+  };
+}
+
+function mergeSubjectIntents(intents = []) {
+  const matched = [];
+  const seenTitles = new Set();
+  const primaryWorldIds = new Set();
+  const secondaryWorldIds = new Set();
+
+  for (const intent of intents) {
+    for (const subj of ensureArray(intent?.matchedSubjects)) {
+      const key = String(subj?.title || "").toLowerCase();
+      if (!key || seenTitles.has(key)) continue;
+      seenTitles.add(key);
+      matched.push(subj);
+    }
+    for (const id of ensureArray(intent?.primaryWorldIds)) {
+      if (id) primaryWorldIds.add(id);
+    }
+    for (const id of ensureArray(intent?.secondaryWorldIds)) {
+      if (id && !primaryWorldIds.has(id)) secondaryWorldIds.add(id);
+    }
+  }
+
+  const bestSubject = intents.find((x) => x?.bestSubject)?.bestSubject || null;
+
+  const exactMatchedTitleSet = new Set();
+  const broadMatchedTitleSet = new Set();
+  for (const intent of intents) {
+    const target = intent?.matchSource === "alias" ? broadMatchedTitleSet : exactMatchedTitleSet;
+    for (const subj of ensureArray(intent?.matchedSubjects)) {
+      const key = String(subj?.title || "").toLowerCase();
+      if (key) target.add(key);
+    }
+  }
+
+  return {
+    intents,
+    matchedSubjects: matched,
+    matchedTitleSet: new Set(matched.map((s) => String(s?.title || "").toLowerCase())),
+    exactMatchedTitleSet,
+    broadMatchedTitleSet,
+    primaryWorldIds: Array.from(primaryWorldIds),
+    secondaryWorldIds: Array.from(secondaryWorldIds).filter((id) => !primaryWorldIds.has(id)),
+    bestSubject,
+  };
+}
+
+function resolveMultipleSubjectIntents(userSubjects = [], libSubjects = []) {
+  const rawLabels = Array.isArray(userSubjects) ? userSubjects : [userSubjects];
+  const labels = rawLabels
+    .map((x) => String(x || "").trim())
+    .filter(Boolean);
+
+  const intents = labels.map((label) => makeSubjectIntent(label, libSubjects));
+  return mergeSubjectIntents(intents);
+}
+
+function subjectCareerWorldBonus(careerWorld, subjectIntent = null) {
+  if (!careerWorld || !subjectIntent) return 0;
+
+  const worldId = careerWorld.id || careerWorld.careerWorldId || "";
+  if (!worldId) return 0;
+
+  const primary = new Set(ensureArray(subjectIntent.primaryWorldIds));
+  const secondary = new Set(ensureArray(subjectIntent.secondaryWorldIds));
+
+  let bonus = 0;
+  if (primary.has(worldId)) bonus += 0.55;
+  else if (secondary.has(worldId)) bonus += 0.16;
+
+  const subjectTags = new Set(ensureArray(subjectIntent.bestSubject?.archetypes));
+  const worldTags = ensureArray(careerWorld?.archetypes);
+  let overlap = 0;
+  for (const tag of worldTags) if (subjectTags.has(tag)) overlap += 1;
+  bonus += Math.min(overlap, 2) * 0.03;
+
+  return bonus;
+}
+
+function buildScoreMap(list = [], ctx = {}) {
+  const scored = list.map((item) => ({ item, score: scoreItemTotal(item, ctx) }));
+  const byId = new Map();
+  const byTitle = new Map();
+  for (const row of scored) {
+    if (row.item?.id) byId.set(row.item.id, row.score);
+    if (row.item?.title) byTitle.set(row.item.title, row.score);
+  }
+  return { scored, byId, byTitle };
+}
+
+function worldScoreForSubject(subject, worldScoreById) {
+  if (!subject) return 0;
+  let bonus = worldScoreById.get(subject.careerWorldId) || 0;
+  const adjacent = Array.isArray(subject.adjacentCareerWorldIds) ? subject.adjacentCareerWorldIds : [];
+  for (const id of adjacent) bonus = Math.max(bonus, (worldScoreById.get(id) || 0) * 0.55);
+  return bonus;
+}
+
+function worldScoreForEnvironment(env, worldScoreById) {
+  const ids = Array.isArray(env.careerWorldIds) ? env.careerWorldIds : [];
+  let bonus = 0;
+  for (const id of ids) bonus = Math.max(bonus, worldScoreById.get(id) || 0);
+  return bonus;
+}
+
+function roleWorldBonus(role, subject, worldScoreById) {
+  if (!role) return 0;
+  let bonus = 0;
+  const mainId = subject?.careerWorldId || "";
+  const adj = new Set(Array.isArray(subject?.adjacentCareerWorldIds) ? subject.adjacentCareerWorldIds : []);
+  if (role.careerWorldId && role.careerWorldId === mainId) bonus += (worldScoreById.get(role.careerWorldId) || 0) * 0.38;
+  else if (role.careerWorldId && adj.has(role.careerWorldId)) bonus += (worldScoreById.get(role.careerWorldId) || 0) * 0.18;
+  return bonus;
+}
+
+function subjectSimilarityToRole(subject, role) {
+  const subj = new Set(Array.isArray(subject?.archetypes) ? subject.archetypes : []);
+  const roleTags = Array.isArray(role?.archetypes) ? role.archetypes : [];
+  let overlap = 0;
+  for (const tag of roleTags) if (subj.has(tag)) overlap += 1;
+  return overlap * 0.06;
+}
+
+function roleFamilyItemsFromFlatRoles(allRoles = []) {
+  if (!Array.isArray(allRoles) || !allRoles.length) return [];
+
+  const groups = new Map();
+
+  for (const role of allRoles) {
+    const familyId = String(role?.roleFamilyId || "").trim();
+    const familyTitle = String(role?.roleFamilyTitle || role?.title || "").trim();
+    if (!familyTitle) continue;
+
+    const careerWorldId = String(role?.careerWorldId || "").trim();
+    const key = familyId || `${careerWorldId}::${familyTitle.toLowerCase()}`;
+    if (!groups.has(key)) {
+      groups.set(key, {
+        id: familyId || `rf_${careerWorldId}_${familyTitle.toLowerCase().replace(/[^a-z0-9]+/g, "_")}` ,
+        title: familyTitle,
+        careerWorldId,
+        careerWorldTitle: role?.careerWorldTitle || "",
+        careerWorldArchetypes: ensureArray(role?.careerWorldArchetypes),
+        archetypes: ensureArray(role?.roleFamilyArchetypes),
+        keySubdimensions: ensureArray(role?.roleFamilyKeySubdimensions),
+        whyBelongs: role?.whyBelongs || "",
+        confidence: role?.confidence || "",
+        sourceUrls: ensureArray(role?.sourceUrls),
+        roles: [],
+      });
+    }
+
+    const group = groups.get(key);
+    group.roles.push({
+      id: role?.id || "",
+      title: role?.title || "",
+      archetypes: ensureArray(role?.archetypes),
+      keySubdimensions: ensureArray(role?.keySubdimensions),
+      entryLevelFit: role?.entryLevelFit || "",
+    });
+
+    if (!group.archetypes.length) {
+      group.archetypes = ensureArray(role?.archetypes);
+    }
+    if (!group.keySubdimensions.length) {
+      group.keySubdimensions = ensureArray(role?.keySubdimensions);
+    }
+  }
+
+  return Array.from(groups.values());
+}
+
+function buildScoredCareerWorldRows(careerWorlds = [], ctx = {}, opts = {}) {
+  const subjectIntent =
+    opts && opts.subjectIntent
+      ? opts.subjectIntent
+      : resolveMultipleSubjectIntents(opts?.subjectLabels || opts?.subjects || [], opts?.allSubjects || []);
+
+  const primaryWorldIds = new Set(ensureArray(subjectIntent?.primaryWorldIds));
+  const secondaryWorldIds = new Set(ensureArray(subjectIntent?.secondaryWorldIds));
+  const baseRows = buildScoreMap(careerWorlds, ctx).scored;
+
+  return sortByScoreDesc(
+    baseRows.map((row) => {
+      const worldId = row?.item?.id || row?.item?.careerWorldId || "";
+
+      return {
+        item: row.item,
+        baseScore: row.score,
+        subjectBonus: 0,
+        score: row.score,
+        subjectTier: primaryWorldIds.has(worldId)
+          ? "primary"
+          : secondaryWorldIds.has(worldId)
+          ? "secondary"
+          : "other",
+      };
+    })
+  );
+}
+
+function buildScoredEnvironmentRows(environments = [], topCareerWorlds = [], ctx = {}) {
+  return sortByScoreDesc(
+    environments.map((env) => {
+      const baseScore = scoreItemTotal(env, ctx);
+      return {
+        item: env,
+        baseScore,
+        worldBonus: 0,
+        score: baseScore,
+      };
+    })
+  );
+}
+
+function buildScoredRoleRows(allRoles = [], matchedSubject = null, topCareerWorlds = [], ctx = {}) {
+  const familyItems = roleFamilyItemsFromFlatRoles(allRoles);
+
+  const matchedWorldId = String(matchedSubject?.careerWorldId || "").trim();
+  const adjacentWorldIds = new Set(
+    ensureArray(matchedSubject?.adjacentCareerWorldIds).map((id) => String(id || "").trim()).filter(Boolean)
+  );
+
+  return sortByScoreDesc(
+    familyItems.map((family) => {
+      const baseScore = scoreItemTotal(family, ctx);
+      const familyWorldId = String(family?.careerWorldId || "").trim();
+
+      let currentSubjectBonus = 0;
+      if (matchedWorldId && familyWorldId) {
+        if (familyWorldId === matchedWorldId) currentSubjectBonus = 0.55;
+        else if (adjacentWorldIds.has(familyWorldId)) currentSubjectBonus = 0.18;
+      }
+
+      return {
+        item: family,
+        baseScore,
+        currentSubjectBonus,
+        subjectWorldBonus: 0,
+        subjectSimilarityBonus: 0,
+        sharedSubdimBonus: 0,
+        score: baseScore + currentSubjectBonus,
+      };
+    })
+  );
+}
 
 function selectStrengths(strengths = [], ctx = {}, limit = 5) {
-  const { includedArchetypes = [], includedWeights = {}, fullArchetypes = [] } = ctx;
-  const scored = strengths.map((st) => ({
-    item: st,
-    score: scoreItemByArchetypeOrder(st, includedArchetypes, includedWeights, fullArchetypes),
-  }));
+  const scored = buildScoreMap(strengths, ctx).scored;
   const sorted = sortByScoreDesc(scored);
-  const top = sorted.slice(0, limit).map((x) => x.item);
-
-  // NEW: guarantee coverage for A1/A2/A3
-  return ensureArchetypeCoverage(top, scored, includedArchetypes, limit);
+  return sorted.slice(0, limit).map((x) => x.item);
 }
 
-function selectEnvironments(environments = [], ctx = {}, limit = 7) {
-  const { includedArchetypes = [], includedWeights = {}, fullArchetypes = [] } = ctx;
-  const scored = environments.map((env) => ({
-    item: env,
-    score: scoreItemByArchetypeOrder(env, includedArchetypes, includedWeights, fullArchetypes),
-  }));
-  const sorted = sortByScoreDesc(scored);
-  const top = sorted.slice(0, limit).map((x) => x.item);
-
-  return ensureArchetypeCoverage(top, scored, includedArchetypes, limit);
+function selectCareerWorlds(careerWorlds = [], ctx = {}, limit = 5, opts = {}) {
+  const scored = buildScoredCareerWorldRows(careerWorlds, ctx, opts);
+  return scored.slice(0, limit).map((x) => x.item);
 }
 
-function selectFitAreas(
-  fitAreas = [],
-  ctx = {},
+function selectEnvironmentsForWorlds(environments = [], topCareerWorlds = [], ctx = {}, limit = 6) {
+  const scored = buildScoredEnvironmentRows(environments, topCareerWorlds, ctx);
+  return scored.slice(0, limit).map((x) => x.item);
+}
+
+
+function subjectClusterKey(subject) {
+  const explicit = String(subject?.subjectCluster || subject?.cluster || "").trim().toLowerCase();
+  if (explicit) return explicit;
+
+  const title = String(subject?.title || "").toLowerCase();
+  const worldId = String(subject?.careerWorldId || "").toLowerCase();
+
+  if (
+    worldId.includes("health_care") ||
+    /counselling|psychotherapy|occupational therapy|nursing|midwifery|medicine|dentistry|physiotherapy|paramedic|pharmacy|health|optometry|radiography|veterinary/.test(title)
+  ) {
+    return "helping-care";
+  }
+
+  if (
+    worldId.includes("education_coaching") ||
+    /education|teaching|social work|childhood|youth/.test(title)
+  ) {
+    return "helping-development";
+  }
+
+  if (worldId.includes("psychology_behaviour") || /psychology/.test(title)) {
+    return "psychology-behaviour";
+  }
+
+  if (
+    worldId.includes("marketing_media") ||
+    /journalism|media|marketing|communications|pr\b|english language|languages|english literature|creative writing/.test(title)
+  ) {
+    return "communication-media";
+  }
+
+  if (
+    worldId.includes("creative_arts") ||
+    worldId.includes("architecture_built") ||
+    /architecture|planning|design|art\b|animation|film|photography|fashion|music|drama|dance|games/.test(title)
+  ) {
+    return "design-creative";
+  }
+
+  if (
+    worldId.includes("software_ai") ||
+    worldId.includes("data_analytics") ||
+    worldId.includes("engineering_manufacturing") ||
+    /computer science|software|engineering|mathematics|statistics/.test(title)
+  ) {
+    return "technical-quant";
+  }
+
+  if (
+    worldId.includes("science_research") ||
+    /biology|chemistry|physics|forensic|biomedical|zoology/.test(title)
+  ) {
+    return "science-research";
+  }
+
+  if (
+    worldId.includes("law_governance") ||
+    /law|politics|criminology|policing/.test(title)
+  ) {
+    return "policy-governance";
+  }
+
+  if (
+    worldId.includes("environment_sustainability") ||
+    /environmental|earth sciences|geography|agriculture/.test(title)
+  ) {
+    return "environment-sustainability";
+  }
+
+  if (
+    worldId.includes("finance_economics") ||
+    worldId.includes("business") ||
+    /finance|economics|accounting|business|management|events|hospitality|tourism/.test(title)
+  ) {
+    return "finance-business";
+  }
+
+  if (
+    worldId.includes("society_culture") ||
+    /anthropology|archaeology|classics|history|philosophy|religion|theology|sociology/.test(title)
+  ) {
+    return "society-culture";
+  }
+
+  return worldId || title;
+}
+
+function subjectFamilyKey(subject) {
+  const explicit = String(subject?.subjectFamily || subject?.family || "").trim().toLowerCase();
+  if (explicit) return explicit;
+  return subjectClusterKey(subject);
+}
+
+function buildScoredSubjectRows(allSubjects = [], topCareerWorlds = [], ctx = {}, userSubjects = []) {
+  const topWorldScored = buildScoreMap(topCareerWorlds, ctx).scored;
+  const orderedTopWorldIds = topWorldScored
+    .slice()
+    .sort((a, b) => b.score - a.score)
+    .map((x) => x.item.id)
+    .filter(Boolean);
+
+  const topWorldSet = new Set(orderedTopWorldIds);
+  const candidates = ensureArray(allSubjects).filter((subj) => topWorldSet.has(subj?.careerWorldId));
+
+  return candidates
+    .map((subj) => {
+      const baseScore = scoreItemTotal(subj, ctx);
+      const worldRank = orderedTopWorldIds.indexOf(subj?.careerWorldId);
+      const finalScore = baseScore;
+
+      return {
+        item: subj,
+        score: finalScore,
+        finalScore,
+        baseScore,
+        worldBonus: 0,
+        worldRankBonus: 0,
+        preferredWorldBonus: 0,
+        userBonus: 0,
+        secondaryBonus: 0,
+        calibrationBonus: 0,
+        spillPenalty: 0,
+        cluster: subjectClusterKey(subj),
+        family: subjectFamilyKey(subj),
+        matchedUser: false,
+        broadMatchedUser: false,
+        preferredWorld: false,
+        worldRank,
+        secondaryMatchCount: 0,
+      };
+    })
+    .sort((a, b) => {
+      const diff = subjectDisplayScore(b) - subjectDisplayScore(a);
+      if (diff !== 0) return diff;
+      if ((a?.worldRank ?? 999) !== (b?.worldRank ?? 999)) return (a?.worldRank ?? 999) - (b?.worldRank ?? 999);
+      return String(a?.item?.title || "").localeCompare(String(b?.item?.title || ""));
+    });
+}
+
+function subjectDisplayScore(row = {}) {
+  return Number(row?.finalScore ?? row?.score) || 0;
+}
+function sortSubjectRows(rows = []) {
+  return rows.slice().sort((a, b) => {
+    const diff = subjectDisplayScore(b) - subjectDisplayScore(a);
+    if (diff !== 0) return diff;
+    if ((a?.worldRank ?? 999) !== (b?.worldRank ?? 999)) return (a?.worldRank ?? 999) - (b?.worldRank ?? 999);
+    return String(a?.item?.title || "").localeCompare(String(b?.item?.title || ""));
+  });
+}
+
+
+function attachSubjectScoreMeta(item, row, displayRank = 0) {
+  if (!item || !row) return item;
+  const meta = {
+    baseScore: Number(row.baseScore || 0),
+    worldBonus: Number(row.worldBonus || 0),
+    worldRankBonus: Number(row.worldRankBonus || 0),
+    preferredWorldBonus: Number(row.preferredWorldBonus || 0),
+    userBonus: Number(row.userBonus || 0),
+    secondaryBonus: Number(row.secondaryBonus || 0),
+    calibrationBonus: Number(row.calibrationBonus || 0),
+    spillPenalty: Number(row.spillPenalty || 0),
+    finalScore: Number(row.finalScore || row.score || 0),
+    worldRank: Number.isFinite(row.worldRank) ? row.worldRank : -1,
+    cluster: row.cluster || "",
+    family: row.family || "",
+    matchedUser: Boolean(row.matchedUser),
+    broadMatchedUser: Boolean(row.broadMatchedUser),
+    preferredWorld: Boolean(row.preferredWorld),
+    displayRank,
+  };
+
+  Object.defineProperty(item, '__cdnaSubjectScore', {
+    value: meta,
+    enumerable: false,
+    configurable: true,
+    writable: true,
+  });
+  return item;
+}
+
+function buildSubjectSelectionResult(rows = [], sectionLabel = "broad") {
+  return rows.map((row, idx) => ({
+    item: row.item,
+    meta: {
+      baseScore: Number(row.baseScore || 0),
+      worldBonus: Number(row.worldBonus || 0),
+      worldRankBonus: Number(row.worldRankBonus || 0),
+      preferredWorldBonus: Number(row.preferredWorldBonus || 0),
+      userBonus: Number(row.userBonus || 0),
+      secondaryBonus: Number(row.secondaryBonus || 0),
+      calibrationBonus: Number(row.calibrationBonus || 0),
+      spillPenalty: Number(row.spillPenalty || 0),
+      finalScore: Number(row.finalScore || row.score || 0),
+      worldRank: Number.isFinite(row.worldRank) ? row.worldRank : -1,
+      cluster: row.cluster || "",
+      family: row.family || "",
+      matchedUser: Boolean(row.matchedUser),
+      broadMatchedUser: Boolean(row.broadMatchedUser),
+      preferredWorld: Boolean(row.preferredWorld),
+      displayRank: idx + 1,
+      subjectPriority: String(row?.item?.subjectPriority || "").trim().toLowerCase(),
+      sectionLabel,
+    },
+    score: Number(row.finalScore || row.score || 0),
+  }));
+}
+
+function pickSubjectRows(
+  rows = [],
   {
-    userSubjects = [],
-    libSubjects = [],
-    total = 7,
-    subjectSlots = 3,
+    total = 10,
+    maxPerWorld = 2,
+    usedTitles = new Set(),
+    usedFamilies = new Set(),
+    enforceFamilyUniqueness = true,
   } = {}
 ) {
-  const { includedArchetypes = [], includedWeights = {}, fullArchetypes = [] } = ctx;
+  const selectedRows = [];
+  const nextTitles = new Set(usedTitles || []);
+  const nextFamilies = new Set(usedFamilies || []);
+  const worldCounts = new Map();
 
-  const scored = fitAreas.map((fa) => ({
-    item: fa,
-    score: scoreItemByArchetypeOrder(fa, includedArchetypes, includedWeights, fullArchetypes),
-  }));
+  for (const row of rows || []) {
+    const titleKey = String(row?.item?.title || "").toLowerCase();
+    const familyKey = String(row?.family || "").trim().toLowerCase();
+    const worldId = row?.item?.careerWorldId || "";
 
-  let sortedGlobal = sortByScoreDesc(scored).map((x) => x.item);
+    if (!titleKey || nextTitles.has(titleKey)) continue;
+    if (enforceFamilyUniqueness && familyKey && nextFamilies.has(familyKey)) continue;
+    if (
+      Number.isFinite(maxPerWorld) &&
+      maxPerWorld !== Infinity &&
+      worldId &&
+      (worldCounts.get(worldId) || 0) >= maxPerWorld
+    ) {
+      continue;
+    }
 
-  // subject-aware part (keep your existing behaviour)
-  const matchedSubjects = matchUserSubjectsToLibSubjects(userSubjects, libSubjects);
-  let subjectRelated = [];
-  if (matchedSubjects.length) {
-    const fromGlobal = filterItemsBySubjectArchetypes(sortedGlobal, matchedSubjects);
-    subjectRelated = fromGlobal.slice(0, subjectSlots);
+    selectedRows.push(row);
+    nextTitles.add(titleKey);
+    if (familyKey) nextFamilies.add(familyKey);
+    if (worldId) worldCounts.set(worldId, (worldCounts.get(worldId) || 0) + 1);
+    if (selectedRows.length >= total) break;
   }
 
-  const taken = new Set(subjectRelated.map((x) => x.title));
-  const remainder = [];
-  for (const it of sortedGlobal) {
-    if (subjectRelated.length + remainder.length >= total) break;
-    if (taken.has(it.title)) continue;
-    remainder.push(it);
-  }
-
-  let picked = dedupeByTitle([...subjectRelated, ...remainder]).slice(0, total);
-
-  // coverage pass
-  picked = ensureArchetypeCoverage(picked, scored, includedArchetypes, total);
-
-  return picked;
+  return {
+    selectedRows,
+    usedTitles: nextTitles,
+    usedFamilies: nextFamilies,
+  };
 }
 
-function selectSubjects(
+function selectSegmentedSubjectsForCareerWorlds(
   allSubjects = [],
+  topCareerWorlds = [],
   ctx = {},
   {
     userSubjects = [],
-    total = 7,
-    subjectSlots = 3,
+    total = 10,
+    maxPerWorld = 2,
+    broadTarget = 6,
+    specialistMax = 4,
   } = {}
 ) {
-  const { includedArchetypes = [], includedWeights = {}, fullArchetypes = [] } = ctx;
+  const rows = buildScoredSubjectRows(allSubjects, topCareerWorlds, ctx, userSubjects);
+  const broadRows = rows.filter(
+    (row) => String(row?.item?.subjectPriority || "").trim().toLowerCase() !== "specialist"
+  );
+  const specialistRows = rows.filter(
+    (row) => String(row?.item?.subjectPriority || "").trim().toLowerCase() === "specialist"
+  );
 
-  const scored = allSubjects.map((subj) => ({
-    item: subj,
-    score: scoreItemByArchetypeOrder(subj, includedArchetypes, includedWeights, fullArchetypes),
-  }));
-  const sortedGlobal = sortByScoreDesc(scored).map((x) => x.item);
+  const broadPrimary = pickSubjectRows(broadRows, {
+    total: Math.min(total, broadTarget),
+    maxPerWorld,
+    enforceFamilyUniqueness: true,
+  });
 
-  const matchedSubjects = matchUserSubjectsToLibSubjects(userSubjects, allSubjects);
-  let subjectFirst = [];
-  if (matchedSubjects.length) {
-    subjectFirst = matchedSubjects.slice(0, subjectSlots);
+  const specialistPrimary = pickSubjectRows(specialistRows, {
+    total: Math.min(specialistMax, Math.max(0, total - broadPrimary.selectedRows.length)),
+    maxPerWorld,
+    usedTitles: broadPrimary.usedTitles,
+    // Important: do NOT inherit broad families here.
+    // We want the specialist section to dedupe within itself,
+    // but not to be blocked just because a broad cousin from the same family
+    // already appeared in the main list.
+    usedFamilies: new Set(),
+    enforceFamilyUniqueness: true,
+  });
+
+  let combinedBroadRows = [...broadPrimary.selectedRows];
+  let usedTitles = specialistPrimary.usedTitles;
+  // Keep broad-family uniqueness for any extra broad overflow rows.
+  // Specialist families should not suppress additional broad entries.
+  let usedFamilies = broadPrimary.usedFamilies;
+  let remaining = Math.max(0, total - combinedBroadRows.length - specialistPrimary.selectedRows.length);
+
+  if (remaining > 0) {
+    const broadOverflowUnique = pickSubjectRows(broadRows, {
+      total: remaining,
+      maxPerWorld,
+      usedTitles,
+      usedFamilies,
+      enforceFamilyUniqueness: true,
+    });
+    combinedBroadRows = [...combinedBroadRows, ...broadOverflowUnique.selectedRows];
+    usedTitles = broadOverflowUnique.usedTitles;
+    usedFamilies = broadOverflowUnique.usedFamilies;
+    remaining = Math.max(0, total - combinedBroadRows.length - specialistPrimary.selectedRows.length);
   }
 
-  const taken = new Set(subjectFirst.map((x) => x.title));
-  const remainder = [];
-  for (const it of sortedGlobal) {
-    if (subjectFirst.length + remainder.length >= total) break;
-    if (taken.has(it.title)) continue;
-    remainder.push(it);
+  if (remaining > 0) {
+    const broadOverflowAnyFamily = pickSubjectRows(broadRows, {
+      total: remaining,
+      maxPerWorld,
+      usedTitles,
+      usedFamilies,
+      enforceFamilyUniqueness: false,
+    });
+    combinedBroadRows = [...combinedBroadRows, ...broadOverflowAnyFamily.selectedRows];
   }
 
-  let picked = dedupeByTitle([...subjectFirst, ...remainder]).slice(0, total);
+  const finalBroadRows = sortSubjectRows(combinedBroadRows).slice(0, total);
+  const finalSpecialistRows = sortSubjectRows(specialistPrimary.selectedRows).slice(0, specialistMax);
+  const combinedRows = [...finalBroadRows, ...finalSpecialistRows].slice(0, total);
 
-  // coverage pass
-  picked = ensureArchetypeCoverage(picked, scored, includedArchetypes, total);
-
-  return picked;
+  return {
+    broad: buildSubjectSelectionResult(finalBroadRows, "broad"),
+    specialist: buildSubjectSelectionResult(finalSpecialistRows, "specialist"),
+    combined: buildSubjectSelectionResult(combinedRows, "combined"),
+  };
 }
 
-// roles / generic bank
+function selectScoredSubjectsForCareerWorlds(
+  allSubjects = [],
+  topCareerWorlds = [],
+  ctx = {},
+  options = {}
+) {
+  return selectSegmentedSubjectsForCareerWorlds(allSubjects, topCareerWorlds, ctx, options).combined;
+}
+
+function selectSubjectsForCareerWorlds(
+  allSubjects = [],
+  topCareerWorlds = [],
+  ctx = {},
+  { userSubjects = [], total = 10, maxPerWorld = 2 } = {}
+) {
+  const rows = buildScoredSubjectRows(allSubjects, topCareerWorlds, ctx, userSubjects);
+  const selectedRows = [];
+  const selectedTitles = new Set();
+  const worldCounts = new Map();
+
+  for (const row of rows) {
+    const titleKey = String(row?.item?.title || "").toLowerCase();
+    const worldId = row?.item?.careerWorldId || "";
+    if (!titleKey || selectedTitles.has(titleKey)) continue;
+    if (
+      Number.isFinite(maxPerWorld) &&
+      maxPerWorld !== Infinity &&
+      worldId &&
+      (worldCounts.get(worldId) || 0) >= maxPerWorld
+    ) {
+      continue;
+    }
+    selectedRows.push(row);
+    selectedTitles.add(titleKey);
+    if (worldId) worldCounts.set(worldId, (worldCounts.get(worldId) || 0) + 1);
+    if (selectedRows.length >= total) break;
+  }
+
+  if (selectedRows.length < total) {
+    for (const row of rows) {
+      const titleKey = String(row?.item?.title || "").toLowerCase();
+      if (!titleKey || selectedTitles.has(titleKey)) continue;
+      selectedRows.push(row);
+      selectedTitles.add(titleKey);
+      if (selectedRows.length >= total) break;
+    }
+  }
+
+  return sortSubjectRows(selectedRows)
+    .slice(0, total)
+    .map((row, idx) => attachSubjectScoreMeta(row.item, row, idx + 1));
+}
+
+function selectRolesForSubject(allRoles = [], matchedSubject = null, topCareerWorlds = [], ctx = {}, { total = 8 } = {}) {
+  const scored = buildScoredRoleRows(allRoles, matchedSubject, topCareerWorlds, ctx);
+
+  const matchedWorldId = String(matchedSubject?.careerWorldId || "").trim();
+  const adjacentWorldIds = new Set(
+    ensureArray(matchedSubject?.adjacentCareerWorldIds).map((id) => String(id || "").trim()).filter(Boolean)
+  );
+
+  const filtered = matchedWorldId
+    ? scored.filter((row) => {
+        const familyWorldId = String(row?.item?.careerWorldId || "").trim();
+        return familyWorldId && (familyWorldId === matchedWorldId || adjacentWorldIds.has(familyWorldId));
+      })
+    : scored;
+
+  return filtered.slice(0, total).map((x) => x.item);
+}
+
 function rankBank(list = [], ctx = {}, limit = 5) {
-  const { includedArchetypes = [], includedWeights = {}, fullArchetypes = [] } = ctx;
-  const scored = list.map((r) => ({
-    item: r,
-    score: scoreItemByArchetypeOrder(r, includedArchetypes, includedWeights, fullArchetypes),
-  }));
+  const scored = buildScoreMap(list, ctx).scored;
   const sorted = sortByScoreDesc(scored);
-  const top = sorted.slice(0, limit).map((x) => x.item);
-
-  return ensureArchetypeCoverage(top, scored, includedArchetypes, limit);
+  return sorted.slice(0, limit).map((x) => x.item);
 }
+
+function selectEnvironments(environments = [], ctx = {}, limit = 6) {
+  return rankBank(environments, ctx, limit);
+}
+
+
 
 module.exports = {
-  selectStrengths,
-  selectEnvironments,
-  selectFitAreas,
-  selectSubjects,
-  rankBank,
   scoreItemByArchetypeOrder,
+  scoreItemBySubdimensionProfile,
+  scoreItemBreakdown,
+  scoreItemTotal,
+  buildScoredCareerWorldRows,
+  buildScoredEnvironmentRows,
+  buildScoredRoleRows,
+  buildScoredSubjectRows,
+  subjectDisplayScore,
+  rankBank,
+  selectStrengths,
+  selectCareerWorlds,
+  selectEnvironmentsForWorlds,
+  selectEnvironments,
+  selectScoredSubjectsForCareerWorlds,
+  selectSegmentedSubjectsForCareerWorlds,
+  selectSubjectsForCareerWorlds,
+  selectRolesForSubject,
+  matchUserSubjectsToLibSubjects,
+  findBestMatchingSubject,
+  resolveMultipleSubjectIntents,
+  normalizeItemScoreToPct,
+  getItemSignalFromBreakdown,
 };

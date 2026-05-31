@@ -1,0 +1,487 @@
+[
+  {
+    "id": "school_relational_creative_balanced",
+    "title": "School: relational + creative balanced profile",
+    "status": "school",
+    "schoolSubjects": [
+      "English",
+      "Art",
+      "Drama"
+    ],
+    "archetypes": {
+      "Connector": 64,
+      "Organizer": 63,
+      "Creator": 58,
+      "Visionary": 58,
+      "Thinker": 57,
+      "Achiever": 54,
+      "Explorer": 54
+    },
+    "subdims": [
+      {
+        "name": "Purpose & Impact",
+        "score": 84
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 82
+      },
+      {
+        "name": "Creative Expression",
+        "score": 79
+      },
+      {
+        "name": "Helping Orientation",
+        "score": 76
+      },
+      {
+        "name": "Clarity & Structure Preference",
+        "score": 74
+      },
+      {
+        "name": "Organisation & Systems Orientation",
+        "score": 72
+      },
+      {
+        "name": "Curiosity & Openness",
+        "score": 71
+      },
+      {
+        "name": "Sociability & Extroversion",
+        "score": 70
+      },
+      {
+        "name": "Independence & Autonomy",
+        "score": 68
+      },
+      {
+        "name": "Hands-On Engagement",
+        "score": 66
+      },
+      {
+        "name": "Emotional Stability",
+        "score": 64
+      },
+      {
+        "name": "Entrepreneurial Drive",
+        "score": 60
+      }
+    ],
+    "expectations": {
+      "minDistinctSubjectFamilies": 4,
+      "minDistinctSubjectClusters": 4,
+      "mustIncludeMainSubjectFamiliesAny": [
+        "design_spatial",
+        "communication_language",
+        "teaching_development"
+      ]
+    }
+  },
+  {
+    "id": "school_creator_explorer",
+    "title": "School: creator + explorer profile",
+    "status": "school",
+    "schoolSubjects": [
+      "Art",
+      "Media",
+      "Design"
+    ],
+    "archetypes": {
+      "Creator": 68,
+      "Explorer": 65,
+      "Visionary": 61,
+      "Connector": 55,
+      "Organizer": 49,
+      "Thinker": 46,
+      "Achiever": 42
+    },
+    "subdims": [
+      {
+        "name": "Creative Expression",
+        "score": 90
+      },
+      {
+        "name": "Novelty & Variety Seeking",
+        "score": 86
+      },
+      {
+        "name": "Curiosity & Openness",
+        "score": 84
+      },
+      {
+        "name": "Independence & Autonomy",
+        "score": 80
+      },
+      {
+        "name": "Hands-On Engagement",
+        "score": 77
+      },
+      {
+        "name": "Purpose & Impact",
+        "score": 72
+      },
+      {
+        "name": "Pace & Intensity Preference",
+        "score": 68
+      },
+      {
+        "name": "Entrepreneurial Drive",
+        "score": 66
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 60
+      }
+    ],
+    "expectations": {
+      "minDistinctSubjectFamilies": 4,
+      "mustIncludeMainSubjectFamiliesAny": [
+        "creative_expression",
+        "design_spatial"
+      ]
+    }
+  },
+  {
+    "id": "school_analytical_structured",
+    "title": "School: analytical + structured profile",
+    "status": "school",
+    "schoolSubjects": [
+      "Mathematics",
+      "Physics",
+      "Computer Science"
+    ],
+    "archetypes": {
+      "Thinker": 69,
+      "Organizer": 66,
+      "Achiever": 60,
+      "Explorer": 57,
+      "Creator": 50,
+      "Visionary": 45,
+      "Connector": 44
+    },
+    "subdims": [
+      {
+        "name": "Investigative Curiosity",
+        "score": 88
+      },
+      {
+        "name": "Reliability & Focus",
+        "score": 84
+      },
+      {
+        "name": "Attention to Detail",
+        "score": 82
+      },
+      {
+        "name": "Clarity & Structure Preference",
+        "score": 80
+      },
+      {
+        "name": "Organisation & Systems Orientation",
+        "score": 78
+      },
+      {
+        "name": "Uncertainty Tolerance",
+        "score": 73
+      },
+      {
+        "name": "Independent Working Approach",
+        "score": 72
+      },
+      {
+        "name": "Financial Ambition",
+        "score": 61
+      },
+      {
+        "name": "Hands-On Engagement",
+        "score": 59
+      }
+    ],
+    "expectations": {
+      "mustIncludeMainSubjectFamiliesAny": [
+        "technical_quantitative"
+      ]
+    }
+  },
+  {
+    "id": "school_people_policy",
+    "title": "School: people + policy profile",
+    "status": "school",
+    "schoolSubjects": [
+      "Politics",
+      "History",
+      "English"
+    ],
+    "archetypes": {
+      "Visionary": 67,
+      "Connector": 65,
+      "Organizer": 58,
+      "Thinker": 57,
+      "Achiever": 56,
+      "Creator": 48,
+      "Explorer": 44
+    },
+    "subdims": [
+      {
+        "name": "Purpose & Impact",
+        "score": 88
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 82
+      },
+      {
+        "name": "Helping Orientation",
+        "score": 77
+      },
+      {
+        "name": "Curiosity & Openness",
+        "score": 75
+      },
+      {
+        "name": "Recognition & Visibility",
+        "score": 70
+      },
+      {
+        "name": "Entrepreneurial Drive",
+        "score": 67
+      },
+      {
+        "name": "Independent Working Approach",
+        "score": 63
+      },
+      {
+        "name": "Team Collaboration",
+        "score": 71
+      },
+      {
+        "name": "Creative Expression",
+        "score": 62
+      }
+    ],
+    "expectations": {
+      "minDistinctSubjectFamilies": 4,
+      "mustIncludeMainSubjectFamiliesAny": [
+        "society_policy_humanities",
+        "teaching_development",
+        "communication_language"
+      ]
+    }
+  },
+  {
+    "id": "ug_business_manager",
+    "title": "Undergraduate: business management pathway",
+    "status": "undergraduate",
+    "uniSubject": "Business and management studies",
+    "archetypes": {
+      "Achiever": 67,
+      "Organizer": 64,
+      "Connector": 60,
+      "Visionary": 56,
+      "Thinker": 50,
+      "Creator": 46,
+      "Explorer": 42
+    },
+    "subdims": [
+      {
+        "name": "Entrepreneurial Drive",
+        "score": 84
+      },
+      {
+        "name": "Recognition & Visibility",
+        "score": 81
+      },
+      {
+        "name": "Reliability & Focus",
+        "score": 79
+      },
+      {
+        "name": "Team Collaboration",
+        "score": 76
+      },
+      {
+        "name": "Financial Ambition",
+        "score": 75
+      },
+      {
+        "name": "Organisation & Systems Orientation",
+        "score": 74
+      },
+      {
+        "name": "Pace & Intensity Preference",
+        "score": 70
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 66
+      }
+    ],
+    "expectations": {
+      "expectedRoleCount": 8,
+      "minDistinctRoleFamilies": 4,
+      "maxRolesPerFamily": 2
+    }
+  },
+  {
+    "id": "ug_computing_product",
+    "title": "Undergraduate: computing + product profile",
+    "status": "undergraduate",
+    "uniSubject": "Computer science",
+    "archetypes": {
+      "Thinker": 68,
+      "Creator": 63,
+      "Organizer": 58,
+      "Explorer": 57,
+      "Achiever": 54,
+      "Connector": 46,
+      "Visionary": 45
+    },
+    "subdims": [
+      {
+        "name": "Investigative Curiosity",
+        "score": 86
+      },
+      {
+        "name": "Creative Expression",
+        "score": 80
+      },
+      {
+        "name": "Independent Working Approach",
+        "score": 79
+      },
+      {
+        "name": "Attention to Detail",
+        "score": 77
+      },
+      {
+        "name": "Organisation & Systems Orientation",
+        "score": 73
+      },
+      {
+        "name": "Hands-On Engagement",
+        "score": 71
+      },
+      {
+        "name": "Novelty & Variety Seeking",
+        "score": 69
+      },
+      {
+        "name": "Uncertainty Tolerance",
+        "score": 66
+      }
+    ],
+    "expectations": {
+      "expectedRoleCount": 8,
+      "minDistinctRoleFamilies": 4,
+      "maxRolesPerFamily": 2
+    }
+  },
+  {
+    "id": "pg_psychology_people_insight",
+    "title": "Postgraduate: psychology + people insight",
+    "status": "postgraduate",
+    "uniSubject": "Psychology",
+    "archetypes": {
+      "Connector": 66,
+      "Visionary": 63,
+      "Thinker": 60,
+      "Organizer": 55,
+      "Creator": 48,
+      "Achiever": 47,
+      "Explorer": 44
+    },
+    "subdims": [
+      {
+        "name": "Helping Orientation",
+        "score": 85
+      },
+      {
+        "name": "Purpose & Impact",
+        "score": 82
+      },
+      {
+        "name": "Investigative Curiosity",
+        "score": 78
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 76
+      },
+      {
+        "name": "Emotional Stability",
+        "score": 70
+      },
+      {
+        "name": "Curiosity & Openness",
+        "score": 68
+      },
+      {
+        "name": "Independent Working Approach",
+        "score": 64
+      },
+      {
+        "name": "Recognition & Visibility",
+        "score": 58
+      }
+    ],
+    "expectations": {
+      "expectedRoleCount": 8,
+      "minDistinctRoleFamilies": 4,
+      "maxRolesPerFamily": 2
+    }
+  },
+  {
+    "id": "pg_marketing_comms",
+    "title": "Postgraduate: marketing + communications profile",
+    "status": "postgraduate",
+    "uniSubject": "Marketing",
+    "archetypes": {
+      "Creator": 64,
+      "Connector": 62,
+      "Achiever": 58,
+      "Visionary": 56,
+      "Organizer": 51,
+      "Thinker": 49,
+      "Explorer": 46
+    },
+    "subdims": [
+      {
+        "name": "Creative Expression",
+        "score": 85
+      },
+      {
+        "name": "Entrepreneurial Drive",
+        "score": 82
+      },
+      {
+        "name": "Recognition & Visibility",
+        "score": 79
+      },
+      {
+        "name": "Belonging & Connection",
+        "score": 74
+      },
+      {
+        "name": "Pace & Intensity Preference",
+        "score": 71
+      },
+      {
+        "name": "Curiosity & Openness",
+        "score": 70
+      },
+      {
+        "name": "Team Collaboration",
+        "score": 68
+      },
+      {
+        "name": "Financial Ambition",
+        "score": 65
+      }
+    ],
+    "expectations": {
+      "expectedRoleCount": 8,
+      "minDistinctRoleFamilies": 4,
+      "maxRolesPerFamily": 2
+    }
+  }
+]

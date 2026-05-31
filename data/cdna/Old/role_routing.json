@@ -1,0 +1,2969 @@
+[
+  {
+    "roleId": "role_data_analyst",
+    "roleTitle": "Data Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_data_analysis",
+    "roleFamilyTitle": "Core Data Analysis & Business Insight",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_actuarial_science",
+      "sub_data_science_and_analytics",
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_economics"
+    ]
+  },
+  {
+    "roleId": "role_operational_research_analyst",
+    "roleTitle": "Operational Research Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_data_analysis",
+    "roleFamilyTitle": "Core Data Analysis & Business Insight",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_economics"
+    ]
+  },
+  {
+    "roleId": "role_business_intelligence_analyst",
+    "roleTitle": "Business Intelligence Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
+    "roleFamilyTitle": "Business Intelligence & Reporting",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_reporting_analyst",
+    "roleTitle": "Reporting Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
+    "roleFamilyTitle": "Business Intelligence & Reporting",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_insight_analyst",
+    "roleTitle": "Insight Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_insight_and_market_research",
+    "roleFamilyTitle": "Customer & Market Insight",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_business_analytics",
+      "sub_data_science_and_analytics",
+      "sub_marketing",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_public_relations_and_communications"
+    ]
+  },
+  {
+    "roleId": "role_customer_insight_analyst",
+    "roleTitle": "Customer Insight Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_insight_and_market_research",
+    "roleFamilyTitle": "Customer & Market Insight",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_business_analytics",
+      "sub_marketing",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_public_relations_and_communications"
+    ]
+  },
+  {
+    "roleId": "role_actuarial_analyst",
+    "roleTitle": "Actuarial Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics",
+    "roleFamilyTitle": "Risk & Quantitative Analysis",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_actuarial_science",
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_quantitative_risk_analyst",
+    "roleTitle": "Quantitative Risk Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics",
+    "roleFamilyTitle": "Risk & Quantitative Analysis",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_actuarial_science",
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_pricing_analyst",
+    "roleTitle": "Pricing Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics",
+    "roleFamilyTitle": "Risk & Quantitative Analysis",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_actuarial_science",
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_data_scientist",
+    "roleTitle": "Data Scientist",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
+    "roleFamilyTitle": "Data Science & Advanced Modelling",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence",
+      "sub_data_science_and_analytics",
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_physics"
+    ]
+  },
+  {
+    "roleId": "role_statistician",
+    "roleTitle": "Statistician",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
+    "roleFamilyTitle": "Data Science & Advanced Modelling",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_mathematics_and_statistics",
+      "sub_statistics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_economics"
+    ]
+  },
+  {
+    "roleId": "role_applied_ai_analyst",
+    "roleTitle": "Applied AI Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_machine_learning_and_applied_ai",
+    "roleFamilyTitle": "Machine Learning & Applied AI",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence",
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_product_analyst",
+    "roleTitle": "Product Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_product_growth_and_experimentation_analytics",
+    "roleFamilyTitle": "Product, Growth & Experimentation Analytics",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_growth_analyst",
+    "roleTitle": "Growth Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_product_growth_and_experimentation_analytics",
+    "roleFamilyTitle": "Product, Growth & Experimentation Analytics",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_experimentation_analyst",
+    "roleTitle": "Experimentation Analyst",
+    "roleFamilyId": "rf_data_analytics_quantitative_insight_product_growth_and_experimentation_analytics",
+    "roleFamilyTitle": "Product, Growth & Experimentation Analytics",
+    "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "primarySubjectIds": [
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_software_engineer",
+    "roleTitle": "Software Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_software_engineering",
+    "roleFamilyTitle": "Software Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_applications_developer",
+    "roleTitle": "Software Developer",
+    "roleFamilyId": "rf_software_ai_digital_systems_software_engineering",
+    "roleFamilyTitle": "Software Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics"
+    ]
+  },
+  {
+    "roleId": "role_systems_analyst",
+    "roleTitle": "Systems Analyst",
+    "roleFamilyId": "rf_software_ai_digital_systems_software_engineering",
+    "roleFamilyTitle": "Software Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_backend_developer",
+    "roleTitle": "Backend Developer",
+    "roleFamilyId": "rf_software_ai_digital_systems_backend_and_platform_engineering",
+    "roleFamilyTitle": "Backend & Platform Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics"
+    ]
+  },
+  {
+    "roleId": "role_platform_engineer",
+    "roleTitle": "Platform Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_backend_and_platform_engineering",
+    "roleFamilyTitle": "Backend & Platform Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics"
+    ]
+  },
+  {
+    "roleId": "role_devops_engineer",
+    "roleTitle": "DevOps Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_backend_and_platform_engineering",
+    "roleFamilyTitle": "Backend & Platform Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics"
+    ]
+  },
+  {
+    "roleId": "role_frontend_developer",
+    "roleTitle": "Frontend Developer",
+    "roleFamilyId": "rf_software_ai_digital_systems_frontend_and_web_development",
+    "roleFamilyTitle": "Frontend & Web Development",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence"
+    ],
+    "adjacentSubjectIds": [
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_web_developer",
+    "roleTitle": "Web Developer",
+    "roleFamilyId": "rf_software_ai_digital_systems_frontend_and_web_development",
+    "roleFamilyTitle": "Frontend & Web Development",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_and_artificial_intelligence"
+    ],
+    "adjacentSubjectIds": [
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_data_engineer",
+    "roleTitle": "Data Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_data_engineering",
+    "roleFamilyTitle": "Data Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence",
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_database_developer",
+    "roleTitle": "Database Developer",
+    "roleFamilyId": "rf_software_ai_digital_systems_data_engineering",
+    "roleFamilyTitle": "Data Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence",
+      "sub_data_science_and_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_software_tester",
+    "roleTitle": "Software Tester",
+    "roleFamilyId": "rf_software_ai_digital_systems_quality_assurance_and_test_engineering",
+    "roleFamilyTitle": "Quality Assurance & Test Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_qa_analyst",
+    "roleTitle": "QA Analyst",
+    "roleFamilyId": "rf_software_ai_digital_systems_quality_assurance_and_test_engineering",
+    "roleFamilyTitle": "Quality Assurance & Test Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_software_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_cyber_security_analyst",
+    "roleTitle": "Cyber Security Analyst",
+    "roleFamilyId": "rf_software_ai_digital_systems_cyber_security",
+    "roleFamilyTitle": "Cyber Security",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_with_cyber_security"
+    ],
+    "adjacentSubjectIds": [
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_soc_analyst",
+    "roleTitle": "SOC Analyst",
+    "roleFamilyId": "rf_software_ai_digital_systems_cyber_security",
+    "roleFamilyTitle": "Cyber Security",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_computer_science_with_cyber_security"
+    ],
+    "adjacentSubjectIds": [
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_machine_learning_engineer",
+    "roleTitle": "Machine Learning Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_ai_and_machine_learning_engineering",
+    "roleFamilyTitle": "AI & Machine Learning Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_computer_science_and_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_ai_engineer",
+    "roleTitle": "AI Engineer",
+    "roleFamilyId": "rf_software_ai_digital_systems_ai_and_machine_learning_engineering",
+    "roleFamilyTitle": "AI & Machine Learning Engineering",
+    "primaryCareerWorldId": "cw_software_ai_digital_systems",
+    "primaryCareerWorldTitle": "Software, AI & Digital Systems",
+    "primarySubjectIds": [
+      "sub_artificial_intelligence"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_computer_science_and_artificial_intelligence"
+    ]
+  },
+  {
+    "roleId": "role_mechanical_engineer",
+    "roleTitle": "Mechanical Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
+    "roleFamilyTitle": "Mechanical Design & Development Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology",
+      "sub_manufacturing_engineering"
+    ]
+  },
+  {
+    "roleId": "role_design_engineer",
+    "roleTitle": "Design Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
+    "roleFamilyTitle": "Mechanical Design & Development Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology",
+      "sub_manufacturing_engineering"
+    ]
+  },
+  {
+    "roleId": "role_product_engineer",
+    "roleTitle": "Product Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
+    "roleFamilyTitle": "Mechanical Design & Development Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology",
+      "sub_manufacturing_engineering"
+    ]
+  },
+  {
+    "roleId": "role_electrical_engineer",
+    "roleTitle": "Electrical Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
+    "roleFamilyTitle": "Electrical & Electronic Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_electronics_engineer",
+    "roleTitle": "Electronics Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
+    "roleFamilyTitle": "Electrical & Electronic Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_control_engineer",
+    "roleTitle": "Control Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
+    "roleFamilyTitle": "Electrical & Electronic Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_manufacturing_engineer",
+    "roleTitle": "Manufacturing Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
+    "roleFamilyTitle": "Manufacturing & Production Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_production_engineer",
+    "roleTitle": "Production Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
+    "roleFamilyTitle": "Manufacturing & Production Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_quality_engineer",
+    "roleTitle": "Quality Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
+    "roleFamilyTitle": "Manufacturing & Production Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_process_engineer",
+    "roleTitle": "Process Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
+    "roleFamilyTitle": "Process & Industrial Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_chemistry"
+    ]
+  },
+  {
+    "roleId": "role_industrial_engineer",
+    "roleTitle": "Industrial Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
+    "roleFamilyTitle": "Process & Industrial Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_chemistry"
+    ]
+  },
+  {
+    "roleId": "role_continuous_improvement_engineer",
+    "roleTitle": "Continuous Improvement Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
+    "roleFamilyTitle": "Process & Industrial Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_chemical_engineering",
+      "sub_manufacturing_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_chemistry"
+    ]
+  },
+  {
+    "roleId": "role_systems_engineer",
+    "roleTitle": "Systems Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_systems_engineering",
+    "roleFamilyTitle": "Systems Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering",
+      "sub_civil_engineering",
+      "sub_electrical_and_electronic_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_mechanical_engineering",
+      "sub_physics",
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_integration_engineer",
+    "roleTitle": "Integration Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_systems_engineering",
+    "roleFamilyTitle": "Systems Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering",
+      "sub_civil_engineering",
+      "sub_electrical_and_electronic_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_mechanical_engineering",
+      "sub_physics",
+      "sub_software_engineering"
+    ]
+  },
+  {
+    "roleId": "role_robotics_engineer",
+    "roleTitle": "Robotics Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
+    "roleFamilyTitle": "Robotics & Automation Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_automation_engineer",
+    "roleTitle": "Automation Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
+    "roleFamilyTitle": "Robotics & Automation Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_mechatronics_engineer",
+    "roleTitle": "Mechatronics Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
+    "roleFamilyTitle": "Robotics & Automation Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_electrical_and_electronic_engineering",
+      "sub_mechanical_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_civil_engineer",
+    "roleTitle": "Civil Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
+    "roleFamilyTitle": "Civil & Structural Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology"
+    ]
+  },
+  {
+    "roleId": "role_structural_engineer",
+    "roleTitle": "Structural Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
+    "roleFamilyTitle": "Civil & Structural Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology"
+    ]
+  },
+  {
+    "roleId": "role_site_engineer",
+    "roleTitle": "Site Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
+    "roleFamilyTitle": "Civil & Structural Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architectural_technology"
+    ]
+  },
+  {
+    "roleId": "role_asset_engineer",
+    "roleTitle": "Asset Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering",
+    "roleFamilyTitle": "Infrastructure, Maintenance & Asset Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_maintenance_engineer",
+    "roleTitle": "Maintenance Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering",
+    "roleFamilyTitle": "Infrastructure, Maintenance & Asset Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_reliability_engineer",
+    "roleTitle": "Reliability Engineer",
+    "roleFamilyId": "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering",
+    "roleFamilyTitle": "Infrastructure, Maintenance & Asset Engineering",
+    "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "primarySubjectIds": [
+      "sub_civil_engineering"
+    ],
+    "adjacentSubjectIds": [
+      "sub_aeronautical_and_aerospace_engineering"
+    ]
+  },
+  {
+    "roleId": "role_architect",
+    "roleTitle": "Architect",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_architecture",
+    "roleFamilyTitle": "Architecture",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architecture"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_architectural_assistant",
+    "roleTitle": "Architectural Assistant",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_architecture",
+    "roleFamilyTitle": "Architecture",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architecture"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_town_planner",
+    "roleTitle": "Town Planner",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
+    "roleFamilyTitle": "Town Planning & Urban Development",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architecture_and_planning"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture",
+      "sub_civil_engineering"
+    ]
+  },
+  {
+    "roleId": "role_planning_consultant",
+    "roleTitle": "Planning Consultant",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
+    "roleFamilyTitle": "Town Planning & Urban Development",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architecture_and_planning"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture",
+      "sub_civil_engineering"
+    ]
+  },
+  {
+    "roleId": "role_architectural_technologist",
+    "roleTitle": "Architectural Technologist",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
+    "roleFamilyTitle": "Architectural Technology & BIM",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architectural_technology",
+      "sub_architecture"
+    ],
+    "adjacentSubjectIds": [
+      "sub_product_design"
+    ]
+  },
+  {
+    "roleId": "role_bim_coordinator",
+    "roleTitle": "BIM Coordinator",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
+    "roleFamilyTitle": "Architectural Technology & BIM",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architectural_technology",
+      "sub_architecture"
+    ],
+    "adjacentSubjectIds": [
+      "sub_product_design"
+    ]
+  },
+  {
+    "roleId": "role_architectural_technician",
+    "roleTitle": "Architectural Technician",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
+    "roleFamilyTitle": "Architectural Technology & BIM",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architectural_technology",
+      "sub_architecture"
+    ],
+    "adjacentSubjectIds": [
+      "sub_product_design"
+    ]
+  },
+  {
+    "roleId": "role_site_manager",
+    "roleTitle": "Site Manager",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_construction_project_management",
+    "roleFamilyTitle": "Construction Project Delivery",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_construction_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_quantity_surveyor",
+    "roleTitle": "Quantity Surveyor",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_surveying_and_cost_consultancy",
+    "roleFamilyTitle": "Surveying & Cost Consultancy",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_construction_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_building_surveyor",
+    "roleTitle": "Building Surveyor",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_surveying_and_cost_consultancy",
+    "roleFamilyTitle": "Surveying & Cost Consultancy",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_construction_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_estimator",
+    "roleTitle": "Estimator",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_surveying_and_cost_consultancy",
+    "roleFamilyTitle": "Surveying & Cost Consultancy",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_construction_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_building_sustainability_consultant",
+    "roleTitle": "Building Sustainability Consultant",
+    "roleFamilyId": "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance",
+    "roleFamilyTitle": "Sustainability & Building Performance",
+    "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "primarySubjectIds": [
+      "sub_architecture",
+      "sub_architectural_technology",
+      "sub_environmental_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture_and_planning"
+    ]
+  },
+  {
+    "roleId": "role_laboratory_technician",
+    "roleTitle": "Laboratory Technician",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_laboratory_science",
+    "roleFamilyTitle": "Laboratory Science",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biomedical_science",
+      "sub_chemistry"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_research_assistant",
+    "roleTitle": "Research Assistant",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_laboratory_science",
+    "roleFamilyTitle": "Laboratory Science",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biomedical_science",
+      "sub_chemistry"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_research_scientist",
+    "roleTitle": "Research Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_r_and_d_science",
+    "roleFamilyTitle": "R&D Science",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biology",
+      "sub_chemistry",
+      "sub_physics"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_r_and_d_scientist",
+    "roleTitle": "R&D Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_r_and_d_science",
+    "roleFamilyTitle": "R&D Science",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biology",
+      "sub_chemistry",
+      "sub_physics"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_analytical_chemist",
+    "roleTitle": "Analytical Chemist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
+    "roleFamilyTitle": "Materials & Chemical Analysis",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_chemistry"
+    ],
+    "adjacentSubjectIds": [
+      "sub_chemical_engineering"
+    ]
+  },
+  {
+    "roleId": "role_materials_scientist",
+    "roleTitle": "Materials Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
+    "roleFamilyTitle": "Materials & Chemical Analysis",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_chemistry"
+    ],
+    "adjacentSubjectIds": [
+      "sub_chemical_engineering"
+    ]
+  },
+  {
+    "roleId": "role_biomedical_scientist",
+    "roleTitle": "Biomedical Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
+    "roleFamilyTitle": "Biomedical & Clinical Research",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biology",
+      "sub_biomedical_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_pharmacy"
+    ]
+  },
+  {
+    "roleId": "role_clinical_research_associate",
+    "roleTitle": "Clinical Research Associate",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
+    "roleFamilyTitle": "Biomedical & Clinical Research",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biology",
+      "sub_biomedical_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_pharmacy"
+    ]
+  },
+  {
+    "roleId": "role_clinical_scientist",
+    "roleTitle": "Clinical Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
+    "roleFamilyTitle": "Biomedical & Clinical Research",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biochemistry",
+      "sub_biology",
+      "sub_biomedical_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_pharmacy"
+    ]
+  },
+  {
+    "roleId": "role_bioinformatics_scientist",
+    "roleTitle": "Bioinformatics Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics",
+    "roleFamilyTitle": "Scientific Data & Bioinformatics",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_physics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biochemistry"
+    ]
+  },
+  {
+    "roleId": "role_scientific_data_analyst",
+    "roleTitle": "Scientific Data Analyst",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics",
+    "roleFamilyTitle": "Scientific Data & Bioinformatics",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_physics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biochemistry"
+    ]
+  },
+  {
+    "roleId": "role_translational_scientist",
+    "roleTitle": "Translational Scientist",
+    "roleFamilyId": "rf_science_research_laboratory_innovation_translational_research_and_innovation",
+    "roleFamilyTitle": "Clinical Trials & Translational Research",
+    "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
+    "primarySubjectIds": [
+      "sub_biology"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_doctor",
+    "roleTitle": "Doctor",
+    "roleFamilyId": "rf_health_care_clinical_practice_medicine",
+    "roleFamilyTitle": "Medicine",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_medicine"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_adult_nurse",
+    "roleTitle": "Adult Nurse",
+    "roleFamilyId": "rf_health_care_clinical_practice_nursing",
+    "roleFamilyTitle": "Nursing",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_nursing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_midwifery"
+    ]
+  },
+  {
+    "roleId": "role_mental_health_nurse",
+    "roleTitle": "Mental Health Nurse",
+    "roleFamilyId": "rf_health_care_clinical_practice_nursing",
+    "roleFamilyTitle": "Nursing",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_nursing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology",
+      "sub_counselling_and_psychotherapy"
+    ]
+  },
+  {
+    "roleId": "role_midwife",
+    "roleTitle": "Midwife",
+    "roleFamilyId": "rf_health_care_clinical_practice_midwifery",
+    "roleFamilyTitle": "Midwifery",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_midwifery"
+    ],
+    "adjacentSubjectIds": [
+      "sub_nursing"
+    ]
+  },
+  {
+    "roleId": "role_physiotherapist",
+    "roleTitle": "Physiotherapist",
+    "roleFamilyId": "rf_health_care_clinical_practice_rehabilitation_therapies",
+    "roleFamilyTitle": "Rehabilitation Therapies",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_physiotherapy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_nursing"
+    ]
+  },
+  {
+    "roleId": "role_occupational_therapist",
+    "roleTitle": "Occupational Therapist",
+    "roleFamilyId": "rf_health_care_clinical_practice_rehabilitation_therapies",
+    "roleFamilyTitle": "Rehabilitation Therapies",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_occupational_therapy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_social_work",
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "roleId": "role_diagnostic_radiographer",
+    "roleTitle": "Diagnostic Radiographer",
+    "roleFamilyId": "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support",
+    "roleFamilyTitle": "Diagnostics, Imaging & Clinical Support",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_biomedical_science",
+      "sub_pharmacy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_paramedic_science"
+    ]
+  },
+  {
+    "roleId": "role_healthcare_scientist",
+    "roleTitle": "Healthcare Scientist",
+    "roleFamilyId": "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support",
+    "roleFamilyTitle": "Diagnostics, Imaging & Clinical Support",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_biomedical_science",
+      "sub_pharmacy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_paramedic_science"
+    ]
+  },
+  {
+    "roleId": "role_pharmacist",
+    "roleTitle": "Pharmacist",
+    "roleFamilyId": "rf_health_care_clinical_practice_pharmacy",
+    "roleFamilyTitle": "Pharmacy",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_pharmacy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biomedical_science"
+    ]
+  },
+  {
+    "roleId": "role_paramedic",
+    "roleTitle": "Paramedic",
+    "roleFamilyId": "rf_health_care_clinical_practice_paramedic_and_emergency_care",
+    "roleFamilyTitle": "Paramedic & Emergency Care",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_paramedic_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_nursing",
+      "sub_midwifery"
+    ]
+  },
+  {
+    "roleId": "role_public_health_practitioner",
+    "roleTitle": "Public Health Practitioner",
+    "roleFamilyId": "rf_health_care_clinical_practice_public_health_and_health_improvement",
+    "roleFamilyTitle": "Public Health & Health Improvement",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_medicine",
+      "sub_nursing",
+      "sub_midwifery",
+      "sub_social_work",
+      "sub_physiotherapy",
+      "sub_occupational_therapy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biomedical_science",
+      "sub_pharmacy"
+    ]
+  },
+  {
+    "roleId": "role_health_improvement_practitioner",
+    "roleTitle": "Health Improvement Practitioner",
+    "roleFamilyId": "rf_health_care_clinical_practice_public_health_and_health_improvement",
+    "roleFamilyTitle": "Public Health & Health Improvement",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_medicine",
+      "sub_nursing",
+      "sub_midwifery",
+      "sub_social_work",
+      "sub_physiotherapy",
+      "sub_occupational_therapy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biomedical_science",
+      "sub_pharmacy"
+    ]
+  },
+  {
+    "roleId": "role_nhs_management_scheme",
+    "roleTitle": "Healthcare Management Associate",
+    "roleFamilyId": "rf_health_care_clinical_practice_healthcare_operations_and_improvement",
+    "roleFamilyTitle": "Healthcare Operations & Improvement",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_nursing",
+      "sub_business_management",
+      "sub_business_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_physiotherapy",
+      "sub_occupational_therapy"
+    ]
+  },
+  {
+    "roleId": "role_service_improvement_analyst",
+    "roleTitle": "Service Improvement Analyst",
+    "roleFamilyId": "rf_health_care_clinical_practice_healthcare_operations_and_improvement",
+    "roleFamilyTitle": "Healthcare Operations & Improvement",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_nursing",
+      "sub_business_management",
+      "sub_business_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_medicine",
+      "sub_physiotherapy",
+      "sub_occupational_therapy"
+    ]
+  },
+  {
+    "roleId": "role_social_worker",
+    "roleTitle": "Social Worker",
+    "roleFamilyId": "rf_health_care_clinical_practice_social_work_and_safeguarding",
+    "roleFamilyTitle": "Social Work & Safeguarding",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_social_work"
+    ],
+    "adjacentSubjectIds": [
+      "sub_occupational_therapy",
+      "sub_education",
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "roleId": "role_safeguarding_officer",
+    "roleTitle": "Safeguarding Officer",
+    "roleFamilyId": "rf_health_care_clinical_practice_social_work_and_safeguarding",
+    "roleFamilyTitle": "Social Work & Safeguarding",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_social_work"
+    ],
+    "adjacentSubjectIds": [
+      "sub_education",
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "roleId": "role_dentist",
+    "roleTitle": "Dentist",
+    "roleFamilyId": "rf_health_care_clinical_practice_dentistry",
+    "roleFamilyTitle": "Dentistry",
+    "primaryCareerWorldId": "cw_health_care_clinical_practice",
+    "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
+    "primarySubjectIds": [
+      "sub_dentistry"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_assistant_psychologist",
+    "roleTitle": "Assistant Psychologist",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health",
+    "roleFamilyTitle": "Mental Health Support & Psychological Services",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_counselling_and_psychotherapy"
+    ]
+  },
+  {
+    "roleId": "role_mental_health_practitioner",
+    "roleTitle": "Mental Health Practitioner",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health",
+    "roleFamilyTitle": "Mental Health Support & Psychological Services",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_counselling_and_psychotherapy"
+    ]
+  },
+  {
+    "roleId": "role_counsellor",
+    "roleTitle": "Counsellor",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_counselling_and_therapeutic_practice",
+    "roleFamilyTitle": "Counselling & Therapeutic Support",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_counselling_and_psychotherapy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology"
+    ]
+  },
+  {
+    "roleId": "role_learning_mentor",
+    "roleTitle": "Learning Mentor",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_educational_and_developmental_psychology",
+    "roleFamilyTitle": "Learning, Development & Behaviour Support",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_education",
+      "sub_primary_education_qts"
+    ]
+  },
+  {
+    "roleId": "role_people_analyst",
+    "roleTitle": "People Analyst",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_people_analytics_and_organisational_psychology",
+    "roleFamilyTitle": "People Analytics & Workplace Behaviour",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_ux_researcher",
+    "roleTitle": "UX Researcher",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science",
+    "roleFamilyTitle": "UX Research & Behavioural Insight",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_data_science_and_analytics",
+      "sub_anthropology"
+    ]
+  },
+  {
+    "roleId": "role_behavioural_scientist",
+    "roleTitle": "Behavioural Insight Analyst",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science",
+    "roleFamilyTitle": "UX Research & Behavioural Insight",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_data_science_and_analytics",
+      "sub_anthropology"
+    ]
+  },
+  {
+    "roleId": "role_probation_officer",
+    "roleTitle": "Probation Officer",
+    "roleFamilyId": "rf_psychology_behaviour_human_insight_forensic_and_justice_psychology",
+    "roleFamilyTitle": "Justice, Rehabilitation & Behaviour Change",
+    "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
+    "primarySubjectIds": [
+      "sub_psychology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_law",
+      "sub_social_and_public_policy"
+    ]
+  },
+  {
+    "roleId": "role_primary_school_teacher",
+    "roleTitle": "Primary School Teacher",
+    "roleFamilyId": "rf_education_coaching_people_development_teaching_and_classroom_practice",
+    "roleFamilyTitle": "Teaching & Classroom Practice",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education",
+      "sub_primary_education_qts"
+    ],
+    "adjacentSubjectIds": [
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "roleId": "role_secondary_school_teacher",
+    "roleTitle": "Secondary School Teacher",
+    "roleFamilyId": "rf_education_coaching_people_development_teaching_and_classroom_practice",
+    "roleFamilyTitle": "Teaching & Classroom Practice",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education",
+      "sub_primary_education_qts"
+    ],
+    "adjacentSubjectIds": [
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "roleId": "role_early_years_teacher",
+    "roleTitle": "Early Years Teacher",
+    "roleFamilyId": "rf_education_coaching_people_development_early_years_and_family_support",
+    "roleFamilyTitle": "Early Years & Family Support",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_early_years_education_and_care"
+    ],
+    "adjacentSubjectIds": [
+      "sub_primary_education_qts",
+      "sub_social_work"
+    ]
+  },
+  {
+    "roleId": "role_family_support_worker",
+    "roleTitle": "Family Support Worker",
+    "roleFamilyId": "rf_education_coaching_people_development_early_years_and_family_support",
+    "roleFamilyTitle": "Early Years & Family Support",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_early_years_education_and_care"
+    ],
+    "adjacentSubjectIds": [
+      "sub_primary_education_qts",
+      "sub_social_work"
+    ]
+  },
+  {
+    "roleId": "role_sen_teacher",
+    "roleTitle": "SEN Teacher",
+    "roleFamilyId": "rf_education_coaching_people_development_send_and_inclusion_support",
+    "roleFamilyTitle": "SEND & Inclusion Support",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_primary_education_qts",
+      "sub_education",
+      "sub_early_years_education_and_care"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology",
+      "sub_occupational_therapy"
+    ]
+  },
+  {
+    "roleId": "role_learning_support_assistant",
+    "roleTitle": "Learning Support Assistant",
+    "roleFamilyId": "rf_education_coaching_people_development_send_and_inclusion_support",
+    "roleFamilyTitle": "SEND & Inclusion Support",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_primary_education_qts",
+      "sub_education",
+      "sub_early_years_education_and_care"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology",
+      "sub_occupational_therapy"
+    ]
+  },
+  {
+    "roleId": "role_learning_designer",
+    "roleTitle": "Learning Designer",
+    "roleFamilyId": "rf_education_coaching_people_development_learning_design_and_educational_technology",
+    "roleFamilyTitle": "Learning Design & Educational Technology",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_marketing"
+    ]
+  },
+  {
+    "roleId": "role_edtech_specialist",
+    "roleTitle": "EdTech Specialist",
+    "roleFamilyId": "rf_education_coaching_people_development_learning_design_and_educational_technology",
+    "roleFamilyTitle": "Learning Design & Educational Technology",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education"
+    ],
+    "adjacentSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_marketing"
+    ]
+  },
+  {
+    "roleId": "role_training_and_development_officer",
+    "roleTitle": "Training and Development Officer",
+    "roleFamilyId": "rf_education_coaching_people_development_training_learning_and_development",
+    "roleFamilyTitle": "Training, Learning & Development",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education",
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology"
+    ]
+  },
+  {
+    "roleId": "role_learning_and_development_coordinator",
+    "roleTitle": "Learning and Development Coordinator",
+    "roleFamilyId": "rf_education_coaching_people_development_training_learning_and_development",
+    "roleFamilyTitle": "Training, Learning & Development",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education",
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology"
+    ]
+  },
+  {
+    "roleId": "role_student_services_officer",
+    "roleTitle": "Student Services Officer",
+    "roleFamilyId": "rf_education_coaching_people_development_education_support_outreach_and_student_services",
+    "roleFamilyTitle": "Education Support, Outreach & Student Services",
+    "primaryCareerWorldId": "cw_education_coaching_people_development",
+    "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
+    "primarySubjectIds": [
+      "sub_education"
+    ],
+    "adjacentSubjectIds": [
+      "sub_primary_education_qts",
+      "sub_early_years_education_and_care",
+      "sub_social_work"
+    ]
+  },
+  {
+    "roleId": "role_paralegal",
+    "roleTitle": "Paralegal",
+    "roleFamilyId": "rf_law_governance_public_impact_legal_practice_and_casework",
+    "roleFamilyTitle": "Legal Support & Casework",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_law"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_compliance_officer",
+    "roleTitle": "Compliance Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_governance_risk_and_compliance",
+    "roleFamilyTitle": "Governance, Risk & Compliance",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_law"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_governance_officer",
+    "roleTitle": "Governance Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_governance_risk_and_compliance",
+    "roleFamilyTitle": "Governance, Risk & Compliance",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_law"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_public_affairs_officer",
+    "roleTitle": "Public Affairs Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_public_affairs_and_advocacy",
+    "roleFamilyTitle": "Public Affairs & Advocacy",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_politics",
+      "sub_social_and_public_policy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_international_relations",
+      "sub_public_relations_and_communications",
+      "sub_sociology"
+    ]
+  },
+  {
+    "roleId": "role_campaigns_officer",
+    "roleTitle": "Campaigns Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_public_affairs_and_advocacy",
+    "roleFamilyTitle": "Public Affairs & Advocacy",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_politics",
+      "sub_social_and_public_policy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_international_relations",
+      "sub_public_relations_and_communications",
+      "sub_sociology"
+    ]
+  },
+  {
+    "roleId": "role_financial_crime_analyst",
+    "roleTitle": "Financial Crime Analyst",
+    "roleFamilyId": "rf_law_governance_public_impact_investigations_and_financial_crime",
+    "roleFamilyTitle": "Investigations & Financial Crime",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_law"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_investigation_officer",
+    "roleTitle": "Investigation Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_investigations_and_financial_crime",
+    "roleFamilyTitle": "Investigations & Financial Crime",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_law"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_policy_officer",
+    "roleTitle": "Policy Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_policy_and_public_sector_analysis",
+    "roleFamilyTitle": "Policy & Public Sector Analysis",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_economics",
+      "sub_politics",
+      "sub_social_and_public_policy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture_and_planning",
+      "sub_international_relations",
+      "sub_law",
+      "sub_sociology"
+    ]
+  },
+  {
+    "roleId": "role_government_social_research_officer",
+    "roleTitle": "Government Social Research Officer",
+    "roleFamilyId": "rf_law_governance_public_impact_policy_and_public_sector_analysis",
+    "roleFamilyTitle": "Policy & Public Sector Analysis",
+    "primaryCareerWorldId": "cw_law_governance_public_impact",
+    "primaryCareerWorldTitle": "Law, Governance & Public Impact",
+    "primarySubjectIds": [
+      "sub_economics",
+      "sub_politics",
+      "sub_social_and_public_policy"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture_and_planning",
+      "sub_international_relations",
+      "sub_law",
+      "sub_sociology"
+    ]
+  },
+  {
+    "roleId": "role_operations_analyst",
+    "roleTitle": "Operations Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
+    "roleFamilyTitle": "Operations & Supply Chain",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_manufacturing_engineering",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_supply_chain_analyst",
+    "roleTitle": "Supply Chain Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
+    "roleFamilyTitle": "Operations & Supply Chain",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_manufacturing_engineering",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_business_analyst",
+    "roleTitle": "Business Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_business_analysis",
+    "roleFamilyTitle": "Business Analysis",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_data_science_and_analytics",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_process_analyst",
+    "roleTitle": "Process Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_business_analysis",
+    "roleFamilyTitle": "Business Analysis",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_analytics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_data_science_and_analytics",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_pmo_analyst",
+    "roleTitle": "PMO Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
+    "roleFamilyTitle": "Project, PMO & Transformation",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_construction_management",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_project_coordinator",
+    "roleTitle": "Project Coordinator",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
+    "roleFamilyTitle": "Project, PMO & Transformation",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_analytics",
+      "sub_construction_management",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_management_consultant",
+    "roleTitle": "Management Consultant",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
+    "roleFamilyTitle": "Consulting & Strategic Improvement",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_analytics",
+      "sub_business_management",
+      "sub_international_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_economics",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_strategy_analyst",
+    "roleTitle": "Strategy Analyst",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
+    "roleFamilyTitle": "Consulting & Strategic Improvement",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_analytics",
+      "sub_business_management",
+      "sub_international_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_economics",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_account_executive",
+    "roleTitle": "Account Executive",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
+    "roleFamilyTitle": "Commercial Partnerships & Account Growth",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_international_business_management",
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_marketing",
+      "sub_entrepreneurship_and_innovation",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_commercial_partnerships_executive",
+    "roleTitle": "Commercial Partnerships Executive",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
+    "roleFamilyTitle": "Commercial Partnerships & Account Growth",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_international_business_management",
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_marketing",
+      "sub_entrepreneurship_and_innovation",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_investment_banking_analyst",
+    "roleTitle": "Investment Banking Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_investment_banking_and_corporate_finance",
+    "roleFamilyTitle": "Investment Banking & Corporate Finance",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_accounting_and_finance"
+    ]
+  },
+  {
+    "roleId": "role_corporate_finance_analyst",
+    "roleTitle": "Corporate Finance Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_investment_banking_and_corporate_finance",
+    "roleFamilyTitle": "Investment Banking & Corporate Finance",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_accounting_and_finance"
+    ]
+  },
+  {
+    "roleId": "role_equity_research_analyst",
+    "roleTitle": "Equity Research Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_equity_research_and_investment_research",
+    "roleFamilyTitle": "Equity Research & Investment Research",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_mathematics_and_statistics"
+    ]
+  },
+  {
+    "roleId": "role_investment_analyst",
+    "roleTitle": "Investment Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_equity_research_and_investment_research",
+    "roleFamilyTitle": "Equity Research & Investment Research",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_data_science_and_analytics",
+      "sub_mathematics_and_statistics"
+    ]
+  },
+  {
+    "roleId": "role_wealth_management_associate",
+    "roleTitle": "Wealth Management Associate",
+    "roleFamilyId": "rf_finance_economics_investment_asset_and_wealth_management",
+    "roleFamilyTitle": "Asset & Wealth Management",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_accounting_and_finance"
+    ]
+  },
+  {
+    "roleId": "role_portfolio_analyst",
+    "roleTitle": "Portfolio Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_asset_and_wealth_management",
+    "roleFamilyTitle": "Asset & Wealth Management",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_accounting_and_finance"
+    ]
+  },
+  {
+    "roleId": "role_corporate_banking_analyst",
+    "roleTitle": "Corporate Banking Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_commercial_and_corporate_banking",
+    "roleFamilyTitle": "Commercial & Corporate Banking",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_accounting_and_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_commercial_banking_associate",
+    "roleTitle": "Commercial Banking Associate",
+    "roleFamilyId": "rf_finance_economics_investment_commercial_and_corporate_banking",
+    "roleFamilyTitle": "Commercial & Corporate Banking",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_accounting_and_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_trader",
+    "roleTitle": "Trading Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_markets_sales_and_trading",
+    "roleFamilyTitle": "Markets & Trading",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_economics",
+      "sub_mathematics_and_statistics"
+    ]
+  },
+  {
+    "roleId": "role_sales_trader",
+    "roleTitle": "Sales & Trading Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_markets_sales_and_trading",
+    "roleFamilyTitle": "Markets & Trading",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_economics",
+      "sub_mathematics_and_statistics"
+    ]
+  },
+  {
+    "roleId": "role_treasury_analyst",
+    "roleTitle": "Treasury Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_treasury_and_liquidity",
+    "roleFamilyTitle": "Treasury & Liquidity",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_liquidity_analyst",
+    "roleTitle": "Liquidity Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_treasury_and_liquidity",
+    "roleFamilyTitle": "Treasury & Liquidity",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_risk_analyst",
+    "roleTitle": "Risk Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_risk_compliance_and_controls",
+    "roleFamilyTitle": "Risk, Compliance & Controls",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_law",
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_compliance_analyst",
+    "roleTitle": "Compliance Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_risk_compliance_and_controls",
+    "roleFamilyTitle": "Risk, Compliance & Controls",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_law",
+      "sub_business_analytics"
+    ]
+  },
+  {
+    "roleId": "role_middle_office_analyst",
+    "roleTitle": "Middle Office Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_banking_operations_and_middle_office",
+    "roleFamilyTitle": "Banking Operations & Middle Office",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_banking_operations_officer",
+    "roleTitle": "Banking Operations Officer",
+    "roleFamilyId": "rf_finance_economics_investment_banking_operations_and_middle_office",
+    "roleFamilyTitle": "Banking Operations & Middle Office",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting_and_finance",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_audit_associate",
+    "roleTitle": "Audit Associate",
+    "roleFamilyId": "rf_finance_economics_investment_accounting_audit_and_assurance",
+    "roleFamilyTitle": "Accounting, Audit & Assurance",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_accountant",
+    "roleTitle": "Assistant Accountant",
+    "roleFamilyId": "rf_finance_economics_investment_accounting_audit_and_assurance",
+    "roleFamilyTitle": "Accounting, Audit & Assurance",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_accounting",
+      "sub_accounting_and_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_esg_analyst",
+    "roleTitle": "ESG Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_sustainable_finance_and_impact_investing",
+    "roleFamilyTitle": "Sustainable Finance & Impact Investing",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_environmental_management"
+    ]
+  },
+  {
+    "roleId": "role_impact_investment_analyst",
+    "roleTitle": "Impact Investment Analyst",
+    "roleFamilyId": "rf_finance_economics_investment_sustainable_finance_and_impact_investing",
+    "roleFamilyTitle": "Sustainable Finance & Impact Investing",
+    "primaryCareerWorldId": "cw_finance_economics_investment",
+    "primaryCareerWorldTitle": "Finance, Economics & Investment",
+    "primarySubjectIds": [
+      "sub_finance",
+      "sub_economics"
+    ],
+    "adjacentSubjectIds": [
+      "sub_environmental_management"
+    ]
+  },
+  {
+    "roleId": "role_founder",
+    "roleTitle": "Founder",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path",
+    "roleFamilyTitle": "Venture Building & Founder",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_international_business_management",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_operations_associate",
+    "roleTitle": "Operations Associate",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_start_up_operations",
+    "roleFamilyTitle": "Start-up Operations",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_business_management",
+      "sub_international_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_marketing",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_growth_executive",
+    "roleTitle": "Growth Executive",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups",
+    "roleFamilyTitle": "Product & Growth in Start-ups",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_venture_capital_analyst",
+    "roleTitle": "Venture Capital Analyst",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support",
+    "roleFamilyTitle": "Venture Capital, Accelerators & Innovation Support",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_finance"
+    ],
+    "adjacentSubjectIds": [
+      "sub_business_management",
+      "sub_international_business_management"
+    ]
+  },
+  {
+    "roleId": "role_business_development_executive",
+    "roleTitle": "Business Development Executive",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_business_development_and_partnerships",
+    "roleFamilyTitle": "Business Development & Partnerships",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_business_management",
+      "sub_international_business_management",
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_partnerships_executive",
+    "roleTitle": "Partnerships Executive",
+    "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_business_development_and_partnerships",
+    "roleFamilyTitle": "Business Development & Partnerships",
+    "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
+    "primarySubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_business_management",
+      "sub_international_business_management",
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_brand_executive",
+    "roleTitle": "Brand Executive",
+    "roleFamilyId": "rf_marketing_media_communication_brand_and_marketing_strategy",
+    "roleFamilyTitle": "Brand & Marketing Strategy",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_graphic_design",
+      "sub_public_relations_and_communications"
+    ]
+  },
+  {
+    "roleId": "role_marketing_executive",
+    "roleTitle": "Marketing Executive",
+    "roleFamilyId": "rf_marketing_media_communication_brand_and_marketing_strategy",
+    "roleFamilyTitle": "Brand & Marketing Strategy",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": [
+      "sub_entrepreneurship_and_innovation",
+      "sub_graphic_design",
+      "sub_public_relations_and_communications"
+    ]
+  },
+  {
+    "roleId": "role_performance_marketing_executive",
+    "roleTitle": "Performance Marketing Executive",
+    "roleFamilyId": "rf_marketing_media_communication_performance_marketing_and_growth",
+    "roleFamilyTitle": "Performance Marketing & Growth",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_crm_executive",
+    "roleTitle": "CRM Executive",
+    "roleFamilyId": "rf_marketing_media_communication_performance_marketing_and_growth",
+    "roleFamilyTitle": "Performance Marketing & Growth",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_pr_executive",
+    "roleTitle": "PR Executive",
+    "roleFamilyId": "rf_marketing_media_communication_pr_and_communications",
+    "roleFamilyTitle": "PR & Communications",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_public_relations_and_communications"
+    ],
+    "adjacentSubjectIds": [
+      "sub_modern_languages"
+    ]
+  },
+  {
+    "roleId": "role_communications_officer",
+    "roleTitle": "Communications Officer",
+    "roleFamilyId": "rf_marketing_media_communication_pr_and_communications",
+    "roleFamilyTitle": "PR & Communications",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_public_relations_and_communications"
+    ],
+    "adjacentSubjectIds": [
+      "sub_modern_languages"
+    ]
+  },
+  {
+    "roleId": "role_market_research_analyst",
+    "roleTitle": "Market Research Analyst",
+    "roleFamilyId": "rf_marketing_media_communication_market_research_and_audience_insight",
+    "roleFamilyTitle": "Market Research & Audience Insight",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_audience_insight_analyst",
+    "roleTitle": "Audience Insight Analyst",
+    "roleFamilyId": "rf_marketing_media_communication_market_research_and_audience_insight",
+    "roleFamilyTitle": "Market Research & Audience Insight",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_content_creator",
+    "roleTitle": "Content Creator",
+    "roleFamilyId": "rf_marketing_media_communication_content_and_social_media",
+    "roleFamilyTitle": "Content & Social Media",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing",
+      "sub_public_relations_and_communications"
+    ],
+    "adjacentSubjectIds": [
+      "sub_animation",
+      "sub_graphic_design"
+    ]
+  },
+  {
+    "roleId": "role_social_media_executive",
+    "roleTitle": "Social Media Executive",
+    "roleFamilyId": "rf_marketing_media_communication_content_and_social_media",
+    "roleFamilyTitle": "Content & Social Media",
+    "primaryCareerWorldId": "cw_marketing_media_communication",
+    "primaryCareerWorldTitle": "Marketing, Media & Communication",
+    "primarySubjectIds": [
+      "sub_marketing",
+      "sub_public_relations_and_communications"
+    ],
+    "adjacentSubjectIds": [
+      "sub_animation",
+      "sub_graphic_design"
+    ]
+  },
+  {
+    "roleId": "role_product_designer",
+    "roleTitle": "Product Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_product_and_industrial_design",
+    "roleFamilyTitle": "Product & Industrial Design",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_product_design"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture",
+      "sub_mechanical_engineering"
+    ]
+  },
+  {
+    "roleId": "role_industrial_designer",
+    "roleTitle": "Industrial Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_product_and_industrial_design",
+    "roleFamilyTitle": "Product & Industrial Design",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_product_design"
+    ],
+    "adjacentSubjectIds": [
+      "sub_architecture",
+      "sub_mechanical_engineering"
+    ]
+  },
+  {
+    "roleId": "role_graphic_designer",
+    "roleTitle": "Graphic Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
+    "roleFamilyTitle": "Graphic Design & Visual Communication",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_graphic_design"
+    ],
+    "adjacentSubjectIds": [
+      "sub_animation",
+      "sub_product_design"
+    ]
+  },
+  {
+    "roleId": "role_visual_designer",
+    "roleTitle": "Visual Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
+    "roleFamilyTitle": "Graphic Design & Visual Communication",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_graphic_design"
+    ],
+    "adjacentSubjectIds": [
+      "sub_animation",
+      "sub_product_design"
+    ]
+  },
+  {
+    "roleId": "role_animator",
+    "roleTitle": "Animator",
+    "roleFamilyId": "rf_creative_arts_design_experience_animation_and_motion_design",
+    "roleFamilyTitle": "Animation & Motion Design",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_animation"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_motion_designer",
+    "roleTitle": "Motion Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_animation_and_motion_design",
+    "roleFamilyTitle": "Animation & Motion Design",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_animation"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_multimedia_designer",
+    "roleTitle": "Multimedia Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_digital_design_and_multimedia",
+    "roleFamilyTitle": "Digital Design & Multimedia",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_animation",
+      "sub_graphic_design",
+      "sub_product_design"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_digital_designer",
+    "roleTitle": "Digital Designer",
+    "roleFamilyId": "rf_creative_arts_design_experience_digital_design_and_multimedia",
+    "roleFamilyTitle": "Digital Design & Multimedia",
+    "primaryCareerWorldId": "cw_creative_arts_design_experience",
+    "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
+    "primarySubjectIds": [
+      "sub_animation",
+      "sub_graphic_design",
+      "sub_product_design"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_environmental_consultant",
+    "roleTitle": "Environmental Consultant",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
+    "roleFamilyTitle": "Environmental Science & Monitoring",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_science",
+      "sub_geography"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biology",
+      "sub_chemical_engineering",
+      "sub_chemistry"
+    ]
+  },
+  {
+    "roleId": "role_environmental_monitoring_officer",
+    "roleTitle": "Environmental Monitoring Officer",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
+    "roleFamilyTitle": "Environmental Science & Monitoring",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_science",
+      "sub_geography"
+    ],
+    "adjacentSubjectIds": [
+      "sub_biology",
+      "sub_chemical_engineering",
+      "sub_chemistry"
+    ]
+  },
+  {
+    "roleId": "role_sustainability_consultant",
+    "roleTitle": "Sustainability Consultant",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory",
+    "roleFamilyTitle": "Sustainability & ESG Advisory",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management",
+      "sub_environmental_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance",
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_sustainability_reporting_analyst",
+    "roleTitle": "Sustainability Reporting Analyst",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory",
+    "roleFamilyTitle": "Sustainability & ESG Advisory",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management",
+      "sub_environmental_science"
+    ],
+    "adjacentSubjectIds": [
+      "sub_finance",
+      "sub_business_management"
+    ]
+  },
+  {
+    "roleId": "role_supply_chain_sustainability_analyst",
+    "roleTitle": "Supply Chain Sustainability Analyst",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_circular_economy_and_sustainable_supply_chains",
+    "roleFamilyTitle": "Circular Economy & Sustainable Supply Chains",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_circular_economy_analyst",
+    "roleTitle": "Circular Economy Analyst",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_circular_economy_and_sustainable_supply_chains",
+    "roleFamilyTitle": "Circular Economy & Sustainable Supply Chains",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_environmental_policy_officer",
+    "roleTitle": "Environmental Policy Officer",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
+    "roleFamilyTitle": "Environmental Policy & Impact Assessment",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_science",
+      "sub_geography"
+    ],
+    "adjacentSubjectIds": [
+      "sub_anthropology",
+      "sub_architecture_and_planning",
+      "sub_civil_engineering",
+      "sub_environmental_management"
+    ]
+  },
+  {
+    "roleId": "role_environmental_impact_assessment_consultant",
+    "roleTitle": "Environmental Impact Assessment Consultant",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
+    "roleFamilyTitle": "Environmental Policy & Impact Assessment",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_science",
+      "sub_geography"
+    ],
+    "adjacentSubjectIds": [
+      "sub_anthropology",
+      "sub_architecture_and_planning",
+      "sub_civil_engineering",
+      "sub_environmental_management"
+    ]
+  },
+  {
+    "roleId": "role_climate_strategy_analyst",
+    "roleTitle": "Climate Strategy Analyst",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy",
+    "roleFamilyTitle": "Net Zero, Climate & Sustainability Strategy",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_environmental_science"
+    ]
+  },
+  {
+    "roleId": "role_net_zero_consultant",
+    "roleTitle": "Net Zero Consultant",
+    "roleFamilyId": "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy",
+    "roleFamilyTitle": "Net Zero, Climate & Sustainability Strategy",
+    "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "primarySubjectIds": [
+      "sub_environmental_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_environmental_science"
+    ]
+  },
+  {
+    "roleId": "role_policy_analyst",
+    "roleTitle": "Policy Analyst",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
+    "roleFamilyTitle": "International Relations, Policy & Geopolitical Analysis",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_international_relations"
+    ],
+    "adjacentSubjectIds": [
+      "sub_politics"
+    ]
+  },
+  {
+    "roleId": "role_political_risk_analyst",
+    "roleTitle": "Political Risk Analyst",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
+    "roleFamilyTitle": "International Relations, Policy & Geopolitical Analysis",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_international_relations"
+    ],
+    "adjacentSubjectIds": [
+      "sub_politics"
+    ]
+  },
+  {
+    "roleId": "role_translator",
+    "roleTitle": "Translator",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_languages_translation_and_localisation",
+    "roleFamilyTitle": "Languages, Translation & Localisation",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_modern_languages"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_localisation_specialist",
+    "roleTitle": "Localisation Specialist",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_languages_translation_and_localisation",
+    "roleFamilyTitle": "Languages, Translation & Localisation",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_modern_languages"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_international_development_officer",
+    "roleTitle": "International Development Officer",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
+    "roleFamilyTitle": "International Development & NGO Programmes",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_anthropology",
+      "sub_international_relations",
+      "sub_sociology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_geography",
+      "sub_international_business_management",
+      "sub_modern_languages",
+      "sub_social_and_public_policy"
+    ]
+  },
+  {
+    "roleId": "role_programme_officer",
+    "roleTitle": "Programme Officer",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
+    "roleFamilyTitle": "International Development & NGO Programmes",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_anthropology",
+      "sub_international_relations",
+      "sub_sociology"
+    ],
+    "adjacentSubjectIds": [
+      "sub_geography",
+      "sub_international_business_management",
+      "sub_modern_languages",
+      "sub_social_and_public_policy"
+    ]
+  },
+  {
+    "roleId": "role_social_researcher",
+    "roleTitle": "Social Researcher",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
+    "roleFamilyTitle": "Social Research & Cultural Analysis",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_anthropology",
+      "sub_sociology"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_cultural_researcher",
+    "roleTitle": "Cultural Researcher",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
+    "roleFamilyTitle": "Social Research & Cultural Analysis",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_anthropology",
+      "sub_sociology"
+    ],
+    "adjacentSubjectIds": []
+  },
+  {
+    "roleId": "role_intelligence_analyst",
+    "roleTitle": "Intelligence Analyst",
+    "roleFamilyId": "rf_society_culture_languages_global_affairs_diplomacy_intelligence_and_public_service",
+    "roleFamilyTitle": "Intelligence, Public Service & Security Analysis",
+    "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryCareerWorldTitle": "Languages, Culture & Global Affairs",
+    "primarySubjectIds": [
+      "sub_international_relations"
+    ],
+    "adjacentSubjectIds": [
+      "sub_politics"
+    ]
+  },
+  {
+    "roleId": "role_hr_officer",
+    "roleTitle": "HR Officer",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
+    "roleFamilyTitle": "HR, People & Organisations",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology",
+      "sub_education",
+      "sub_finance"
+    ]
+  },
+  {
+    "roleId": "role_people_operations_associate",
+    "roleTitle": "People Operations Associate",
+    "roleFamilyId": "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
+    "roleFamilyTitle": "HR, People & Organisations",
+    "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
+    "primarySubjectIds": [
+      "sub_business_management"
+    ],
+    "adjacentSubjectIds": [
+      "sub_psychology",
+      "sub_education",
+      "sub_finance"
+    ]
+  }
+]

@@ -1,0 +1,323 @@
+[
+  {
+    "schoolInterestLabel": "Accounting, Finance & Economics",
+    "primaryCareerWorldIds": [
+      "cw_finance_economics_investment"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_data_analytics_quantitative_insight",
+      "cw_business_strategy_commercial_leadership"
+    ],
+    "seedSubjectIds": [
+      "sub_accounting",
+      "sub_finance",
+      "sub_economics",
+      "sub_actuarial_science"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Business, Management & Entrepreneurship",
+    "primaryCareerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_entrepreneurship_innovation_venture_building"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_marketing_media_communication",
+      "cw_finance_economics_investment"
+    ],
+    "seedSubjectIds": [
+      "sub_business_management",
+      "sub_business_analytics",
+      "sub_international_business_management",
+      "sub_entrepreneurship_and_innovation"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Data, Maths & Analytics",
+    "primaryCareerWorldIds": [
+      "cw_data_analytics_quantitative_insight"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_finance_economics_investment",
+      "cw_software_ai_digital_systems"
+    ],
+    "seedSubjectIds": [
+      "sub_mathematics_and_statistics",
+      "sub_statistics",
+      "sub_data_science_and_analytics",
+      "sub_actuarial_science"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Computer Science, Software & AI",
+    "primaryCareerWorldIds": [
+      "cw_software_ai_digital_systems"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_data_analytics_quantitative_insight",
+      "cw_engineering_manufacturing_infrastructure"
+    ],
+    "seedSubjectIds": [
+      "sub_computer_science_and_artificial_intelligence",
+      "sub_software_engineering",
+      "sub_computer_science_with_cyber_security",
+      "sub_artificial_intelligence"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Engineering & Technology",
+    "primaryCareerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_software_ai_digital_systems",
+      "cw_architecture_built_environment_spatial_design"
+    ],
+    "seedSubjectIds": [
+      "sub_mechanical_engineering",
+      "sub_civil_engineering",
+      "sub_electrical_and_electronic_engineering",
+      "sub_manufacturing_engineering"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Architecture, Built Environment & Planning",
+    "primaryCareerWorldIds": [
+      "cw_architecture_built_environment_spatial_design"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_environment_sustainability_planetary_futures"
+    ],
+    "seedSubjectIds": [
+      "sub_architecture",
+      "sub_architecture_and_planning",
+      "sub_architectural_technology",
+      "sub_construction_management"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Biological & Biomedical Sciences",
+    "primaryCareerWorldIds": [
+      "cw_science_research_laboratory_innovation"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_health_care_clinical_practice"
+    ],
+    "seedSubjectIds": [
+      "sub_biology",
+      "sub_biomedical_science",
+      "sub_biochemistry"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Chemistry",
+    "primaryCareerWorldIds": [
+      "cw_science_research_laboratory_innovation"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_environment_sustainability_planetary_futures"
+    ],
+    "seedSubjectIds": [
+      "sub_chemistry",
+      "sub_chemical_engineering"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Physics",
+    "primaryCareerWorldIds": [
+      "cw_science_research_laboratory_innovation"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_data_analytics_quantitative_insight"
+    ],
+    "seedSubjectIds": [
+      "sub_physics",
+      "sub_mechanical_engineering",
+      "sub_electrical_and_electronic_engineering"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Medicine, Pharmacy & Dentistry",
+    "primaryCareerWorldIds": [
+      "cw_health_care_clinical_practice"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_science_research_laboratory_innovation"
+    ],
+    "seedSubjectIds": [
+      "sub_medicine",
+      "sub_pharmacy",
+      "sub_dentistry"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Nursing, Midwifery & Allied Health",
+    "primaryCareerWorldIds": [
+      "cw_health_care_clinical_practice"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_education_coaching_people_development",
+      "cw_psychology_behaviour_human_insight"
+    ],
+    "seedSubjectIds": [
+      "sub_nursing",
+      "sub_midwifery",
+      "sub_physiotherapy",
+      "sub_occupational_therapy",
+      "sub_paramedic_science"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Psychology & Behaviour",
+    "primaryCareerWorldIds": [
+      "cw_psychology_behaviour_human_insight"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_health_care_clinical_practice",
+      "cw_education_coaching_people_development"
+    ],
+    "seedSubjectIds": [
+      "sub_psychology",
+      "sub_counselling_and_psychotherapy"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Education & Childhood",
+    "primaryCareerWorldIds": [
+      "cw_education_coaching_people_development"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_psychology_behaviour_human_insight",
+      "cw_health_care_clinical_practice"
+    ],
+    "seedSubjectIds": [
+      "sub_education",
+      "sub_primary_education_qts",
+      "sub_early_years_education_and_care"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Law, Politics & Public Policy",
+    "primaryCareerWorldIds": [
+      "cw_law_governance_public_impact"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_society_culture_languages_global_affairs"
+    ],
+    "seedSubjectIds": [
+      "sub_law",
+      "sub_politics",
+      "sub_social_and_public_policy"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Languages, Culture & International Relations",
+    "primaryCareerWorldIds": [
+      "cw_society_culture_languages_global_affairs"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_law_governance_public_impact",
+      "cw_marketing_media_communication"
+    ],
+    "seedSubjectIds": [
+      "sub_modern_languages",
+      "sub_international_relations"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Sociology, Anthropology & Social Research",
+    "primaryCareerWorldIds": [
+      "cw_society_culture_languages_global_affairs"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_psychology_behaviour_human_insight",
+      "cw_law_governance_public_impact"
+    ],
+    "seedSubjectIds": [
+      "sub_sociology",
+      "sub_anthropology"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Marketing, PR & Media",
+    "primaryCareerWorldIds": [
+      "cw_marketing_media_communication"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_creative_arts_design_experience"
+    ],
+    "seedSubjectIds": [
+      "sub_marketing",
+      "sub_public_relations_and_communications"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Product, Graphic & Animation Design",
+    "primaryCareerWorldIds": [
+      "cw_creative_arts_design_experience"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_architecture_built_environment_spatial_design",
+      "cw_marketing_media_communication"
+    ],
+    "seedSubjectIds": [
+      "sub_product_design",
+      "sub_graphic_design",
+      "sub_animation"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Environment & Sustainability",
+    "primaryCareerWorldIds": [
+      "cw_environment_sustainability_planetary_futures"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_science_research_laboratory_innovation",
+      "cw_architecture_built_environment_spatial_design"
+    ],
+    "seedSubjectIds": [
+      "sub_geography",
+      "sub_environmental_science",
+      "sub_environmental_management"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Arts, Performance & Creative Media",
+    "primaryCareerWorldIds": [
+      "cw_creative_arts_design_experience"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_marketing_media_communication"
+    ],
+    "seedSubjectIds": [
+      "sub_graphic_design",
+      "sub_animation",
+      "sub_product_design"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Sport, Exercise & Health",
+    "primaryCareerWorldIds": [
+      "cw_health_care_clinical_practice"
+    ],
+    "adjacentCareerWorldIds": [
+      "cw_science_research_laboratory_innovation",
+      "cw_psychology_behaviour_human_insight"
+    ],
+    "seedSubjectIds": [
+      "sub_physiotherapy",
+      "sub_occupational_therapy",
+      "sub_biomedical_science"
+    ]
+  },
+  {
+    "schoolInterestLabel": "Other",
+    "primaryCareerWorldIds": [],
+    "adjacentCareerWorldIds": [],
+    "seedSubjectIds": []
+  }
+]

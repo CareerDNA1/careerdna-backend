@@ -1,0 +1,514 @@
+[
+  {
+    "id": "env_structured_process_oriented",
+    "title": "Structured and process-oriented",
+    "archetypes": [
+      "Organizer",
+      "Thinker"
+    ],
+    "primaryArchetype1": "Organizer",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Clarity & Structure Preference",
+      "Organisation & Systems Orientation"
+    ],
+    "secondarySubdimensions": [
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_business_strategy_commercial_leadership",
+      "cw_finance_economics_investment"
+    ],
+    "evidenceSubdims": [
+      "Clarity & Structure Preference",
+      "Organisation & Systems Orientation"
+    ]
+  },
+  {
+    "id": "env_analytical_research_focused",
+    "title": "Analytical and research-focused",
+    "archetypes": [
+      "Thinker",
+      "Explorer",
+      "Organizer"
+    ],
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Explorer",
+    "secondaryArchetype": "Organizer",
+    "coreSubdimensions": [
+      "Investigative Curiosity",
+      "Attention to Detail"
+    ],
+    "secondarySubdimensions": [
+      "Independent Working Approach",
+      "Clarity & Structure Preference"
+    ],
+    "careerWorldIds": [
+      "cw_data_analytics_quantitative_insight",
+      "cw_science_research_laboratory_innovation",
+      "cw_finance_economics_investment",
+      "cw_psychology_behaviour_human_insight"
+    ],
+    "evidenceSubdims": [
+      "Investigative Curiosity",
+      "Attention to Detail"
+    ]
+  },
+  {
+    "id": "env_precision_quality_driven",
+    "title": "Precision and quality-driven",
+    "archetypes": [
+      "Organizer",
+      "Thinker",
+      "Achiever"
+    ],
+    "primaryArchetype1": "Organizer",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "Achiever",
+    "coreSubdimensions": [
+      "Attention to Detail",
+      "Reliability & Focus"
+    ],
+    "secondarySubdimensions": [
+      "Clarity & Structure Preference"
+    ],
+    "careerWorldIds": [
+      "cw_finance_economics_investment",
+      "cw_science_research_laboratory_innovation",
+      "cw_health_care_clinical_practice",
+      "cw_law_governance_public_impact"
+    ],
+    "evidenceSubdims": [
+      "Attention to Detail",
+      "Reliability & Focus"
+    ]
+  },
+  {
+    "id": "env_corporate_goal_driven",
+    "title": "Performance-focused and results-driven",
+    "archetypes": [
+      "Achiever",
+      "Organizer"
+    ],
+    "primaryArchetype1": "Achiever",
+    "primaryArchetype2": "Organizer",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Pace & Intensity Preference",
+      "Reliability & Focus"
+    ],
+    "secondarySubdimensions": [
+      "Recognition & Visibility",
+      "Organisation & Systems Orientation"
+    ],
+    "careerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_finance_economics_investment",
+      "cw_marketing_media_communication"
+    ],
+    "evidenceSubdims": [
+      "Pace & Intensity Preference",
+      "Reliability & Focus"
+    ]
+  },
+  {
+    "id": "env_strategic_commercial",
+    "title": "Strategic and commercially focused",
+    "archetypes": [
+      "Visionary",
+      "Achiever",
+      "Thinker"
+    ],
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Achiever",
+    "secondaryArchetype": "Thinker",
+    "coreSubdimensions": [
+      "Purpose & Impact",
+      "Financial Ambition"
+    ],
+    "secondarySubdimensions": [
+      "Investigative Curiosity",
+      "Clarity & Structure Preference"
+    ],
+    "careerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_finance_economics_investment",
+      "cw_marketing_media_communication",
+      "cw_entrepreneurship_innovation_venture_building"
+    ],
+    "evidenceSubdims": [
+      "Purpose & Impact",
+      "Financial Ambition"
+    ]
+  },
+  {
+    "id": "env_dynamic_fast_paced",
+    "title": "Dynamic and fast-paced",
+    "archetypes": [
+      "Achiever",
+      "Explorer"
+    ],
+    "primaryArchetype1": "Achiever",
+    "primaryArchetype2": "Explorer",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Pace & Intensity Preference",
+      "Uncertainty Tolerance"
+    ],
+    "secondarySubdimensions": [
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_finance_economics_investment",
+      "cw_marketing_media_communication",
+      "cw_entrepreneurship_innovation_venture_building"
+    ],
+    "evidenceSubdims": [
+      "Pace & Intensity Preference",
+      "Uncertainty Tolerance"
+    ]
+  },
+  {
+    "id": "env_transformation_change_oriented",
+    "title": "Change and transformation-focused",
+    "archetypes": [
+      "Visionary",
+      "Achiever",
+      "Thinker"
+    ],
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Achiever",
+    "secondaryArchetype": "Thinker",
+    "coreSubdimensions": [
+      "Purpose & Impact",
+      "Uncertainty Tolerance"
+    ],
+    "secondarySubdimensions": [
+      "Curiosity & Openness",
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_software_ai_digital_systems",
+      "cw_environment_sustainability_planetary_futures",
+      "cw_entrepreneurship_innovation_venture_building"
+    ],
+    "evidenceSubdims": [
+      "Purpose & Impact",
+      "Uncertainty Tolerance"
+    ]
+  },
+  {
+    "id": "env_flexible_autonomous",
+    "title": "Flexible and autonomous",
+    "archetypes": [
+      "Explorer",
+      "Thinker"
+    ],
+    "primaryArchetype1": "Explorer",
+    "primaryArchetype2": "Thinker",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Independence & Autonomy",
+      "Independent Working Approach"
+    ],
+    "secondarySubdimensions": [],
+    "careerWorldIds": [
+      "cw_software_ai_digital_systems",
+      "cw_data_analytics_quantitative_insight",
+      "cw_entrepreneurship_innovation_venture_building",
+      "cw_creative_arts_design_experience"
+    ],
+    "evidenceSubdims": [
+      "Independence & Autonomy",
+      "Independent Working Approach"
+    ]
+  },
+  {
+    "id": "env_creative_design_driven",
+    "title": "Creative and design-driven",
+    "archetypes": [
+      "Creator",
+      "Visionary"
+    ],
+    "primaryArchetype1": "Creator",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Creative Expression",
+      "Hands-On Engagement"
+    ],
+    "secondarySubdimensions": [
+      "Curiosity & Openness"
+    ],
+    "careerWorldIds": [
+      "cw_creative_arts_design_experience",
+      "cw_marketing_media_communication",
+      "cw_architecture_built_environment_spatial_design"
+    ],
+    "evidenceSubdims": [
+      "Creative Expression",
+      "Hands-On Engagement"
+    ]
+  },
+  {
+    "id": "env_innovation_startup",
+    "title": "Entrepreneurial and fast-changing",
+    "archetypes": [
+      "Visionary",
+      "Creator",
+      "Achiever"
+    ],
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Creator",
+    "secondaryArchetype": "Achiever",
+    "coreSubdimensions": [
+      "Entrepreneurial Drive",
+      "Novelty & Variety Seeking"
+    ],
+    "secondarySubdimensions": [
+      "Pace & Intensity Preference",
+      "Independence & Autonomy"
+    ],
+    "careerWorldIds": [
+      "cw_entrepreneurship_innovation_venture_building",
+      "cw_software_ai_digital_systems",
+      "cw_marketing_media_communication",
+      "cw_creative_arts_design_experience"
+    ],
+    "evidenceSubdims": [
+      "Entrepreneurial Drive",
+      "Novelty & Variety Seeking"
+    ]
+  },
+  {
+    "id": "env_hands_on_practical",
+    "title": "Hands-on and practical",
+    "archetypes": [
+      "Creator",
+      "Explorer",
+      "Organizer"
+    ],
+    "primaryArchetype1": "Creator",
+    "primaryArchetype2": "Explorer",
+    "secondaryArchetype": "Organizer",
+    "coreSubdimensions": [
+      "Hands-On Engagement",
+      "Organisation & Systems Orientation"
+    ],
+    "secondarySubdimensions": [
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_architecture_built_environment_spatial_design",
+      "cw_health_care_clinical_practice"
+    ],
+    "evidenceSubdims": [
+      "Hands-On Engagement",
+      "Organisation & Systems Orientation"
+    ]
+  },
+  {
+    "id": "env_collaborative_team_oriented",
+    "title": "Collaborative and team-oriented",
+    "archetypes": [
+      "Connector",
+      "Organizer"
+    ],
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Organizer",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Team Collaboration",
+      "Belonging & Connection"
+    ],
+    "secondarySubdimensions": [
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_business_strategy_commercial_leadership",
+      "cw_health_care_clinical_practice",
+      "cw_education_coaching_people_development",
+      "cw_marketing_media_communication"
+    ],
+    "evidenceSubdims": [
+      "Team Collaboration",
+      "Belonging & Connection"
+    ]
+  },
+  {
+    "id": "env_supportive_people_centred",
+    "title": "Supportive and people-centred",
+    "archetypes": [
+      "Connector",
+      "Visionary"
+    ],
+    "primaryArchetype1": "Connector",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Helping Orientation",
+      "Belonging & Connection"
+    ],
+    "secondarySubdimensions": [
+      "Emotional Stability"
+    ],
+    "careerWorldIds": [
+      "cw_health_care_clinical_practice",
+      "cw_psychology_behaviour_human_insight",
+      "cw_education_coaching_people_development"
+    ],
+    "evidenceSubdims": [
+      "Helping Orientation",
+      "Belonging & Connection"
+    ]
+  },
+  {
+    "id": "env_public_service_policy_led",
+    "title": "Public service and policy-led",
+    "archetypes": [
+      "Thinker",
+      "Visionary",
+      "Connector"
+    ],
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Visionary",
+    "secondaryArchetype": "Connector",
+    "coreSubdimensions": [
+      "Purpose & Impact",
+      "Clarity & Structure Preference"
+    ],
+    "secondarySubdimensions": [
+      "Investigative Curiosity",
+      "Belonging & Connection"
+    ],
+    "careerWorldIds": [
+      "cw_law_governance_public_impact",
+      "cw_society_culture_languages_global_affairs",
+      "cw_environment_sustainability_planetary_futures",
+      "cw_education_coaching_people_development"
+    ],
+    "evidenceSubdims": [
+      "Purpose & Impact",
+      "Clarity & Structure Preference"
+    ]
+  },
+  {
+    "id": "env_learning_growth_oriented",
+    "title": "Development-focused and growth-oriented",
+    "archetypes": [
+      "Thinker",
+      "Connector",
+      "Visionary"
+    ],
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Connector",
+    "secondaryArchetype": "Visionary",
+    "coreSubdimensions": [
+      "Curiosity & Openness",
+      "Investigative Curiosity"
+    ],
+    "secondarySubdimensions": [
+      "Helping Orientation",
+      "Belonging & Connection"
+    ],
+    "careerWorldIds": [
+      "cw_education_coaching_people_development",
+      "cw_psychology_behaviour_human_insight",
+      "cw_health_care_clinical_practice"
+    ],
+    "evidenceSubdims": [
+      "Curiosity & Openness",
+      "Investigative Curiosity"
+    ]
+  },
+  {
+    "id": "env_independent_remote",
+    "title": "Independent and self-directed",
+    "archetypes": [
+      "Thinker",
+      "Explorer"
+    ],
+    "primaryArchetype1": "Thinker",
+    "primaryArchetype2": "Explorer",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Independent Working Approach",
+      "Independence & Autonomy"
+    ],
+    "secondarySubdimensions": [
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_data_analytics_quantitative_insight",
+      "cw_software_ai_digital_systems",
+      "cw_society_culture_languages_global_affairs"
+    ],
+    "evidenceSubdims": [
+      "Independent Working Approach",
+      "Independence & Autonomy"
+    ]
+  },
+  {
+    "id": "env_exploratory_field_based",
+    "title": "Field-based and exploratory",
+    "archetypes": [
+      "Explorer",
+      "Achiever"
+    ],
+    "primaryArchetype1": "Explorer",
+    "primaryArchetype2": "Achiever",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Novelty & Variety Seeking",
+      "Hands-On Engagement"
+    ],
+    "secondarySubdimensions": [
+      "Curiosity & Openness",
+      "Uncertainty Tolerance"
+    ],
+    "careerWorldIds": [
+      "cw_environment_sustainability_planetary_futures",
+      "cw_engineering_manufacturing_infrastructure",
+      "cw_society_culture_languages_global_affairs",
+      "cw_science_research_laboratory_innovation"
+    ],
+    "evidenceSubdims": [
+      "Novelty & Variety Seeking",
+      "Hands-On Engagement"
+    ]
+  },
+  {
+    "id": "env_purpose_driven_mission_led",
+    "title": "Purpose-driven and mission-led",
+    "archetypes": [
+      "Visionary",
+      "Connector"
+    ],
+    "primaryArchetype1": "Visionary",
+    "primaryArchetype2": "Connector",
+    "secondaryArchetype": "",
+    "coreSubdimensions": [
+      "Purpose & Impact",
+      "Helping Orientation"
+    ],
+    "secondarySubdimensions": [
+      "Belonging & Connection",
+      "Reliability & Focus"
+    ],
+    "careerWorldIds": [
+      "cw_environment_sustainability_planetary_futures",
+      "cw_law_governance_public_impact",
+      "cw_society_culture_languages_global_affairs",
+      "cw_education_coaching_people_development"
+    ],
+    "evidenceSubdims": [
+      "Purpose & Impact",
+      "Helping Orientation"
+    ]
+  }
+]

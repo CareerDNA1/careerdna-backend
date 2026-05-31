@@ -1,0 +1,4942 @@
+[
+  {
+    "id": "school_relational_creative_balanced",
+    "title": "School: relational + creative balanced profile",
+    "status": "school",
+    "included": [
+      "Connector",
+      "Organizer",
+      "Creator",
+      "Visionary"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Connector",
+        "score": 64
+      },
+      {
+        "name": "Organizer",
+        "score": 63
+      },
+      {
+        "name": "Creator",
+        "score": 58
+      },
+      {
+        "name": "Visionary",
+        "score": 58
+      },
+      {
+        "name": "Thinker",
+        "score": 57
+      },
+      {
+        "name": "Achiever",
+        "score": 54
+      },
+      {
+        "name": "Explorer",
+        "score": 54
+      }
+    ],
+    "allowedSubdims": [
+      "Purpose & Impact",
+      "Belonging & Connection",
+      "Creative Expression",
+      "Helping Orientation",
+      "Clarity & Structure Preference",
+      "Organisation & Systems Orientation",
+      "Curiosity & Openness",
+      "Sociability & Extroversion",
+      "Independence & Autonomy",
+      "Hands-On Engagement",
+      "Emotional Stability",
+      "Entrepreneurial Drive"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "purpose & impact",
+        "score": 84
+      },
+      {
+        "name": "belonging & connection",
+        "score": 82
+      },
+      {
+        "name": "creative expression",
+        "score": 79
+      },
+      {
+        "name": "helping orientation",
+        "score": 76
+      },
+      {
+        "name": "clarity & structure preference",
+        "score": 74
+      },
+      {
+        "name": "organisation & systems orientation",
+        "score": 72
+      },
+      {
+        "name": "curiosity & openness",
+        "score": 71
+      },
+      {
+        "name": "sociability & extroversion",
+        "score": 70
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_education_coaching_people_development",
+        "title": "Education, Coaching & People Development",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+        "displayOrder": 8
+      },
+      {
+        "id": "cw_health_care_clinical_practice",
+        "title": "Health, Care & Clinical Practice",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "description": "For people who want to support health and wellbeing through compassionate, evidence-informed, and dependable practice.",
+        "displayOrder": 6
+      },
+      {
+        "id": "cw_society_culture_languages_global_affairs",
+        "title": "Society, Culture, Languages & Global Affairs",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Creator",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "description": "For people interested in culture, language, identity, global issues, and understanding how societies communicate and change.",
+        "displayOrder": 16
+      },
+      {
+        "id": "cw_architecture_built_environment_spatial_design",
+        "title": "Architecture, Built Environment & Spatial Design",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people drawn to shaping spaces, buildings, and places through a blend of design imagination, long-term thinking, and practical structure.",
+        "displayOrder": 4
+      },
+      {
+        "id": "cw_psychology_behaviour_human_insight",
+        "title": "Psychology, Behaviour & Human Insight",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "description": "For people interested in understanding how people think, feel, behave, and change across individual, group, or societal contexts.",
+        "displayOrder": 7
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_design_thinking",
+        "title": "Design thinking",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "str_empathy",
+        "title": "Empathy",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_reliability",
+        "title": "Reliability",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_stakeholder_management",
+        "title": "Stakeholder management",
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "str_collaboration",
+        "title": "Collaboration",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_collaborative_team_oriented",
+        "title": "Collaborative and team-oriented",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_health_care_clinical_practice",
+          "cw_education_coaching_people_development",
+          "cw_marketing_media_communication"
+        ]
+      },
+      {
+        "id": "env_supportive_people_centred",
+        "title": "Supportive and people-centred",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_purpose_driven_mission_led",
+        "title": "Purpose-driven and mission-led",
+        "archetypes": [
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_learning_growth_oriented",
+        "title": "Learning and growth-oriented",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_education_coaching_people_development",
+          "cw_psychology_behaviour_human_insight",
+          "cw_health_care_clinical_practice"
+        ]
+      },
+      {
+        "id": "env_public_service_policy_led",
+        "title": "Public service and policy-led",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_environment_sustainability_planetary_futures",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_hands_on_practical",
+        "title": "Hands-on and practical",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure",
+          "cw_architecture_built_environment_spatial_design",
+          "cw_health_care_clinical_practice"
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": "sub_education",
+        "title": "Education",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank logic. Connector leads because the subject is people-focused, Visionary reflects shaping growth and futures, and Organizer supports planning and dependable delivery.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Team Collaboration",
+          "Purpose & Impact",
+          "Emotional Stability"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "helping-development",
+        "subjectFamily": "education-learning",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_counselling_psychotherapy_and_occupational_therapy",
+        "title": "Counselling, psychotherapy, and occupational therapy",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "This guide sits between health and psychology. Connector leads for direct support and relational work, Thinker reflects evidence-informed practice, and Organizer stays important because intervention work requires structure and professional discipline.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Emotional Stability",
+          "Team Collaboration",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "therapeutic-support",
+        "careerWorldId": "cw_health_care_clinical_practice",
+        "careerWorldTitle": "Health, Care & Clinical Practice",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_architecture_and_planning",
+        "title": "Architecture and planning",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "adapted_existing_bank",
+        "signatureRationale": "Matches the architecture signature already present in your subject bank. Creator leads for spatial design, Visionary stays second for long-term placemaking and future thinking, and Organizer reflects the technical and regulatory discipline the field requires.",
+        "adjacentCareerWorldIds": [
+          "cw_creative_arts_design_experience"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Organisation & Systems Orientation",
+          "Purpose & Impact",
+          "Hands-On Engagement",
+          "Attention to Detail"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "architecture-spatial-design",
+        "careerWorldId": "cw_architecture_built_environment_spatial_design",
+        "careerWorldTitle": "Architecture, Built Environment & Spatial Design",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_english_language",
+        "title": "English language",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "English language focuses strongly on communication and how language works. Connector leads for social communication, Thinker supports analysis, and Creator reflects expressive and interpretive language use.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Creative Expression",
+          "Attention to Detail",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "language-communication",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ]
+      },
+      {
+        "id": "sub_sociology",
+        "title": "Sociology",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "signatureSource": "adapted_existing_bank",
+        "signatureRationale": "Builds from your existing Sociology seed by adding Thinker in third place. Sociology is social and systems-oriented first, but still analytical in how it studies institutions, inequality, and change.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight",
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Belonging & Connection",
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Curiosity & Openness",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ]
+      }
+    ],
+    "roles": [],
+    "matchedSubject": null,
+    "checks": [
+      {
+        "name": "exact_subject_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 5 subjects; expected 5."
+      },
+      {
+        "name": "exact_main_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 3 main suggestions; expected 3."
+      },
+      {
+        "name": "exact_other_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 2 other options; expected 2."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate subject titles detected."
+      },
+      {
+        "name": "subject_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject families=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "subject_cluster_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject clusters=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Subject coverage across included archetypes=4.",
+        "actual": 4
+      },
+      {
+        "name": "other_options_broader_than_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Other options do not broaden the recommendation set beyond the main families."
+      },
+      {
+        "name": "secondary_archetypes_visible_in_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Secondary included archetypes in main suggestions: Creator, Visionary."
+      },
+      {
+        "name": "custom_main_family_expectation",
+        "pass": false,
+        "severity": "warn",
+        "details": "Expected one main subject family from: design_spatial, communication_language, teaching_development."
+      },
+      {
+        "name": "family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A subject family appears more than 2 times."
+      }
+    ],
+    "statusLabel": "WARN"
+  },
+  {
+    "id": "school_creator_explorer",
+    "title": "School: creator + explorer profile",
+    "status": "school",
+    "included": [
+      "Creator",
+      "Explorer",
+      "Visionary",
+      "Connector"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Creator",
+        "score": 68
+      },
+      {
+        "name": "Explorer",
+        "score": 65
+      },
+      {
+        "name": "Visionary",
+        "score": 61
+      },
+      {
+        "name": "Connector",
+        "score": 55
+      },
+      {
+        "name": "Organizer",
+        "score": 49
+      },
+      {
+        "name": "Thinker",
+        "score": 46
+      },
+      {
+        "name": "Achiever",
+        "score": 42
+      }
+    ],
+    "allowedSubdims": [
+      "Creative Expression",
+      "Novelty & Variety Seeking",
+      "Curiosity & Openness",
+      "Independence & Autonomy",
+      "Hands-On Engagement",
+      "Purpose & Impact",
+      "Pace & Intensity Preference",
+      "Entrepreneurial Drive",
+      "Belonging & Connection"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "creative expression",
+        "score": 90
+      },
+      {
+        "name": "novelty & variety seeking",
+        "score": 86
+      },
+      {
+        "name": "curiosity & openness",
+        "score": 84
+      },
+      {
+        "name": "independence & autonomy",
+        "score": 80
+      },
+      {
+        "name": "hands-on engagement",
+        "score": 77
+      },
+      {
+        "name": "purpose & impact",
+        "score": 72
+      },
+      {
+        "name": "pace & intensity preference",
+        "score": 68
+      },
+      {
+        "name": "entrepreneurial drive",
+        "score": 66
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_creative_arts_design_experience",
+        "title": "Creative Arts, Design & Experience",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Explorer"
+        ],
+        "description": "For people drawn to imaginative, expressive, and original work in art, design, storytelling, performance, or experience creation.",
+        "displayOrder": 14
+      },
+      {
+        "id": "cw_architecture_built_environment_spatial_design",
+        "title": "Architecture, Built Environment & Spatial Design",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people drawn to shaping spaces, buildings, and places through a blend of design imagination, long-term thinking, and practical structure.",
+        "displayOrder": 4
+      },
+      {
+        "id": "cw_marketing_media_communication",
+        "title": "Marketing, Media & Communication",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Achiever",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "description": "For people who enjoy understanding audiences, shaping messages, building brands, and creating content that connects and influences.",
+        "displayOrder": 13
+      },
+      {
+        "id": "cw_software_ai_digital_systems",
+        "title": "Software, AI & Digital Systems",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "description": "For people who like building digital tools, coding systems, solving technical problems, and creating intelligent products.",
+        "displayOrder": 2
+      },
+      {
+        "id": "cw_society_culture_languages_global_affairs",
+        "title": "Society, Culture, Languages & Global Affairs",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Creator",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "description": "For people interested in culture, language, identity, global issues, and understanding how societies communicate and change.",
+        "displayOrder": 16
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_innovation_mindset",
+        "title": "Innovation mindset",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_design_thinking",
+        "title": "Design thinking",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "str_creativity",
+        "title": "Creativity",
+        "archetypes": [
+          "Creator",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_adaptability",
+        "title": "Adaptability",
+        "archetypes": [
+          "Explorer",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_curiosity",
+        "title": "Curiosity",
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_creative_design_driven",
+        "title": "Creative and design-driven",
+        "archetypes": [
+          "Creator",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_creative_arts_design_experience",
+          "cw_marketing_media_communication",
+          "cw_architecture_built_environment_spatial_design"
+        ]
+      },
+      {
+        "id": "env_hands_on_practical",
+        "title": "Hands-on and practical",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure",
+          "cw_architecture_built_environment_spatial_design",
+          "cw_health_care_clinical_practice"
+        ]
+      },
+      {
+        "id": "env_innovation_startup",
+        "title": "Innovation and start-up",
+        "archetypes": [
+          "Visionary",
+          "Creator",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_software_ai_digital_systems",
+          "cw_marketing_media_communication",
+          "cw_creative_arts_design_experience"
+        ]
+      },
+      {
+        "id": "env_flexible_autonomous",
+        "title": "Flexible and autonomous",
+        "archetypes": [
+          "Explorer",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_software_ai_digital_systems",
+          "cw_data_analytics_quantitative_insight",
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_creative_arts_design_experience"
+        ]
+      },
+      {
+        "id": "env_purpose_driven_mission_led",
+        "title": "Purpose-driven and mission-led",
+        "archetypes": [
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_supportive_people_centred",
+        "title": "Supportive and people-centred",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight",
+          "cw_education_coaching_people_development"
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": "sub_art",
+        "title": "Art",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Explorer"
+        ],
+        "signatureSource": "career_world_inferred",
+        "signatureRationale": "This subject follows the creative world closely: expressive making first, imaginative originality second, and exploratory experimentation third.",
+        "adjacentCareerWorldIds": [
+          "cw_marketing_media_communication"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Hands-On Engagement",
+          "Independence & Autonomy"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "visual-design-arts",
+        "careerWorldId": "cw_creative_arts_design_experience",
+        "careerWorldTitle": "Creative Arts, Design & Experience",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Visionary",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "sub_digital_media_production_and_technology",
+        "title": "Digital media, production, and technology",
+        "archetypes": [
+          "Creator",
+          "Thinker",
+          "Explorer"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "This subject clearly belongs to media/communication, but it is more production- and tool-led than pure brand communication. Creator leads, Thinker supports technical workflow, and Explorer reflects experimentation with formats and platforms.",
+        "adjacentCareerWorldIds": [
+          "cw_creative_arts_design_experience",
+          "cw_software_ai_digital_systems"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Creative Expression",
+          "Hands-On Engagement",
+          "Curiosity & Openness",
+          "Recognition & Visibility",
+          "Novelty & Variety Seeking"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "communication-media",
+        "subjectFamily": "media-marketing-communication",
+        "careerWorldId": "cw_marketing_media_communication",
+        "careerWorldTitle": "Marketing, Media & Communication",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ]
+      },
+      {
+        "id": "sub_computer_science",
+        "title": "Computer science",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank exactly. Thinker leads for deep problem-solving, Creator reflects building digital products and systems, and Explorer captures experimentation with new technologies.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Clarity & Structure Preference",
+          "Hands-On Engagement"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "software-computing",
+        "careerWorldId": "cw_software_ai_digital_systems",
+        "careerWorldTitle": "Software, AI & Digital Systems",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "sub_history",
+        "title": "History",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "History is analytical first, but it also depends on constructing interpretations and understanding long-term change. Creator reflects narrative/interpretive synthesis, while Visionary captures big-picture historical perspective.",
+        "adjacentCareerWorldIds": [
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ]
+      },
+      {
+        "id": "sub_geography",
+        "title": "Geography",
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "Geography sits at the boundary of environment and society. Explorer leads for place-based inquiry, Thinker supports systems analysis, and Visionary reflects climate, development, and long-term global issues.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Curiosity & Openness",
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Hands-On Engagement"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "environment-sustainability",
+        "subjectFamily": "environment-geography",
+        "careerWorldId": "cw_environment_sustainability_planetary_futures",
+        "careerWorldTitle": "Environment, Sustainability & Planetary Futures",
+        "careerWorldArchetypes": [
+          "Visionary",
+          "Thinker",
+          "Explorer"
+        ]
+      }
+    ],
+    "roles": [],
+    "matchedSubject": null,
+    "checks": [
+      {
+        "name": "exact_subject_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 5 subjects; expected 5."
+      },
+      {
+        "name": "exact_main_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 3 main suggestions; expected 3."
+      },
+      {
+        "name": "exact_other_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 2 other options; expected 2."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate subject titles detected."
+      },
+      {
+        "name": "subject_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject families=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "subject_cluster_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject clusters=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Subject coverage across included archetypes=3.",
+        "actual": 3
+      },
+      {
+        "name": "other_options_broader_than_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Other options do not broaden the recommendation set beyond the main families."
+      },
+      {
+        "name": "secondary_archetypes_visible_in_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Secondary included archetypes in main suggestions: Visionary, Connector."
+      },
+      {
+        "name": "custom_main_family_expectation",
+        "pass": false,
+        "severity": "warn",
+        "details": "Expected one main subject family from: creative_expression, design_spatial."
+      },
+      {
+        "name": "family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A subject family appears more than 2 times."
+      }
+    ],
+    "statusLabel": "WARN"
+  },
+  {
+    "id": "school_analytical_structured",
+    "title": "School: analytical + structured profile",
+    "status": "school",
+    "included": [
+      "Thinker",
+      "Organizer",
+      "Achiever",
+      "Explorer"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Thinker",
+        "score": 69
+      },
+      {
+        "name": "Organizer",
+        "score": 66
+      },
+      {
+        "name": "Achiever",
+        "score": 60
+      },
+      {
+        "name": "Explorer",
+        "score": 57
+      },
+      {
+        "name": "Creator",
+        "score": 50
+      },
+      {
+        "name": "Visionary",
+        "score": 45
+      },
+      {
+        "name": "Connector",
+        "score": 44
+      }
+    ],
+    "allowedSubdims": [
+      "Investigative Curiosity",
+      "Reliability & Focus",
+      "Attention to Detail",
+      "Clarity & Structure Preference",
+      "Organisation & Systems Orientation",
+      "Uncertainty Tolerance",
+      "Independent Working Approach",
+      "Financial Ambition",
+      "Hands-On Engagement"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "investigative curiosity",
+        "score": 88
+      },
+      {
+        "name": "reliability & focus",
+        "score": 84
+      },
+      {
+        "name": "attention to detail",
+        "score": 82
+      },
+      {
+        "name": "clarity & structure preference",
+        "score": 80
+      },
+      {
+        "name": "organisation & systems orientation",
+        "score": 78
+      },
+      {
+        "name": "uncertainty tolerance",
+        "score": 73
+      },
+      {
+        "name": "independent working approach",
+        "score": 72
+      },
+      {
+        "name": "financial ambition",
+        "score": 61
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_data_analytics_quantitative_insight",
+        "title": "Data, Analytics & Quantitative Insight",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "description": "For people drawn to evidence, numbers, modelling, forecasting, optimisation, and structured decision-making.",
+        "displayOrder": 1
+      },
+      {
+        "id": "cw_finance_economics_investment",
+        "title": "Finance, Economics & Investment",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "description": "For people interested in financial systems, markets, value, risk, incentives, and rigorous decision-making with real-world impact.",
+        "displayOrder": 11
+      },
+      {
+        "id": "cw_science_research_laboratory_innovation",
+        "title": "Science, Research & Laboratory Innovation",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "description": "For people motivated by discovery, experimentation, evidence, and deep understanding in scientific or laboratory settings.",
+        "displayOrder": 5
+      },
+      {
+        "id": "cw_engineering_manufacturing_infrastructure",
+        "title": "Engineering, Manufacturing & Infrastructure",
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "description": "For people who enjoy designing, improving, and delivering reliable physical systems, processes, machines, and infrastructure.",
+        "displayOrder": 3
+      },
+      {
+        "id": "cw_law_governance_public_impact",
+        "title": "Law, Governance & Public Impact",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Visionary"
+        ],
+        "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
+        "displayOrder": 9
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_process_improvement",
+        "title": "Process improvement",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ]
+      },
+      {
+        "id": "str_attention_to_detail",
+        "title": "Attention to detail",
+        "archetypes": [
+          "Organizer",
+          "Thinker"
+        ]
+      },
+      {
+        "id": "str_problem_solving",
+        "title": "Problem-solving",
+        "archetypes": [
+          "Thinker",
+          "Achiever"
+        ]
+      },
+      {
+        "id": "str_learning_agility",
+        "title": "Learning agility",
+        "archetypes": [
+          "Explorer",
+          "Thinker"
+        ]
+      },
+      {
+        "id": "str_planning_and_organisation",
+        "title": "Planning and organisation",
+        "archetypes": [
+          "Organizer",
+          "Achiever"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_precision_quality_driven",
+        "title": "Precision and quality-driven",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_finance_economics_investment",
+          "cw_science_research_laboratory_innovation",
+          "cw_health_care_clinical_practice",
+          "cw_law_governance_public_impact"
+        ]
+      },
+      {
+        "id": "env_analytical_research_focused",
+        "title": "Analytical and research-focused",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_data_analytics_quantitative_insight",
+          "cw_science_research_laboratory_innovation",
+          "cw_finance_economics_investment",
+          "cw_psychology_behaviour_human_insight"
+        ]
+      },
+      {
+        "id": "env_structured_process_oriented",
+        "title": "Structured and process-oriented",
+        "archetypes": [
+          "Organizer",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure",
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment"
+        ]
+      },
+      {
+        "id": "env_independent_remote",
+        "title": "Independent and remote",
+        "archetypes": [
+          "Thinker",
+          "Explorer"
+        ],
+        "careerWorldIds": [
+          "cw_data_analytics_quantitative_insight",
+          "cw_software_ai_digital_systems",
+          "cw_society_culture_languages_global_affairs"
+        ]
+      },
+      {
+        "id": "env_flexible_autonomous",
+        "title": "Flexible and autonomous",
+        "archetypes": [
+          "Explorer",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_software_ai_digital_systems",
+          "cw_data_analytics_quantitative_insight",
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_creative_arts_design_experience"
+        ]
+      },
+      {
+        "id": "env_corporate_goal_driven",
+        "title": "Corporate and goal-driven",
+        "archetypes": [
+          "Achiever",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment",
+          "cw_marketing_media_communication"
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": "sub_computer_science",
+        "title": "Computer science",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank exactly. Thinker leads for deep problem-solving, Creator reflects building digital products and systems, and Explorer captures experimentation with new technologies.",
+        "adjacentCareerWorldIds": [
+          "cw_data_analytics_quantitative_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Clarity & Structure Preference",
+          "Hands-On Engagement"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "technical-quant",
+        "subjectFamily": "software-computing",
+        "careerWorldId": "cw_software_ai_digital_systems",
+        "careerWorldTitle": "Software, AI & Digital Systems",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "sub_accounting_and_finance",
+        "title": "Accounting and finance",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank exactly. Thinker leads for financial reasoning, Organizer reflects precision and control, and Achiever captures performance and commercial results.",
+        "adjacentCareerWorldIds": [
+          "cw_business_management_commercial_leadership"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Clarity & Structure Preference",
+          "Organisation & Systems Orientation",
+          "Financial Ambition"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "finance-business",
+        "subjectFamily": "finance-economics",
+        "careerWorldId": "cw_finance_economics_investment",
+        "careerWorldTitle": "Finance, Economics & Investment",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_biology",
+        "title": "Biology",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "signatureSource": "career_world_inferred",
+        "signatureRationale": "Biology is fundamentally investigative, so Thinker leads. Explorer stays high because discovery and field/lab curiosity matter, while Organizer reflects scientific method and careful evidence handling.",
+        "adjacentCareerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_health_care_clinical_practice"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Reliability & Focus"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "science-research",
+        "subjectFamily": "laboratory-science",
+        "careerWorldId": "cw_science_research_laboratory_innovation",
+        "careerWorldTitle": "Science, Research & Laboratory Innovation",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_building_and_construction",
+        "title": "Building and construction",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Thinker"
+        ],
+        "signatureSource": "adapted_existing_bank",
+        "signatureRationale": "Uses the same logic as your existing construction-project-management seed. Organizer leads for coordination and systems, Achiever reflects delivery and execution, and Thinker supports technical judgement and planning.",
+        "adjacentCareerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Organisation & Systems Orientation",
+          "Reliability & Focus",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Pace & Intensity Preference"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "design-creative",
+        "subjectFamily": "construction-delivery",
+        "careerWorldId": "cw_architecture_built_environment_spatial_design",
+        "careerWorldTitle": "Architecture, Built Environment & Spatial Design",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_archaeology",
+        "title": "Archaeology",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "Archaeology sits in the society/culture world but with a more investigative and methodical profile. Thinker leads for evidence-based interpretation, Explorer reflects discovery, and Organizer supports careful reconstruction and method.",
+        "adjacentCareerWorldIds": [
+          "cw_science_research_laboratory_innovation"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Hands-On Engagement",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ]
+      }
+    ],
+    "roles": [],
+    "matchedSubject": null,
+    "checks": [
+      {
+        "name": "exact_subject_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 5 subjects; expected 5."
+      },
+      {
+        "name": "exact_main_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 3 main suggestions; expected 3."
+      },
+      {
+        "name": "exact_other_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 2 other options; expected 2."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate subject titles detected."
+      },
+      {
+        "name": "subject_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject families=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "subject_cluster_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject clusters=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Subject coverage across included archetypes=4.",
+        "actual": 4
+      },
+      {
+        "name": "other_options_broader_than_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Other options do not broaden the recommendation set beyond the main families."
+      },
+      {
+        "name": "secondary_archetypes_visible_in_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Secondary included archetypes in main suggestions: Achiever, Explorer."
+      },
+      {
+        "name": "custom_main_family_expectation",
+        "pass": false,
+        "severity": "warn",
+        "details": "Expected one main subject family from: technical_quantitative."
+      },
+      {
+        "name": "family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A subject family appears more than 2 times."
+      }
+    ],
+    "statusLabel": "WARN"
+  },
+  {
+    "id": "school_people_policy",
+    "title": "School: people + policy profile",
+    "status": "school",
+    "included": [
+      "Visionary",
+      "Connector",
+      "Organizer",
+      "Thinker"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Visionary",
+        "score": 67
+      },
+      {
+        "name": "Connector",
+        "score": 65
+      },
+      {
+        "name": "Organizer",
+        "score": 58
+      },
+      {
+        "name": "Thinker",
+        "score": 57
+      },
+      {
+        "name": "Achiever",
+        "score": 56
+      },
+      {
+        "name": "Creator",
+        "score": 48
+      },
+      {
+        "name": "Explorer",
+        "score": 44
+      }
+    ],
+    "allowedSubdims": [
+      "Purpose & Impact",
+      "Belonging & Connection",
+      "Helping Orientation",
+      "Curiosity & Openness",
+      "Team Collaboration",
+      "Recognition & Visibility",
+      "Entrepreneurial Drive",
+      "Independent Working Approach"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "purpose & impact",
+        "score": 88
+      },
+      {
+        "name": "belonging & connection",
+        "score": 82
+      },
+      {
+        "name": "helping orientation",
+        "score": 77
+      },
+      {
+        "name": "curiosity & openness",
+        "score": 75
+      },
+      {
+        "name": "team collaboration",
+        "score": 71
+      },
+      {
+        "name": "recognition & visibility",
+        "score": 70
+      },
+      {
+        "name": "entrepreneurial drive",
+        "score": 67
+      },
+      {
+        "name": "independent working approach",
+        "score": 63
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_education_coaching_people_development",
+        "title": "Education, Coaching & People Development",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+        "displayOrder": 8
+      },
+      {
+        "id": "cw_psychology_behaviour_human_insight",
+        "title": "Psychology, Behaviour & Human Insight",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "description": "For people interested in understanding how people think, feel, behave, and change across individual, group, or societal contexts.",
+        "displayOrder": 7
+      },
+      {
+        "id": "cw_law_governance_public_impact",
+        "title": "Law, Governance & Public Impact",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Visionary"
+        ],
+        "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
+        "displayOrder": 9
+      },
+      {
+        "id": "cw_health_care_clinical_practice",
+        "title": "Health, Care & Clinical Practice",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "description": "For people who want to support health and wellbeing through compassionate, evidence-informed, and dependable practice.",
+        "displayOrder": 6
+      },
+      {
+        "id": "cw_environment_sustainability_planetary_futures",
+        "title": "Environment, Sustainability & Planetary Futures",
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Visionary",
+          "Thinker",
+          "Explorer"
+        ],
+        "description": "For people motivated by climate, sustainability, environmental systems, and building a more resilient future.",
+        "displayOrder": 15
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_collaboration",
+        "title": "Collaboration",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "str_strategic_thinking",
+        "title": "Strategic thinking",
+        "archetypes": [
+          "Visionary",
+          "Thinker"
+        ]
+      },
+      {
+        "id": "str_leadership_and_influence",
+        "title": "Leadership and influence",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_communication",
+        "title": "Communication",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_empathy",
+        "title": "Empathy",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_learning_growth_oriented",
+        "title": "Learning and growth-oriented",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_education_coaching_people_development",
+          "cw_psychology_behaviour_human_insight",
+          "cw_health_care_clinical_practice"
+        ]
+      },
+      {
+        "id": "env_public_service_policy_led",
+        "title": "Public service and policy-led",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_environment_sustainability_planetary_futures",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_purpose_driven_mission_led",
+        "title": "Purpose-driven and mission-led",
+        "archetypes": [
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_supportive_people_centred",
+        "title": "Supportive and people-centred",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_collaborative_team_oriented",
+        "title": "Collaborative and team-oriented",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_health_care_clinical_practice",
+          "cw_education_coaching_people_development",
+          "cw_marketing_media_communication"
+        ]
+      },
+      {
+        "id": "env_transformation_change_oriented",
+        "title": "Transformation and change-oriented",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_software_ai_digital_systems",
+          "cw_environment_sustainability_planetary_futures",
+          "cw_entrepreneurship_innovation_venture_building"
+        ]
+      }
+    ],
+    "subjects": [
+      {
+        "id": "sub_politics",
+        "title": "Politics",
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Thinker"
+        ],
+        "signatureSource": "adapted_existing_bank",
+        "signatureRationale": "Follows the same logic as your Politics and International Relations seed. Visionary leads for systems change and big-picture impact, Connector reflects public and collective life, and Thinker supports analysis.",
+        "adjacentCareerWorldIds": [
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Belonging & Connection",
+          "Curiosity & Openness"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "policy-governance",
+        "subjectFamily": "law-policy-public",
+        "careerWorldId": "cw_law_governance_public_impact",
+        "careerWorldTitle": "Law, Governance & Public Impact",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "sub_history",
+        "title": "History",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "History is analytical first, but it also depends on constructing interpretations and understanding long-term change. Creator reflects narrative/interpretive synthesis, while Visionary captures big-picture historical perspective.",
+        "adjacentCareerWorldIds": [
+          "cw_law_governance_public_impact"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Curiosity & Openness",
+          "Attention to Detail",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "society-culture",
+        "subjectFamily": "social-cultural-analysis",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ]
+      },
+      {
+        "id": "sub_education",
+        "title": "Education",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank logic. Connector leads because the subject is people-focused, Visionary reflects shaping growth and futures, and Organizer supports planning and dependable delivery.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Team Collaboration",
+          "Purpose & Impact",
+          "Emotional Stability"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "helping-development",
+        "subjectFamily": "education-learning",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "sub_psychology",
+        "title": "Psychology",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "signatureSource": "existing_bank_exact",
+        "signatureRationale": "Matches your existing subject bank exactly. Connector leads for human understanding, Thinker reflects evidence and theory, and Visionary captures growth, change, and insight into behaviour.",
+        "adjacentCareerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_society_culture_languages_global_affairs"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Investigative Curiosity",
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Independent Working Approach",
+          "Purpose & Impact"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "psychology-behaviour",
+        "subjectFamily": "psychology",
+        "careerWorldId": "cw_psychology_behaviour_human_insight",
+        "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "sub_counselling_psychotherapy_and_occupational_therapy",
+        "title": "Counselling, psychotherapy, and occupational therapy",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "signatureSource": "career_world_plus_subject_override",
+        "signatureRationale": "This guide sits between health and psychology. Connector leads for direct support and relational work, Thinker reflects evidence-informed practice, and Organizer stays important because intervention work requires structure and professional discipline.",
+        "adjacentCareerWorldIds": [
+          "cw_psychology_behaviour_human_insight"
+        ],
+        "ucasSubjectGuide": true,
+        "evidenceSubdims": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Emotional Stability",
+          "Team Collaboration",
+          "Independent Working Approach"
+        ],
+        "subdimensionSource": "subject-specific_curated",
+        "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+        "subjectCluster": "helping-care",
+        "subjectFamily": "therapeutic-support",
+        "careerWorldId": "cw_health_care_clinical_practice",
+        "careerWorldTitle": "Health, Care & Clinical Practice",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ]
+      }
+    ],
+    "roles": [],
+    "matchedSubject": null,
+    "checks": [
+      {
+        "name": "exact_subject_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 5 subjects; expected 5."
+      },
+      {
+        "name": "exact_main_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 3 main suggestions; expected 3."
+      },
+      {
+        "name": "exact_other_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 2 other options; expected 2."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate subject titles detected."
+      },
+      {
+        "name": "subject_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject families=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "subject_cluster_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct subject clusters=5; target >= 4.",
+        "actual": 5,
+        "target": 4
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Subject coverage across included archetypes=4.",
+        "actual": 4
+      },
+      {
+        "name": "other_options_broader_than_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Other options do not broaden the recommendation set beyond the main families."
+      },
+      {
+        "name": "secondary_archetypes_visible_in_main",
+        "pass": true,
+        "severity": "pass",
+        "details": "Secondary included archetypes in main suggestions: Organizer, Thinker."
+      },
+      {
+        "name": "custom_main_family_expectation",
+        "pass": false,
+        "severity": "warn",
+        "details": "Expected one main subject family from: society_policy_humanities, teaching_development, communication_language."
+      },
+      {
+        "name": "family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A subject family appears more than 2 times."
+      }
+    ],
+    "statusLabel": "WARN"
+  },
+  {
+    "id": "ug_business_manager",
+    "title": "Undergraduate: business management pathway",
+    "status": "undergraduate",
+    "included": [
+      "Achiever",
+      "Organizer",
+      "Connector",
+      "Visionary"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Achiever",
+        "score": 67
+      },
+      {
+        "name": "Organizer",
+        "score": 64
+      },
+      {
+        "name": "Connector",
+        "score": 60
+      },
+      {
+        "name": "Visionary",
+        "score": 56
+      },
+      {
+        "name": "Thinker",
+        "score": 50
+      },
+      {
+        "name": "Creator",
+        "score": 46
+      },
+      {
+        "name": "Explorer",
+        "score": 42
+      }
+    ],
+    "allowedSubdims": [
+      "Entrepreneurial Drive",
+      "Recognition & Visibility",
+      "Reliability & Focus",
+      "Team Collaboration",
+      "Financial Ambition",
+      "Organisation & Systems Orientation",
+      "Pace & Intensity Preference",
+      "Belonging & Connection"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "entrepreneurial drive",
+        "score": 84
+      },
+      {
+        "name": "recognition & visibility",
+        "score": 81
+      },
+      {
+        "name": "reliability & focus",
+        "score": 79
+      },
+      {
+        "name": "team collaboration",
+        "score": 76
+      },
+      {
+        "name": "financial ambition",
+        "score": 75
+      },
+      {
+        "name": "organisation & systems orientation",
+        "score": 74
+      },
+      {
+        "name": "pace & intensity preference",
+        "score": 70
+      },
+      {
+        "name": "belonging & connection",
+        "score": 66
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_education_coaching_people_development",
+        "title": "Education, Coaching & People Development",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+        "displayOrder": 8
+      },
+      {
+        "id": "cw_business_strategy_commercial_leadership",
+        "title": "Business, Management & Commercial Leadership",
+        "primaryArchetype1": "Achiever",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Thinker",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Thinker"
+        ],
+        "description": "For people who enjoy commercial decision-making, cross-functional management, business performance, and leading growth and change.",
+        "displayOrder": 10
+      },
+      {
+        "id": "cw_data_analytics_quantitative_insight",
+        "title": "Data, Analytics & Quantitative Insight",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "description": "For people drawn to evidence, numbers, modelling, forecasting, optimisation, and structured decision-making.",
+        "displayOrder": 1
+      },
+      {
+        "id": "cw_finance_economics_investment",
+        "title": "Finance, Economics & Investment",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "description": "For people interested in financial systems, markets, value, risk, incentives, and rigorous decision-making with real-world impact.",
+        "displayOrder": 11
+      },
+      {
+        "id": "cw_entrepreneurship_innovation_venture_building",
+        "title": "Entrepreneurship, Innovation & Venture Building",
+        "primaryArchetype1": "Visionary",
+        "primaryArchetype2": "Achiever",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Explorer"
+        ],
+        "description": "For people who like creating new ideas, launching ventures, building products, and turning opportunities into action.",
+        "displayOrder": 12
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_resilience",
+        "title": "Resilience",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_reliability",
+        "title": "Reliability",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_stakeholder_management",
+        "title": "Stakeholder management",
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "str_leadership_and_influence",
+        "title": "Leadership and influence",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_planning_and_organisation",
+        "title": "Planning and organisation",
+        "archetypes": [
+          "Organizer",
+          "Achiever"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_corporate_goal_driven",
+        "title": "Corporate and goal-driven",
+        "archetypes": [
+          "Achiever",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment",
+          "cw_marketing_media_communication"
+        ]
+      },
+      {
+        "id": "env_precision_quality_driven",
+        "title": "Precision and quality-driven",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_finance_economics_investment",
+          "cw_science_research_laboratory_innovation",
+          "cw_health_care_clinical_practice",
+          "cw_law_governance_public_impact"
+        ]
+      },
+      {
+        "id": "env_collaborative_team_oriented",
+        "title": "Collaborative and team-oriented",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_health_care_clinical_practice",
+          "cw_education_coaching_people_development",
+          "cw_marketing_media_communication"
+        ]
+      },
+      {
+        "id": "env_strategic_commercial",
+        "title": "Strategic and commercial",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment",
+          "cw_marketing_media_communication",
+          "cw_entrepreneurship_innovation_venture_building"
+        ]
+      },
+      {
+        "id": "env_transformation_change_oriented",
+        "title": "Transformation and change-oriented",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_software_ai_digital_systems",
+          "cw_environment_sustainability_planetary_futures",
+          "cw_entrepreneurship_innovation_venture_building"
+        ]
+      },
+      {
+        "id": "env_innovation_startup",
+        "title": "Innovation and start-up",
+        "archetypes": [
+          "Visionary",
+          "Creator",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_software_ai_digital_systems",
+          "cw_marketing_media_communication",
+          "cw_creative_arts_design_experience"
+        ]
+      }
+    ],
+    "subjects": [],
+    "roles": [
+      {
+        "id": "role_business_operations_associate",
+        "title": "Business Operations Associate",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Organizer"
+        ],
+        "keySubdimensions": [
+          "Pace & Intensity Preference",
+          "Entrepreneurial Drive",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+        "careerWorldTitle": "Entrepreneurship, Innovation & Venture Building",
+        "careerWorldArchetypes": [
+          "Visionary",
+          "Achiever",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_start_up_operations",
+        "roleFamilyTitle": "Start-up Operations",
+        "roleFamilyArchetypes": [
+          "Achiever",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Pace & Intensity Preference",
+          "Entrepreneurial Drive",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "whyBelongs": "Common early-career route inside startups and venture-backed firms.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_operations_associate",
+        "title": "Operations Associate",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Organizer"
+        ],
+        "keySubdimensions": [
+          "Pace & Intensity Preference",
+          "Entrepreneurial Drive",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+        "careerWorldTitle": "Entrepreneurship, Innovation & Venture Building",
+        "careerWorldArchetypes": [
+          "Visionary",
+          "Achiever",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_start_up_operations",
+        "roleFamilyTitle": "Start-up Operations",
+        "roleFamilyArchetypes": [
+          "Achiever",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Pace & Intensity Preference",
+          "Entrepreneurial Drive",
+          "Organisation & Systems Orientation",
+          "Reliability & Focus"
+        ],
+        "whyBelongs": "Common early-career route inside startups and venture-backed firms.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_commercial_operations_analyst",
+        "title": "Commercial Operations Analyst",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation",
+          "Entrepreneurial Drive",
+          "Financial Ambition"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+        "careerWorldTitle": "Entrepreneurship, Innovation & Venture Building",
+        "careerWorldArchetypes": [
+          "Visionary",
+          "Achiever",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_entrepreneurship_innovation_venture_building_revenue_operations_and_growth",
+        "roleFamilyTitle": "Revenue Operations & Growth",
+        "roleFamilyArchetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation",
+          "Entrepreneurial Drive",
+          "Financial Ambition"
+        ],
+        "whyBelongs": "Scaling-focused route in venture-backed organisations.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_business_unit_coordinator",
+        "title": "Business Unit Coordinator",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_business_strategy_commercial_leadership",
+        "careerWorldTitle": "Business, Management & Commercial Leadership",
+        "careerWorldArchetypes": [
+          "Achiever",
+          "Visionary",
+          "Thinker"
+        ],
+        "roleFamilyId": "rf_business_strategy_commercial_leadership_general_management",
+        "roleFamilyTitle": "General Management",
+        "roleFamilyArchetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Valid generalist route for broad business and management graduates.",
+        "confidence": "Medium-High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/consulting-graduate-schemes/"
+        ]
+      },
+      {
+        "id": "role_management_trainee",
+        "title": "Management Trainee",
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_business_strategy_commercial_leadership",
+        "careerWorldTitle": "Business, Management & Commercial Leadership",
+        "careerWorldArchetypes": [
+          "Achiever",
+          "Visionary",
+          "Thinker"
+        ],
+        "roleFamilyId": "rf_business_strategy_commercial_leadership_general_management",
+        "roleFamilyTitle": "General Management",
+        "roleFamilyArchetypes": [
+          "Achiever",
+          "Organizer",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Valid generalist route for broad business and management graduates.",
+        "confidence": "Medium-High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/consulting-graduate-schemes/"
+        ]
+      },
+      {
+        "id": "role_pmo_analyst",
+        "title": "PMO Analyst",
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Clarity & Structure Preference"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_business_strategy_commercial_leadership",
+        "careerWorldTitle": "Business, Management & Commercial Leadership",
+        "careerWorldArchetypes": [
+          "Achiever",
+          "Visionary",
+          "Thinker"
+        ],
+        "roleFamilyId": "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
+        "roleFamilyTitle": "Project, PMO & Transformation",
+        "roleFamilyArchetypes": [
+          "Organizer",
+          "Achiever",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Organisation & Systems Orientation",
+          "Pace & Intensity Preference",
+          "Team Collaboration",
+          "Clarity & Structure Preference"
+        ],
+        "whyBelongs": "Strong early-career family in large organisations.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/business-consulting-and-management-jobs/",
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/business-consulting-and-management/consulting-graduate-schemes/"
+        ]
+      },
+      {
+        "id": "role_learning_and_development_coordinator",
+        "title": "Learning and Development Coordinator",
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ],
+        "keySubdimensions": [
+          "Team Collaboration",
+          "Helping Orientation",
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_education_coaching_people_development_training_and_learning_and_development",
+        "roleFamilyTitle": "Training & Learning and Development",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Team Collaboration",
+          "Helping Orientation",
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation"
+        ],
+        "whyBelongs": "Common business-facing extension of the education/coaching world.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/",
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_people_development_associate",
+        "title": "People Development Associate",
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ],
+        "keySubdimensions": [
+          "Team Collaboration",
+          "Helping Orientation",
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_education_coaching_people_development_training_and_learning_and_development",
+        "roleFamilyTitle": "Training & Learning and Development",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Team Collaboration",
+          "Helping Orientation",
+          "Pace & Intensity Preference",
+          "Organisation & Systems Orientation"
+        ],
+        "whyBelongs": "Common business-facing extension of the education/coaching world.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/",
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides"
+        ]
+      }
+    ],
+    "matchedSubject": {
+      "id": "sub_business_and_management_studies",
+      "title": "Business and management studies",
+      "archetypes": [
+        "Achiever",
+        "Organizer",
+        "Visionary"
+      ],
+      "signatureSource": "adapted_existing_bank",
+      "signatureRationale": "Matches the logic of your Business and Management seed. Achiever leads for performance and delivery, Organizer supports coordination and execution, and Visionary reflects strategic growth thinking.",
+      "adjacentCareerWorldIds": [
+        "cw_entrepreneurship_innovation_venture_building",
+        "cw_finance_economics_investment"
+      ],
+      "ucasSubjectGuide": true,
+      "evidenceSubdims": [
+        "Entrepreneurial Drive",
+        "Financial Ambition",
+        "Team Collaboration",
+        "Organisation & Systems Orientation",
+        "Purpose & Impact"
+      ],
+      "subdimensionSource": "subject-specific_curated",
+      "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+      "subjectCluster": "finance-business",
+      "subjectFamily": "business-management-services",
+      "careerWorldId": "cw_business_management_commercial_leadership",
+      "careerWorldTitle": "Business, Management & Commercial Leadership",
+      "careerWorldArchetypes": [
+        "Achiever",
+        "Visionary",
+        "Thinker"
+      ]
+    },
+    "checks": [
+      {
+        "name": "matched_subject_found",
+        "pass": true,
+        "severity": "pass",
+        "details": "Could not match the case uniSubject to a library subject."
+      },
+      {
+        "name": "exact_role_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 8 roles; expected 8."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate role titles detected."
+      },
+      {
+        "name": "role_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct role families=5.",
+        "actual": 5
+      },
+      {
+        "name": "role_family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A role family appears more than 2 times."
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Role coverage across included archetypes=4.",
+        "actual": 4
+      }
+    ],
+    "statusLabel": "PASS"
+  },
+  {
+    "id": "ug_computing_product",
+    "title": "Undergraduate: computing + product profile",
+    "status": "undergraduate",
+    "included": [
+      "Thinker",
+      "Creator",
+      "Organizer",
+      "Explorer"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Thinker",
+        "score": 68
+      },
+      {
+        "name": "Creator",
+        "score": 63
+      },
+      {
+        "name": "Organizer",
+        "score": 58
+      },
+      {
+        "name": "Explorer",
+        "score": 57
+      },
+      {
+        "name": "Achiever",
+        "score": 54
+      },
+      {
+        "name": "Connector",
+        "score": 46
+      },
+      {
+        "name": "Visionary",
+        "score": 45
+      }
+    ],
+    "allowedSubdims": [
+      "Investigative Curiosity",
+      "Creative Expression",
+      "Independent Working Approach",
+      "Attention to Detail",
+      "Organisation & Systems Orientation",
+      "Hands-On Engagement",
+      "Novelty & Variety Seeking",
+      "Uncertainty Tolerance"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "investigative curiosity",
+        "score": 86
+      },
+      {
+        "name": "creative expression",
+        "score": 80
+      },
+      {
+        "name": "independent working approach",
+        "score": 79
+      },
+      {
+        "name": "attention to detail",
+        "score": 77
+      },
+      {
+        "name": "organisation & systems orientation",
+        "score": 73
+      },
+      {
+        "name": "hands-on engagement",
+        "score": 71
+      },
+      {
+        "name": "novelty & variety seeking",
+        "score": 69
+      },
+      {
+        "name": "uncertainty tolerance",
+        "score": 66
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_software_ai_digital_systems",
+        "title": "Software, AI & Digital Systems",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Creator",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "description": "For people who like building digital tools, coding systems, solving technical problems, and creating intelligent products.",
+        "displayOrder": 2
+      },
+      {
+        "id": "cw_science_research_laboratory_innovation",
+        "title": "Science, Research & Laboratory Innovation",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Explorer",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "description": "For people motivated by discovery, experimentation, evidence, and deep understanding in scientific or laboratory settings.",
+        "displayOrder": 5
+      },
+      {
+        "id": "cw_engineering_manufacturing_infrastructure",
+        "title": "Engineering, Manufacturing & Infrastructure",
+        "primaryArchetype1": "Organizer",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "description": "For people who enjoy designing, improving, and delivering reliable physical systems, processes, machines, and infrastructure.",
+        "displayOrder": 3
+      },
+      {
+        "id": "cw_data_analytics_quantitative_insight",
+        "title": "Data, Analytics & Quantitative Insight",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Achiever",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "description": "For people drawn to evidence, numbers, modelling, forecasting, optimisation, and structured decision-making.",
+        "displayOrder": 1
+      },
+      {
+        "id": "cw_law_governance_public_impact",
+        "title": "Law, Governance & Public Impact",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Visionary"
+        ],
+        "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
+        "displayOrder": 9
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_design_thinking",
+        "title": "Design thinking",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "str_attention_to_detail",
+        "title": "Attention to detail",
+        "archetypes": [
+          "Organizer",
+          "Thinker"
+        ]
+      },
+      {
+        "id": "str_process_improvement",
+        "title": "Process improvement",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ]
+      },
+      {
+        "id": "str_learning_agility",
+        "title": "Learning agility",
+        "archetypes": [
+          "Explorer",
+          "Thinker"
+        ]
+      },
+      {
+        "id": "str_analytical_thinking",
+        "title": "Analytical thinking",
+        "archetypes": [
+          "Thinker"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_analytical_research_focused",
+        "title": "Analytical and research-focused",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_data_analytics_quantitative_insight",
+          "cw_science_research_laboratory_innovation",
+          "cw_finance_economics_investment",
+          "cw_psychology_behaviour_human_insight"
+        ]
+      },
+      {
+        "id": "env_independent_remote",
+        "title": "Independent and remote",
+        "archetypes": [
+          "Thinker",
+          "Explorer"
+        ],
+        "careerWorldIds": [
+          "cw_data_analytics_quantitative_insight",
+          "cw_software_ai_digital_systems",
+          "cw_society_culture_languages_global_affairs"
+        ]
+      },
+      {
+        "id": "env_hands_on_practical",
+        "title": "Hands-on and practical",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure",
+          "cw_architecture_built_environment_spatial_design",
+          "cw_health_care_clinical_practice"
+        ]
+      },
+      {
+        "id": "env_structured_process_oriented",
+        "title": "Structured and process-oriented",
+        "archetypes": [
+          "Organizer",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_engineering_manufacturing_infrastructure",
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment"
+        ]
+      },
+      {
+        "id": "env_flexible_autonomous",
+        "title": "Flexible and autonomous",
+        "archetypes": [
+          "Explorer",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_software_ai_digital_systems",
+          "cw_data_analytics_quantitative_insight",
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_creative_arts_design_experience"
+        ]
+      },
+      {
+        "id": "env_precision_quality_driven",
+        "title": "Precision and quality-driven",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_finance_economics_investment",
+          "cw_science_research_laboratory_innovation",
+          "cw_health_care_clinical_practice",
+          "cw_law_governance_public_impact"
+        ]
+      }
+    ],
+    "subjects": [],
+    "roles": [
+      {
+        "id": "role_application_developer",
+        "title": "Application Developer",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_software_ai_digital_systems",
+        "careerWorldTitle": "Software, AI & Digital Systems",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_software_ai_digital_systems_software_engineering",
+        "roleFamilyTitle": "Software Engineering",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "whyBelongs": "Primary route from computer science/software subjects into digital product and platform work.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/information-technology/how-to-get-a-job-in-ai/",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_junior_developer",
+        "title": "Junior Developer",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_software_ai_digital_systems",
+        "careerWorldTitle": "Software, AI & Digital Systems",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_software_ai_digital_systems_software_engineering",
+        "roleFamilyTitle": "Software Engineering",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Independent Working Approach",
+          "Hands-On Engagement",
+          "Curiosity & Openness"
+        ],
+        "whyBelongs": "Primary route from computer science/software subjects into digital product and platform work.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/information-technology/how-to-get-a-job-in-ai/",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_ai_engineer",
+        "title": "AI Engineer",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Novelty & Variety Seeking"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_software_ai_digital_systems",
+        "careerWorldTitle": "Software, AI & Digital Systems",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_software_ai_digital_systems_ai_engineering_and_mlops",
+        "roleFamilyTitle": "AI Engineering & MLOps",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Novelty & Variety Seeking"
+        ],
+        "whyBelongs": "Emerging but increasingly standard path in the digital/AI stack.",
+        "confidence": "Medium-High",
+        "sourceUrls": [
+          "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/information-technology/how-to-get-a-job-in-ai/",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_applied_ai_analyst",
+        "title": "Applied AI Analyst",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Independent Working Approach"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_data_analytics_quantitative_insight",
+        "careerWorldTitle": "Data, Analytics & Quantitative Insight",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_data_analytics_quantitative_insight_machine_learning_and_decision_science",
+        "roleFamilyTitle": "Machine Learning & Decision Science",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Independent Working Approach"
+        ],
+        "whyBelongs": "Future-relevant analytical route where modelling and experimentation matter.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_machine_learning_analyst",
+        "title": "Machine Learning Analyst",
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Independent Working Approach"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_data_analytics_quantitative_insight",
+        "careerWorldTitle": "Data, Analytics & Quantitative Insight",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_data_analytics_quantitative_insight_machine_learning_and_decision_science",
+        "roleFamilyTitle": "Machine Learning & Decision Science",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Novelty & Variety Seeking",
+          "Independent Working Approach"
+        ],
+        "whyBelongs": "Future-relevant analytical route where modelling and experimentation matter.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_controls_engineer",
+        "title": "Controls Engineer",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Hands-On Engagement"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+        "careerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+        "careerWorldArchetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
+        "roleFamilyTitle": "Electrical & Electronic Engineering",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Hands-On Engagement"
+        ],
+        "whyBelongs": "Technical systems route with stronger signal/control/circuit emphasis.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides/engineering-and-technology-personal-statement-guide",
+          "https://targetjobs.co.uk/careers-advice/job-descriptions"
+        ]
+      },
+      {
+        "id": "role_electrical_engineer",
+        "title": "Electrical Engineer",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Hands-On Engagement"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+        "careerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+        "careerWorldArchetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "roleFamilyId": "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
+        "roleFamilyTitle": "Electrical & Electronic Engineering",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Attention to Detail",
+          "Organisation & Systems Orientation",
+          "Hands-On Engagement"
+        ],
+        "whyBelongs": "Technical systems route with stronger signal/control/circuit emphasis.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides/engineering-and-technology-personal-statement-guide",
+          "https://targetjobs.co.uk/careers-advice/job-descriptions"
+        ]
+      },
+      {
+        "id": "role_analytics_scientist",
+        "title": "Analytics Scientist",
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Attention to Detail"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_data_analytics_quantitative_insight",
+        "careerWorldTitle": "Data, Analytics & Quantitative Insight",
+        "careerWorldArchetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_data_analytics_quantitative_insight_data_science",
+        "roleFamilyTitle": "Data Science",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Explorer",
+          "Organizer"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Curiosity & Openness",
+          "Independent Working Approach",
+          "Attention to Detail"
+        ],
+        "whyBelongs": "More model- and experimentation-heavy than standard analyst roles.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      }
+    ],
+    "matchedSubject": {
+      "id": "sub_computer_science",
+      "title": "Computer science",
+      "archetypes": [
+        "Thinker",
+        "Creator",
+        "Explorer"
+      ],
+      "signatureSource": "existing_bank_exact",
+      "signatureRationale": "Matches your existing subject bank exactly. Thinker leads for deep problem-solving, Creator reflects building digital products and systems, and Explorer captures experimentation with new technologies.",
+      "adjacentCareerWorldIds": [
+        "cw_data_analytics_quantitative_insight"
+      ],
+      "ucasSubjectGuide": true,
+      "evidenceSubdims": [
+        "Investigative Curiosity",
+        "Independent Working Approach",
+        "Curiosity & Openness",
+        "Clarity & Structure Preference",
+        "Hands-On Engagement"
+      ],
+      "subdimensionSource": "subject-specific_curated",
+      "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+      "subjectCluster": "technical-quant",
+      "subjectFamily": "software-computing",
+      "careerWorldId": "cw_software_ai_digital_systems",
+      "careerWorldTitle": "Software, AI & Digital Systems",
+      "careerWorldArchetypes": [
+        "Thinker",
+        "Creator",
+        "Explorer"
+      ]
+    },
+    "checks": [
+      {
+        "name": "matched_subject_found",
+        "pass": true,
+        "severity": "pass",
+        "details": "Could not match the case uniSubject to a library subject."
+      },
+      {
+        "name": "exact_role_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 8 roles; expected 8."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate role titles detected."
+      },
+      {
+        "name": "role_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct role families=5.",
+        "actual": 5
+      },
+      {
+        "name": "role_family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A role family appears more than 2 times."
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Role coverage across included archetypes=4.",
+        "actual": 4
+      }
+    ],
+    "statusLabel": "PASS"
+  },
+  {
+    "id": "pg_psychology_people_insight",
+    "title": "Postgraduate: psychology + people insight",
+    "status": "postgraduate",
+    "included": [
+      "Connector",
+      "Visionary",
+      "Thinker",
+      "Organizer"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Connector",
+        "score": 66
+      },
+      {
+        "name": "Visionary",
+        "score": 63
+      },
+      {
+        "name": "Thinker",
+        "score": 60
+      },
+      {
+        "name": "Organizer",
+        "score": 55
+      },
+      {
+        "name": "Creator",
+        "score": 48
+      },
+      {
+        "name": "Achiever",
+        "score": 47
+      },
+      {
+        "name": "Explorer",
+        "score": 44
+      }
+    ],
+    "allowedSubdims": [
+      "Helping Orientation",
+      "Purpose & Impact",
+      "Investigative Curiosity",
+      "Belonging & Connection",
+      "Emotional Stability",
+      "Curiosity & Openness",
+      "Independent Working Approach",
+      "Recognition & Visibility"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "helping orientation",
+        "score": 85
+      },
+      {
+        "name": "purpose & impact",
+        "score": 82
+      },
+      {
+        "name": "investigative curiosity",
+        "score": 78
+      },
+      {
+        "name": "belonging & connection",
+        "score": 76
+      },
+      {
+        "name": "emotional stability",
+        "score": 70
+      },
+      {
+        "name": "curiosity & openness",
+        "score": 68
+      },
+      {
+        "name": "independent working approach",
+        "score": 64
+      },
+      {
+        "name": "recognition & visibility",
+        "score": 58
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_psychology_behaviour_human_insight",
+        "title": "Psychology, Behaviour & Human Insight",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "description": "For people interested in understanding how people think, feel, behave, and change across individual, group, or societal contexts.",
+        "displayOrder": 7
+      },
+      {
+        "id": "cw_education_coaching_people_development",
+        "title": "Education, Coaching & People Development",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+        "displayOrder": 8
+      },
+      {
+        "id": "cw_health_care_clinical_practice",
+        "title": "Health, Care & Clinical Practice",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "description": "For people who want to support health and wellbeing through compassionate, evidence-informed, and dependable practice.",
+        "displayOrder": 6
+      },
+      {
+        "id": "cw_law_governance_public_impact",
+        "title": "Law, Governance & Public Impact",
+        "primaryArchetype1": "Thinker",
+        "primaryArchetype2": "Organizer",
+        "secondaryArchetype": "Visionary",
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Visionary"
+        ],
+        "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
+        "displayOrder": 9
+      },
+      {
+        "id": "cw_society_culture_languages_global_affairs",
+        "title": "Society, Culture, Languages & Global Affairs",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Creator",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "description": "For people interested in culture, language, identity, global issues, and understanding how societies communicate and change.",
+        "displayOrder": 16
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_communication",
+        "title": "Communication",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_empathy",
+        "title": "Empathy",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_collaboration",
+        "title": "Collaboration",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "str_stakeholder_management",
+        "title": "Stakeholder management",
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Organizer"
+        ]
+      },
+      {
+        "id": "str_strategic_thinking",
+        "title": "Strategic thinking",
+        "archetypes": [
+          "Visionary",
+          "Thinker"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_learning_growth_oriented",
+        "title": "Learning and growth-oriented",
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_education_coaching_people_development",
+          "cw_psychology_behaviour_human_insight",
+          "cw_health_care_clinical_practice"
+        ]
+      },
+      {
+        "id": "env_public_service_policy_led",
+        "title": "Public service and policy-led",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_environment_sustainability_planetary_futures",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_supportive_people_centred",
+        "title": "Supportive and people-centred",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_purpose_driven_mission_led",
+        "title": "Purpose-driven and mission-led",
+        "archetypes": [
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_collaborative_team_oriented",
+        "title": "Collaborative and team-oriented",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_health_care_clinical_practice",
+          "cw_education_coaching_people_development",
+          "cw_marketing_media_communication"
+        ]
+      },
+      {
+        "id": "env_precision_quality_driven",
+        "title": "Precision and quality-driven",
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_finance_economics_investment",
+          "cw_science_research_laboratory_innovation",
+          "cw_health_care_clinical_practice",
+          "cw_law_governance_public_impact"
+        ]
+      }
+    ],
+    "subjects": [],
+    "roles": [
+      {
+        "id": "role_assistant_psychologist",
+        "title": "Assistant Psychologist",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Emotional Stability",
+          "Belonging & Connection"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_psychology_behaviour_human_insight",
+        "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyId": "rf_psychology_behaviour_human_insight_clinical_and_counselling_psychology_pathways",
+        "roleFamilyTitle": "Clinical & Counselling Psychology Pathways",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Emotional Stability",
+          "Belonging & Connection"
+        ],
+        "whyBelongs": "Core route for psychology graduates pursuing clinical or counselling directions.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_psychology_assistant",
+        "title": "Psychology Assistant",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Emotional Stability",
+          "Belonging & Connection"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_psychology_behaviour_human_insight",
+        "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyId": "rf_psychology_behaviour_human_insight_clinical_and_counselling_psychology_pathways",
+        "roleFamilyTitle": "Clinical & Counselling Psychology Pathways",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Emotional Stability",
+          "Belonging & Connection"
+        ],
+        "whyBelongs": "Core route for psychology graduates pursuing clinical or counselling directions.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_behaviour_change_associate",
+        "title": "Behaviour Change Associate",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "keySubdimensions": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Helping Orientation",
+          "Curiosity & Openness"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_psychology_behaviour_human_insight",
+        "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyId": "rf_psychology_behaviour_human_insight_human_factors_and_behaviour_change",
+        "roleFamilyTitle": "Human Factors & Behaviour Change",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Purpose & Impact",
+          "Investigative Curiosity",
+          "Helping Orientation",
+          "Curiosity & Openness"
+        ],
+        "whyBelongs": "More specialist but increasingly relevant applied route.",
+        "confidence": "Medium",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/job-descriptions",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_health_improvement_officer",
+        "title": "Health Improvement Officer",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Purpose & Impact",
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Belonging & Connection"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_health_care_clinical_practice",
+        "careerWorldTitle": "Health, Care & Clinical Practice",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_health_care_clinical_practice_public_health_and_health_improvement",
+        "roleFamilyTitle": "Public Health & Health Improvement",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Purpose & Impact",
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Belonging & Connection"
+        ],
+        "whyBelongs": "Population-health route linking healthcare with systems and prevention.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides",
+          "https://targetjobs.co.uk/careers-advice/healthcare/how-do-i-get-graduate-job-healthcare-operations-and-management"
+        ]
+      },
+      {
+        "id": "role_health_policy_analyst",
+        "title": "Health Policy Analyst",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Purpose & Impact",
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Belonging & Connection"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_health_care_clinical_practice",
+        "careerWorldTitle": "Health, Care & Clinical Practice",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_health_care_clinical_practice_public_health_and_health_improvement",
+        "roleFamilyTitle": "Public Health & Health Improvement",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Purpose & Impact",
+          "Helping Orientation",
+          "Investigative Curiosity",
+          "Belonging & Connection"
+        ],
+        "whyBelongs": "Population-health route linking healthcare with systems and prevention.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides",
+          "https://targetjobs.co.uk/careers-advice/healthcare/how-do-i-get-graduate-job-healthcare-operations-and-management"
+        ]
+      },
+      {
+        "id": "role_geopolitical_risk_analyst",
+        "title": "Geopolitical Risk Analyst",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Independent Working Approach"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "roleFamilyId": "rf_society_culture_languages_global_affairs_international_relations_and_geopolitical_analysis",
+        "roleFamilyTitle": "International Relations & Geopolitical Analysis",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Independent Working Approach"
+        ],
+        "whyBelongs": "Strong route for politics/international relations type graduates.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_policy_researcher",
+        "title": "Policy Researcher",
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "keySubdimensions": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Independent Working Approach"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "roleFamilyId": "rf_society_culture_languages_global_affairs_international_relations_and_geopolitical_analysis",
+        "roleFamilyTitle": "International Relations & Geopolitical Analysis",
+        "roleFamilyArchetypes": [
+          "Thinker",
+          "Visionary",
+          "Connector"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Investigative Curiosity",
+          "Purpose & Impact",
+          "Belonging & Connection",
+          "Independent Working Approach"
+        ],
+        "whyBelongs": "Strong route for politics/international relations type graduates.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_community_nurse",
+        "title": "Community Nurse",
+        "archetypes": [
+          "Connector",
+          "Organizer",
+          "Thinker"
+        ],
+        "keySubdimensions": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Emotional Stability",
+          "Reliability & Focus"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_health_care_clinical_practice",
+        "careerWorldTitle": "Health, Care & Clinical Practice",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_health_care_clinical_practice_nursing_and_midwifery",
+        "roleFamilyTitle": "Nursing & Midwifery",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Organizer",
+          "Thinker"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Helping Orientation",
+          "Belonging & Connection",
+          "Emotional Stability",
+          "Reliability & Focus"
+        ],
+        "whyBelongs": "Established care pathway with strong graduate-entry routes.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides",
+          "https://targetjobs.co.uk/careers-advice/healthcare/how-do-i-get-graduate-job-healthcare-operations-and-management"
+        ]
+      }
+    ],
+    "matchedSubject": {
+      "id": "sub_psychology",
+      "title": "Psychology",
+      "archetypes": [
+        "Connector",
+        "Thinker",
+        "Visionary"
+      ],
+      "signatureSource": "existing_bank_exact",
+      "signatureRationale": "Matches your existing subject bank exactly. Connector leads for human understanding, Thinker reflects evidence and theory, and Visionary captures growth, change, and insight into behaviour.",
+      "adjacentCareerWorldIds": [
+        "cw_health_care_clinical_practice",
+        "cw_society_culture_languages_global_affairs"
+      ],
+      "ucasSubjectGuide": true,
+      "evidenceSubdims": [
+        "Investigative Curiosity",
+        "Helping Orientation",
+        "Belonging & Connection",
+        "Independent Working Approach",
+        "Purpose & Impact"
+      ],
+      "subdimensionSource": "subject-specific_curated",
+      "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+      "subjectCluster": "psychology-behaviour",
+      "subjectFamily": "psychology",
+      "careerWorldId": "cw_psychology_behaviour_human_insight",
+      "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+      "careerWorldArchetypes": [
+        "Connector",
+        "Thinker",
+        "Visionary"
+      ]
+    },
+    "checks": [
+      {
+        "name": "matched_subject_found",
+        "pass": true,
+        "severity": "pass",
+        "details": "Could not match the case uniSubject to a library subject."
+      },
+      {
+        "name": "exact_role_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 8 roles; expected 8."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate role titles detected."
+      },
+      {
+        "name": "role_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct role families=5.",
+        "actual": 5
+      },
+      {
+        "name": "role_family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A role family appears more than 2 times."
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Role coverage across included archetypes=4.",
+        "actual": 4
+      }
+    ],
+    "statusLabel": "PASS"
+  },
+  {
+    "id": "pg_marketing_comms",
+    "title": "Postgraduate: marketing + communications profile",
+    "status": "postgraduate",
+    "included": [
+      "Creator",
+      "Connector",
+      "Achiever",
+      "Visionary"
+    ],
+    "sortedArchetypes": [
+      {
+        "name": "Creator",
+        "score": 64
+      },
+      {
+        "name": "Connector",
+        "score": 62
+      },
+      {
+        "name": "Achiever",
+        "score": 58
+      },
+      {
+        "name": "Visionary",
+        "score": 56
+      },
+      {
+        "name": "Organizer",
+        "score": 51
+      },
+      {
+        "name": "Thinker",
+        "score": 49
+      },
+      {
+        "name": "Explorer",
+        "score": 46
+      }
+    ],
+    "allowedSubdims": [
+      "Creative Expression",
+      "Entrepreneurial Drive",
+      "Recognition & Visibility",
+      "Belonging & Connection",
+      "Pace & Intensity Preference",
+      "Curiosity & Openness",
+      "Team Collaboration",
+      "Financial Ambition"
+    ],
+    "topSubdimProfile": [
+      {
+        "name": "creative expression",
+        "score": 85
+      },
+      {
+        "name": "entrepreneurial drive",
+        "score": 82
+      },
+      {
+        "name": "recognition & visibility",
+        "score": 79
+      },
+      {
+        "name": "belonging & connection",
+        "score": 74
+      },
+      {
+        "name": "pace & intensity preference",
+        "score": 71
+      },
+      {
+        "name": "curiosity & openness",
+        "score": 70
+      },
+      {
+        "name": "team collaboration",
+        "score": 68
+      },
+      {
+        "name": "financial ambition",
+        "score": 65
+      }
+    ],
+    "careerWorlds": [
+      {
+        "id": "cw_marketing_media_communication",
+        "title": "Marketing, Media & Communication",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Connector",
+        "secondaryArchetype": "Achiever",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "description": "For people who enjoy understanding audiences, shaping messages, building brands, and creating content that connects and influences.",
+        "displayOrder": 13
+      },
+      {
+        "id": "cw_society_culture_languages_global_affairs",
+        "title": "Society, Culture, Languages & Global Affairs",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Thinker",
+        "secondaryArchetype": "Creator",
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "description": "For people interested in culture, language, identity, global issues, and understanding how societies communicate and change.",
+        "displayOrder": 16
+      },
+      {
+        "id": "cw_architecture_built_environment_spatial_design",
+        "title": "Architecture, Built Environment & Spatial Design",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people drawn to shaping spaces, buildings, and places through a blend of design imagination, long-term thinking, and practical structure.",
+        "displayOrder": 4
+      },
+      {
+        "id": "cw_creative_arts_design_experience",
+        "title": "Creative Arts, Design & Experience",
+        "primaryArchetype1": "Creator",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Explorer",
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Explorer"
+        ],
+        "description": "For people drawn to imaginative, expressive, and original work in art, design, storytelling, performance, or experience creation.",
+        "displayOrder": 14
+      },
+      {
+        "id": "cw_education_coaching_people_development",
+        "title": "Education, Coaching & People Development",
+        "primaryArchetype1": "Connector",
+        "primaryArchetype2": "Visionary",
+        "secondaryArchetype": "Organizer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "description": "For people who enjoy helping others grow, learn, and build confidence through guidance, teaching, mentoring, or development.",
+        "displayOrder": 8
+      }
+    ],
+    "strengths": [
+      {
+        "id": "str_leadership_and_influence",
+        "title": "Leadership and influence",
+        "archetypes": [
+          "Achiever",
+          "Visionary",
+          "Connector"
+        ]
+      },
+      {
+        "id": "str_design_thinking",
+        "title": "Design thinking",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ]
+      },
+      {
+        "id": "str_creativity",
+        "title": "Creativity",
+        "archetypes": [
+          "Creator",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_innovation_mindset",
+        "title": "Innovation mindset",
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Visionary"
+        ]
+      },
+      {
+        "id": "str_communication",
+        "title": "Communication",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ]
+      }
+    ],
+    "environments": [
+      {
+        "id": "env_innovation_startup",
+        "title": "Innovation and start-up",
+        "archetypes": [
+          "Visionary",
+          "Creator",
+          "Achiever"
+        ],
+        "careerWorldIds": [
+          "cw_entrepreneurship_innovation_venture_building",
+          "cw_software_ai_digital_systems",
+          "cw_marketing_media_communication",
+          "cw_creative_arts_design_experience"
+        ]
+      },
+      {
+        "id": "env_creative_design_driven",
+        "title": "Creative and design-driven",
+        "archetypes": [
+          "Creator",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_creative_arts_design_experience",
+          "cw_marketing_media_communication",
+          "cw_architecture_built_environment_spatial_design"
+        ]
+      },
+      {
+        "id": "env_purpose_driven_mission_led",
+        "title": "Purpose-driven and mission-led",
+        "archetypes": [
+          "Visionary",
+          "Connector"
+        ],
+        "careerWorldIds": [
+          "cw_environment_sustainability_planetary_futures",
+          "cw_law_governance_public_impact",
+          "cw_society_culture_languages_global_affairs",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_supportive_people_centred",
+        "title": "Supportive and people-centred",
+        "archetypes": [
+          "Connector",
+          "Visionary"
+        ],
+        "careerWorldIds": [
+          "cw_health_care_clinical_practice",
+          "cw_psychology_behaviour_human_insight",
+          "cw_education_coaching_people_development"
+        ]
+      },
+      {
+        "id": "env_strategic_commercial",
+        "title": "Strategic and commercial",
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Thinker"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_finance_economics_investment",
+          "cw_marketing_media_communication",
+          "cw_entrepreneurship_innovation_venture_building"
+        ]
+      },
+      {
+        "id": "env_collaborative_team_oriented",
+        "title": "Collaborative and team-oriented",
+        "archetypes": [
+          "Connector",
+          "Organizer"
+        ],
+        "careerWorldIds": [
+          "cw_business_strategy_commercial_leadership",
+          "cw_health_care_clinical_practice",
+          "cw_education_coaching_people_development",
+          "cw_marketing_media_communication"
+        ]
+      }
+    ],
+    "subjects": [],
+    "roles": [
+      {
+        "id": "role_brand_executive",
+        "title": "Brand Executive",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "keySubdimensions": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Pace & Intensity Preference"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_marketing_media_communication",
+        "careerWorldTitle": "Marketing, Media & Communication",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_marketing_media_communication_brand_and_marketing_management",
+        "roleFamilyTitle": "Brand & Marketing Management",
+        "roleFamilyArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Pace & Intensity Preference"
+        ],
+        "whyBelongs": "Core mainstream route into marketing.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/marketing-advertising-and-pr",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides/marketing-personal-statement-guide"
+        ]
+      },
+      {
+        "id": "role_campaign_executive",
+        "title": "Campaign Executive",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "keySubdimensions": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Pace & Intensity Preference"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_marketing_media_communication",
+        "careerWorldTitle": "Marketing, Media & Communication",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_marketing_media_communication_brand_and_marketing_management",
+        "roleFamilyTitle": "Brand & Marketing Management",
+        "roleFamilyArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Creative Expression",
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Pace & Intensity Preference"
+        ],
+        "whyBelongs": "Core mainstream route into marketing.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/marketing-advertising-and-pr",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides/marketing-personal-statement-guide"
+        ]
+      },
+      {
+        "id": "role_affiliate_executive",
+        "title": "Affiliate Executive",
+        "archetypes": [
+          "Connector",
+          "Creator",
+          "Achiever"
+        ],
+        "keySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Sociability & Extroversion"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_marketing_media_communication",
+        "careerWorldTitle": "Marketing, Media & Communication",
+        "careerWorldArchetypes": [
+          "Creator",
+          "Connector",
+          "Achiever"
+        ],
+        "roleFamilyId": "rf_marketing_media_communication_influencer_and_partnerships_marketing",
+        "roleFamilyTitle": "Influencer & Partnerships Marketing",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Creator",
+          "Achiever"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Sociability & Extroversion"
+        ],
+        "whyBelongs": "Current real route in consumer-facing brands and media.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/careers-advice/marketing-advertising-and-pr",
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides/marketing-personal-statement-guide"
+        ]
+      },
+      {
+        "id": "role_communications_officer",
+        "title": "Communications Officer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "keySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "roleFamilyId": "rf_society_culture_languages_global_affairs_global_communications_and_diplomacy_support",
+        "roleFamilyTitle": "Global Communications & Diplomacy Support",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Broad but valid route for globally oriented communicators.",
+        "confidence": "Medium",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_diplomatic_support_officer",
+        "title": "Diplomatic Support Officer",
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "keySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "roleFamilyId": "rf_society_culture_languages_global_affairs_global_communications_and_diplomacy_support",
+        "roleFamilyTitle": "Global Communications & Diplomacy Support",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Belonging & Connection",
+          "Recognition & Visibility",
+          "Creative Expression",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Broad but valid route for globally oriented communicators.",
+        "confidence": "Medium",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_collections_assistant",
+        "title": "Collections Assistant",
+        "archetypes": [
+          "Connector",
+          "Creator",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Belonging & Connection",
+          "Creative Expression",
+          "Purpose & Impact",
+          "Curiosity & Openness"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_society_culture_languages_global_affairs",
+        "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "roleFamilyId": "rf_society_culture_languages_global_affairs_heritage_museums_and_cultural_organisations",
+        "roleFamilyTitle": "Heritage, Museums & Cultural Organisations",
+        "roleFamilyArchetypes": [
+          "Connector",
+          "Creator",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Belonging & Connection",
+          "Creative Expression",
+          "Purpose & Impact",
+          "Curiosity & Openness"
+        ],
+        "whyBelongs": "Valid cultural-sector pathway.",
+        "confidence": "High",
+        "sourceUrls": [
+          "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/2026-personal-statement-guides",
+          "https://targetjobs.co.uk/"
+        ]
+      },
+      {
+        "id": "role_edtech_coordinator",
+        "title": "EdTech Coordinator",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Creative Expression",
+          "Helping Orientation",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_education_coaching_people_development_learning_design_and_educational_technology",
+        "roleFamilyTitle": "Learning Design & Educational Technology",
+        "roleFamilyArchetypes": [
+          "Creator",
+          "Connector",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Creative Expression",
+          "Helping Orientation",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Valid route where education meets digital content and course design.",
+        "confidence": "Medium-High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/",
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides"
+        ]
+      },
+      {
+        "id": "role_instructional_designer",
+        "title": "Instructional Designer",
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Visionary"
+        ],
+        "keySubdimensions": [
+          "Creative Expression",
+          "Helping Orientation",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "entryLevelFit": "High",
+        "careerWorldId": "cw_education_coaching_people_development",
+        "careerWorldTitle": "Education, Coaching & People Development",
+        "careerWorldArchetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "roleFamilyId": "rf_education_coaching_people_development_learning_design_and_educational_technology",
+        "roleFamilyTitle": "Learning Design & Educational Technology",
+        "roleFamilyArchetypes": [
+          "Creator",
+          "Connector",
+          "Visionary"
+        ],
+        "roleFamilyKeySubdimensions": [
+          "Creative Expression",
+          "Helping Orientation",
+          "Curiosity & Openness",
+          "Purpose & Impact"
+        ],
+        "whyBelongs": "Valid route where education meets digital content and course design.",
+        "confidence": "Medium-High",
+        "sourceUrls": [
+          "https://targetjobs.co.uk/",
+          "https://www.ucas.com/applying/applying-university/personal-statement-guides"
+        ]
+      }
+    ],
+    "matchedSubject": {
+      "id": "sub_marketing",
+      "title": "Marketing",
+      "archetypes": [
+        "Creator",
+        "Connector",
+        "Achiever"
+      ],
+      "signatureSource": "existing_bank_exact",
+      "signatureRationale": "Matches your existing subject bank exactly. Creator leads for message and campaign design, Connector reflects audience understanding, and Achiever supports growth and results orientation.",
+      "adjacentCareerWorldIds": [
+        "cw_business_management_commercial_leadership"
+      ],
+      "ucasSubjectGuide": true,
+      "evidenceSubdims": [
+        "Creative Expression",
+        "Belonging & Connection",
+        "Recognition & Visibility",
+        "Sociability & Extroversion",
+        "Pace & Intensity Preference"
+      ],
+      "subdimensionSource": "subject-specific_curated",
+      "evidenceNote": "Evidence subdimensions are selected from the uploaded CareerDNA subdimension-to-archetype matrix and then refined where the subject has a clear domain-specific psychological profile.",
+      "subjectCluster": "communication-media",
+      "subjectFamily": "media-marketing-communication",
+      "careerWorldId": "cw_marketing_media_communication",
+      "careerWorldTitle": "Marketing, Media & Communication",
+      "careerWorldArchetypes": [
+        "Creator",
+        "Connector",
+        "Achiever"
+      ]
+    },
+    "checks": [
+      {
+        "name": "matched_subject_found",
+        "pass": true,
+        "severity": "pass",
+        "details": "Could not match the case uniSubject to a library subject."
+      },
+      {
+        "name": "exact_role_count",
+        "pass": true,
+        "severity": "pass",
+        "details": "Found 8 roles; expected 8."
+      },
+      {
+        "name": "no_duplicate_titles",
+        "pass": true,
+        "severity": "pass",
+        "details": "Duplicate role titles detected."
+      },
+      {
+        "name": "role_family_diversity",
+        "pass": true,
+        "severity": "pass",
+        "details": "Distinct role families=5.",
+        "actual": 5
+      },
+      {
+        "name": "role_family_overcrowding",
+        "pass": true,
+        "severity": "pass",
+        "details": "A role family appears more than 2 times."
+      },
+      {
+        "name": "included_archetype_coverage",
+        "pass": true,
+        "severity": "pass",
+        "details": "Role coverage across included archetypes=4.",
+        "actual": 4
+      }
+    ],
+    "statusLabel": "PASS"
+  }
+]

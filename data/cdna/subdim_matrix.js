@@ -1,6 +1,6 @@
 // data/subdim_matrix.js
 // Central CareerDNA subdimension ↔ archetype weight matrix (0–1 scale)
-// Source of truth: utils/archetypeWeights.js (24 subdimensions × 7 archetypes)
+// Source of truth: utils/archetypeWeights.js
 // NOTE: This file mirrors utils/archetypeWeights.js exactly. Keep them in sync.
 
 module.exports = {
@@ -8,11 +8,11 @@ module.exports = {
   "Curiosity & Openness": {
     Achiever: 0,
     Connector: 0,
-    Creator: 0.6,
+    Creator: 0.7,
     Explorer: 1.0,
     Organizer: 0,
     Thinker: 0,
-    Visionary: 0.8
+    Visionary: 0.5
   },
   "Reliability & Focus": {
     Achiever: 0.8,
@@ -20,12 +20,12 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 1.0,
-    Thinker: 0.5,
+    Thinker: 0,
     Visionary: 0
   },
   "Emotional Stability": {
     Achiever: 0,
-    Connector: 0.5,
+    Connector: 0.7,
     Creator: 0,
     Explorer: 0,
     Organizer: 0.5,
@@ -33,20 +33,20 @@ module.exports = {
     Visionary: 0
   },
   "Uncertainty Tolerance": {
-    Achiever: 0.5,
+    Achiever: 0.3,
     Connector: 0,
-    Creator: 0.5,
+    Creator: 0,
     Explorer: 1.0,
-    Organizer: 0.0,
+    Organizer: 0,
     Thinker: 0,
-    Visionary: 0.5
+    Visionary: 0.3
   },
   "Perseverance": {
     Achiever: 1.0,
     Connector: 0,
     Creator: 0,
     Explorer: 0,
-    Organizer: 0.5,
+    Organizer: 0.7,
     Thinker: 0,
     Visionary: 0
   },
@@ -65,7 +65,7 @@ module.exports = {
     Achiever: 0,
     Connector: 0,
     Creator: 0,
-    Explorer: 0.8,
+    Explorer: 0.4,
     Organizer: 0,
     Thinker: 1.0,
     Visionary: 0
@@ -77,7 +77,7 @@ module.exports = {
     Explorer: 0,
     Organizer: 0,
     Thinker: 0,
-    Visionary: 0
+    Visionary: 0.3
   },
   "Helping Orientation": {
     Achiever: 0,
@@ -101,7 +101,7 @@ module.exports = {
     Achiever: 0,
     Connector: 0,
     Creator: 1.0,
-    Explorer: 0.5,
+    Explorer: 0.4,
     Organizer: 0,
     Thinker: 0,
     Visionary: 0
@@ -109,17 +109,17 @@ module.exports = {
   "Novelty & Variety Seeking": {
     Achiever: 0,
     Connector: 0,
-    Creator: 0.8,
+    Creator: 0.6,
     Explorer: 1.0,
     Organizer: 0,
     Thinker: 0,
-    Visionary: 0.5
+    Visionary: 0.3
   },
 
   // WHAT MATTERS
   "Purpose & Impact": {
     Achiever: 0,
-    Connector: 0.5,
+    Connector: 0.6,
     Creator: 0,
     Explorer: 0,
     Organizer: 0,
@@ -127,13 +127,13 @@ module.exports = {
     Visionary: 1.0
   },
   "Independence & Autonomy": {
-    Achiever: 0.5,
+    Achiever: 0.3,
     Connector: 0,
-    Creator: 0.8,
-    Explorer: 0.5,
+    Creator: 0.3,
+    Explorer: 0.4,
     Organizer: 0,
-    Thinker: 0.5,
-    Visionary: 1.0
+    Thinker: 1.0,
+    Visionary: 0.3
   },
   "Stability & Predictability": {
     Achiever: 0,
@@ -147,7 +147,7 @@ module.exports = {
   "Recognition & Visibility": {
     Achiever: 1.0,
     Connector: 0,
-    Creator: 0.5,
+    Creator: 0.3,
     Explorer: 0,
     Organizer: 0,
     Thinker: 0,
@@ -178,9 +178,9 @@ module.exports = {
     Connector: 0,
     Creator: 0,
     Explorer: 0,
-    Organizer: 0.5,
+    Organizer: 0.4,
     Thinker: 0,
-    Visionary: 0.5
+    Visionary: 0
   },
   "Organisation & Systems Orientation": {
     Achiever: 0,
@@ -188,7 +188,7 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 1.0,
-    Thinker: 0.5,
+    Thinker: 0.6,
     Visionary: 0
   },
   "Clarity & Structure Preference": {
@@ -197,7 +197,7 @@ module.exports = {
     Creator: 0,
     Explorer: 0,
     Organizer: 1.0,
-    Thinker: 0.8,
+    Thinker: 0.6,
     Visionary: 0
   },
   "Team Collaboration": {
@@ -205,18 +205,18 @@ module.exports = {
     Connector: 1.0,
     Creator: 0,
     Explorer: 0,
-    Organizer: 0.5,
+    Organizer: 0.4,
     Thinker: 0,
-    Visionary: 0.5
+    Visionary: 0
   },
   "Independent Working Approach": {
     Achiever: 0,
     Connector: 0,
-    Creator: 0.5,
-    Explorer: 1.0,
+    Creator: 0.3,
+    Explorer: 0,
     Organizer: 0,
-    Thinker: 0.5,
-    Visionary: 0.5
+    Thinker: 1.0,
+    Visionary: 0
   },
   "Attention to Detail": {
     Achiever: 0.5,
