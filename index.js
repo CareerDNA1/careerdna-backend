@@ -1842,6 +1842,19 @@ async function getAuthenticatedUserAndProfile(req) {
   return { user, profile };
 }
 
+
+async function requireAdmin(req) {
+  const { user, profile } = await getAuthenticatedUserAndProfile(req);
+
+  if (!profile?.is_admin) {
+    const err = new Error("Admin access required.");
+    err.status = 403;
+    throw err;
+  }
+
+  return { user, profile };
+}
+
 async function consumeReportCredit(profile = {}) {
   if (!profile?.id) {
     return { allowed: false, profile };
@@ -3790,6 +3803,105 @@ app.post("/api/selection-insights", selectionInsightsRateLimit, async (req, res)
       error: "SELECTION_INSIGHTS_FAILED",
       message: "We could not load deeper insights right now.",
       requestId: req._rid,
+    });
+  }
+});
+
+
+app.post("/api/analytics/event", async (req, res) => {
+  try {
+    const { user } = await getAuthenticatedUserAndProfile(req);
+
+    const eventType = String(req.body?.eventType || "").trim();
+    const eventData = req.body?.eventData && typeof req.body.eventData === "object"
+      ? req.body.eventData
+      : {};
+
+    if (!eventType) {
+      return res.status(400).json({ error: "EVENT_TYPE_REQUIRED" });
+    }
+
+    const { error } = await supabaseAdmin
+      .from("analytics_events")
+      .insert({
+        user_id: user.id,
+        event_type: eventType,
+        event_data: eventData,
+      });
+
+    if (error) throw error;
+
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error("Analytics event error:", err?.message || err);
+    return res.status(err.status || 500).json({
+      error: "ANALYTICS_EVENT_FAILED",
+      message: err.message || "Could not save analytics event.",
+    });
+  }
+});
+
+app.get("/api/admin/dashboard", async (req, res) => {
+  try {
+    await requireAdmin(req);
+
+    const excludedEmails = new Set([
+      "georgealexandridis@hotmail.com",
+    ]);
+
+    const { data: profilesRaw, error: profilesError } = await supabaseAdmin
+      .from("profiles")
+      .select("id, email, full_name, plan, created_at, reports_used, report_limit, advisor_questions_used, advisor_questions_limit")
+      .order("created_at", { ascending: false });
+
+    if (profilesError) throw profilesError;
+
+    const profiles = (profilesRaw || []).filter((profile) => {
+      const email = String(profile?.email || "").trim().toLowerCase();
+      return !excludedEmails.has(email);
+    });
+
+    const includedUserIds = new Set(profiles.map((profile) => profile.id).filter(Boolean));
+
+    const { data: eventsRaw, error: eventsError } = await supabaseAdmin
+      .from("analytics_events")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(1000);
+
+    if (eventsError) throw eventsError;
+
+    const { data: runsRaw, error: runsError } = await supabaseAdmin
+      .from("assessment_runs")
+      .select("id, user_id, created_at, intro_answers_json, results_json")
+      .order("created_at", { ascending: false })
+      .limit(5000);
+
+    if (runsError) throw runsError;
+
+    const { data: feedbackRaw, error: feedbackError } = await supabaseAdmin
+      .from("result_feedback")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(10000);
+
+    if (feedbackError && feedbackError.code !== "42P01") throw feedbackError;
+
+    const events = (eventsRaw || []).filter((event) => includedUserIds.has(event.user_id));
+    const runs = (runsRaw || []).filter((run) => includedUserIds.has(run.user_id));
+    const feedback = (feedbackRaw || []).filter((row) => includedUserIds.has(row.user_id));
+
+    return res.json({
+      users: profiles,
+      events,
+      runs,
+      feedback,
+    });
+  } catch (err) {
+    console.error("Admin dashboard error:", err?.message || err);
+    return res.status(err.status || 500).json({
+      error: "ADMIN_DASHBOARD_FAILED",
+      message: err.message || "Could not load admin dashboard.",
     });
   }
 });
