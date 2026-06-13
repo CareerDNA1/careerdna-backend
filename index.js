@@ -1819,25 +1819,11 @@ async function getAuthenticatedUserAndProfile(req) {
   }
 
   if (!profile) {
-    const { data: createdProfile, error: createProfileError } = await supabaseAdmin
-      .from("profiles")
-      .insert({
-        id: user.id,
-        email: user.email || null,
-        plan: "free",
-        plan_source: "free",
-        reports_used: 0,
-        report_limit: 0,
-        advisor_questions_used: 0,
-        advisor_questions_limit: 0,
-        advisor_extra_questions: 0,
-      })
-      .select("*")
-      .single();
-
-    if (createProfileError) throw createProfileError;
-    profile = createdProfile;
-  }
+  const err = new Error("Profile not found.");
+  err.status = 404;
+  err.code = "PROFILE_NOT_FOUND";
+  throw err;
+}
 
   return { user, profile };
 }
@@ -3143,20 +3129,12 @@ app.post("/api/delete-account", deleteAccountRateLimit, async (req, res) => {
       });
     }
 
-    if (!supabaseAuthClient) {
-      return res.status(500).json({
-        error: "Supabase auth client is not configured on the backend.",
-      });
-    }
-
     if (String(req.body?.confirmation || "").trim() !== "DELETE") {
       return res.status(400).json({ error: "Deletion confirmation is required." });
     }
 
+    const requestedAuthMode = String(req.body?.authMode || "password").trim().toLowerCase();
     const password = String(req.body?.password || "");
-    if (!password) {
-      return res.status(400).json({ error: "Password is required to delete your account." });
-    }
 
     const token = getBearerToken(req);
     if (!token) {
@@ -3176,16 +3154,52 @@ app.post("/api/delete-account", deleteAccountRateLimit, async (req, res) => {
       return res.status(400).json({ error: "Your account email could not be verified." });
     }
 
-    const { error: passwordError } = await supabaseAuthClient.auth.signInWithPassword({
-      email: user.email,
-      password,
-    });
+    const provider = String(user?.app_metadata?.provider || "").toLowerCase();
+    const identityProviders = Array.isArray(user?.identities)
+      ? user.identities.map((identity) => String(identity?.provider || "").toLowerCase()).filter(Boolean)
+      : [];
+    const hasPasswordIdentity = provider === "email" || identityProviders.includes("email");
+    const hasExternalIdentity = identityProviders.some((identityProvider) => identityProvider && identityProvider !== "email") || (!!provider && provider !== "email");
 
-    if (passwordError) {
-      return res.status(401).json({ error: "Incorrect password. Account deletion was not completed." });
+    if (requestedAuthMode === "oauth") {
+      if (!hasExternalIdentity) {
+        return res.status(400).json({ error: "This account is not connected to an external login provider." });
+      }
+
+      const lastSignInAt = user?.last_sign_in_at ? new Date(user.last_sign_in_at).getTime() : 0;
+      const recentSignInWindowMs = 10 * 60 * 1000;
+      if (!lastSignInAt || Date.now() - lastSignInAt > recentSignInWindowMs) {
+        return res.status(401).json({
+          error: "Please confirm with Google again before deleting your account.",
+          code: "RECENT_AUTH_REQUIRED",
+        });
+      }
+    } else {
+      if (!supabaseAuthClient) {
+        return res.status(500).json({
+          error: "Supabase auth client is not configured on the backend.",
+        });
+      }
+
+      if (!hasPasswordIdentity) {
+        return res.status(400).json({ error: "This account does not use a CareerDNA password. Please confirm with Google instead." });
+      }
+
+      if (!password) {
+        return res.status(400).json({ error: "Password is required to delete your account." });
+      }
+
+      const { error: passwordError } = await supabaseAuthClient.auth.signInWithPassword({
+        email: user.email,
+        password,
+      });
+
+      if (passwordError) {
+        return res.status(401).json({ error: "Incorrect password. Account deletion was not completed." });
+      }
+
+      await supabaseAuthClient.auth.signOut();
     }
-
-    await supabaseAuthClient.auth.signOut();
 
     const userId = user.id;
 
