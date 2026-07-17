@@ -198,7 +198,7 @@ function buildIncludedWeights(archetypeScores, included = []) {
       : sortArchetypes(archetypeScores);
 
   const byName = new Map(
-    sorted.map((x) => [x.name, normalizeScoreToPct(x.score) / 100])
+    sorted.map((x) => [x.name, normalizeScoreToPct(x.score)])
   );
 
   const out = {};

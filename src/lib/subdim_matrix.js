@@ -1,6 +1,6 @@
 // data/subdim_matrix.js
-// CareerDNA v2 — 25 behavioural dimensions × 7 archetypes weight matrix
-// 39 non-zero weights. Source of truth: CareerDNA Model Specification v2.
+// CareerDNA v2 — 25 behavioural dimensions × 7 archetypes weight matrix (CommonJS/backend)
+// Source of truth: CareerDNA Model Specification v2.
 // NOTE: This file mirrors utils/archetypeWeights.js exactly. Keep them in sync.
 
 module.exports = {
@@ -25,10 +25,10 @@ module.exports = {
     Visionary: 0
   },
   "Resilience": {
-    Achiever:  0.7,
-    Connector: 0.5,
+    Achiever:  0.5,
+    Connector: 0.3,
     Creator:   0,
-    Explorer:  0,
+    Explorer:  0.3,
     Organizer: 0,
     Thinker:   0,
     Visionary: 0.5
@@ -49,7 +49,7 @@ module.exports = {
     Explorer:  0,
     Organizer: 0,
     Thinker:   0,
-    Visionary: 0.6
+    Visionary: 0
   },
   "Empathy": {
     Achiever:  0,
@@ -101,10 +101,10 @@ module.exports = {
   "Technical Curiosity": {
     Achiever:  0,
     Connector: 0,
-    Creator:   0.6,
+    Creator:   0.5,
     Explorer:  0,
     Organizer: 0,
-    Thinker:   0.5,
+    Thinker:   0.7,
     Visionary: 0
   },
   "Cultural & Global Curiosity": {
@@ -129,7 +129,7 @@ module.exports = {
   // WHAT MATTERS
   "Purpose & Impact": {
     Achiever:  0,
-    Connector: 0.5,
+    Connector: 0.3,
     Creator:   0,
     Explorer:  0,
     Organizer: 0,
@@ -139,11 +139,11 @@ module.exports = {
   "Autonomy": {
     Achiever:  0,
     Connector: 0,
-    Creator:   0.7,
+    Creator:   0.5,
     Explorer:  0.4,
     Organizer: 0,
-    Thinker:   0.8,
-    Visionary: 0.5
+    Thinker:   0.5,
+    Visionary: 0.7
   },
   "Belonging": {
     Achiever:  0,
@@ -175,7 +175,7 @@ module.exports = {
   "Mastery": {
     Achiever:  0,
     Connector: 0,
-    Creator:   0.6,
+    Creator:   0.7,
     Explorer:  0,
     Organizer: 0,
     Thinker:   1.0,
@@ -220,7 +220,7 @@ module.exports = {
     Visionary: 0
   },
   "Pace": {
-    Achiever:  1.0,
+    Achiever:  0.8,
     Connector: 0,
     Creator:   0,
     Explorer:  0.5,
@@ -238,4 +238,4 @@ module.exports = {
     Visionary: 0
   }
 
-}
+};

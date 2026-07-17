@@ -28,7 +28,7 @@ const {
   normalizeItemScoreToPct,
   getItemSignalFromBreakdown,
 } = require("./src/lib/cdnaSelect");
-const { buildReportPrompt, buildSelectionNarrativesPrompt } = require("./src/lib/cdnaProse");
+const { buildReportPrompt, buildSelectionNarrativesPrompt } = require("./src/lib/cdnaProse_v2");
 const { buildRecommendationPayload } = require("./src/lib/cdnaRecommendationPayload");
 const {
   buildCareerAdvisorMessages,
@@ -315,19 +315,14 @@ function clampNumber(min, max, value) {
   return Math.min(max, Math.max(min, value));
 }
 
-function getLabelFromRankBand(rankPosition = 1, populationSize = 0) {
-  const total = Math.max(0, Number(populationSize) || 0);
-  const rank = Math.max(1, Number(rankPosition) || 1);
-
-  if (total <= 1) return { signalLabel: "Standout", signalBlocks: 4 };
-
-  const standoutCount = Math.max(1, Math.floor(total * 0.15));
-  const strongCount = Math.max(1, Math.floor(total * 0.20));
-  const goodCount = Math.max(1, Math.floor(total * 0.20));
-
-  if (rank <= standoutCount) return { signalLabel: "Standout", signalBlocks: 4 };
-  if (rank <= standoutCount + strongCount) return { signalLabel: "Strong", signalBlocks: 3 };
-  if (rank <= standoutCount + strongCount + goodCount) return { signalLabel: "Good", signalBlocks: 2 };
+// Fixed score thresholds: >80 = Standout, >70 = Strong, >=60 = Good, else Lower.
+// Applied to the absolute fit percentage (0–100) so labels are consistent and independent
+// of how many other items happen to be in the same population.
+function getLabelFromFixedThresholds(fitPct = 0) {
+  const pct = Number(fitPct) || 0;
+  if (pct > 80) return { signalLabel: "Standout", signalBlocks: 4 };
+  if (pct > 70) return { signalLabel: "Strong", signalBlocks: 3 };
+  if (pct >= 60) return { signalLabel: "Good", signalBlocks: 2 };
   return { signalLabel: "Lower", signalBlocks: 1 };
 }
 
@@ -359,7 +354,7 @@ function buildRelativeSignal(score = 0, populationScoreMap = new Map(), fallback
     fitPct: Number(fallbackSignal?.fitPct || 0),
     coveragePct: Number(fallbackSignal?.coveragePct || 0),
     coverageRatio: Number(fallbackSignal?.coverageRatio || 0),
-    ...getLabelFromRankBand(avgRank, total),
+    ...getLabelFromFixedThresholds(fallbackSignal?.fitPct || 0),
   };
 }
 
@@ -471,8 +466,8 @@ function pickProseSubdimensionsForItem(item = {}, userSubdimMap = new Map(), { m
       return a.order - b.order;
     });
 
-  const strong = scored.filter((row) => row.pct >= minPct).slice(0, maxCount).map((row) => row.name);
-  const fallback = !strong.length && scored.length ? scored.slice(0, Math.min(1, maxCount)).map((row) => row.name) : [];
+  const strong = scored.filter((row) => row.pct >= minPct).map((row) => row.name).slice(0, maxCount);
+  const fallback = !strong.length && scored.length ? scored.slice(0, 1).map((row) => row.name) : [];
   const picked = strong.length ? strong : fallback;
 
   return {
@@ -512,6 +507,38 @@ function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(),
       minPct: pickedView.minPct,
       maxCount: pickedView.maxCount,
     };
+  }
+
+  // Post-process: when two items in the same section share an identical picked set,
+  // rotate which traits are foregrounded as primary so the LLM produces distinct paragraphs.
+  const seenPickKeys = new Map(); // sorted-key → title of first item with that set
+  for (const item of items || []) {
+    const title = String(item?.title || "").trim();
+    if (!title || !context[title]) continue;
+
+    const pickKey = [...(context[title].prose_subdims)].sort().join("|");
+
+    if (seenPickKeys.has(pickKey)) {
+      // Rotate the strong_user_subdims: shift by half so the second item foregrounds
+      // different traits as primary than the first item did.
+      const originalStrong = [...context[title].strong_user_subdims];
+      if (originalStrong.length >= 2) {
+        const shift = Math.max(1, Math.floor(originalStrong.length / 2));
+        const newStrong = originalStrong.slice(shift);
+        const demoted = originalStrong.slice(0, shift);
+        const rotated = [...newStrong, ...demoted];
+
+        context[title].prose_subdims = rotated;
+        context[title].matched_user_subdims = rotated;
+        context[title].item_relevant_subdims = rotated;
+        context[title].strong_user_subdims = newStrong;
+        hints[title] = rotated;
+        evidence[title].subdimensions = rotated;
+        evidence[title].strong_user_subdims = newStrong;
+      }
+    } else {
+      seenPickKeys.set(pickKey, title);
+    }
   }
 
   return { context, hints, pairs: evidence };
@@ -624,9 +651,9 @@ function findUniversityPathwayMatrixEntry(matchedSubject = null, subjectLabel = 
   const subjectTitle = normalizeMatrixMatchLabel(matchedSubject?.title || "");
   const requestedTitle = normalizeMatrixMatchLabel(subjectLabel || "");
   if (!rows.length) return null;
-  return rows.find((row) => String(row?.subjectId || "").trim() === subjectId) ||
-    rows.find((row) => normalizeMatrixMatchLabel(row?.subjectTitle || "") === subjectTitle) ||
-    rows.find((row) => normalizeMatrixMatchLabel(row?.subjectTitle || "") === requestedTitle) ||
+  return rows.find((row) => { const rid = String(row?.id || row?.subjectId || "").trim(); return rid && rid === subjectId; }) ||
+    rows.find((row) => normalizeMatrixMatchLabel(row?.title || row?.subjectTitle || "") === subjectTitle) ||
+    rows.find((row) => normalizeMatrixMatchLabel(row?.title || row?.subjectTitle || "") === requestedTitle) ||
     null;
 }
 
@@ -680,15 +707,25 @@ function scoreRoleFamiliesByIds(roleFamilies = [], ids = [], ctx = {}) {
     .sort((a, b) => b.score !== a.score ? b.score - a.score : String(a?.family?.title || "").localeCompare(String(b?.family?.title || "")));
 }
 
+function scoreRoleFamiliesByTitles(roleFamilies = [], titles = [], ctx = {}) {
+  const wanted = new Set((Array.isArray(titles) ? titles : []).map((t) => String(t || "").trim().toLowerCase()).filter(Boolean));
+  if (!wanted.size) return [];
+  return (Array.isArray(roleFamilies) ? roleFamilies : [])
+    .filter((family) => wanted.has(String(family?.title || family?.familyTitle || "").trim().toLowerCase()))
+    .map((family) => ({ family, score: scoreItemTotal(family, ctx) }))
+    .sort((a, b) => b.score !== a.score ? b.score - a.score : String(a?.family?.title || "").localeCompare(String(b?.family?.title || "")));
+}
+
 function buildRoleFamilyPopulationScoreMap(roleFamilies = [], ctx = {}) {
   return new Map((Array.isArray(roleFamilies) ? roleFamilies : []).map((family) => [buildItemLookupKey(family), { item: family, score: Number(scoreItemTotal(family, ctx) || 0) }]));
 }
 
-function getRoleFamilySignalLabel(family = {}, score = 0, populationScoreMap = new Map()) {
+function getRoleFamilySignalLabel(family = {}, score = 0, populationScoreMap = new Map(), ctx = {}) {
+  const breakdown = scoreItemBreakdown(family, ctx);
   const signal = buildRelativeSignal(Number(score || 0), populationScoreMap, {
-    fitPct: normalizeItemScoreToPct(Number(score || 0)),
-    coveragePct: 0,
-    coverageRatio: 0,
+    fitPct: Number(breakdown.fitStrengthPct || normalizeItemScoreToPct(Number(score || 0))),
+    coveragePct: Number(breakdown.rawFitPct || 0),
+    coverageRatio: Number(breakdown.coverageRatio || 0),
   });
   return signal?.signalLabel || "Lower";
 }
@@ -698,28 +735,39 @@ function pickMatrixRoleFamilyRows(rows = [], roleFamilies = [], ctx = {}, {
   minimum = 0,
   requireGoodFit = false,
   allowMinimumFallback = false,
+  maxLowerFallback = 0,
   populationScoreMapOverride = null,
 } = {}) {
   const populationScoreMap = populationScoreMapOverride || buildRoleFamilyPopulationScoreMap(roleFamilies, ctx);
-  const enrichedRows = (Array.isArray(rows) ? rows : []).map((row) => ({
-    ...row,
-    signalLabel: getRoleFamilySignalLabel(row.family, row.score, populationScoreMap),
-  }));
+  // Enrich each row with fitPct and signalLabel, then sort by fitPct descending so that
+  // all ordering (within each tier and across tiers) is driven by the percentage score,
+  // not by the raw internal composite total.
+  const enrichedRows = (Array.isArray(rows) ? rows : []).map((row) => {
+    const breakdown = scoreItemBreakdown(row.family, ctx);
+    const fitPct = Number(breakdown.fitStrengthPct || normalizeItemScoreToPct(Number(row.score || 0)));
+    const signalLabel = getRoleFamilySignalLabel(row.family, row.score, populationScoreMap, ctx);
+    return { ...row, fitPct, signalLabel };
+  }).sort((a, b) => b.fitPct - a.fitPct);
   const picked = [];
   const seen = new Set();
+  const seenTitles = new Set();
   const addRow = (row, cap = limit) => {
     const key = buildItemLookupKey(row?.family);
-    if (!key || seen.has(key) || picked.length >= cap) return;
+    const titleKey = String(row?.family?.title || row?.family?.familyTitle || "").trim().toLowerCase();
+    if (!key || seen.has(key) || (titleKey && seenTitles.has(titleKey)) || picked.length >= cap) return;
     picked.push(row);
     seen.add(key);
+    if (titleKey) seenTitles.add(titleKey);
   };
   const normaliseSignalLabel = (label) => String(label || "Lower").trim().toLowerCase();
   const isGoodOrBetter = (row) => ["standout", "strong", "good"].includes(normaliseSignalLabel(row?.signalLabel));
   const isStrongOrBetter = (row) => ["standout", "strong"].includes(normaliseSignalLabel(row?.signalLabel));
 
-  // First pass: always prioritise pathways that are Good / Strong / Standout.
+  // First pass: add in strict tier order so Standout always precedes Strong, Strong precedes Good.
+  // Within each tier the rows are already sorted by total score descending (from scoreRoleFamiliesByTitles).
   const goodOrBetterRows = enrichedRows.filter(isGoodOrBetter);
-  goodOrBetterRows.filter(isStrongOrBetter).forEach((row) => addRow(row));
+  goodOrBetterRows.filter((row) => normaliseSignalLabel(row?.signalLabel) === "standout").forEach((row) => addRow(row));
+  goodOrBetterRows.filter((row) => normaliseSignalLabel(row?.signalLabel) === "strong").forEach((row) => addRow(row));
   goodOrBetterRows.filter((row) => normaliseSignalLabel(row?.signalLabel) === "good").forEach((row) => addRow(row));
 
   // Main pathway behaviour: show up to the limit only when the options are at least Good.
@@ -732,28 +780,58 @@ function pickMatrixRoleFamilyRows(rows = [], roleFamilies = [], ctx = {}, {
       .forEach((row) => addRow(row, minimum));
   }
 
+  // Optional: backfill with up to maxLowerFallback Lower-tier rows if we haven't reached the limit.
+  // Used for primary aligned pathways so students always see up to 7 even if some are Lower matches.
+  if (maxLowerFallback > 0 && picked.length < limit) {
+    const lowerCap = Math.min(limit, picked.length + maxLowerFallback);
+    enrichedRows
+      .filter((row) => normaliseSignalLabel(row?.signalLabel) === "lower")
+      .forEach((row) => addRow(row, lowerCap));
+  }
+
   return picked.map((row) => stripInternalMeta(row.family));
 }
 
 function selectUniversityPathwaysFromMatrix({ matchedSubject = null, subjectLabel = "", roleFamilies = [], matrix = [], ctx = {}, adjacentPopulationScoreMap = null }) {
   const matrixEntry = findUniversityPathwayMatrixEntry(matchedSubject, subjectLabel, matrix);
   if (!matrixEntry) return { matrixEntry: null, aligned: [], adjacent: [] };
-  const coreIds = Array.isArray(matrixEntry.corePathwayIds) ? matrixEntry.corePathwayIds : [];
-  const adjacentIds = Array.isArray(matrixEntry.adjacentPathwayIds) ? matrixEntry.adjacentPathwayIds : [];
-  const coreIdSet = new Set(coreIds.map(String));
-  const alignedRows = scoreRoleFamiliesByIds(roleFamilies, coreIds, ctx);
-  const adjacentRows = scoreRoleFamiliesByIds(roleFamilies, adjacentIds.filter((id) => !coreIdSet.has(String(id))), ctx);
+  const coreTitles = Array.isArray(matrixEntry.primaryPathways) ? matrixEntry.primaryPathways : [];
+  const adjacentTitles = Array.isArray(matrixEntry.adjacentPathways) ? matrixEntry.adjacentPathways : [];
+  const coreTitleSet = new Set(coreTitles.map((t) => String(t || "").trim().toLowerCase()));
+  const alignedRows = scoreRoleFamiliesByTitles(roleFamilies, coreTitles, ctx);
+  const adjacentRows = scoreRoleFamiliesByTitles(roleFamilies, adjacentTitles.filter((t) => !coreTitleSet.has(String(t || "").trim().toLowerCase())), ctx);
+
+  // Aligned: all primary pathways that score Good or better (>=60%), up to 7.
+  // If fewer than 7 qualify at Good+, backfill with up to 2 Lower-tier primary pathways
+  // so students always see as many relevant directions as possible.
   const aligned = pickMatrixRoleFamilyRows(alignedRows, roleFamilies, ctx, {
     limit: Math.min(7, ROLE_LIMIT),
-    minimum: Math.min(5, alignedRows.length),
-    requireGoodFit: false,
-  });
-  const alignedIdSet = new Set(aligned.map((family) => String(family?.id || family?.roleFamilyId || "")));
-  const adjacent = pickMatrixRoleFamilyRows(adjacentRows.filter((row) => !alignedIdSet.has(String(row?.family?.id || row?.family?.roleFamilyId || ""))), roleFamilies, ctx, {
-    limit: 3,
-    minimum: Math.min(2, adjacentRows.length),
+    minimum: 0,
     requireGoodFit: true,
-    allowMinimumFallback: true,
+    allowMinimumFallback: false,
+    maxLowerFallback: 2,
+  });
+
+  const alignedTitleSet = new Set(aligned.map((family) => String(family?.title || family?.familyTitle || "").trim().toLowerCase()));
+
+  // Adjacent: pre-compute signal labels so we can filter to Strong/Standout only (>70%).
+  // scoreRoleFamiliesByTitles returns { family, score } with no signalLabel — must add it here.
+  const populationScoreMap = buildRoleFamilyPopulationScoreMap(roleFamilies, ctx);
+  const adjacentWithSignal = adjacentRows.map((row) => ({
+    ...row,
+    signalLabel: getRoleFamilySignalLabel(row.family, row.score, populationScoreMap, ctx),
+  }));
+  const strongOrBetterAdjacentRows = adjacentWithSignal.filter((row) =>
+    ["standout", "strong"].includes(String(row.signalLabel || "").trim().toLowerCase()) &&
+    !alignedTitleSet.has(String(row?.family?.title || row?.family?.familyTitle || "").trim().toLowerCase())
+  );
+
+  // Adjacent section shown only if at least one Strong/Standout adjacent path qualifies. Max 5.
+  const adjacent = pickMatrixRoleFamilyRows(strongOrBetterAdjacentRows, roleFamilies, ctx, {
+    limit: 5,
+    minimum: 0,
+    requireGoodFit: false,
+    allowMinimumFallback: false,
     populationScoreMapOverride: adjacentPopulationScoreMap,
   });
   return { matrixEntry, aligned, adjacent };
@@ -790,33 +868,31 @@ function selectRecommendations({ status, subjects, ctx, lib }) {
 
   if (status === "school") {
     const hasSubjectInterest = (subjects || []).some((x) => String(x || "").trim());
+    const CW_FLOOR = 10;
+    const CW_GOOD_THRESHOLD = 60; // fitPct >= 60 = Good or better
+
+    // Score all worlds and tag with fitPct — worldDebugRows is already sorted by score desc
+    const worldRowsWithFit = (worldDebugRows || []).map((row) => ({
+      ...row,
+      fitPct: scoreItemBreakdown(row.item, ctx).fitStrengthPct || 0,
+    }));
+    const goodOrBetterCount = worldRowsWithFit.filter((r) => r.fitPct >= CW_GOOD_THRESHOLD).length;
+    const showCount = Math.max(CW_FLOOR, goodOrBetterCount);
+    const rowsToShow = worldRowsWithFit.slice(0, showCount);
 
     if (hasSubjectInterest) {
-      const isRelevantTier = (row) => {
+      const isAligned = (row) => {
         const tier = String(row?.subjectTier || "").toLowerCase();
         return tier === "primary" || tier === "secondary";
       };
-
-      const alignedRows = (worldDebugRows || []).filter((row) => isRelevantTier(row));
-      const subjectWorldIds = new Set(
-        alignedRows
-          .map((row) => String(row?.item?.id || ""))
-          .filter(Boolean)
-      );
-      const otherRows = (worldDebugRows || []).filter((row) => {
-        const worldId = String(row?.item?.id || "");
-        if (!worldId) return false;
-        return !subjectWorldIds.has(worldId);
-      });
-
-      topCareerWorldsAligned = alignedRows.slice(0, 3).map((row) => stripInternalMeta(row.item));
-      topCareerWorldsOther = otherRows.slice(0, 3).map((row) => stripInternalMeta(row.item));
+      topCareerWorldsAligned = rowsToShow.filter((row) => isAligned(row)).map((row) => stripInternalMeta(row.item));
+      topCareerWorldsOther = rowsToShow.filter((row) => !isAligned(row)).map((row) => stripInternalMeta(row.item));
       topCareerWorlds = [...topCareerWorldsAligned, ...topCareerWorldsOther];
       profileMode = "school_interest";
     } else {
       topCareerWorldsAligned = [];
       topCareerWorldsOther = [];
-      topCareerWorlds = sortCareerWorldsByMeta(selectedCareerWorlds, careerWorldMetaById).map(stripInternalMeta);
+      topCareerWorlds = rowsToShow.map((row) => stripInternalMeta(row.item));
       profileMode = "school_general";
     }
 
@@ -1004,11 +1080,67 @@ function printScoredSection(label, items, profile, ctx, recommendations) {
     if (subjectMeta) {
       console.log(`- #${subjectMeta.displayRank || idx + 1} ${it.title} | final=${Number(subjectMeta.finalScore || 0).toFixed(3)} | base=${Number(subjectMeta.baseScore || 0).toFixed(3)} | world=${Number(subjectMeta.worldBonus || 0).toFixed(3)} | user=${Number(subjectMeta.userBonus || 0).toFixed(3)} | archetype=${archetype.toFixed(3)} | subdim=${subdim.toFixed(3)} | family=${subjectMeta.family || ""} | cluster=${subjectMeta.cluster || ""}`);
     } else if (careerWorldMeta) {
-      console.log(`- #${idx + 1} ${it.title} | final=${Number(careerWorldMeta.finalScore || 0).toFixed(3)} | base=${Number(careerWorldMeta.baseScore || 0).toFixed(3)} | subjectBonus=${Number(careerWorldMeta.subjectBonus || 0).toFixed(3)} | tier=${careerWorldMeta.subjectTier || "other"} | archetype=${archetype.toFixed(3)} | subdim=${subdim.toFixed(3)} | tags=[${Array.isArray(it.archetypes) ? it.archetypes.join(", ") : ""}]`);
+      const cwBreakdown = scoreItemBreakdown(it, ctx);
+      const cwFitPct = cwBreakdown.fitStrengthPct || 0;
+      const cwLabel = cwFitPct > 80 ? "Standout" : cwFitPct > 70 ? "Strong" : cwFitPct >= 60 ? "Good" : "Lower";
+      console.log(`- #${idx + 1} ${it.title} | final=${Number(careerWorldMeta.finalScore || 0).toFixed(3)} | base=${Number(careerWorldMeta.baseScore || 0).toFixed(3)} | subjectBonus=${Number(careerWorldMeta.subjectBonus || 0).toFixed(3)} | tier=${careerWorldMeta.subjectTier || "other"} | fitPct=${cwFitPct}% (${cwLabel}) | archetype=${archetype.toFixed(3)} | subdim=${subdim.toFixed(3)} | tags=[${Array.isArray(it.archetypes) ? it.archetypes.join(", ") : ""}]`);
+      // Debug: print per-subdim scores for first career world to diagnose coreAvg
+      if (idx === 0) {
+        const { scoreItemBreakdownDebug } = require("./src/lib/cdnaSelect");
+        if (scoreItemBreakdownDebug) {
+          scoreItemBreakdownDebug(it, ctx);
+        } else {
+          // Inline fallback: print what subdimMap has for this world's core subdims
+          const cwCore = Array.isArray(it.coreSubdimensions) ? it.coreSubdimensions : [];
+          const cwSec = Array.isArray(it.secondarySubdimensions) ? it.secondarySubdimensions : [];
+          const allSd = [...cwCore.map(n => `[CORE] ${n}`), ...cwSec.map(n => `[SEC] ${n}`)];
+          const umap = ctx.userSubdimMap instanceof Map ? ctx.userSubdimMap : new Map();
+          const fmap = ctx.fullSubdimMap && typeof ctx.fullSubdimMap === "object" ? ctx.fullSubdimMap : {};
+          const getScore = (name) => {
+            const canon = name.toLowerCase().replace(/\s*&\s*/g, " & ").replace(/\s+/g, " ").trim();
+            if (umap.has(name)) return umap.get(name);
+            for (const [k, v] of umap.entries()) {
+              if (k.toLowerCase().replace(/\s*&\s*/g, " & ").replace(/\s+/g, " ").trim() === canon) return v;
+            }
+            if (fmap[name] !== undefined) return fmap[name];
+            for (const [k, v] of Object.entries(fmap)) {
+              if (k.toLowerCase().replace(/\s*&\s*/g, " & ").replace(/\s+/g, " ").trim() === canon) return v;
+            }
+            return "NOT_FOUND";
+          };
+          console.log(`  [CW#1 subdim debug] userSubdimMap size=${umap.size} fullSubdimMap keys=${Object.keys(fmap).length}`);
+          for (const sd of allSd) {
+            const rawName = sd.replace(/\[(CORE|SEC)\] /, "");
+            console.log(`  ${sd}: score=${getScore(rawName)}`);
+          }
+        }
+      }
     } else {
-      console.log(`- ${it.title} | total=${total.toFixed(3)} | archetype=${archetype.toFixed(3)} | subdim=${subdim.toFixed(3)} | tags=[${Array.isArray(it.archetypes) ? it.archetypes.join(", ") : ""}]`);
+      const breakdown = scoreItemBreakdown(it, ctx);
+      const fitPct = breakdown.fitStrengthPct || 0;
+      const label2 = fitPct > 80 ? "Standout" : fitPct > 70 ? "Strong" : fitPct >= 60 ? "Good" : "Lower";
+      console.log(`- ${it.title} | total=${total.toFixed(3)} | fitPct=${fitPct}% (${label2}) | archetype=${archetype.toFixed(3)} | subdim=${subdim.toFixed(3)} | tags=[${Array.isArray(it.archetypes) ? it.archetypes.join(", ") : ""}]`);
     }
   });
+}
+
+function logFullDistribution(lib, ctx) {
+  if (!VERBOSE) return;
+  const cats = [
+    { name: "ALL CAREER WORLDS", items: lib.career_worlds || [] },
+    { name: "ALL STRENGTHS", items: lib.strengths || [] },
+    { name: "ALL ENVIRONMENTS", items: lib.environments || [] },
+  ];
+  for (const { name, items } of cats) {
+    const rows = items.map(it => {
+      const bd = scoreItemBreakdown(it, ctx);
+      const fitPct = bd.fitStrengthPct || 0;
+      const lbl = fitPct > 80 ? "Standout" : fitPct > 70 ? "Strong" : fitPct >= 60 ? "Good" : "Lower";
+      return { title: it.title, fitPct, lbl };
+    }).sort((a, b) => b.fitPct - a.fitPct);
+    console.log(`\n=== ${name} (${rows.length} total) ===`);
+    rows.forEach(r => console.log(`  ${r.fitPct}% (${r.lbl}) | ${r.title}`));
+  }
 }
 
 function logScoredSections(status, recommendations, profile, ctx) {
@@ -1031,9 +1163,9 @@ function buildFixedLists(recommendations) {
   return {
     strengthsFixed: uniq(recommendations.topStrengths.map((x) => x.title)).slice(0, MAX_LOG_ITEMS_PER_SECTION),
     envsFixed: uniq(recommendations.topEnvironments.map((x) => x.title)).slice(0, MAX_LOG_ITEMS_PER_SECTION),
-    careerWorldsFixed: uniq(recommendations.topCareerWorlds.map((x) => x.title)).slice(0, MAX_LOG_ITEMS_PER_SECTION),
-    careerWorldsAlignedFixed: uniq((recommendations.topCareerWorldsAligned || []).map((x) => x.title)).slice(0, 3),
-    careerWorldsOtherFixed: uniq((recommendations.topCareerWorldsOther || []).map((x) => x.title)).slice(0, 3),
+    careerWorldsFixed: uniq(recommendations.topCareerWorlds.map((x) => x.title)),
+    careerWorldsAlignedFixed: uniq((recommendations.topCareerWorldsAligned || []).map((x) => x.title)),
+    careerWorldsOtherFixed: uniq((recommendations.topCareerWorldsOther || []).map((x) => x.title)),
     subjectsFixed: uniq((recommendations.topSubjects || []).map((x) => x.title)).slice(0, SCHOOL_SUBJECT_LIMIT),
     broadSubjectsFixed: uniq((recommendations.topBroadSubjects || []).map((x) => x.title)).slice(0, SCHOOL_SUBJECT_LIMIT),
     specialistSubjectsFixed: uniq((recommendations.topSpecialistSubjects || []).map((x) => x.title)).slice(0, 4),
@@ -1056,11 +1188,11 @@ function buildItemEvidenceBundle(recommendations, profile) {
     roles: buildItemArchetypeMap(recommendations.topRoles, profile.included),
   };
 
-  const strengthsSubdimMeta = buildItemSubdimContextForSection(recommendations.topStrengths, profile.userSubdimMap, 2);
-  const environmentsSubdimMeta = buildItemSubdimContextForSection(recommendations.topEnvironments, profile.userSubdimMap, 2);
-  const careerWorldsSubdimMeta = buildItemSubdimContextForSection(recommendations.topCareerWorlds, profile.userSubdimMap, 3);
-  const subjectsSubdimMeta = buildItemSubdimContextForSection(recommendations.topSubjects, profile.userSubdimMap, 3);
-  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap, 3);
+  const strengthsSubdimMeta = buildItemSubdimContextForSection(recommendations.topStrengths, profile.userSubdimMap);
+  const environmentsSubdimMeta = buildItemSubdimContextForSection(recommendations.topEnvironments, profile.userSubdimMap);
+  const careerWorldsSubdimMeta = buildItemSubdimContextForSection(recommendations.topCareerWorlds, profile.userSubdimMap, 5);
+  const subjectsSubdimMeta = buildItemSubdimContextForSection(recommendations.topSubjects, profile.userSubdimMap);
+  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap);
 
   const itemSubdimContext = {
     strengths: strengthsSubdimMeta.context,
@@ -1237,8 +1369,40 @@ function applyPrewrittenNarratives(insights = [], explorerNarratives = null) {
     const next = { ...insight };
 
     if (narrativeText && !next.narrative) next.narrative = narrativeText;
-    next.linkedSubjects = mergeNarrativeItems(next.linkedSubjects, narrativeItems);
-    next.roles = mergeNarrativeItems(next.roles, narrativeItems);
+
+    // Primary strategy: positional merge within the matched group.
+    // The LLM is instructed to preserve item order, so item[N] in the LLM group
+    // corresponds to linkedSubjects[N] / roles[N]. This is more reliable than
+    // title matching when the LLM paraphrases subject/role names.
+    const mergePositional = (existingItems, narrativeGroupItems) => {
+      if (!Array.isArray(existingItems)) return existingItems;
+      if (!Array.isArray(narrativeGroupItems) || !narrativeGroupItems.length) {
+        return mergeNarrativeItems(existingItems, narrativeItems);
+      }
+      return existingItems.map((existingItem, idx) => {
+        const narrativeItem = narrativeGroupItems[idx];
+        const narrativeSummary = String(narrativeItem?.fullSummary || narrativeItem?.summary || "").trim();
+        const hasLlmNarrative = Boolean(narrativeSummary);
+        const fallbackSummary = existingItem?.fallbackSummary || existingItem?.entryLevelFit || "";
+        return {
+          ...existingItem,
+          fallbackSummary,
+          fullSummary: hasLlmNarrative ? narrativeSummary : (existingItem?.fullSummary || existingItem?.summary || fallbackSummary || ""),
+          summary: hasLlmNarrative ? narrativeSummary : (existingItem?.summary || existingItem?.fullSummary || fallbackSummary || ""),
+          narrativeSource: hasLlmNarrative ? "llm" : "fallback",
+        };
+      });
+    };
+
+    if (group && groupNarrativeItems.length) {
+      next.linkedSubjects = mergePositional(next.linkedSubjects, groupNarrativeItems);
+      next.roles = mergePositional(next.roles, groupNarrativeItems);
+    } else {
+      // Fallback: title-based matching across all narrative items
+      next.linkedSubjects = mergeNarrativeItems(next.linkedSubjects, narrativeItems);
+      next.roles = mergeNarrativeItems(next.roles, narrativeItems);
+    }
+
     next.items = Array.isArray(next.linkedSubjects) && next.linkedSubjects.length
       ? next.linkedSubjects
       : Array.isArray(next.roles) && next.roles.length
@@ -1504,7 +1668,7 @@ function buildDevDiagnostics({ profile, recommendations, itemEvidence, fixedList
     roles: fixedLists.rolesFixed,
     roles_aligned: fixedLists.rolesAlignedFixed,
     roles_adjacent: fixedLists.rolesAdjacentFixed,
-    matchedPathwayMatrixEntry: recommendations.matchedPathwayMatrixEntry?.subjectTitle || null,
+    matchedPathwayMatrixEntry: recommendations.matchedPathwayMatrixEntry?.title || recommendations.matchedPathwayMatrixEntry?.subjectTitle || null,
     itemArchetypes: itemEvidence.itemArchetypes,
     itemSubdimHints: itemEvidence.itemSubdimHints,
     itemSubdimContext: itemEvidence.itemSubdimContext,
@@ -1515,7 +1679,7 @@ function buildDevDiagnostics({ profile, recommendations, itemEvidence, fixedList
   };
 }
 
-function buildSummaryPromptPayload({ archetypes, age, status, subjects, profileMode, profile, allowedSubdimsForPrompt, fixedLists, itemEvidence, hiddenSelectionGroups = [] }) {
+function buildSummaryPromptPayload({ archetypes, age, status, subjects, profileMode, profile, allowedSubdimsForPrompt, fixedLists, itemEvidence, hiddenSelectionGroups = [], rolesContextFixed = [] }) {
   return {
     showSubdimScores: true,
     archetypes,
@@ -1533,6 +1697,7 @@ function buildSummaryPromptPayload({ archetypes, age, status, subjects, profileM
     rolesFixed: fixedLists.rolesFixed,
     rolesAlignedFixed: fixedLists.rolesAlignedFixed,
     rolesAdjacentFixed: fixedLists.rolesAdjacentFixed,
+    rolesContextFixed,
     subjectsFixed: fixedLists.subjectsFixed,
     broadSubjectsFixed: fixedLists.broadSubjectsFixed,
     specialistSubjectsFixed: fixedLists.specialistSubjectsFixed,
@@ -1602,7 +1767,9 @@ async function callModels(messages) {
       const payload = {
         model,
         messages,
-        ...(modelSupportsTemperature(model) ? { temperature: 0.35 } : {}),
+        ...(modelSupportsTemperature(model)
+          ? { temperature: 0.35 }
+          : { reasoning_effort: "medium" }),
       };
 
       const resp = await openai.chat.completions.create(payload);
@@ -3275,6 +3442,7 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
 
     const scoreMaps = buildScoreMaps(recommendations, ctx);
     logScoredSections(status, recommendations, profile, ctx);
+    logFullDistribution(CDNA_LIBRARY, ctx);
 
     const fixedLists = buildFixedLists(recommendations);
     const itemEvidence = buildItemEvidenceBundle(recommendations, profile);
@@ -3310,6 +3478,14 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
       });
     }
 
+    // rolesContextFixed: aligned pathways filtered to Good or better (>50 fitPct).
+    // Used by the LLM for summary, strengths, and environments — so those sections
+    // only reference pathways the student genuinely scores well on.
+    const rolesContextFixed = (analysisMeta.sections.rolesAligned || [])
+      .filter((row) => ["standout", "strong", "good"].includes(String(row?.signalLabel || "").trim().toLowerCase()))
+      .map((row) => row.title)
+      .filter(Boolean);
+
     const promptPayload = buildSummaryPromptPayload({
       archetypes,
       age,
@@ -3321,6 +3497,7 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
       fixedLists,
       itemEvidence,
       hiddenSelectionGroups,
+      rolesContextFixed,
     });
 
     const prompt = buildReportPrompt(promptPayload);

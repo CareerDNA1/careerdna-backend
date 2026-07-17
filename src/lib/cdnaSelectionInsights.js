@@ -1,4 +1,5 @@
-const { scoreItemTotal } = require('./cdnaSelect');
+const { scoreItemTotal, scoreItemBreakdown } = require('./cdnaSelect');
+const { CDNA_SCORE_CONFIG } = require('./cdnaScoreConfig');
 
 function norm(value = '') {
   return String(value || '')
@@ -382,31 +383,23 @@ function buildRelevantSubdimensionNames(signatureSubdimensions = [], profile = {
   ).slice(0, maxItems);
 }
 
-function buildSignalBlocks(ratio = 1) {
-  const pct = Math.max(0, Math.min(100, Math.round((Number(ratio) || 0) / 3.2 * 100)));
-  if (pct >= 85) return 4;
-  if (pct >= 70) return 3;
-  if (pct >= 55) return 2;
-  return 1;
+// Fixed score thresholds: >80 = Standout, >70 = Strong, >=60 = Good, else Lower.
+// Applied to the absolute fit percentage (0–100).
+function getLabelFromFixedThresholds(fitPct) {
+  const pct = Number(fitPct) || 0;
+  if (pct > 80) return { signalLabel: 'Standout', signalBlocks: 4 };
+  if (pct > 70) return { signalLabel: 'Strong',   signalBlocks: 3 };
+  if (pct >= 60) return { signalLabel: 'Good',    signalBlocks: 2 };
+  return { signalLabel: 'Lower', signalBlocks: 1 };
 }
 
-function buildSignalLabel(ratio = 1) {
-  const pct = Math.max(0, Math.min(100, Math.round((Number(ratio) || 0) / 3.2 * 100)));
-  if (pct >= 85) return 'Very strong';
-  if (pct >= 70) return 'Strong';
-  if (pct >= 55) return 'Good';
-  return 'Emerging';
-}
-
-function buildLinkedSubjectSummary(subject = {}, careerWorld = {}, profile = {}, relation = 'direct') {
+function buildLinkedSubjectSummary(subject = {}, careerWorld = {}, profile = {}) {
   const subjectTitle = String(subject?.title || 'This subject').trim();
   const archetypes = buildRelevantArchetypes(subject, profile, 2);
   const subdims = buildRelevantSubdimensionNames(subject.signatureSubdimensions || [], profile, 2);
   const worldTitle = String(careerWorld?.title || 'this area').trim();
 
-  const intro = relation === 'direct'
-    ? `${subjectTitle} is one of the clearest degree routes into ${worldTitle}, helping you build the knowledge base and way of thinking often used in that space.`
-    : `${subjectTitle} is a broader adjacent route that can still connect well to ${worldTitle}, especially if you want a slightly wider way into that area.`;
+  const intro = `${subjectTitle} is a strong degree route into ${worldTitle}, helping you build the knowledge base and way of thinking often used in that space.`;
 
   const archetypeSentence = archetypes.length
     ? `It is especially supported by your ${formatList(archetypes)} pattern.`
@@ -454,36 +447,40 @@ function scoreAnchorRelevance(subject = {}, careerWorld = {}) {
   return overlap > 0 ? Math.min(0.18, overlap * 0.09) : 0;
 }
 
-function scoreLinkedSubjects(careerWorld = {}, profile = {}, limit = 3) {
+function scoreLinkedSubjects(careerWorld = {}, profile = {}, limit = 4, subjectPopulationScoreMap = null) {
   const ctx = buildScoringContext(profile);
   const exact = Array.isArray(careerWorld?.linkedSubjectsExact) ? careerWorld.linkedSubjectsExact : [];
   const adjacent = Array.isArray(careerWorld?.linkedSubjectsAdjacent) ? careerWorld.linkedSubjectsAdjacent : [];
+
+  // Build sorted global population scores for rank-based labelling.
+  // Signal labels are derived from fixed absolute-score thresholds (>75 / >65 / >=50)
+  // applied to fitPct, so no population map is needed for ranking.
 
   const rawRows = [
     ...exact.map((subject) => ({ subject, relation: 'direct' })),
     ...adjacent.map((subject) => ({ subject, relation: 'adjacent' })),
   ]
     .map(({ subject, relation }) => {
-      const baseScore = Number(scoreItemTotal(subject, ctx) || 0);
-      const priority = String(subject?.subjectPriority || '').trim().toLowerCase();
-      const relationBonus = relation === 'direct' ? 0.42 : 0.08;
-      const breadthBonus = priority === 'specialist' ? 0 : 0.08;
+      const breakdown = scoreItemBreakdown(subject, ctx);
+      // fitPct: group-based ungated score (core 70% / secondary 30%) — consistent with main scoring pipeline
+      const fitPct = Math.max(0, Math.min(100, breakdown.fitStrengthPct || 0));
       const anchorBonus = scoreAnchorRelevance(subject, careerWorld);
-      const totalScore = baseScore + relationBonus + breadthBonus + anchorBonus;
+      const rankScore = breakdown.totalScore + anchorBonus;
 
       return {
         subject,
         relation,
-        baseScore,
-        totalScore,
+        fitPct,
+        breakdown,
+        rankScore,
         anchorBonus,
         familyKey: norm(subject?.subjectFamily || subject?.family || subject?.subjectCluster || subject?.cluster || subject?.title),
       };
     })
     .sort((a, b) => {
-      if (b.totalScore !== a.totalScore) return b.totalScore - a.totalScore;
+      if (b.fitPct !== a.fitPct) return b.fitPct - a.fitPct;
+      if (b.rankScore !== a.rankScore) return b.rankScore - a.rankScore;
       if (a.relation !== b.relation) return a.relation === 'direct' ? -1 : 1;
-      if ((b.anchorBonus || 0) !== (a.anchorBonus || 0)) return (b.anchorBonus || 0) - (a.anchorBonus || 0);
       return String(a?.subject?.title || '').localeCompare(String(b?.subject?.title || ''));
     });
 
@@ -506,45 +503,41 @@ function scoreLinkedSubjects(careerWorld = {}, profile = {}, limit = 3) {
     if (familyKey) familyCounts.set(familyKey, currentFamilyCount + 1);
   };
 
-  for (const row of rawRows.filter((row) => row.relation === 'direct' && String(row?.subject?.subjectPriority || '').trim().toLowerCase() !== 'specialist')) {
+  // Pass 1: non-specialist subjects, one per family
+  for (const row of rawRows.filter((row) => String(row?.subject?.subjectPriority || '').trim().toLowerCase() !== 'specialist')) {
     if (selected.length >= limit) break;
     tryAdd(row, { enforceFamily: true });
   }
-  for (const row of rawRows.filter((row) => row.relation === 'direct')) {
-    if (selected.length >= limit) break;
-    tryAdd(row, { enforceFamily: false, maxFamilyCount: 2 });
-  }
-  for (const row of rawRows.filter((row) => row.relation === 'adjacent' && String(row?.subject?.subjectPriority || '').trim().toLowerCase() !== 'specialist')) {
-    if (selected.length >= limit) break;
-    tryAdd(row, { enforceFamily: true });
-  }
+  // Pass 2: fill remaining slots, up to 2 per family
   for (const row of rawRows) {
     if (selected.length >= limit) break;
     tryAdd(row, { enforceFamily: false, maxFamilyCount: 2 });
   }
 
-  return selected.map((row) => {
-    const absoluteScore = Number(row?.totalScore || 0);
-    return {
-      id: row?.subject?.id || row?.subject?.title || '',
-      title: row?.subject?.title || '',
-      relation: row?.relation,
-      absoluteFitScore: Math.max(0, Math.min(100, Math.round(absoluteScore / 3.2 * 100))),
-      signalLabel: buildSignalLabel(absoluteScore),
-      signalBlocks: buildSignalBlocks(absoluteScore),
-      fullSummary: buildLinkedSubjectSummary({
+  return selected
+    .map((row) => {
+      const { signalLabel, signalBlocks } = getLabelFromFixedThresholds(row.fitPct);
+      const fitPct = row.fitPct;
+      const summary = buildLinkedSubjectSummary({
         ...row.subject,
         signatureSubdimensions: buildSubjectSignatureSubdimensions(row.subject),
-      }, careerWorld, profile, row?.relation),
-      summary: buildLinkedSubjectSummary({
-        ...row.subject,
-        signatureSubdimensions: buildSubjectSignatureSubdimensions(row.subject),
-      }, careerWorld, profile, row?.relation),
-    };
-  });
+      }, careerWorld, profile);
+      return {
+        id: row?.subject?.id || row?.subject?.title || '',
+        title: row?.subject?.title || '',
+        absoluteFitScore: fitPct,
+        signalLabel,
+        signalBlocks,
+        fullSummary: summary,
+        summary,
+      };
+    })
+    // Only show "Good" or better (signalBlocks >= 2); always include the top result
+    .filter((item, idx) => idx === 0 || item.signalBlocks >= 2);
 }
 
-function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {}) {
+function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {}, options = {}) {
+  const subjectPopulationScoreMap = options?.subjectPopulationScoreMap || null;
   const archetypeScores = buildArchetypeScoreMap(profile);
   const archetypes = (Array.isArray(libraryItem.archetypes) ? libraryItem.archetypes : [])
     .map((name) => {
@@ -574,8 +567,8 @@ function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {})
   const type = requestItem?.type || libraryItem?.type || 'subject';
   const isPathway = type === 'pathway' || roles.length > 0;
   const isCareerWorld = type === 'career_world';
-  const linkedSubjects = isCareerWorld ? scoreLinkedSubjects(libraryItem, profile, 3) : [];
-  const canonicalSignal = extractCanonicalSignal(requestItem);
+  const linkedSubjects = isCareerWorld ? scoreLinkedSubjects(libraryItem, profile, 5, subjectPopulationScoreMap) : [];
+  const canonicalSignal = options?.canonicalSignal || extractCanonicalSignal(requestItem);
 
   return {
     id: requestItem?.id || libraryItem?.id || libraryItem?.title,

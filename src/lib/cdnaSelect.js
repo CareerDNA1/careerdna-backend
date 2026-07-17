@@ -129,8 +129,7 @@ function extractItemKeySubdimensions(item) {
 function normalizeProfilePct(pct) {
   const n = Number(pct);
   if (!Number.isFinite(n)) return 0;
-  const { minPct, rangePct } = CDNA_SCORE_CONFIG.profileNormalization;
-  return clamp(0, 1, (n - minPct) / rangePct);
+  return clamp(0, 1, n / 100);
 }
 
 function normalizeItemScoreToPct(score = 0, scaleMax = CDNA_SCORE_CONFIG.subdimension.totalScoreScale || 3.2) {
@@ -180,13 +179,13 @@ function getItemSignalFromBreakdown(breakdown = {}, options = {}) {
   let signalLabel = "Lower";
   let signalBlocks = 1;
 
-  if (signalPct >= 70) {
+  if (signalPct > 80) {
     signalLabel = "Standout";
     signalBlocks = 4;
-  } else if (signalPct >= 60) {
+  } else if (signalPct > 70) {
     signalLabel = "Strong";
     signalBlocks = 3;
-  } else if (signalPct >= 50) {
+  } else if (signalPct >= 60) {
     signalLabel = "Good";
     signalBlocks = 2;
   }
@@ -284,6 +283,12 @@ function scoreItemBreakdown(item, ctx = {}) {
   let coreTotal = 0;
   let strongestCore = 0;
 
+  // Group-based tracking: core and secondary averages computed independently
+  let coreSum = 0;
+  let coreCount = 0;
+  let secondarySum = 0;
+  let secondaryCount = 0;
+
   for (const entry of entries) {
     const pct = Number(subdimMap.get(entry.name));
     if (!Number.isFinite(pct)) continue;
@@ -298,14 +303,30 @@ function scoreItemBreakdown(item, ctx = {}) {
       matchedWeight += entry.weight;
     }
 
-    if (entry.tier === "core") {
-      coreTotal += 1;
-      if (pct >= cfg.coreMatchThresholdPct) coreMatched += 1;
+    // Group averages include all scored entries (boosted=0 when below threshold)
+    const isCorelike = entry.tier === "core" || entry.tier === "fallback";
+    if (isCorelike) {
+      coreSum += boosted;
+      coreCount++;
+      coreTotal++;
+      if (pct >= cfg.coreMatchThresholdPct) coreMatched++;
       if (pct > strongestCore) strongestCore = pct;
+    } else {
+      secondarySum += boosted;
+      secondaryCount++;
     }
   }
 
-  const weightedTraitFit = clamp(0, 1, weightedSum / totalWeight);
+  // Core and secondary group averages — independent of how many subdims are in each group
+  const coreAvg = coreCount > 0 ? clamp(0, 1, coreSum / coreCount) : 0;
+  const secondaryAvg = secondaryCount > 0 ? clamp(0, 1, secondarySum / secondaryCount) : 0;
+
+  // Combine: cores 70%, secondaries 30% — fall back to whichever group exists
+  const groupFit = coreCount > 0 && secondaryCount > 0
+    ? clamp(0, 1, coreAvg * cfg.coreGroupWeight + secondaryAvg * cfg.secondaryGroupWeight)
+    : coreCount > 0 ? coreAvg : secondaryAvg;
+
+  const weightedTraitFit = groupFit;
   const coverageRatio = clamp(0, 1, matchedWeight / totalWeight);
   const coreCoverageRatio = coreTotal ? clamp(0, 1, coreMatched / coreTotal) : coverageRatio;
   const combinedCoverageRatio = clamp(
@@ -644,6 +665,8 @@ function roleFamilyItemsFromFlatRoles(allRoles = []) {
         careerWorldArchetypes: ensureArray(role?.careerWorldArchetypes),
         archetypes: ensureArray(role?.roleFamilyArchetypes),
         keySubdimensions: ensureArray(role?.roleFamilyKeySubdimensions),
+        coreSubdimensions: ensureArray(role?.roleFamilyCoreSubdimensions),
+        secondarySubdimensions: ensureArray(role?.roleFamilySecondarySubdimensions),
         whyBelongs: role?.whyBelongs || "",
         confidence: role?.confidence || "",
         sourceUrls: ensureArray(role?.sourceUrls),

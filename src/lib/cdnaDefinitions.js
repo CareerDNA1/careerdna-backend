@@ -1,7 +1,7 @@
 // careerdna-backend/src/lib/cdnaDefinitions.js
-// Canonical CareerDNA definitions (backend)
-// - 7 archetypes
-// - 24 subdimensions using the labels in your matrix / DIMENSIONS.js
+// CareerDNA v2 — canonical definitions (backend)
+// - 7 archetypes (unchanged from v1)
+// - 25 behavioural dimensions using the exact label strings from questions.js / archetypeWeights.js
 
 const CDNA_DEFINITIONS = {
   archetypes: {
@@ -18,66 +18,70 @@ const CDNA_DEFINITIONS = {
     Thinker:
       "A Thinker is analytical, logical, and reflective. They enjoy solving complex problems, diving deep into topics, and making sense of patterns. Thinkers are most comfortable in roles that reward independence and intellectual depth.",
     Visionary:
-      "A Visionary is future-focused, bold, and full of ideas. They’re passionate about making a difference and inspired by big-picture thinking. Visionaries thrive in spaces where they can lead change, innovate, and inspire others.",
+      "A Visionary is future-focused, bold, and full of ideas. They're passionate about making a difference and inspired by big-picture thinking. Visionaries thrive in spaces where they can lead change, innovate, and inspire others.",
   },
 
-  // 24 subdimensions – names must match what the frontend/matrix uses
+  // 25 behavioural dimensions — keys must match subdimension strings in questions.js and archetypeWeights.js
   subdimensions: {
+
     // WHO YOU ARE
-    "Curiosity & Openness":
-      "Shows imagination and curiosity about new ideas and experiences. Higher scores mean you enjoy exploring and thinking creatively.",
-    "Reliability & Focus":
-      "Shows organisation, persistence, and reliability. Higher scores mean you plan carefully, stay on task, and deliver what you promise.",
-    "Emotional Stability":
-      "Shows calmness and ability to handle pressure. Higher scores mean you stay steady and adapt well when things change.",
-    "Uncertainty Tolerance":
-      "Shows comfort with unpredictability and change. Higher scores mean you handle ambiguity well and can take considered risks.",
-    "Perseverance":
-      "Shows determination and sustained effort toward goals. Higher scores mean you keep going even when things get tough.",
-    "Sociability & Extroversion":
-      "Shows comfort around people and enthusiasm for social interaction. Higher scores mean you enjoy teamwork, communication, and visibility.",
+    "Originality":
+      "Shows a tendency to generate novel ideas and take unconventional approaches. Higher scores mean you naturally think of fresh ways to solve problems and enjoy combining ideas from different areas.",
+    "Reliability":
+      "Shows consistent follow-through and self-discipline. Higher scores mean you plan carefully, complete work on time, and deliver what you promise even when it gets difficult.",
+    "Resilience":
+      "Shows the capacity to recover from setbacks and keep going under sustained difficulty. Higher scores mean you stay steady and maintain progress even when things are slow or frustrating.",
+    "Adaptability":
+      "Shows comfort with change and shifting expectations. Higher scores mean you handle unexpected changes well and feel confident navigating uncertain situations.",
+    "Social Confidence":
+      "Shows comfort and energy in social and group settings. Higher scores mean you enjoy interacting with others, communicate easily, and feel at home in groups.",
+    "Empathy":
+      "Shows sensitivity to others' emotional states. Higher scores mean you naturally sense how people feel and tend to consider the emotional impact of your decisions on others.",
 
     // WHAT YOU LOVE
-    "Investigative Curiosity":
-      "Shows a drive to question, analyse, and understand how things work. Higher scores mean you like exploring complex ideas and patterns.",
+    "Analytical Curiosity":
+      "Shows a drive to investigate and understand complex ideas. Higher scores mean you enjoy researching topics in depth, finding patterns, and making sense of how things really work.",
     "Creative Expression":
-      "Shows enjoyment of creating or designing things. Higher scores mean you like bringing ideas to life visually, practically, or conceptually.",
-    "Helping Orientation":
-      "Shows motivation to support or teach others. Higher scores mean you care about people’s wellbeing and like making a difference.",
+      "Shows motivation to make or design original work. Higher scores mean you care deeply about creating something of your own and take satisfaction in the quality and style of what you produce.",
+    "Helping & Caring":
+      "Shows intrinsic motivation to support or improve outcomes for others. Higher scores mean that helping people develop or overcome challenges is genuinely rewarding to you.",
     "Entrepreneurial Drive":
-      "Shows initiative, leadership, and opportunity-seeking. Higher scores mean you like to start things, improve systems, and make ideas real.",
-    "Hands-On Engagement":
-      "Shows preference for practical, tangible work. Higher scores mean you like learning by doing, building, or experimenting.",
-    "Novelty & Variety Seeking":
-      "Shows enjoyment of change and new experiences. Higher scores mean you get energy from variety and dislike too much routine.",
+      "Shows energy from identifying opportunities and building something new. Higher scores mean you like taking charge, spotting possibilities, and making things happen rather than waiting.",
+    "Technical Curiosity":
+      "Shows interest in how tools, systems, and materials work. Higher scores mean you get real satisfaction from building, fixing, making, or operating things in the real world.",
+    "Cultural & Global Curiosity":
+      "Shows interest in diverse cultures, global affairs, and big social questions. Higher scores mean questions about how the world works and differs genuinely engage and energise you.",
+    "Data Curiosity":
+      "Shows intrinsic interest in working with numbers, data, and information. Higher scores mean you find genuine satisfaction in organising, analysing, and making sense of data.",
 
     // WHAT MATTERS
     "Purpose & Impact":
-      "Shows motivation to make a meaningful difference. Higher scores mean you care that your work contributes to a bigger purpose.",
-    "Independence & Autonomy":
-      "Shows desire for freedom and control over your own approach. Higher scores mean you like self-direction and ownership.",
-    "Stability & Predictability":
-      "Shows preference for structure, clarity, and consistency. Higher scores mean you value routine and clear expectations.",
-    "Recognition & Visibility":
-      "Shows motivation from acknowledgment and success. Higher scores mean you like your efforts to be noticed and valued.",
-    "Financial Ambition":
-      "Shows motivation from reward and achievement. Higher scores mean you focus on results, success, and long-term goals.",
-    "Belonging & Connection":
-      "Shows value placed on inclusion, teamwork, and belonging. Higher scores mean you enjoy shared goals and collaboration.",
+      "Shows motivation to contribute to something larger than personal success. Higher scores mean you care that your work makes a real positive difference to others or society.",
+    "Autonomy":
+      "Shows the need for freedom in how you work. Higher scores mean you prefer owning how things get done and feel constrained by close direction or step-by-step instructions.",
+    "Belonging":
+      "Shows the need for meaningful connection and team identity. Higher scores mean that feeling genuinely part of a group or community is an important source of motivation for you.",
+    "Achievement":
+      "Shows the drive for success and recognition. Higher scores mean you are strongly motivated by visible achievement, being acknowledged for your performance, and financial reward as a marker of success.",
+    "Security":
+      "Shows preference for career stability and predictable income. Higher scores mean that choosing a path that is stable and unlikely to change drastically matters a great deal to you.",
+    "Mastery":
+      "Shows the drive to develop deep expertise over time. Higher scores mean that becoming genuinely excellent at something you care about, and getting better continuously, motivates you more than external recognition.",
 
     // HOW YOU WORK BEST
-    "Pace & Intensity Preference":
-      "Shows how well you handle busy, fast-moving work. Higher scores mean you stay motivated and focused under pressure.",
-    "Organisation & Systems Orientation":
-      "Shows comfort with structured systems and processes. Higher scores mean you like order, routines, and efficiency.",
-    "Clarity & Structure Preference":
-      "Shows need for clear expectations and defined tasks. Higher scores mean you like knowing what good performance looks like.",
-    "Team Collaboration":
-      "Shows comfort working with others toward shared goals. Higher scores mean you enjoy cooperation and open communication.",
-    "Independent Working Approach":
-      "Shows comfort working autonomously. Higher scores mean you like to set your own direction and make progress independently.",
-    "Attention to Detail":
-      "Shows precision, accuracy, and thoroughness. Higher scores mean you take care to complete work properly and to a high standard.",
+    "Structure":
+      "Shows preference for clear processes and organised environments. Higher scores mean you work best with a clear plan, defined expectations, and well-established ways of working.",
+    "Collaboration":
+      "Shows preference for working with others toward shared goals. Higher scores mean that working closely with a team energises you and produces better results than working alone.",
+    "Independence":
+      "Shows preference for working alone with minimal supervision. Higher scores mean you are significantly more productive when you can own a task and complete it independently.",
+    "Precision":
+      "Shows attention to accuracy and quality. Higher scores mean you naturally notice errors, check your work carefully, and take real pride in producing accurate, high-quality outputs.",
+    "Pace":
+      "Shows comfort with fast-paced, high-intensity environments. Higher scores mean you thrive under pressure and feel energised by urgency, deadlines, and dynamic working conditions.",
+    "Variety":
+      "Shows preference for diverse tasks and changing environments. Higher scores mean you work best when no two days look the same, and find repetitive routines very hard to sustain.",
+
   },
 };
 

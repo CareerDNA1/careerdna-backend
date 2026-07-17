@@ -1,2243 +1,2526 @@
-{
-  "schemaVersion": "careerDNA.universityPathwayMatrix.v1",
-  "generatedFrom": [
-    "subjects1.json",
-    "Roles2.json",
-    "university_subject_routing.json",
-    "deep-research-report (3).md"
-  ],
-  "method": "corePathwayIds are derived from role-family/role primarySubjectIds; adjacentPathwayIds are derived from role-family/role adjacentSubjectIds; legacy fields are retained only for audit/review.",
-  "selectionRules": {
-    "main": "Use corePathwayIds, rank by profile fit, show strongest pathways with minimum fallback.",
-    "adjacent": "Use adjacentPathwayIds, exclude any selected core pathways, rank by profile fit, show only good/strong/standout candidates.",
-    "noCareerWorldLeakage": "Do not use adjacentCareerWorldIds to pull whole worlds of pathways."
+[
+  {
+    "id": "sub_mathematics_and_statistics",
+    "title": "Mathematics and Statistics",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Data Science & Advanced Modelling",
+      "Risk & Quantitative Analysis"
+    ],
+    "adjacentPathways": [
+      "Equity Research & Investment Research",
+      "Business Analysis",
+      "Secondary Teaching",
+      "Insurance & Actuarial",
+      "Machine Learning & Applied AI"
+    ],
+    "pathways": [
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Data Science & Advanced Modelling",
+      "Risk & Quantitative Analysis",
+      "Equity Research & Investment Research",
+      "Business Analysis",
+      "Secondary Teaching",
+      "Insurance & Actuarial",
+      "Machine Learning & Applied AI"
+    ]
   },
-  "subjects": [
-    {
-      "subjectId": "sub_mathematics_and_statistics",
-      "subjectTitle": "Mathematics",
-      "subjectFamily": "quantitative-analysis",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
-      "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
-      "adjacentCareerWorldIds": [
-        "cw_finance_economics_investment"
-      ],
-      "corePathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics"
-      ],
-      "adjacentPathwayIds": [
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_business_strategy_commercial_leadership_business_analysis"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_business_strategy_commercial_leadership_business_analysis"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_data_science_and_analytics",
-      "subjectTitle": "Data Science",
-      "subjectFamily": "quantitative-analysis",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
-      "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
-      "adjacentCareerWorldIds": [
-        "cw_software_ai_digital_systems"
-      ],
-      "corePathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_software_ai_digital_systems_data_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_data_analytics_quantitative_insight_insight_and_market_research",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_data_analytics_quantitative_insight_product_growth_and_experimentation_analytics"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_data_analytics_quantitative_insight_machine_learning_and_applied_ai",
-        "rf_data_analytics_quantitative_insight_product_growth_and_experimentation_analytics",
-        "rf_data_analytics_quantitative_insight_data_analysis"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_software_ai_digital_systems_data_engineering",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 4,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_statistics",
-      "subjectTitle": "Statistics",
-      "subjectFamily": "quantitative-analysis",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
-      "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
-      "adjacentCareerWorldIds": [
-        "cw_finance_economics_investment"
-      ],
-      "corePathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics"
-      ],
-      "adjacentPathwayIds": [
-        "rf_data_analytics_quantitative_insight_insight_and_market_research"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting",
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_finance_economics_investment_risk_compliance_and_controls"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 1,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_actuarial_science",
-      "subjectTitle": "Actuarial Science",
-      "subjectFamily": "quantitative-analysis",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_data_analytics_quantitative_insight",
-      "primaryCareerWorldTitle": "Data, Analytics & Quantitative Insight",
-      "adjacentCareerWorldIds": [
-        "cw_finance_economics_investment"
-      ],
-      "corePathwayIds": [
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics",
-        "rf_data_analytics_quantitative_insight_data_analysis"
-      ],
-      "adjacentPathwayIds": [
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_treasury_and_liquidity"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_actuarial_and_risk_analytics",
-        "rf_data_analytics_quantitative_insight_data_analysis"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_treasury_and_liquidity"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_computer_science_and_artificial_intelligence",
-      "subjectTitle": "Computer Science",
-      "subjectFamily": "software-computing",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_software_ai_digital_systems",
-      "primaryCareerWorldTitle": "Software, AI & Digital Systems",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight"
-      ],
-      "corePathwayIds": [
-        "rf_software_ai_digital_systems_software_engineering",
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_frontend_and_web_development"
-      ],
-      "adjacentPathwayIds": [
-        "rf_software_ai_digital_systems_data_engineering",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_software_ai_digital_systems_software_engineering",
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_frontend_and_web_development"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_software_ai_digital_systems_data_engineering",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_software_engineering",
-      "subjectTitle": "Software Engineering",
-      "subjectFamily": "software-computing",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_software_ai_digital_systems",
-      "primaryCareerWorldTitle": "Software, AI & Digital Systems",
-      "adjacentCareerWorldIds": [
-        "cw_engineering_manufacturing_infrastructure"
-      ],
-      "corePathwayIds": [
-        "rf_software_ai_digital_systems_software_engineering",
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_quality_assurance_and_test_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_software_ai_digital_systems_data_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_software_ai_digital_systems_software_engineering",
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_quality_assurance_and_test_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_software_ai_digital_systems_data_engineering"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 1,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_computer_science_with_cyber_security",
-      "subjectTitle": "Cyber Security",
-      "subjectFamily": "software-computing",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_software_ai_digital_systems",
-      "primaryCareerWorldTitle": "Software, AI & Digital Systems",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight",
-        "cw_finance_economics_investment"
-      ],
-      "corePathwayIds": [
-        "rf_software_ai_digital_systems_cyber_security"
-      ],
-      "adjacentPathwayIds": [
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_quality_assurance_and_test_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_software_ai_digital_systems_cyber_security"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_software_ai_digital_systems_backend_and_platform_engineering",
-        "rf_software_ai_digital_systems_quality_assurance_and_test_engineering"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_artificial_intelligence",
-      "subjectTitle": "Artificial Intelligence",
-      "subjectFamily": "software-computing",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_software_ai_digital_systems",
-      "primaryCareerWorldTitle": "Software, AI & Digital Systems",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight"
-      ],
-      "corePathwayIds": [
-        "rf_software_ai_digital_systems_data_engineering",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_software_ai_digital_systems_software_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_software_ai_digital_systems_data_engineering",
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_software_ai_digital_systems_software_engineering"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_mechanical_engineering",
-      "subjectTitle": "Mechanical Engineering",
-      "subjectFamily": "engineering-systems",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_architecture_built_environment_spatial_design"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_creative_arts_design_experience_product_and_industrial_design",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_creative_arts_design_experience_product_and_industrial_design",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_civil_engineering",
-      "subjectTitle": "Civil Engineering",
-      "subjectFamily": "civil-infrastructure",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_architecture_built_environment_spatial_design",
-        "cw_environment_sustainability_planetary_futures"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
-        "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
-        "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_electrical_and_electronic_engineering",
-      "subjectTitle": "Electrical and Electronic Engineering",
-      "subjectFamily": "engineering-systems",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_software_ai_digital_systems"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering",
-        "rf_software_ai_digital_systems_data_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_electrical_and_electronic_engineering",
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_software_ai_digital_systems_ai_and_machine_learning_engineering",
-        "rf_software_ai_digital_systems_data_engineering"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_chemical_engineering",
-      "subjectTitle": "Chemical Engineering",
-      "subjectFamily": "engineering-systems",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_science_research_laboratory_innovation",
-        "cw_environment_sustainability_planetary_futures"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_aeronautical_and_aerospace_engineering",
-      "subjectTitle": "Aeronautical and Aerospace Engineering",
-      "subjectFamily": "engineering-systems",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_science_research_laboratory_innovation"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "adjacentPathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
-        "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_robotics_and_automation_engineering",
-        "rf_engineering_manufacturing_infrastructure_infrastructure_maintenance_and_asset_engineering"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_manufacturing_engineering",
-      "subjectTitle": "Manufacturing Engineering",
-      "subjectFamily": "engineering-systems",
-      "subjectCluster": "technical-quant",
-      "primaryCareerWorldId": "cw_engineering_manufacturing_infrastructure",
-      "primaryCareerWorldTitle": "Engineering, Manufacturing & Infrastructure",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain"
-      ],
-      "adjacentPathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_manufacturing_and_production_engineering",
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_architecture",
-      "subjectTitle": "Architecture",
-      "subjectFamily": "architecture-spatial-design",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
-      "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
-      "adjacentCareerWorldIds": [
-        "cw_creative_arts_design_experience"
-      ],
-      "corePathwayIds": [
-        "rf_architecture_built_environment_spatial_design_architecture",
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim"
-      ],
-      "adjacentPathwayIds": [
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_architecture_built_environment_spatial_design_architecture",
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_creative_arts_design_experience_product_and_industrial_design",
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_architecture_and_planning",
-      "subjectTitle": "Urban Planning",
-      "subjectFamily": "architecture-spatial-design",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
-      "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
-      "adjacentCareerWorldIds": [
-        "cw_law_governance_public_impact",
-        "cw_environment_sustainability_planetary_futures"
-      ],
-      "corePathwayIds": [
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "adjacentPathwayIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_architecture_built_environment_spatial_design_town_planning_and_urban_development",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_architectural_technology",
-      "subjectTitle": "Architectural Technology",
-      "subjectFamily": "architecture-spatial-design",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
-      "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
-      "adjacentCareerWorldIds": [
-        "cw_engineering_manufacturing_infrastructure"
-      ],
-      "corePathwayIds": [
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "adjacentPathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim",
-        "rf_architecture_built_environment_spatial_design_sustainability_and_building_performance"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_civil_and_structural_engineering",
-        "rf_engineering_manufacturing_infrastructure_mechanical_design_and_development_engineering"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_construction_management",
-      "subjectTitle": "Construction Management",
-      "subjectFamily": "construction-delivery",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_architecture_built_environment_spatial_design",
-      "primaryCareerWorldTitle": "Architecture, Built Environment & Spatial Design",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_architecture_built_environment_spatial_design_construction_project_management",
-        "rf_architecture_built_environment_spatial_design_surveying_and_cost_consultancy"
-      ],
-      "adjacentPathwayIds": [
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_architecture_built_environment_spatial_design_construction_project_management",
-        "rf_architecture_built_environment_spatial_design_surveying_and_cost_consultancy"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 1,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_biomedical_science",
-      "subjectTitle": "Biomedical Science",
-      "subjectFamily": "laboratory-science",
-      "subjectCluster": "science-research",
-      "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
-      "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_health_care_clinical_practice"
-      ],
-      "corePathwayIds": [
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_science_research_laboratory_innovation_laboratory_science",
-        "rf_health_care_clinical_practice_clinical_science_laboratory_diagnostics"
-      ],
-      "adjacentPathwayIds": [
-        "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics",
-        "rf_science_research_laboratory_innovation_translational_research_and_innovation",
-        "rf_health_care_clinical_practice_pharmaceutical_industry_drug_development"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_science_research_laboratory_innovation_laboratory_science"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support",
-        "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_biochemistry",
-      "subjectTitle": "Biochemistry",
-      "subjectFamily": "laboratory-science",
-      "subjectCluster": "science-research",
-      "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
-      "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_health_care_clinical_practice"
-      ],
-      "corePathwayIds": [
-        "rf_science_research_laboratory_innovation_laboratory_science",
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research"
-      ],
-      "adjacentPathwayIds": [
-        "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics",
-        "rf_health_care_clinical_practice_pharmacy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_laboratory_science",
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics",
-        "rf_health_care_clinical_practice_pharmacy"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_chemistry",
-      "subjectTitle": "Chemistry",
-      "subjectFamily": "laboratory-science",
-      "subjectCluster": "science-research",
-      "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
-      "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_engineering_manufacturing_infrastructure"
-      ],
-      "corePathwayIds": [
-        "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
-        "rf_science_research_laboratory_innovation_laboratory_science",
-        "rf_science_research_laboratory_innovation_r_and_d_science"
-      ],
-      "adjacentPathwayIds": [
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_materials_and_chemical_analysis",
-        "rf_science_research_laboratory_innovation_laboratory_science",
-        "rf_science_research_laboratory_innovation_r_and_d_science"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_engineering_manufacturing_infrastructure_process_and_industrial_engineering",
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_biology",
-      "subjectTitle": "Biology",
-      "subjectFamily": "laboratory-science",
-      "subjectCluster": "science-research",
-      "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
-      "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_environment_sustainability_planetary_futures",
-        "cw_health_care_clinical_practice"
-      ],
-      "corePathwayIds": [
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_science_research_laboratory_innovation_translational_research_and_innovation"
-      ],
-      "adjacentPathwayIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_science_research_laboratory_innovation_translational_research_and_innovation"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_physics",
-      "subjectTitle": "Physics",
-      "subjectFamily": "laboratory-science",
-      "subjectCluster": "science-research",
-      "primaryCareerWorldId": "cw_science_research_laboratory_innovation",
-      "primaryCareerWorldTitle": "Science, Research & Laboratory Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight",
-        "cw_engineering_manufacturing_infrastructure"
-      ],
-      "corePathwayIds": [
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics"
-      ],
-      "adjacentPathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_r_and_d_science",
-        "rf_science_research_laboratory_innovation_scientific_data_and_bioinformatics"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_science_and_statistical_modelling",
-        "rf_engineering_manufacturing_infrastructure_systems_engineering"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_medicine",
-      "subjectTitle": "Medicine",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_medicine",
-        "rf_health_care_clinical_practice_surgery_procedural_medicine",
-        "rf_health_care_clinical_practice_acute_emergency_critical_care",
-        "rf_health_care_clinical_practice_mental_health_behavioural_medicine",
-        "rf_health_care_clinical_practice_diagnostic_investigative_medicine"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_public_health_medicine_policy",
-        "rf_health_care_clinical_practice_academic_medicine_clinical_research",
-        "rf_health_care_clinical_practice_healthcare_leadership_service_improvement",
-        "rf_health_care_clinical_practice_digital_health_medical_innovation"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_medicine"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "audit": {
-        "coreCount": 5,
-        "adjacentCount": 4,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Medicine taxonomy expanded into doctor-led main pathways and medicine-compatible adjacent routes only. Shared allied-health routes removed from Medicine recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_dentistry",
-      "subjectTitle": "Dentistry",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_dentistry",
-        "rf_health_care_clinical_practice_specialist_dentistry"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_dental_research_academic_dentistry",
-        "rf_health_care_clinical_practice_oral_health_policy_dental_public_health"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_medicine",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_pharmacy",
-      "subjectTitle": "Pharmacy",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [
-        "cw_science_research_laboratory_innovation"
-      ],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_clinical_pharmacy",
-        "rf_health_care_clinical_practice_community_pharmacy"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_pharmaceutical_industry_drug_development",
-        "rf_health_care_clinical_practice_regulatory_affairs_medicines_safety",
-        "rf_health_care_clinical_practice_medicines_policy_public_health_pharmacy",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_pharmacy"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 4,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_nursing",
-      "subjectTitle": "Nursing",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_nursing"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_public_health_nursing_health_visiting",
-        "rf_health_care_clinical_practice_clinical_research_nursing",
-        "rf_health_care_clinical_practice_nurse_education_leadership",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_nursing"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_public_health_and_health_improvement",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 4,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_midwifery",
-      "subjectTitle": "Midwifery",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_midwifery"
-      ],
-      "adjacentPathwayIds": [],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_midwifery"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_nursing",
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 0,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to avoid treating Nursing as a casual adjacent route from Midwifery."
-      }
-    },
-    {
-      "subjectId": "sub_physiotherapy",
-      "subjectTitle": "Physiotherapy",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight"
-      ],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement",
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_occupational_therapy",
-      "subjectTitle": "Occupational Therapy",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight",
-        "cw_education_coaching_people_development"
-      ],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies"
-      ],
-      "adjacentPathwayIds": [
-        "rf_education_coaching_people_development_send_and_inclusion_support",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_social_work_and_safeguarding",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_paramedic_science",
-      "subjectTitle": "Paramedic Science",
-      "subjectFamily": "clinical-practice",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_paramedic_and_emergency_care"
-      ],
-      "adjacentPathwayIds": [
-        "rf_health_care_clinical_practice_emergency_planning_ambulance_leadership",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_paramedic_and_emergency_care"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_diagnostics_imaging_and_clinical_support",
-        "rf_health_care_clinical_practice_healthcare_operations_and_improvement"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_social_work",
-      "subjectTitle": "Social Work",
-      "subjectFamily": "social-care-support",
-      "subjectCluster": "helping-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [
-        "cw_education_coaching_people_development",
-        "cw_psychology_behaviour_human_insight"
-      ],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_social_work_and_safeguarding"
-      ],
-      "adjacentPathwayIds": [
-        "rf_education_coaching_people_development_early_years_and_family_support",
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services",
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_social_work_and_safeguarding"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_public_health_and_health_improvement",
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_psychology",
-      "subjectTitle": "Psychology",
-      "subjectFamily": "psychology",
-      "subjectCluster": "psychology-behaviour",
-      "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
-      "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
-      "adjacentCareerWorldIds": [
-        "cw_health_care_clinical_practice",
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health",
-        "rf_psychology_behaviour_human_insight_counselling_psychology",
-        "rf_psychology_behaviour_human_insight_people_analytics_and_organisational_psychology",
-        "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science"
-      ],
-      "adjacentPathwayIds": [
-        "rf_psychology_behaviour_human_insight_counselling_and_therapeutic_practice",
-        "rf_psychology_behaviour_human_insight_forensic_and_justice_psychology",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health",
-        "rf_psychology_behaviour_human_insight_educational_and_developmental_psychology",
-        "rf_psychology_behaviour_human_insight_people_analytics_and_organisational_psychology",
-        "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science",
-        "rf_psychology_behaviour_human_insight_forensic_and_justice_psychology"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_psychology_behaviour_human_insight_counselling_and_therapeutic_practice"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_counselling_and_psychotherapy",
-      "subjectTitle": "Counselling and Psychotherapy",
-      "subjectFamily": "counselling-therapy",
-      "subjectCluster": "psychology-behaviour",
-      "primaryCareerWorldId": "cw_psychology_behaviour_human_insight",
-      "primaryCareerWorldTitle": "Psychology, Behaviour & Human Development",
-      "adjacentCareerWorldIds": [
-        "cw_health_care_clinical_practice"
-      ],
-      "corePathwayIds": [
-        "rf_psychology_behaviour_human_insight_counselling_and_therapeutic_practice"
-      ],
-      "adjacentPathwayIds": [
-        "rf_psychology_behaviour_human_insight_counselling_psychology",
-        "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_psychology_behaviour_human_insight_counselling_and_therapeutic_practice"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_social_work_and_safeguarding",
-        "rf_psychology_behaviour_human_insight_clinical_psychology_and_mental_health"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_education",
-      "subjectTitle": "Education Studies",
-      "subjectFamily": "education-learning",
-      "subjectCluster": "helping-development",
-      "primaryCareerWorldId": "cw_education_coaching_people_development",
-      "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight"
-      ],
-      "corePathwayIds": [
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services",
-        "rf_education_coaching_people_development_learning_design_and_educational_technology",
-        "rf_education_coaching_people_development_training_learning_and_development",
-        "rf_education_coaching_people_development_early_years_and_family_support"
-      ],
-      "adjacentPathwayIds": [
-        "rf_education_coaching_people_development_teaching_and_classroom_practice",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_education_coaching_people_development_teaching_and_classroom_practice",
-        "rf_education_coaching_people_development_learning_design_and_educational_technology",
-        "rf_education_coaching_people_development_training_learning_and_development",
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_education_coaching_people_development_early_years_and_family_support",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_primary_education_qts",
-      "subjectTitle": "Primary Education",
-      "subjectFamily": "education-learning",
-      "subjectCluster": "helping-development",
-      "primaryCareerWorldId": "cw_education_coaching_people_development",
-      "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight"
-      ],
-      "corePathwayIds": [
-        "rf_education_coaching_people_development_teaching_and_classroom_practice",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "adjacentPathwayIds": [
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services",
-        "rf_education_coaching_people_development_early_years_and_family_support",
-        "rf_education_coaching_people_development_learning_design_and_educational_technology"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_education_coaching_people_development_teaching_and_classroom_practice",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_education_coaching_people_development_early_years_and_family_support",
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated in professional-route taxonomy patch to distinguish direct professional pathways from adjacent/later/pivot routes."
-      }
-    },
-    {
-      "subjectId": "sub_early_years_education_and_care",
-      "subjectTitle": "Early Years Education and Care",
-      "subjectFamily": "education-learning",
-      "subjectCluster": "helping-development",
-      "primaryCareerWorldId": "cw_education_coaching_people_development",
-      "primaryCareerWorldTitle": "Education, Coaching & Learning Development",
-      "adjacentCareerWorldIds": [
-        "cw_health_care_clinical_practice"
-      ],
-      "corePathwayIds": [
-        "rf_education_coaching_people_development_early_years_and_family_support"
-      ],
-      "adjacentPathwayIds": [
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_education_coaching_people_development_early_years_and_family_support",
-        "rf_education_coaching_people_development_send_and_inclusion_support"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_education_coaching_people_development_teaching_and_classroom_practice",
-        "rf_education_coaching_people_development_education_support_outreach_and_student_services"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 1,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_law",
-      "subjectTitle": "Law",
-      "subjectFamily": "law-policy-public",
-      "subjectCluster": "policy-governance",
-      "primaryCareerWorldId": "cw_law_governance_public_impact",
-      "primaryCareerWorldTitle": "Law, Governance & Public Impact",
-      "adjacentCareerWorldIds": [
-        "cw_finance_economics_investment"
-      ],
-      "corePathwayIds": [
-        "rf_law_governance_public_impact_legal_practice_and_casework",
-        "rf_law_governance_public_impact_governance_risk_and_compliance"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_investigations_and_financial_crime",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_law_governance_public_impact_legal_practice_and_casework",
-        "rf_law_governance_public_impact_governance_risk_and_compliance",
-        "rf_law_governance_public_impact_investigations_and_financial_crime"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_politics",
-      "subjectTitle": "Politics",
-      "subjectFamily": "law-policy-public",
-      "subjectCluster": "policy-governance",
-      "primaryCareerWorldId": "cw_law_governance_public_impact",
-      "primaryCareerWorldTitle": "Law, Governance & Public Impact",
-      "adjacentCareerWorldIds": [
-        "cw_society_culture_languages_global_affairs"
-      ],
-      "corePathwayIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "adjacentPathwayIds": [
-        "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
-        "rf_society_culture_languages_global_affairs_diplomacy_intelligence_and_public_service"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
-        "rf_society_culture_languages_global_affairs_diplomacy_intelligence_and_public_service"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_social_and_public_policy",
-      "subjectTitle": "Public Policy",
-      "subjectFamily": "law-policy-public",
-      "subjectCluster": "policy-governance",
-      "primaryCareerWorldId": "cw_law_governance_public_impact",
-      "primaryCareerWorldTitle": "Law, Governance & Public Impact",
-      "adjacentCareerWorldIds": [
-        "cw_education_coaching_people_development",
-        "cw_society_culture_languages_global_affairs"
-      ],
-      "corePathwayIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy",
-        "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_governance_risk_and_compliance",
-        "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_health_care_clinical_practice_public_health_and_health_improvement",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_business_management",
-      "subjectTitle": "Business Management",
-      "subjectFamily": "business-management-services",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
-      "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
-      "adjacentCareerWorldIds": [
-        "cw_entrepreneurship_innovation_venture_building",
-        "cw_finance_economics_investment",
-        "cw_marketing_media_communication"
-      ],
-      "corePathwayIds": [
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships",
-        "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path"
-      ],
-      "adjacentPathwayIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_asset_and_wealth_management",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_accounting_audit_and_assurance"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships",
-        "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_asset_and_wealth_management",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_accounting_audit_and_assurance"
-      ],
-      "audit": {
-        "coreCount": 8,
-        "adjacentCount": 7,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated: Consulting, HR and Venture Building & Founder treated as Business Management core; marketing and finance pathways treated as adjacent."
-      }
-    },
-    {
-      "subjectId": "sub_business_analytics",
-      "subjectTitle": "Business Analytics",
-      "subjectFamily": "business-management-services",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
-      "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight"
-      ],
-      "corePathwayIds": [
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement"
-      ],
-      "adjacentPathwayIds": [
-        "rf_business_strategy_commercial_leadership_general_management_and_leadership_schemes",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_data_analytics_quantitative_insight_business_intelligence_and_reporting"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_general_management_and_leadership_schemes",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 4,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_international_business_management",
-      "subjectTitle": "International Business Management",
-      "subjectFamily": "business-management-services",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_business_strategy_commercial_leadership",
-      "primaryCareerWorldTitle": "Business, Management & Commercial Strategy",
-      "adjacentCareerWorldIds": [
-        "cw_society_culture_languages_global_affairs",
-        "cw_entrepreneurship_innovation_venture_building"
-      ],
-      "corePathwayIds": [
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_business_analysis"
-      ],
-      "adjacentPathwayIds": [
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_finance_economics_investment_commercial_and_corporate_banking"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_general_management_and_leadership_schemes",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_accounting",
-      "subjectTitle": "Accounting",
-      "subjectFamily": "finance-economics",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_finance_economics_investment",
-      "primaryCareerWorldTitle": "Finance, Economics & Investment",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_accounting_audit_and_assurance"
-      ],
-      "adjacentPathwayIds": [
-        "rf_finance_economics_investment_banking_operations_and_middle_office"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_accounting_audit_and_assurance"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_banking_operations_and_middle_office"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 1,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_finance",
-      "subjectTitle": "Finance",
-      "subjectFamily": "finance-economics",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_finance_economics_investment",
-      "primaryCareerWorldTitle": "Finance, Economics & Investment",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership",
-        "cw_entrepreneurship_innovation_venture_building"
-      ],
-      "corePathwayIds": [
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_finance_economics_investment_asset_and_wealth_management",
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_markets_sales_and_trading",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_sustainable_finance_and_impact_investing",
-        "rf_finance_economics_investment_banking_operations_and_middle_office"
-      ],
-      "adjacentPathwayIds": [
-        "rf_finance_economics_investment_accounting_audit_and_assurance",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path",
-        "rf_entrepreneurship_innovation_venture_building_start_up_operations",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups",
-        "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_finance_economics_investment_asset_and_wealth_management",
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_markets_sales_and_trading",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_sustainable_finance_and_impact_investing",
-        "rf_finance_economics_investment_banking_operations_and_middle_office"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_accounting_audit_and_assurance",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_business_analysis",
-        "rf_business_strategy_commercial_leadership_project_pmo_and_transformation",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain",
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_business_strategy_commercial_leadership_hr_people_and_organisations",
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path",
-        "rf_entrepreneurship_innovation_venture_building_start_up_operations",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups",
-        "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support",
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships"
-      ],
-      "audit": {
-        "coreCount": 9,
-        "adjacentCount": 12,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Finance routing manually updated: all finance pathways except Accounting are core; Accounting, Business/Management and Entrepreneurship pathways are adjacent."
-      }
-    },
-    {
-      "subjectId": "sub_accounting_and_finance",
-      "subjectTitle": "Accounting and Finance",
-      "subjectFamily": "finance-economics",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_finance_economics_investment",
-      "primaryCareerWorldTitle": "Finance, Economics & Investment",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_accounting_audit_and_assurance",
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_asset_and_wealth_management"
-      ],
-      "adjacentPathwayIds": [],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_finance_economics_investment_commercial_and_corporate_banking",
-        "rf_finance_economics_investment_treasury_and_liquidity",
-        "rf_finance_economics_investment_risk_compliance_and_controls",
-        "rf_finance_economics_investment_accounting_audit_and_assurance"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_asset_and_wealth_management"
-      ],
-      "audit": {
-        "coreCount": 6,
-        "adjacentCount": 0,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": "Added founder pathway as an adjacent entrepreneurial route for accounting and finance students."
-      }
-    },
-    {
-      "subjectId": "sub_economics",
-      "subjectTitle": "Economics",
-      "subjectFamily": "finance-economics",
-      "subjectCluster": "finance-business",
-      "primaryCareerWorldId": "cw_finance_economics_investment",
-      "primaryCareerWorldTitle": "Finance, Economics & Investment",
-      "adjacentCareerWorldIds": [
-        "cw_data_analytics_quantitative_insight",
-        "cw_law_governance_public_impact"
-      ],
-      "corePathwayIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_equity_research_and_investment_research",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement",
-        "rf_business_strategy_commercial_leadership_business_analysis"
-      ],
-      "adjacentPathwayIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_finance_economics_investment_investment_banking_and_corporate_finance",
-        "rf_finance_economics_investment_equity_research_and_investment_research"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_data_analytics_quantitative_insight_data_analysis",
-        "rf_business_strategy_commercial_leadership_consulting_and_strategic_improvement"
-      ],
-      "audit": {
-        "coreCount": 5,
-        "adjacentCount": 1,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": "Added founder pathway as an adjacent entrepreneurial route for economics students."
-      }
-    },
-    {
-      "subjectId": "sub_entrepreneurship_and_innovation",
-      "subjectTitle": "Entrepreneurship and Innovation",
-      "subjectFamily": "entrepreneurship-innovation",
-      "subjectCluster": "innovation-commercial",
-      "primaryCareerWorldId": "cw_entrepreneurship_innovation_venture_building",
-      "primaryCareerWorldTitle": "Entrepreneurship, Start-Ups & Innovation",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership",
-        "cw_marketing_media_communication"
-      ],
-      "corePathwayIds": [
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path",
-        "rf_entrepreneurship_innovation_venture_building_start_up_operations",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups",
-        "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support"
-      ],
-      "adjacentPathwayIds": [
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships",
-        "rf_marketing_media_communication_brand_and_marketing_strategy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_entrepreneurship_innovation_venture_building_venture_building_founder_path",
-        "rf_entrepreneurship_innovation_venture_building_start_up_operations",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups",
-        "rf_entrepreneurship_innovation_venture_building_venture_capital_accelerators_and_innovation_support"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_business_development_and_strategic_partnerships",
-        "rf_marketing_media_communication_brand_and_marketing_strategy"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_marketing",
-      "subjectTitle": "Marketing",
-      "subjectFamily": "media-marketing-communication",
-      "subjectCluster": "communication-media",
-      "primaryCareerWorldId": "cw_marketing_media_communication",
-      "primaryCareerWorldTitle": "Marketing, Communications & Media",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_marketing_media_communication_performance_marketing_and_growth",
-        "rf_marketing_media_communication_market_research_and_audience_insight",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "adjacentPathwayIds": [
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_marketing_media_communication_performance_marketing_and_growth",
-        "rf_marketing_media_communication_market_research_and_audience_insight",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_business_strategy_commercial_leadership_commercial_partnerships_and_account_growth",
-        "rf_entrepreneurship_innovation_venture_building_product_and_growth_in_start_ups"
-      ],
-      "audit": {
-        "coreCount": 4,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_public_relations_and_communications",
-      "subjectTitle": "Public Relations and Communications",
-      "subjectFamily": "media-marketing-communication",
-      "subjectCluster": "communication-media",
-      "primaryCareerWorldId": "cw_marketing_media_communication",
-      "primaryCareerWorldTitle": "Marketing, Communications & Media",
-      "adjacentCareerWorldIds": [
-        "cw_society_culture_languages_global_affairs"
-      ],
-      "corePathwayIds": [
-        "rf_marketing_media_communication_pr_and_communications",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_public_affairs_and_advocacy",
-        "rf_marketing_media_communication_brand_and_marketing_strategy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_marketing_media_communication_pr_and_communications",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_law_governance_public_impact_public_affairs_and_advocacy",
-        "rf_marketing_media_communication_brand_and_marketing_strategy"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_product_design",
-      "subjectTitle": "Product Design",
-      "subjectFamily": "visual-design-arts",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_creative_arts_design_experience",
-      "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
-      "adjacentCareerWorldIds": [
-        "cw_architecture_built_environment_spatial_design"
-      ],
-      "corePathwayIds": [
-        "rf_creative_arts_design_experience_product_and_industrial_design",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "adjacentPathwayIds": [
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_creative_arts_design_experience_product_and_industrial_design",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
-        "rf_architecture_built_environment_spatial_design_architectural_technology_and_bim"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_graphic_design",
-      "subjectTitle": "Graphic Design",
-      "subjectFamily": "visual-design-arts",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_creative_arts_design_experience",
-      "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
-      "adjacentCareerWorldIds": [
-        "cw_marketing_media_communication"
-      ],
-      "corePathwayIds": [
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "adjacentPathwayIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_marketing_media_communication_content_and_social_media"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_animation",
-      "subjectTitle": "Animation",
-      "subjectFamily": "screen-digital-creative",
-      "subjectCluster": "design-creative",
-      "primaryCareerWorldId": "cw_creative_arts_design_experience",
-      "primaryCareerWorldTitle": "Creative Arts, Design & Experience",
-      "adjacentCareerWorldIds": [
-        "cw_marketing_media_communication"
-      ],
-      "corePathwayIds": [
-        "rf_creative_arts_design_experience_animation_and_motion_design",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "adjacentPathwayIds": [
-        "rf_marketing_media_communication_content_and_social_media",
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_creative_arts_design_experience_animation_and_motion_design",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_marketing_media_communication_content_and_social_media",
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_geography",
-      "subjectTitle": "Geography",
-      "subjectFamily": "environment-geography",
-      "subjectCluster": "environment-sustainability",
-      "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
-      "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
-      "adjacentCareerWorldIds": [
-        "cw_society_culture_languages_global_affairs"
-      ],
-      "corePathwayIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "adjacentPathwayIds": [
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_environmental_science",
-      "subjectTitle": "Environmental Science",
-      "subjectFamily": "environment-geography",
-      "subjectCluster": "environment-sustainability",
-      "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
-      "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
-      "adjacentCareerWorldIds": [
-        "cw_science_research_laboratory_innovation"
-      ],
-      "corePathwayIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory"
-      ],
-      "adjacentPathwayIds": [
-        "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_science_and_monitoring",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 1,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_environmental_management",
-      "subjectTitle": "Environmental Management",
-      "subjectFamily": "environment-geography",
-      "subjectCluster": "environment-sustainability",
-      "primaryCareerWorldId": "cw_environment_sustainability_planetary_futures",
-      "primaryCareerWorldTitle": "Environment, Sustainability & Planetary Futures",
-      "adjacentCareerWorldIds": [
-        "cw_business_strategy_commercial_leadership"
-      ],
-      "corePathwayIds": [
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory",
-        "rf_environment_sustainability_planetary_futures_circular_economy_and_sustainable_supply_chains",
-        "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy"
-      ],
-      "adjacentPathwayIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_sustainability_and_esg_advisory",
-        "rf_environment_sustainability_planetary_futures_circular_economy_and_sustainable_supply_chains",
-        "rf_environment_sustainability_planetary_futures_net_zero_climate_and_sustainability_strategy"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment",
-        "rf_business_strategy_commercial_leadership_operations_and_supply_chain"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_modern_languages",
-      "subjectTitle": "Modern Languages",
-      "subjectFamily": "language-communication",
-      "subjectCluster": "communication-media",
-      "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
-      "primaryCareerWorldTitle": "Society, Culture, Languages & Global Affairs",
-      "adjacentCareerWorldIds": [
-        "cw_marketing_media_communication"
-      ],
-      "corePathwayIds": [
-        "rf_society_culture_languages_global_affairs_languages_translation_and_localisation"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_public_affairs_and_advocacy",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
-        "rf_marketing_media_communication_pr_and_communications"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_languages_translation_and_localisation"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_marketing_media_communication_pr_and_communications",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "audit": {
-        "coreCount": 1,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_sociology",
-      "subjectTitle": "Sociology",
-      "subjectFamily": "social-cultural-analysis",
-      "subjectCluster": "society-culture",
-      "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
-      "primaryCareerWorldTitle": "Society, Culture, Languages & Global Affairs",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight",
-        "cw_law_governance_public_impact"
-      ],
-      "corePathwayIds": [
-        "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_anthropology",
-      "subjectTitle": "Anthropology",
-      "subjectFamily": "social-cultural-analysis",
-      "subjectCluster": "society-culture",
-      "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
-      "primaryCareerWorldTitle": "Society, Culture, Languages & Global Affairs",
-      "adjacentCareerWorldIds": [
-        "cw_psychology_behaviour_human_insight",
-        "cw_environment_sustainability_planetary_futures"
-      ],
-      "corePathwayIds": [
-        "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "adjacentPathwayIds": [
-        "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_social_research_and_cultural_analysis",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science",
-        "rf_environment_sustainability_planetary_futures_environmental_policy_and_impact_assessment"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": true,
-        "needsHumanReview": false,
-        "notes": ""
-      }
-    },
-    {
-      "subjectId": "sub_international_relations",
-      "subjectTitle": "International Relations",
-      "subjectFamily": "international-relations-global-affairs",
-      "subjectCluster": "society-culture",
-      "primaryCareerWorldId": "cw_society_culture_languages_global_affairs",
-      "primaryCareerWorldTitle": "Society, Culture, Languages & Global Affairs",
-      "adjacentCareerWorldIds": [
-        "cw_law_governance_public_impact"
-      ],
-      "corePathwayIds": [
-        "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes",
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis"
-      ],
-      "adjacentPathwayIds": [
-        "rf_law_governance_public_impact_public_affairs_and_advocacy",
-        "rf_society_culture_languages_global_affairs_diplomacy_intelligence_and_public_service"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_society_culture_languages_global_affairs_international_relations_policy_and_geopolitical_analysis",
-        "rf_society_culture_languages_global_affairs_diplomacy_intelligence_and_public_service",
-        "rf_society_culture_languages_global_affairs_international_development_and_ngo_programmes"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_law_governance_public_impact_policy_and_public_sector_analysis",
-        "rf_law_governance_public_impact_public_affairs_and_advocacy"
-      ],
-      "audit": {
-        "coreCount": 3,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Updated to match deep research report routing recommendations."
-      }
-    },
-    {
-      "subjectId": "sub_digital_media_production_and_technology",
-      "subjectTitle": "Digital Media, Production and Technology",
-      "subjectFamily": "marketing-media-communications",
-      "subjectCluster": "creative-digital",
-      "primaryCareerWorldId": "cw_marketing_media_communication",
-      "primaryCareerWorldTitle": "Marketing, Communications & Media",
-      "adjacentCareerWorldIds": [
-        "cw_creative_arts_design_experience"
-      ],
-      "corePathwayIds": [
-        "rf_marketing_media_communication_content_and_social_media",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "adjacentPathwayIds": [
-        "rf_marketing_media_communication_pr_and_communications",
-        "rf_marketing_media_communication_brand_and_marketing_strategy",
-        "rf_creative_arts_design_experience_graphic_design_and_visual_communication"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_marketing_media_communication_content_and_social_media",
-        "rf_creative_arts_design_experience_digital_design_and_multimedia"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_marketing_media_communication_pr_and_communications",
-        "rf_marketing_media_communication_brand_and_marketing_strategy"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 3,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Added from deep research report to support Media promise in school-facing/product copy."
-      }
-    },
-    {
-      "subjectId": "sub_sport_and_exercise_science",
-      "subjectTitle": "Sport and Exercise Science",
-      "subjectFamily": "sport-exercise-health",
-      "subjectCluster": "health-care",
-      "primaryCareerWorldId": "cw_health_care_clinical_practice",
-      "primaryCareerWorldTitle": "Health, Care & Clinical Practice",
-      "adjacentCareerWorldIds": [
-        "cw_science_research_laboratory_innovation",
-        "cw_psychology_behaviour_human_insight"
-      ],
-      "corePathwayIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies",
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "adjacentPathwayIds": [
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research",
-        "rf_psychology_behaviour_human_insight_human_factors_ux_and_behavioural_science"
-      ],
-      "legacyAllowedRoleFamilyIds": [
-        "rf_health_care_clinical_practice_rehabilitation_therapies",
-        "rf_health_care_clinical_practice_public_health_and_health_improvement"
-      ],
-      "legacyAdjacentRoleFamilyIds": [
-        "rf_science_research_laboratory_innovation_biomedical_and_clinical_research"
-      ],
-      "audit": {
-        "coreCount": 2,
-        "adjacentCount": 2,
-        "legacyRouteMatched": false,
-        "needsHumanReview": false,
-        "notes": "Added from deep research report to support Sport, Exercise & Health school-facing label."
-      }
-    }
-  ]
-}
+  {
+    "id": "sub_data_science",
+    "title": "Data Science",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Core Data Analysis & Business Insight",
+      "Data Science & Advanced Modelling",
+      "Data Engineering",
+      "Machine Learning & Applied AI"
+    ],
+    "adjacentPathways": [
+      "Customer & Market Insight",
+      "AI & Machine Learning Engineering",
+      "Business Analysis",
+      "Product, Growth & Experimentation Analytics"
+    ],
+    "pathways": [
+      "Core Data Analysis & Business Insight",
+      "Data Science & Advanced Modelling",
+      "Data Engineering",
+      "Machine Learning & Applied AI",
+      "Customer & Market Insight",
+      "AI & Machine Learning Engineering",
+      "Business Analysis",
+      "Product, Growth & Experimentation Analytics"
+    ]
+  },
+  {
+    "id": "sub_statistics",
+    "title": "Statistics",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Data Science & Advanced Modelling",
+      "Risk & Quantitative Analysis"
+    ],
+    "adjacentPathways": [
+      "Customer & Market Insight",
+      "Insurance & Actuarial",
+      "Machine Learning & Applied AI"
+    ],
+    "pathways": [
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Data Science & Advanced Modelling",
+      "Risk & Quantitative Analysis",
+      "Customer & Market Insight",
+      "Insurance & Actuarial",
+      "Machine Learning & Applied AI"
+    ]
+  },
+  {
+    "id": "sub_actuarial_science",
+    "title": "Actuarial Science",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Risk & Quantitative Analysis",
+      "Core Data Analysis & Business Insight",
+      "Insurance & Actuarial"
+    ],
+    "adjacentPathways": [
+      "Risk, Compliance & Controls",
+      "Treasury & Liquidity"
+    ],
+    "pathways": [
+      "Risk & Quantitative Analysis",
+      "Core Data Analysis & Business Insight",
+      "Insurance & Actuarial",
+      "Risk, Compliance & Controls",
+      "Treasury & Liquidity"
+    ]
+  },
+  {
+    "id": "sub_mathematics",
+    "title": "Mathematics",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Machine Learning & Applied AI"
+    ],
+    "adjacentPathways": [
+      "Core Data Analysis & Business Insight",
+      "Scientific Data & Bioinformatics"
+    ],
+    "pathways": [
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Machine Learning & Applied AI",
+      "Core Data Analysis & Business Insight",
+      "Scientific Data & Bioinformatics"
+    ]
+  },
+  {
+    "id": "sub_operational_research",
+    "title": "Operational Research",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Core Data Analysis & Business Insight",
+      "Risk & Quantitative Analysis",
+      "Business Intelligence & Reporting"
+    ],
+    "adjacentPathways": [
+      "Operations & Supply Chain",
+      "Consulting & Strategic Improvement"
+    ],
+    "pathways": [
+      "Core Data Analysis & Business Insight",
+      "Risk & Quantitative Analysis",
+      "Business Intelligence & Reporting",
+      "Operations & Supply Chain",
+      "Consulting & Strategic Improvement"
+    ]
+  },
+  {
+    "id": "sub_financial_mathematics",
+    "title": "Financial Mathematics",
+    "careerWorldId": "cw_data_analytics_quantitative_insight",
+    "primaryPathways": [
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling"
+    ],
+    "adjacentPathways": [
+      "Investment Banking & Corporate Finance",
+      "Treasury & Liquidity"
+    ],
+    "pathways": [
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Investment Banking & Corporate Finance",
+      "Treasury & Liquidity"
+    ]
+  },
+  {
+    "id": "sub_computer_science_and_artificial_intelligence",
+    "title": "Computer Science and Artificial Intelligence",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Frontend & Web Development"
+    ],
+    "adjacentPathways": [
+      "Data Engineering",
+      "AI & Machine Learning Engineering",
+      "UX/UI Design",
+      "Fintech & Digital Finance",
+      "Machine Learning & Applied AI"
+    ],
+    "pathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Frontend & Web Development",
+      "Data Engineering",
+      "AI & Machine Learning Engineering",
+      "UX/UI Design",
+      "Fintech & Digital Finance",
+      "Machine Learning & Applied AI"
+    ]
+  },
+  {
+    "id": "sub_software_engineering",
+    "title": "Software Engineering",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Quality Assurance & Test Engineering"
+    ],
+    "adjacentPathways": [
+      "Data Engineering",
+      "UX/UI Design"
+    ],
+    "pathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Quality Assurance & Test Engineering",
+      "Data Engineering",
+      "UX/UI Design"
+    ]
+  },
+  {
+    "id": "sub_computer_science_with_cyber_security",
+    "title": "Computer Science with Cyber Security",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Cyber Security"
+    ],
+    "adjacentPathways": [
+      "Backend & Platform Engineering",
+      "Quality Assurance & Test Engineering"
+    ],
+    "pathways": [
+      "Cyber Security",
+      "Backend & Platform Engineering",
+      "Quality Assurance & Test Engineering"
+    ]
+  },
+  {
+    "id": "sub_artificial_intelligence",
+    "title": "Artificial Intelligence",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Data Engineering",
+      "AI & Machine Learning Engineering",
+      "Machine Learning & Applied AI"
+    ],
+    "adjacentPathways": [
+      "Data Science & Advanced Modelling",
+      "Software Engineering"
+    ],
+    "pathways": [
+      "Data Engineering",
+      "AI & Machine Learning Engineering",
+      "Machine Learning & Applied AI",
+      "Data Science & Advanced Modelling",
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "sub_computer_science",
+    "title": "Computer Science",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Frontend & Web Development",
+      "AI & Machine Learning Engineering"
+    ],
+    "adjacentPathways": [
+      "Data Engineering",
+      "Cyber Security"
+    ],
+    "pathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Frontend & Web Development",
+      "AI & Machine Learning Engineering",
+      "Data Engineering",
+      "Cyber Security"
+    ]
+  },
+  {
+    "id": "sub_cyber_security",
+    "title": "Cyber Security",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Cyber Security",
+      "Software Engineering"
+    ],
+    "adjacentPathways": [
+      "Backend & Platform Engineering",
+      "Governance, Risk & Compliance"
+    ],
+    "pathways": [
+      "Cyber Security",
+      "Software Engineering",
+      "Backend & Platform Engineering",
+      "Governance, Risk & Compliance"
+    ]
+  },
+  {
+    "id": "sub_games_technology",
+    "title": "Games Technology",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Software Engineering",
+      "Frontend & Web Development"
+    ],
+    "adjacentPathways": [
+      "Digital Design & Multimedia",
+      "Product & Industrial Design"
+    ],
+    "pathways": [
+      "Software Engineering",
+      "Frontend & Web Development",
+      "Digital Design & Multimedia",
+      "Product & Industrial Design"
+    ]
+  },
+  {
+    "id": "sub_human_computer_interaction",
+    "title": "Human-Computer Interaction",
+    "careerWorldId": "cw_software_ai_digital_systems",
+    "primaryPathways": [
+      "Frontend & Web Development",
+      "Software Engineering"
+    ],
+    "adjacentPathways": [
+      "UX/UI Design",
+      "UX Research & Behavioural Insight"
+    ],
+    "pathways": [
+      "Frontend & Web Development",
+      "Software Engineering",
+      "UX/UI Design",
+      "UX Research & Behavioural Insight"
+    ]
+  },
+  {
+    "id": "sub_mechanical_engineering",
+    "title": "Mechanical Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Mechanical Design & Development Engineering",
+      "Manufacturing & Production Engineering",
+      "Robotics & Automation Engineering"
+    ],
+    "adjacentPathways": [
+      "Product & Industrial Design",
+      "Systems Engineering",
+      "Aerospace & Defence Engineering",
+      "Chemical & Process Engineering"
+    ],
+    "pathways": [
+      "Mechanical Design & Development Engineering",
+      "Manufacturing & Production Engineering",
+      "Robotics & Automation Engineering",
+      "Product & Industrial Design",
+      "Systems Engineering",
+      "Aerospace & Defence Engineering",
+      "Chemical & Process Engineering"
+    ]
+  },
+  {
+    "id": "sub_civil_engineering",
+    "title": "Civil Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Civil & Structural Engineering",
+      "Infrastructure, Maintenance & Asset Engineering",
+      "Systems Engineering"
+    ],
+    "adjacentPathways": [
+      "Town Planning & Urban Development",
+      "Environmental Policy & Impact Assessment"
+    ],
+    "pathways": [
+      "Civil & Structural Engineering",
+      "Infrastructure, Maintenance & Asset Engineering",
+      "Systems Engineering",
+      "Town Planning & Urban Development",
+      "Environmental Policy & Impact Assessment"
+    ]
+  },
+  {
+    "id": "sub_electrical_and_electronic_engineering",
+    "title": "Electrical and Electronic Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Electrical & Electronic Engineering",
+      "Robotics & Automation Engineering",
+      "Systems Engineering"
+    ],
+    "adjacentPathways": [
+      "AI & Machine Learning Engineering",
+      "Data Engineering",
+      "Aerospace & Defence Engineering"
+    ],
+    "pathways": [
+      "Electrical & Electronic Engineering",
+      "Robotics & Automation Engineering",
+      "Systems Engineering",
+      "AI & Machine Learning Engineering",
+      "Data Engineering",
+      "Aerospace & Defence Engineering"
+    ]
+  },
+  {
+    "id": "sub_chemical_engineering",
+    "title": "Chemical Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Process & Industrial Engineering",
+      "Manufacturing & Production Engineering",
+      "Chemical & Process Engineering"
+    ],
+    "adjacentPathways": [
+      "Materials & Chemical Analysis",
+      "Environmental Science & Monitoring"
+    ],
+    "pathways": [
+      "Process & Industrial Engineering",
+      "Manufacturing & Production Engineering",
+      "Chemical & Process Engineering",
+      "Materials & Chemical Analysis",
+      "Environmental Science & Monitoring"
+    ]
+  },
+  {
+    "id": "sub_aeronautical_and_aerospace_engineering",
+    "title": "Aeronautical and Aerospace Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Mechanical Design & Development Engineering",
+      "Systems Engineering",
+      "Aerospace & Defence Engineering"
+    ],
+    "adjacentPathways": [
+      "Robotics & Automation Engineering",
+      "Infrastructure, Maintenance & Asset Engineering"
+    ],
+    "pathways": [
+      "Mechanical Design & Development Engineering",
+      "Systems Engineering",
+      "Aerospace & Defence Engineering",
+      "Robotics & Automation Engineering",
+      "Infrastructure, Maintenance & Asset Engineering"
+    ]
+  },
+  {
+    "id": "sub_manufacturing_engineering",
+    "title": "Manufacturing Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Manufacturing & Production Engineering",
+      "Process & Industrial Engineering",
+      "Operations & Supply Chain"
+    ],
+    "adjacentPathways": [
+      "Mechanical Design & Development Engineering",
+      "Healthcare Operations & Service Improvement",
+      "Chemical & Process Engineering"
+    ],
+    "pathways": [
+      "Manufacturing & Production Engineering",
+      "Process & Industrial Engineering",
+      "Operations & Supply Chain",
+      "Mechanical Design & Development Engineering",
+      "Healthcare Operations & Service Improvement",
+      "Chemical & Process Engineering"
+    ]
+  },
+  {
+    "id": "sub_robotics_and_mechatronic_engineering",
+    "title": "Robotics and Mechatronic Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Robotics & Automation Engineering",
+      "Mechanical Design & Development Engineering",
+      "Electrical & Electronic Engineering"
+    ],
+    "adjacentPathways": [
+      "AI & Machine Learning Engineering",
+      "Manufacturing & Production Engineering"
+    ],
+    "pathways": [
+      "Robotics & Automation Engineering",
+      "Mechanical Design & Development Engineering",
+      "Electrical & Electronic Engineering",
+      "AI & Machine Learning Engineering",
+      "Manufacturing & Production Engineering"
+    ]
+  },
+  {
+    "id": "sub_biomedical_engineering",
+    "title": "Biomedical Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Systems Engineering",
+      "Mechanical Design & Development Engineering",
+      "Electrical & Electronic Engineering"
+    ],
+    "adjacentPathways": [
+      "Biomedical & Clinical Research",
+      "Clinical Science & Laboratory Diagnostics"
+    ],
+    "pathways": [
+      "Systems Engineering",
+      "Mechanical Design & Development Engineering",
+      "Electrical & Electronic Engineering",
+      "Biomedical & Clinical Research",
+      "Clinical Science & Laboratory Diagnostics"
+    ]
+  },
+  {
+    "id": "sub_systems_engineering",
+    "title": "Systems Engineering",
+    "careerWorldId": "cw_engineering_manufacturing_infrastructure",
+    "primaryPathways": [
+      "Systems Engineering",
+      "Aerospace & Defence Engineering",
+      "Infrastructure, Maintenance & Asset Engineering"
+    ],
+    "adjacentPathways": [
+      "Mechanical Design & Development Engineering",
+      "Process & Industrial Engineering"
+    ],
+    "pathways": [
+      "Systems Engineering",
+      "Aerospace & Defence Engineering",
+      "Infrastructure, Maintenance & Asset Engineering",
+      "Mechanical Design & Development Engineering",
+      "Process & Industrial Engineering"
+    ]
+  },
+  {
+    "id": "sub_architecture",
+    "title": "Architecture",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Architecture",
+      "Architectural Technology & BIM"
+    ],
+    "adjacentPathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance"
+    ],
+    "pathways": [
+      "Architecture",
+      "Architectural Technology & BIM",
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance"
+    ]
+  },
+  {
+    "id": "sub_architecture_and_urban_planning",
+    "title": "Architecture and Urban Planning",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance"
+    ],
+    "adjacentPathways": [
+      "Environmental Policy & Impact Assessment",
+      "Policy & Public Sector Analysis"
+    ],
+    "pathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Environmental Policy & Impact Assessment",
+      "Policy & Public Sector Analysis"
+    ]
+  },
+  {
+    "id": "sub_architectural_technology",
+    "title": "Architectural Technology",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Architectural Technology & BIM",
+      "Sustainability & Building Performance"
+    ],
+    "adjacentPathways": [
+      "Civil & Structural Engineering",
+      "Mechanical Design & Development Engineering"
+    ],
+    "pathways": [
+      "Architectural Technology & BIM",
+      "Sustainability & Building Performance",
+      "Civil & Structural Engineering",
+      "Mechanical Design & Development Engineering"
+    ]
+  },
+  {
+    "id": "sub_construction_management",
+    "title": "Construction Management",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Construction Project Delivery",
+      "Surveying & Cost Consultancy"
+    ],
+    "adjacentPathways": [
+      "Project, PMO & Transformation"
+    ],
+    "pathways": [
+      "Construction Project Delivery",
+      "Surveying & Cost Consultancy",
+      "Project, PMO & Transformation"
+    ]
+  },
+  {
+    "id": "sub_interior_architecture_and_design",
+    "title": "Interior Architecture and Design",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Architecture",
+      "Architectural Technology & BIM"
+    ],
+    "adjacentPathways": [
+      "Product & Industrial Design",
+      "Graphic Design & Visual Communication"
+    ],
+    "pathways": [
+      "Architecture",
+      "Architectural Technology & BIM",
+      "Product & Industrial Design",
+      "Graphic Design & Visual Communication"
+    ]
+  },
+  {
+    "id": "sub_landscape_architecture",
+    "title": "Landscape Architecture",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance"
+    ],
+    "adjacentPathways": [
+      "Conservation & Land Management",
+      "Environmental Policy & Impact Assessment"
+    ],
+    "pathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Conservation & Land Management",
+      "Environmental Policy & Impact Assessment"
+    ]
+  },
+  {
+    "id": "sub_urban_planning_and_development",
+    "title": "Urban Planning and Development",
+    "careerWorldId": "cw_architecture_built_environment_spatial_design",
+    "primaryPathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Surveying & Cost Consultancy"
+    ],
+    "adjacentPathways": [
+      "Environmental Policy & Impact Assessment",
+      "Policy & Public Sector Analysis"
+    ],
+    "pathways": [
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Surveying & Cost Consultancy",
+      "Environmental Policy & Impact Assessment",
+      "Policy & Public Sector Analysis"
+    ]
+  },
+  {
+    "id": "sub_biomedical_science",
+    "title": "Biomedical Science",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "Biomedical & Clinical Research",
+      "Laboratory Science",
+      "Clinical Science & Laboratory Diagnostics"
+    ],
+    "adjacentPathways": [
+      "Scientific Data & Bioinformatics",
+      "Clinical Trials & Translational Research",
+      "Pharmaceutical Industry & Drug Development",
+      "Higher Education & Academic Research",
+      "Forensic Science",
+      "Diagnostics, Imaging & Clinical Support"
+    ],
+    "pathways": [
+      "Biomedical & Clinical Research",
+      "Laboratory Science",
+      "Clinical Science & Laboratory Diagnostics",
+      "Scientific Data & Bioinformatics",
+      "Clinical Trials & Translational Research",
+      "Pharmaceutical Industry & Drug Development",
+      "Higher Education & Academic Research",
+      "Forensic Science",
+      "Diagnostics, Imaging & Clinical Support"
+    ]
+  },
+  {
+    "id": "sub_biochemistry",
+    "title": "Biochemistry",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "Laboratory Science",
+      "R&D Science",
+      "Biomedical & Clinical Research"
+    ],
+    "adjacentPathways": [
+      "Scientific Data & Bioinformatics",
+      "Clinical Pharmacy",
+      "Forensic Science"
+    ],
+    "pathways": [
+      "Laboratory Science",
+      "R&D Science",
+      "Biomedical & Clinical Research",
+      "Scientific Data & Bioinformatics",
+      "Clinical Pharmacy",
+      "Forensic Science"
+    ]
+  },
+  {
+    "id": "sub_chemistry",
+    "title": "Chemistry",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "Materials & Chemical Analysis",
+      "Laboratory Science",
+      "R&D Science",
+      "Forensic Science"
+    ],
+    "adjacentPathways": [
+      "Process & Industrial Engineering",
+      "Environmental Science & Monitoring",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Chemical & Process Engineering"
+    ],
+    "pathways": [
+      "Materials & Chemical Analysis",
+      "Laboratory Science",
+      "R&D Science",
+      "Forensic Science",
+      "Process & Industrial Engineering",
+      "Environmental Science & Monitoring",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Chemical & Process Engineering"
+    ]
+  },
+  {
+    "id": "sub_biology",
+    "title": "Biology",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "R&D Science",
+      "Biomedical & Clinical Research",
+      "Clinical Trials & Translational Research",
+      "Forensic Science"
+    ],
+    "adjacentPathways": [
+      "Environmental Science & Monitoring",
+      "Public Health & Health Improvement",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Conservation & Land Management"
+    ],
+    "pathways": [
+      "R&D Science",
+      "Biomedical & Clinical Research",
+      "Clinical Trials & Translational Research",
+      "Forensic Science",
+      "Environmental Science & Monitoring",
+      "Public Health & Health Improvement",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Conservation & Land Management"
+    ]
+  },
+  {
+    "id": "sub_physics",
+    "title": "Physics",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "R&D Science",
+      "Scientific Data & Bioinformatics"
+    ],
+    "adjacentPathways": [
+      "Data Science & Advanced Modelling",
+      "Systems Engineering",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Aerospace & Defence Engineering"
+    ],
+    "pathways": [
+      "R&D Science",
+      "Scientific Data & Bioinformatics",
+      "Data Science & Advanced Modelling",
+      "Systems Engineering",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Aerospace & Defence Engineering"
+    ]
+  },
+  {
+    "id": "sub_neuroscience",
+    "title": "Neuroscience",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "Biomedical & Clinical Research",
+      "R&D Science",
+      "Scientific Data & Bioinformatics"
+    ],
+    "adjacentPathways": [
+      "Clinical Psychology & Mental Health Support",
+      "Clinical Trials & Translational Research"
+    ],
+    "pathways": [
+      "Biomedical & Clinical Research",
+      "R&D Science",
+      "Scientific Data & Bioinformatics",
+      "Clinical Psychology & Mental Health Support",
+      "Clinical Trials & Translational Research"
+    ]
+  },
+  {
+    "id": "sub_biotechnology",
+    "title": "Biotechnology",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "R&D Science",
+      "Biomedical & Clinical Research",
+      "Materials & Chemical Analysis"
+    ],
+    "adjacentPathways": [
+      "Pharmaceutical Industry & Drug Development",
+      "Clinical Trials & Translational Research"
+    ],
+    "pathways": [
+      "R&D Science",
+      "Biomedical & Clinical Research",
+      "Materials & Chemical Analysis",
+      "Pharmaceutical Industry & Drug Development",
+      "Clinical Trials & Translational Research"
+    ]
+  },
+  {
+    "id": "sub_natural_sciences",
+    "title": "Natural Sciences",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "R&D Science",
+      "Laboratory Science",
+      "Scientific Data & Bioinformatics"
+    ],
+    "adjacentPathways": [
+      "Materials & Chemical Analysis",
+      "Environmental Science & Monitoring"
+    ],
+    "pathways": [
+      "R&D Science",
+      "Laboratory Science",
+      "Scientific Data & Bioinformatics",
+      "Materials & Chemical Analysis",
+      "Environmental Science & Monitoring"
+    ]
+  },
+  {
+    "id": "sub_pharmacology",
+    "title": "Pharmacology",
+    "careerWorldId": "cw_science_research_laboratory_innovation",
+    "primaryPathways": [
+      "Biomedical & Clinical Research",
+      "R&D Science",
+      "Laboratory Science",
+      "Clinical Trials & Translational Research"
+    ],
+    "adjacentPathways": [
+      "Clinical Pharmacy",
+      "Pharmaceutical Industry & Drug Development"
+    ],
+    "pathways": [
+      "Biomedical & Clinical Research",
+      "R&D Science",
+      "Laboratory Science",
+      "Clinical Trials & Translational Research",
+      "Clinical Pharmacy",
+      "Pharmaceutical Industry & Drug Development"
+    ]
+  },
+  {
+    "id": "sub_medicine",
+    "title": "Medicine",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Clinical Medicine / Doctor",
+      "Surgery & Procedural Medicine",
+      "Acute, Emergency & Critical Care",
+      "Mental Health & Behavioural Medicine",
+      "Diagnostic & Investigative Medicine",
+      "Diagnostics, Imaging & Clinical Support"
+    ],
+    "adjacentPathways": [
+      "Public Health Medicine, Epidemiology & Health Policy",
+      "Academic Medicine & Clinical Research",
+      "Healthcare Leadership & Service Improvement",
+      "Digital Health, Healthtech & Medical Innovation"
+    ],
+    "pathways": [
+      "Clinical Medicine / Doctor",
+      "Surgery & Procedural Medicine",
+      "Acute, Emergency & Critical Care",
+      "Mental Health & Behavioural Medicine",
+      "Diagnostic & Investigative Medicine",
+      "Diagnostics, Imaging & Clinical Support",
+      "Public Health Medicine, Epidemiology & Health Policy",
+      "Academic Medicine & Clinical Research",
+      "Healthcare Leadership & Service Improvement",
+      "Digital Health, Healthtech & Medical Innovation"
+    ]
+  },
+  {
+    "id": "sub_dentistry",
+    "title": "Dentistry",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Dentistry / Dentist",
+      "Specialist Dentistry"
+    ],
+    "adjacentPathways": [
+      "Dental Research & Academic Dentistry",
+      "Oral Health Policy & Dental Public Health"
+    ],
+    "pathways": [
+      "Dentistry / Dentist",
+      "Specialist Dentistry",
+      "Dental Research & Academic Dentistry",
+      "Oral Health Policy & Dental Public Health"
+    ]
+  },
+  {
+    "id": "sub_pharmacy",
+    "title": "Pharmacy",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Clinical Pharmacy",
+      "Community Pharmacy"
+    ],
+    "adjacentPathways": [
+      "Pharmaceutical Industry & Drug Development",
+      "Regulatory Affairs & Medicines Safety",
+      "Medicines Policy & Public Health Pharmacy",
+      "Healthcare Operations & Service Improvement"
+    ],
+    "pathways": [
+      "Clinical Pharmacy",
+      "Community Pharmacy",
+      "Pharmaceutical Industry & Drug Development",
+      "Regulatory Affairs & Medicines Safety",
+      "Medicines Policy & Public Health Pharmacy",
+      "Healthcare Operations & Service Improvement"
+    ]
+  },
+  {
+    "id": "sub_nursing",
+    "title": "Nursing",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Nursing"
+    ],
+    "adjacentPathways": [
+      "Public Health Nursing & Health Visiting",
+      "Clinical Research Nursing",
+      "Nurse Education & Leadership",
+      "Healthcare Operations & Service Improvement",
+      "Diagnostics, Imaging & Clinical Support"
+    ],
+    "pathways": [
+      "Nursing",
+      "Public Health Nursing & Health Visiting",
+      "Clinical Research Nursing",
+      "Nurse Education & Leadership",
+      "Healthcare Operations & Service Improvement",
+      "Diagnostics, Imaging & Clinical Support"
+    ]
+  },
+  {
+    "id": "sub_midwifery",
+    "title": "Midwifery",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Midwifery"
+    ],
+    "adjacentPathways": [],
+    "pathways": [
+      "Midwifery"
+    ]
+  },
+  {
+    "id": "sub_physiotherapy",
+    "title": "Physiotherapy",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Rehabilitation & Functional Independence"
+    ],
+    "adjacentPathways": [
+      "Healthcare Operations & Service Improvement",
+      "Biomedical & Clinical Research",
+      "Diagnostics, Imaging & Clinical Support"
+    ],
+    "pathways": [
+      "Rehabilitation & Functional Independence",
+      "Healthcare Operations & Service Improvement",
+      "Biomedical & Clinical Research",
+      "Diagnostics, Imaging & Clinical Support"
+    ]
+  },
+  {
+    "id": "sub_occupational_therapy",
+    "title": "Occupational Therapy",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Rehabilitation & Functional Independence"
+    ],
+    "adjacentPathways": [
+      "SEND & Inclusion Support",
+      "Healthcare Operations & Service Improvement"
+    ],
+    "pathways": [
+      "Rehabilitation & Functional Independence",
+      "SEND & Inclusion Support",
+      "Healthcare Operations & Service Improvement"
+    ]
+  },
+  {
+    "id": "sub_paramedic_science",
+    "title": "Paramedic Science",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Paramedic Practice & Emergency Care"
+    ],
+    "adjacentPathways": [
+      "Emergency Planning & Ambulance Service Leadership",
+      "Healthcare Operations & Service Improvement",
+      "Diagnostics, Imaging & Clinical Support"
+    ],
+    "pathways": [
+      "Paramedic Practice & Emergency Care",
+      "Emergency Planning & Ambulance Service Leadership",
+      "Healthcare Operations & Service Improvement",
+      "Diagnostics, Imaging & Clinical Support"
+    ]
+  },
+  {
+    "id": "sub_social_work",
+    "title": "Social Work",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Social Work & Safeguarding"
+    ],
+    "adjacentPathways": [
+      "Early Years & Family Support",
+      "Education Support, Outreach & Student Services",
+      "Policy & Public Sector Analysis"
+    ],
+    "pathways": [
+      "Social Work & Safeguarding",
+      "Early Years & Family Support",
+      "Education Support, Outreach & Student Services",
+      "Policy & Public Sector Analysis"
+    ]
+  },
+  {
+    "id": "sub_sport_and_exercise_science",
+    "title": "Sport and Exercise Science",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Rehabilitation & Functional Independence",
+      "Public Health & Health Improvement"
+    ],
+    "adjacentPathways": [
+      "Biomedical & Clinical Research",
+      "UX Research & Behavioural Insight"
+    ],
+    "pathways": [
+      "Rehabilitation & Functional Independence",
+      "Public Health & Health Improvement",
+      "Biomedical & Clinical Research",
+      "UX Research & Behavioural Insight"
+    ]
+  },
+  {
+    "id": "sub_diagnostic_radiography",
+    "title": "Diagnostic Radiography",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Diagnostic & Investigative Medicine",
+      "Clinical Science & Laboratory Diagnostics"
+    ],
+    "adjacentPathways": [
+      "Nursing",
+      "Healthcare Operations & Service Improvement"
+    ],
+    "pathways": [
+      "Diagnostic & Investigative Medicine",
+      "Clinical Science & Laboratory Diagnostics",
+      "Nursing",
+      "Healthcare Operations & Service Improvement"
+    ]
+  },
+  {
+    "id": "sub_optometry",
+    "title": "Optometry",
+    "careerWorldId": "cw_health_care_clinical_practice",
+    "primaryPathways": [
+      "Diagnostic & Investigative Medicine",
+      "Clinical Science & Laboratory Diagnostics"
+    ],
+    "adjacentPathways": [
+      "Healthcare Leadership & Service Improvement",
+      "Rehabilitation & Functional Independence"
+    ],
+    "pathways": [
+      "Diagnostic & Investigative Medicine",
+      "Clinical Science & Laboratory Diagnostics",
+      "Healthcare Leadership & Service Improvement",
+      "Rehabilitation & Functional Independence"
+    ]
+  },
+  {
+    "id": "sub_psychology",
+    "title": "Psychology",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "Clinical Psychology & Mental Health Support",
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "People Analytics & Workplace Behaviour",
+      "UX Research & Behavioural Insight",
+      "Occupational & Organisational Psychology",
+      "Learning, Development & Behaviour Support"
+    ],
+    "adjacentPathways": [
+      "Business Intelligence & Reporting",
+      "Justice, Rehabilitation & Behaviour Change",
+      "SEND & Inclusion Support",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "Clinical Psychology & Mental Health Support"
+    ],
+    "pathways": [
+      "Clinical Psychology & Mental Health Support",
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "People Analytics & Workplace Behaviour",
+      "UX Research & Behavioural Insight",
+      "Occupational & Organisational Psychology",
+      "Learning, Development & Behaviour Support",
+      "Business Intelligence & Reporting",
+      "Justice, Rehabilitation & Behaviour Change",
+      "SEND & Inclusion Support",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "Clinical Psychology & Mental Health Support"
+    ]
+  },
+  {
+    "id": "sub_counselling_and_psychotherapy",
+    "title": "Counselling and Psychotherapy",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "Clinical Psychology & Mental Health Support",
+      "Learning, Development & Behaviour Support"
+    ],
+    "adjacentPathways": [
+      "Learning, Development & Behaviour Support",
+      "Occupational & Organisational Psychology",
+      "Social Work & Safeguarding"
+    ],
+    "pathways": [
+      "Counselling, Psychotherapy & Therapeutic Practice",
+      "Clinical Psychology & Mental Health Support",
+      "Learning, Development & Behaviour Support",
+      "Learning, Development & Behaviour Support",
+      "Occupational & Organisational Psychology",
+      "Social Work & Safeguarding"
+    ]
+  },
+  {
+    "id": "sub_cognitive_science",
+    "title": "Cognitive Science",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "UX Research & Behavioural Insight",
+      "People Analytics & Workplace Behaviour",
+      "Learning, Development & Behaviour Support"
+    ],
+    "adjacentPathways": [
+      "AI & Machine Learning Engineering",
+      "Software Engineering"
+    ],
+    "pathways": [
+      "UX Research & Behavioural Insight",
+      "People Analytics & Workplace Behaviour",
+      "Learning, Development & Behaviour Support",
+      "AI & Machine Learning Engineering",
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "sub_forensic_psychology",
+    "title": "Forensic Psychology",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "Justice, Rehabilitation & Behaviour Change",
+      "Clinical Psychology & Mental Health Support"
+    ],
+    "adjacentPathways": [
+      "Legal Support & Casework",
+      "Social Work & Safeguarding"
+    ],
+    "pathways": [
+      "Justice, Rehabilitation & Behaviour Change",
+      "Clinical Psychology & Mental Health Support",
+      "Legal Support & Casework",
+      "Social Work & Safeguarding"
+    ]
+  },
+  {
+    "id": "sub_behavioural_science",
+    "title": "Behavioural Science",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "People Analytics & Workplace Behaviour",
+      "UX Research & Behavioural Insight",
+      "Learning, Development & Behaviour Support"
+    ],
+    "adjacentPathways": [
+      "Market Research & Audience Insight",
+      "HR, People & Organisations"
+    ],
+    "pathways": [
+      "People Analytics & Workplace Behaviour",
+      "UX Research & Behavioural Insight",
+      "Learning, Development & Behaviour Support",
+      "Market Research & Audience Insight",
+      "HR, People & Organisations"
+    ]
+  },
+  {
+    "id": "sub_psychology_with_neuroscience",
+    "title": "Psychology with Neuroscience",
+    "careerWorldId": "cw_psychology_behaviour_human_insight",
+    "primaryPathways": [
+      "Clinical Psychology & Mental Health Support",
+      "Learning, Development & Behaviour Support"
+    ],
+    "adjacentPathways": [
+      "Biomedical & Clinical Research",
+      "R&D Science"
+    ],
+    "pathways": [
+      "Clinical Psychology & Mental Health Support",
+      "Learning, Development & Behaviour Support",
+      "Biomedical & Clinical Research",
+      "R&D Science"
+    ]
+  },
+  {
+    "id": "sub_education_studies",
+    "title": "Education Studies",
+    "careerWorldId": "cw_education_coaching_people_development",
+    "primaryPathways": [
+      "Education Support, Outreach & Student Services",
+      "Learning Design & Educational Technology",
+      "Training, Learning & Development",
+      "Early Years & Family Support",
+      "Higher Education & Academic Research",
+      "Secondary Teaching"
+    ],
+    "adjacentPathways": [
+      "Primary Teaching & Classroom Practice",
+      "SEND & Inclusion Support",
+      "Learning, Development & Behaviour Support"
+    ],
+    "pathways": [
+      "Education Support, Outreach & Student Services",
+      "Learning Design & Educational Technology",
+      "Training, Learning & Development",
+      "Early Years & Family Support",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Primary Teaching & Classroom Practice",
+      "SEND & Inclusion Support",
+      "Learning, Development & Behaviour Support"
+    ]
+  },
+  {
+    "id": "sub_primary_education_qts",
+    "title": "Primary Education (QTS)",
+    "careerWorldId": "cw_education_coaching_people_development",
+    "primaryPathways": [
+      "Primary Teaching & Classroom Practice",
+      "SEND & Inclusion Support"
+    ],
+    "adjacentPathways": [
+      "Education Support, Outreach & Student Services",
+      "Early Years & Family Support",
+      "Learning Design & Educational Technology",
+      "Secondary Teaching",
+      "Learning, Development & Behaviour Support"
+    ],
+    "pathways": [
+      "Primary Teaching & Classroom Practice",
+      "SEND & Inclusion Support",
+      "Education Support, Outreach & Student Services",
+      "Early Years & Family Support",
+      "Learning Design & Educational Technology",
+      "Secondary Teaching",
+      "Learning, Development & Behaviour Support"
+    ]
+  },
+  {
+    "id": "sub_early_years_education_and_care",
+    "title": "Early Years Education and Care",
+    "careerWorldId": "cw_education_coaching_people_development",
+    "primaryPathways": [
+      "Early Years & Family Support"
+    ],
+    "adjacentPathways": [
+      "Education Support, Outreach & Student Services",
+      "Learning, Development & Behaviour Support"
+    ],
+    "pathways": [
+      "Early Years & Family Support",
+      "Education Support, Outreach & Student Services",
+      "Learning, Development & Behaviour Support"
+    ]
+  },
+  {
+    "id": "sub_secondary_education_qts",
+    "title": "Secondary Education (QTS)",
+    "careerWorldId": "cw_education_coaching_people_development",
+    "primaryPathways": [
+      "Secondary Teaching",
+      "Education Support, Outreach & Student Services",
+      "SEND & Inclusion Support"
+    ],
+    "adjacentPathways": [
+      "Learning Design & Educational Technology",
+      "Higher Education & Academic Research"
+    ],
+    "pathways": [
+      "Secondary Teaching",
+      "Education Support, Outreach & Student Services",
+      "SEND & Inclusion Support",
+      "Learning Design & Educational Technology",
+      "Higher Education & Academic Research"
+    ]
+  },
+  {
+    "id": "sub_sports_coaching_and_development",
+    "title": "Sports Coaching and Development",
+    "careerWorldId": "cw_education_coaching_people_development",
+    "primaryPathways": [
+      "Training, Learning & Development",
+      "Education Support, Outreach & Student Services"
+    ],
+    "adjacentPathways": [
+      "Rehabilitation & Functional Independence",
+      "Public Health & Health Improvement"
+    ],
+    "pathways": [
+      "Training, Learning & Development",
+      "Education Support, Outreach & Student Services",
+      "Rehabilitation & Functional Independence",
+      "Public Health & Health Improvement"
+    ]
+  },
+  {
+    "id": "sub_law",
+    "title": "Law",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Legal Support & Casework",
+      "Governance, Risk & Compliance",
+      "Barrister & Advocacy",
+      "Solicitor Practice"
+    ],
+    "adjacentPathways": [
+      "Policy & Public Sector Analysis",
+      "Investigations & Financial Crime",
+      "Public Affairs & Advocacy",
+      "Higher Education & Academic Research"
+    ],
+    "pathways": [
+      "Legal Support & Casework",
+      "Governance, Risk & Compliance",
+      "Barrister & Advocacy",
+      "Solicitor Practice",
+      "Policy & Public Sector Analysis",
+      "Investigations & Financial Crime",
+      "Public Affairs & Advocacy",
+      "Higher Education & Academic Research"
+    ]
+  },
+  {
+    "id": "sub_politics",
+    "title": "Politics",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy"
+    ],
+    "adjacentPathways": [
+      "International Relations, Policy & Geopolitical Analysis",
+      "Intelligence, Public Service & Security Analysis"
+    ],
+    "pathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Intelligence, Public Service & Security Analysis"
+    ]
+  },
+  {
+    "id": "sub_social_and_public_policy",
+    "title": "Social and Public Policy",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Social Research & Cultural Analysis"
+    ],
+    "adjacentPathways": [
+      "Governance, Risk & Compliance",
+      "International Relations, Policy & Geopolitical Analysis"
+    ],
+    "pathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Social Research & Cultural Analysis",
+      "Governance, Risk & Compliance",
+      "International Relations, Policy & Geopolitical Analysis"
+    ]
+  },
+  {
+    "id": "sub_criminology",
+    "title": "Criminology",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Legal Support & Casework",
+      "Investigations & Financial Crime",
+      "Governance, Risk & Compliance"
+    ],
+    "adjacentPathways": [
+      "Social Work & Safeguarding",
+      "Justice, Rehabilitation & Behaviour Change"
+    ],
+    "pathways": [
+      "Legal Support & Casework",
+      "Investigations & Financial Crime",
+      "Governance, Risk & Compliance",
+      "Social Work & Safeguarding",
+      "Justice, Rehabilitation & Behaviour Change"
+    ]
+  },
+  {
+    "id": "sub_philosophy_politics_and_economics_ppe",
+    "title": "Philosophy, Politics and Economics (PPE)",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Governance, Risk & Compliance"
+    ],
+    "adjacentPathways": [
+      "International Relations, Policy & Geopolitical Analysis",
+      "Investment Banking & Corporate Finance"
+    ],
+    "pathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Governance, Risk & Compliance",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Investment Banking & Corporate Finance"
+    ]
+  },
+  {
+    "id": "sub_law_with_criminology",
+    "title": "Law with Criminology",
+    "careerWorldId": "cw_law_governance_public_impact",
+    "primaryPathways": [
+      "Solicitor Practice",
+      "Legal Support & Casework",
+      "Investigations & Financial Crime"
+    ],
+    "adjacentPathways": [
+      "Governance, Risk & Compliance",
+      "Justice, Rehabilitation & Behaviour Change"
+    ],
+    "pathways": [
+      "Solicitor Practice",
+      "Legal Support & Casework",
+      "Investigations & Financial Crime",
+      "Governance, Risk & Compliance",
+      "Justice, Rehabilitation & Behaviour Change"
+    ]
+  },
+  {
+    "id": "sub_business_management",
+    "title": "Business Management",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Project, PMO & Transformation",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "HR, People & Organisations",
+      "Venture Building & Founder",
+      "Business Development & Commercial Partnerships"
+    ],
+    "adjacentPathways": [
+      "Brand & Marketing Strategy",
+      "Commercial & Corporate Banking",
+      "Investment Banking & Corporate Finance",
+      "Asset & Wealth Management",
+      "Risk, Compliance & Controls",
+      "Treasury & Liquidity",
+      "Accounting, Audit & Assurance",
+      "Occupational & Organisational Psychology"
+    ],
+    "pathways": [
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Project, PMO & Transformation",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "HR, People & Organisations",
+      "Venture Building & Founder",
+      "Business Development & Commercial Partnerships",
+      "Brand & Marketing Strategy",
+      "Commercial & Corporate Banking",
+      "Investment Banking & Corporate Finance",
+      "Asset & Wealth Management",
+      "Risk, Compliance & Controls",
+      "Treasury & Liquidity",
+      "Accounting, Audit & Assurance",
+      "Occupational & Organisational Psychology"
+    ]
+  },
+  {
+    "id": "sub_business_analytics",
+    "title": "Business Analytics",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Operations & Supply Chain",
+      "Business Analysis",
+      "Consulting & Strategic Improvement"
+    ],
+    "adjacentPathways": [
+      "Generalist Business Programmes",
+      "Project, PMO & Transformation",
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance"
+    ],
+    "pathways": [
+      "Operations & Supply Chain",
+      "Business Analysis",
+      "Consulting & Strategic Improvement",
+      "Generalist Business Programmes",
+      "Project, PMO & Transformation",
+      "Core Data Analysis & Business Insight",
+      "Business Intelligence & Reporting",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance"
+    ]
+  },
+  {
+    "id": "sub_international_business",
+    "title": "International Business",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Generalist Business Programmes",
+      "Commercial Partnerships & Account Growth",
+      "Business Development & Commercial Partnerships"
+    ],
+    "adjacentPathways": [
+      "International Relations, Policy & Geopolitical Analysis",
+      "Languages, Translation & Localisation"
+    ],
+    "pathways": [
+      "Generalist Business Programmes",
+      "Commercial Partnerships & Account Growth",
+      "Business Development & Commercial Partnerships",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Languages, Translation & Localisation"
+    ]
+  },
+  {
+    "id": "sub_human_resource_management",
+    "title": "Human Resource Management",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "HR, People & Organisations",
+      "Consulting & Strategic Improvement"
+    ],
+    "adjacentPathways": [
+      "Training, Learning & Development",
+      "Occupational & Organisational Psychology"
+    ],
+    "pathways": [
+      "HR, People & Organisations",
+      "Consulting & Strategic Improvement",
+      "Training, Learning & Development",
+      "Occupational & Organisational Psychology"
+    ]
+  },
+  {
+    "id": "sub_operations_and_supply_chain_management",
+    "title": "Operations and Supply Chain Management",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Operations & Supply Chain",
+      "Project, PMO & Transformation",
+      "Business Analysis"
+    ],
+    "adjacentPathways": [
+      "Process & Industrial Engineering",
+      "Manufacturing & Production Engineering"
+    ],
+    "pathways": [
+      "Operations & Supply Chain",
+      "Project, PMO & Transformation",
+      "Business Analysis",
+      "Process & Industrial Engineering",
+      "Manufacturing & Production Engineering"
+    ]
+  },
+  {
+    "id": "sub_accounting",
+    "title": "Accounting",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Accounting, Audit & Assurance"
+    ],
+    "adjacentPathways": [
+      "Banking Operations & Middle Office",
+      "Financial Analysis & FP&A",
+      "Insurance & Actuarial",
+      "Venture Building & Founder"
+    ],
+    "pathways": [
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Accounting, Audit & Assurance",
+      "Banking Operations & Middle Office",
+      "Financial Analysis & FP&A",
+      "Insurance & Actuarial"
+    ]
+  },
+  {
+    "id": "sub_finance",
+    "title": "Finance",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Investment Banking & Corporate Finance",
+      "Equity Research & Investment Research",
+      "Asset & Wealth Management",
+      "Commercial & Corporate Banking",
+      "Markets & Trading",
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Sustainable Finance & Impact Investing",
+      "Banking Operations & Middle Office",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Private Equity & Venture Capital"
+    ],
+    "adjacentPathways": [
+      "Accounting, Audit & Assurance",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Project, PMO & Transformation",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "HR, People & Organisations",
+      "Venture Building & Founder",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Capital, Accelerators & Innovation Support",
+      "Insurance & Actuarial"
+    ],
+    "pathways": [
+      "Investment Banking & Corporate Finance",
+      "Equity Research & Investment Research",
+      "Asset & Wealth Management",
+      "Commercial & Corporate Banking",
+      "Markets & Trading",
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Sustainable Finance & Impact Investing",
+      "Banking Operations & Middle Office",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Private Equity & Venture Capital",
+      "Accounting, Audit & Assurance",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Project, PMO & Transformation",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "HR, People & Organisations",
+      "Venture Building & Founder",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Capital, Accelerators & Innovation Support",
+      "Insurance & Actuarial"
+    ]
+  },
+  {
+    "id": "sub_accounting_and_finance",
+    "title": "Accounting and Finance",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Commercial & Corporate Banking",
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Accounting, Audit & Assurance",
+      "Investment Banking & Corporate Finance",
+      "Asset & Wealth Management",
+      "Financial Analysis & FP&A"
+    ],
+    "adjacentPathways": [
+      "Fintech & Digital Finance",
+      "Private Equity & Venture Capital",
+      "Venture Building & Founder"
+    ],
+    "pathways": [
+      "Commercial & Corporate Banking",
+      "Treasury & Liquidity",
+      "Risk, Compliance & Controls",
+      "Accounting, Audit & Assurance",
+      "Investment Banking & Corporate Finance",
+      "Asset & Wealth Management",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Private Equity & Venture Capital"
+    ]
+  },
+  {
+    "id": "sub_economics",
+    "title": "Economics",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Policy & Public Sector Analysis",
+      "Investment Banking & Corporate Finance",
+      "Equity Research & Investment Research",
+      "Consulting & Strategic Improvement",
+      "Business Analysis"
+    ],
+    "adjacentPathways": [
+      "Core Data Analysis & Business Insight",
+      "Financial Analysis & FP&A",
+      "Private Equity & Venture Capital"
+    ],
+    "pathways": [
+      "Policy & Public Sector Analysis",
+      "Investment Banking & Corporate Finance",
+      "Equity Research & Investment Research",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Core Data Analysis & Business Insight",
+      "Financial Analysis & FP&A",
+      "Private Equity & Venture Capital"
+    ]
+  },
+  {
+    "id": "sub_finance_and_financial_technology",
+    "title": "Finance and Financial Technology",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Fintech & Digital Finance",
+      "Investment Banking & Corporate Finance",
+      "Markets & Trading"
+    ],
+    "adjacentPathways": [
+      "Software Engineering",
+      "Backend & Platform Engineering"
+    ],
+    "pathways": [
+      "Fintech & Digital Finance",
+      "Investment Banking & Corporate Finance",
+      "Markets & Trading",
+      "Software Engineering",
+      "Backend & Platform Engineering"
+    ]
+  },
+  {
+    "id": "sub_economics_with_data_science",
+    "title": "Economics with Data Science",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Financial Analysis & FP&A",
+      "Equity Research & Investment Research",
+      "Risk, Compliance & Controls"
+    ],
+    "adjacentPathways": [
+      "Data Science & Advanced Modelling",
+      "Core Data Analysis & Business Insight"
+    ],
+    "pathways": [
+      "Financial Analysis & FP&A",
+      "Equity Research & Investment Research",
+      "Risk, Compliance & Controls",
+      "Data Science & Advanced Modelling",
+      "Core Data Analysis & Business Insight"
+    ]
+  },
+  {
+    "id": "sub_investment_management",
+    "title": "Investment Management",
+    "careerWorldId": "cw_finance_economics_investment",
+    "primaryPathways": [
+      "Asset & Wealth Management",
+      "Equity Research & Investment Research",
+      "Private Equity & Venture Capital"
+    ],
+    "adjacentPathways": [
+      "Investment Banking & Corporate Finance",
+      "Markets & Trading"
+    ],
+    "pathways": [
+      "Asset & Wealth Management",
+      "Equity Research & Investment Research",
+      "Private Equity & Venture Capital",
+      "Investment Banking & Corporate Finance",
+      "Markets & Trading"
+    ]
+  },
+  {
+    "id": "sub_entrepreneurship_and_innovation",
+    "title": "Entrepreneurship and Innovation",
+    "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryPathways": [
+      "Venture Building & Founder",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Capital, Accelerators & Innovation Support"
+    ],
+    "adjacentPathways": [
+      "Business Intelligence & Reporting",
+      "Brand & Marketing Strategy",
+      "Private Equity & Venture Capital",
+      "Business Development & Commercial Partnerships"
+    ],
+    "pathways": [
+      "Venture Building & Founder",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Capital, Accelerators & Innovation Support",
+      "Business Intelligence & Reporting",
+      "Brand & Marketing Strategy",
+      "Private Equity & Venture Capital",
+      "Business Development & Commercial Partnerships"
+    ]
+  },
+  {
+    "id": "sub_business_management_with_entrepreneurship",
+    "title": "Business Management with Entrepreneurship",
+    "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryPathways": [
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Building & Founder"
+    ],
+    "adjacentPathways": [
+      "Generalist Business Programmes",
+      "Consulting & Strategic Improvement"
+    ],
+    "pathways": [
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Venture Building & Founder",
+      "Generalist Business Programmes",
+      "Consulting & Strategic Improvement"
+    ]
+  },
+  {
+    "id": "sub_social_enterprise_and_community_development",
+    "title": "Social Enterprise and Community Development",
+    "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryPathways": [
+      "Venture Building & Founder",
+      "Start-up Operations"
+    ],
+    "adjacentPathways": [
+      "International Development & NGO Programmes",
+      "Social Work & Safeguarding"
+    ],
+    "pathways": [
+      "Venture Building & Founder",
+      "Start-up Operations",
+      "International Development & NGO Programmes",
+      "Social Work & Safeguarding"
+    ]
+  },
+  {
+    "id": "sub_innovation_and_technology_management",
+    "title": "Innovation and Technology Management",
+    "careerWorldId": "cw_entrepreneurship_innovation_venture_building",
+    "primaryPathways": [
+      "Venture Capital, Accelerators & Innovation Support",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups"
+    ],
+    "adjacentPathways": [
+      "Consulting & Strategic Improvement",
+      "Project, PMO & Transformation"
+    ],
+    "pathways": [
+      "Venture Capital, Accelerators & Innovation Support",
+      "Start-up Operations",
+      "Product Growth & Business Development in Start-ups",
+      "Consulting & Strategic Improvement",
+      "Project, PMO & Transformation"
+    ]
+  },
+  {
+    "id": "sub_marketing",
+    "title": "Marketing",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Brand & Marketing Strategy",
+      "Performance Marketing & Growth",
+      "Market Research & Audience Insight",
+      "Content & Social Media"
+    ],
+    "adjacentPathways": [
+      "Business Intelligence & Reporting",
+      "Product Growth & Business Development in Start-ups",
+      "Business Development & Commercial Partnerships"
+    ],
+    "pathways": [
+      "Brand & Marketing Strategy",
+      "Performance Marketing & Growth",
+      "Market Research & Audience Insight",
+      "Content & Social Media",
+      "Business Intelligence & Reporting",
+      "Product Growth & Business Development in Start-ups",
+      "Business Development & Commercial Partnerships"
+    ]
+  },
+  {
+    "id": "sub_public_relations_and_communications",
+    "title": "Public Relations and Communications",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "PR & Communications",
+      "Content & Social Media"
+    ],
+    "adjacentPathways": [
+      "Public Affairs & Advocacy",
+      "Brand & Marketing Strategy",
+      "Journalism & Editorial"
+    ],
+    "pathways": [
+      "PR & Communications",
+      "Content & Social Media",
+      "Public Affairs & Advocacy",
+      "Brand & Marketing Strategy",
+      "Journalism & Editorial"
+    ]
+  },
+  {
+    "id": "sub_digital_media_production_and_technology",
+    "title": "Digital Media Production and Technology",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Content & Social Media",
+      "Digital Design & Multimedia",
+      "Journalism & Editorial"
+    ],
+    "adjacentPathways": [
+      "PR & Communications",
+      "Brand & Marketing Strategy",
+      "Graphic Design & Visual Communication"
+    ],
+    "pathways": [
+      "Content & Social Media",
+      "Digital Design & Multimedia",
+      "Journalism & Editorial",
+      "PR & Communications",
+      "Brand & Marketing Strategy",
+      "Graphic Design & Visual Communication"
+    ]
+  },
+  {
+    "id": "sub_digital_marketing_and_social_media",
+    "title": "Digital Marketing and Social Media",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Performance Marketing & Growth",
+      "Content & Social Media",
+      "Brand & Marketing Strategy"
+    ],
+    "adjacentPathways": [
+      "Business Development & Commercial Partnerships",
+      "Market Research & Audience Insight"
+    ],
+    "pathways": [
+      "Performance Marketing & Growth",
+      "Content & Social Media",
+      "Brand & Marketing Strategy",
+      "Business Development & Commercial Partnerships",
+      "Market Research & Audience Insight"
+    ]
+  },
+  {
+    "id": "sub_journalism",
+    "title": "Journalism",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Journalism & Editorial",
+      "Content & Social Media"
+    ],
+    "adjacentPathways": [
+      "PR & Communications",
+      "Public Affairs & Advocacy"
+    ],
+    "pathways": [
+      "Journalism & Editorial",
+      "Content & Social Media",
+      "PR & Communications",
+      "Public Affairs & Advocacy"
+    ]
+  },
+  {
+    "id": "sub_advertising_and_brand_management",
+    "title": "Advertising and Brand Management",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Brand & Marketing Strategy",
+      "PR & Communications",
+      "Performance Marketing & Growth"
+    ],
+    "adjacentPathways": [
+      "Market Research & Audience Insight",
+      "Business Development & Commercial Partnerships"
+    ],
+    "pathways": [
+      "Brand & Marketing Strategy",
+      "PR & Communications",
+      "Performance Marketing & Growth",
+      "Market Research & Audience Insight",
+      "Business Development & Commercial Partnerships"
+    ]
+  },
+  {
+    "id": "sub_media_studies",
+    "title": "Media Studies",
+    "careerWorldId": "cw_marketing_media_communication",
+    "primaryPathways": [
+      "Journalism & Editorial",
+      "Content & Social Media",
+      "Market Research & Audience Insight"
+    ],
+    "adjacentPathways": [
+      "PR & Communications",
+      "Social Research & Cultural Analysis"
+    ],
+    "pathways": [
+      "Journalism & Editorial",
+      "Content & Social Media",
+      "Market Research & Audience Insight",
+      "PR & Communications",
+      "Social Research & Cultural Analysis"
+    ]
+  },
+  {
+    "id": "sub_product_design",
+    "title": "Product Design",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Product & Industrial Design",
+      "Digital Design & Multimedia",
+      "UX/UI Design"
+    ],
+    "adjacentPathways": [
+      "Graphic Design & Visual Communication",
+      "Architectural Technology & BIM"
+    ],
+    "pathways": [
+      "Product & Industrial Design",
+      "Digital Design & Multimedia",
+      "UX/UI Design",
+      "Graphic Design & Visual Communication",
+      "Architectural Technology & BIM"
+    ]
+  },
+  {
+    "id": "sub_graphic_design",
+    "title": "Graphic Design",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Graphic Design & Visual Communication",
+      "Digital Design & Multimedia"
+    ],
+    "adjacentPathways": [
+      "Brand & Marketing Strategy",
+      "Content & Social Media",
+      "UX/UI Design"
+    ],
+    "pathways": [
+      "Graphic Design & Visual Communication",
+      "Digital Design & Multimedia",
+      "Brand & Marketing Strategy",
+      "Content & Social Media",
+      "UX/UI Design"
+    ]
+  },
+  {
+    "id": "sub_animation",
+    "title": "Animation",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Animation & Motion Design",
+      "Digital Design & Multimedia"
+    ],
+    "adjacentPathways": [
+      "Content & Social Media",
+      "Graphic Design & Visual Communication"
+    ],
+    "pathways": [
+      "Animation & Motion Design",
+      "Digital Design & Multimedia",
+      "Content & Social Media",
+      "Graphic Design & Visual Communication"
+    ]
+  },
+  {
+    "id": "sub_ux_design_and_interaction_design",
+    "title": "UX Design and Interaction Design",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "UX/UI Design",
+      "Digital Design & Multimedia"
+    ],
+    "adjacentPathways": [
+      "UX Research & Behavioural Insight",
+      "Software Engineering"
+    ],
+    "pathways": [
+      "UX/UI Design",
+      "Digital Design & Multimedia",
+      "UX Research & Behavioural Insight",
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "sub_game_design",
+    "title": "Game Design",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Digital Design & Multimedia",
+      "Animation & Motion Design"
+    ],
+    "adjacentPathways": [
+      "Software Engineering",
+      "Product & Industrial Design"
+    ],
+    "pathways": [
+      "Digital Design & Multimedia",
+      "Animation & Motion Design",
+      "Software Engineering",
+      "Product & Industrial Design"
+    ]
+  },
+  {
+    "id": "sub_fashion_design",
+    "title": "Fashion Design",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Product & Industrial Design"
+    ],
+    "adjacentPathways": [
+      "Graphic Design & Visual Communication",
+      "Brand & Marketing Strategy"
+    ],
+    "pathways": [
+      "Product & Industrial Design",
+      "Graphic Design & Visual Communication",
+      "Brand & Marketing Strategy"
+    ]
+  },
+  {
+    "id": "sub_fine_art",
+    "title": "Fine Art",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Graphic Design & Visual Communication",
+      "Product & Industrial Design"
+    ],
+    "adjacentPathways": [
+      "Animation & Motion Design",
+      "Content & Social Media"
+    ],
+    "pathways": [
+      "Graphic Design & Visual Communication",
+      "Product & Industrial Design",
+      "Animation & Motion Design",
+      "Content & Social Media"
+    ]
+  },
+  {
+    "id": "sub_film_and_television_production",
+    "title": "Film and Television Production",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Animation & Motion Design",
+      "Digital Design & Multimedia"
+    ],
+    "adjacentPathways": [
+      "Content & Social Media",
+      "Journalism & Editorial"
+    ],
+    "pathways": [
+      "Animation & Motion Design",
+      "Digital Design & Multimedia",
+      "Content & Social Media",
+      "Journalism & Editorial"
+    ]
+  },
+  {
+    "id": "sub_illustration",
+    "title": "Illustration",
+    "careerWorldId": "cw_creative_arts_design_experience",
+    "primaryPathways": [
+      "Graphic Design & Visual Communication",
+      "Digital Design & Multimedia"
+    ],
+    "adjacentPathways": [
+      "Animation & Motion Design",
+      "Product & Industrial Design"
+    ],
+    "pathways": [
+      "Graphic Design & Visual Communication",
+      "Digital Design & Multimedia",
+      "Animation & Motion Design",
+      "Product & Industrial Design"
+    ]
+  },
+  {
+    "id": "sub_geography",
+    "title": "Geography",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Environmental Science & Monitoring",
+      "Environmental Policy & Impact Assessment",
+      "Conservation & Land Management"
+    ],
+    "adjacentPathways": [
+      "International Development & NGO Programmes",
+      "Sustainability & ESG Advisory"
+    ],
+    "pathways": [
+      "Environmental Science & Monitoring",
+      "Environmental Policy & Impact Assessment",
+      "Conservation & Land Management",
+      "International Development & NGO Programmes",
+      "Sustainability & ESG Advisory"
+    ]
+  },
+  {
+    "id": "sub_environmental_science",
+    "title": "Environmental Science",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Environmental Science & Monitoring",
+      "Environmental Policy & Impact Assessment",
+      "Sustainability & ESG Advisory",
+      "Conservation & Land Management"
+    ],
+    "adjacentPathways": [
+      "Net Zero, Climate & Sustainability Strategy"
+    ],
+    "pathways": [
+      "Environmental Science & Monitoring",
+      "Environmental Policy & Impact Assessment",
+      "Sustainability & ESG Advisory",
+      "Conservation & Land Management",
+      "Net Zero, Climate & Sustainability Strategy"
+    ]
+  },
+  {
+    "id": "sub_environmental_management",
+    "title": "Environmental Management",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Sustainability & ESG Advisory",
+      "Circular Economy & Sustainable Supply Chains",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Conservation & Land Management"
+    ],
+    "adjacentPathways": [
+      "Environmental Policy & Impact Assessment",
+      "Operations & Supply Chain"
+    ],
+    "pathways": [
+      "Sustainability & ESG Advisory",
+      "Circular Economy & Sustainable Supply Chains",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Conservation & Land Management",
+      "Environmental Policy & Impact Assessment",
+      "Operations & Supply Chain"
+    ]
+  },
+  {
+    "id": "sub_ecology_and_conservation_biology",
+    "title": "Ecology and Conservation Biology",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Conservation & Land Management",
+      "Environmental Science & Monitoring"
+    ],
+    "adjacentPathways": [
+      "Environmental Policy & Impact Assessment",
+      "R&D Science"
+    ],
+    "pathways": [
+      "Conservation & Land Management",
+      "Environmental Science & Monitoring",
+      "Environmental Policy & Impact Assessment",
+      "R&D Science"
+    ]
+  },
+  {
+    "id": "sub_climate_science_and_sustainability",
+    "title": "Climate Science and Sustainability",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Net Zero, Climate & Sustainability Strategy",
+      "Environmental Policy & Impact Assessment"
+    ],
+    "adjacentPathways": [
+      "Sustainability & ESG Advisory",
+      "Circular Economy & Sustainable Supply Chains"
+    ],
+    "pathways": [
+      "Net Zero, Climate & Sustainability Strategy",
+      "Environmental Policy & Impact Assessment",
+      "Sustainability & ESG Advisory",
+      "Circular Economy & Sustainable Supply Chains"
+    ]
+  },
+  {
+    "id": "sub_sustainable_development",
+    "title": "Sustainable Development",
+    "careerWorldId": "cw_environment_sustainability_planetary_futures",
+    "primaryPathways": [
+      "Sustainability & ESG Advisory",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Circular Economy & Sustainable Supply Chains"
+    ],
+    "adjacentPathways": [
+      "International Development & NGO Programmes",
+      "Policy & Public Sector Analysis"
+    ],
+    "pathways": [
+      "Sustainability & ESG Advisory",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Circular Economy & Sustainable Supply Chains",
+      "International Development & NGO Programmes",
+      "Policy & Public Sector Analysis"
+    ]
+  },
+  {
+    "id": "sub_modern_languages",
+    "title": "Modern Languages",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "Languages, Translation & Localisation"
+    ],
+    "adjacentPathways": [
+      "Public Affairs & Advocacy",
+      "International Development & NGO Programmes",
+      "PR & Communications",
+      "Secondary Teaching",
+      "Journalism & Editorial"
+    ],
+    "pathways": [
+      "Languages, Translation & Localisation",
+      "Public Affairs & Advocacy",
+      "International Development & NGO Programmes",
+      "PR & Communications",
+      "Secondary Teaching",
+      "Journalism & Editorial"
+    ]
+  },
+  {
+    "id": "sub_sociology",
+    "title": "Sociology",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "Social Research & Cultural Analysis",
+      "International Development & NGO Programmes"
+    ],
+    "adjacentPathways": [
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Journalism & Editorial"
+    ],
+    "pathways": [
+      "Social Research & Cultural Analysis",
+      "International Development & NGO Programmes",
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Higher Education & Academic Research",
+      "Secondary Teaching",
+      "Journalism & Editorial"
+    ]
+  },
+  {
+    "id": "sub_anthropology",
+    "title": "Anthropology",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "Social Research & Cultural Analysis",
+      "International Development & NGO Programmes"
+    ],
+    "adjacentPathways": [
+      "UX Research & Behavioural Insight",
+      "Environmental Policy & Impact Assessment",
+      "Higher Education & Academic Research"
+    ],
+    "pathways": [
+      "Social Research & Cultural Analysis",
+      "International Development & NGO Programmes",
+      "UX Research & Behavioural Insight",
+      "Environmental Policy & Impact Assessment",
+      "Higher Education & Academic Research"
+    ]
+  },
+  {
+    "id": "sub_international_relations",
+    "title": "International Relations",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "International Relations, Policy & Geopolitical Analysis",
+      "International Development & NGO Programmes",
+      "Policy & Public Sector Analysis"
+    ],
+    "adjacentPathways": [
+      "Public Affairs & Advocacy",
+      "Intelligence, Public Service & Security Analysis"
+    ],
+    "pathways": [
+      "International Relations, Policy & Geopolitical Analysis",
+      "International Development & NGO Programmes",
+      "Policy & Public Sector Analysis",
+      "Public Affairs & Advocacy",
+      "Intelligence, Public Service & Security Analysis"
+    ]
+  },
+  {
+    "id": "sub_history",
+    "title": "History",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "Social Research & Cultural Analysis",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Higher Education & Academic Research",
+      "Policy & Public Sector Analysis",
+      "Journalism & Editorial",
+      "Intelligence, Public Service & Security Analysis"
+    ],
+    "adjacentPathways": [
+      "Public Affairs & Advocacy",
+      "Consulting & Strategic Improvement",
+      "PR & Communications",
+      "International Development & NGO Programmes",
+      "Solicitor Practice"
+    ],
+    "pathways": [
+      "Social Research & Cultural Analysis",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Public Affairs & Advocacy",
+      "Higher Education & Academic Research"
+    ]
+  },
+  {
+    "id": "sub_philosophy",
+    "title": "Philosophy",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "Social Research & Cultural Analysis"
+    ],
+    "adjacentPathways": [
+      "Policy & Public Sector Analysis",
+      "Intelligence, Public Service & Security Analysis"
+    ],
+    "pathways": [
+      "Social Research & Cultural Analysis",
+      "Policy & Public Sector Analysis",
+      "Intelligence, Public Service & Security Analysis"
+    ]
+  },
+  {
+    "id": "sub_global_development_studies",
+    "title": "Global Development Studies",
+    "careerWorldId": "cw_society_culture_languages_global_affairs",
+    "primaryPathways": [
+      "International Development & NGO Programmes",
+      "International Relations, Policy & Geopolitical Analysis"
+    ],
+    "adjacentPathways": [
+      "Social Research & Cultural Analysis",
+      "Sustainability & ESG Advisory"
+    ],
+    "pathways": [
+      "International Development & NGO Programmes",
+      "International Relations, Policy & Geopolitical Analysis",
+      "Social Research & Cultural Analysis",
+      "Sustainability & ESG Advisory"
+    ]
+  }
+]

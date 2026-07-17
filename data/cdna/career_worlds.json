@@ -2,635 +2,548 @@
   {
     "id": "cw_data_analytics_quantitative_insight",
     "title": "Data, Analytics & Quantitative Insight",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Achiever",
     "archetypes": [
       "Thinker",
-      "Organizer",
-      "Achiever"
-    ],
-    "description": "For people who enjoy using data, evidence, and structured thinking to understand problems, uncover patterns, and support better decisions.",
-    "displayOrder": 1,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Attention to Detail"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference",
-      "Organisation & Systems Orientation"
+      "Creator",
+      "Organizer"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference",
-      "Organisation & Systems Orientation"
+      "Analytical Curiosity",
+      "Data Curiosity",
+      "Mastery",
+      "Precision",
+      "Technical Curiosity",
+      "Originality"
     ],
     "secondarySubdimensions": [
-      "Reliability & Focus",
-      "Independent Working Approach"
+      "Achievement",
+      "Autonomy",
+      "Security",
+      "Variety",
+      "Entrepreneurial Drive",
+      "Independence",
+      "Purpose & Impact",
+      "Social Confidence"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_finance_economics_investment",
-      "cw_software_ai_digital_systems"
+    "adjacentCareerWorlds": [
+      "Finance",
+      "Economics & Investment",
+      "Software",
+      "AI & Digital Systems"
     ]
   },
   {
     "id": "cw_software_ai_digital_systems",
     "title": "Software, AI & Digital Systems",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Creator",
     "archetypes": [
       "Thinker",
-      "Organizer",
-      "Creator"
-    ],
-    "description": "For people who like building digital tools, coding systems, solving technical problems, and creating intelligent products.",
-    "displayOrder": 2,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Independent Working Approach"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Independent Working Approach",
-      "Hands-On Engagement"
+      "Creator",
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Independent Working Approach",
-      "Hands-On Engagement"
+      "Technical Curiosity",
+      "Analytical Curiosity",
+      "Mastery",
+      "Originality",
+      "Autonomy"
     ],
     "secondarySubdimensions": [
-      "Curiosity & Openness",
-      "Clarity & Structure Preference",
-      "Attention to Detail",
-      "Reliability & Focus"
+      "Reliability",
+      "Adaptability",
+      "Independence",
+      "Precision",
+      "Data Curiosity",
+      "Achievement",
+      "Security",
+      "Variety"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_data_analytics_quantitative_insight",
-      "cw_engineering_manufacturing_infrastructure"
+    "adjacentCareerWorlds": [
+      "Data",
+      "Analytics & Quantitative Insight",
+      "Engineering",
+      "Manufacturing & Infrastructure"
     ]
   },
   {
     "id": "cw_engineering_manufacturing_infrastructure",
     "title": "Engineering, Manufacturing & Infrastructure",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Creator",
     "archetypes": [
       "Thinker",
-      "Organizer",
-      "Creator"
-    ],
-    "description": "For people who enjoy designing, improving, and delivering reliable physical systems, processes, machines, and infrastructure.",
-    "displayOrder": 3,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Hands-On Engagement"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Hands-On Engagement",
-      "Organisation & Systems Orientation",
-      "Attention to Detail"
+      "Creator",
+      "Visionary",
+      "Achiever"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Hands-On Engagement",
-      "Organisation & Systems Orientation",
-      "Attention to Detail"
+      "Technical Curiosity",
+      "Analytical Curiosity",
+      "Mastery",
+      "Originality",
+      "Achievement",
+      "Purpose & Impact"
     ],
     "secondarySubdimensions": [
-      "Reliability & Focus",
-      "Clarity & Structure Preference"
+      "Reliability",
+      "Precision",
+      "Structure",
+      "Collaboration",
+      "Resilience",
+      "Adaptability",
+      "Autonomy"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_software_ai_digital_systems",
-      "cw_architecture_built_environment_spatial_design",
-      "cw_science_research_laboratory_innovation"
+    "adjacentCareerWorlds": [
+      "Software",
+      "AI & Digital Systems",
+      "Architecture",
+      "Built Environment & Spatial Design",
+      "Science",
+      "Research & Laboratory Innovation"
     ]
   },
   {
     "id": "cw_architecture_built_environment_spatial_design",
     "title": "Architecture, Built Environment & Spatial Design",
-    "primaryArchetype1": "Creator",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Visionary",
     "archetypes": [
       "Creator",
-      "Organizer",
+      "Thinker",
       "Visionary"
     ],
-    "description": "For people drawn to shaping spaces, buildings, and places through a blend of design imagination, long-term thinking, and practical structure.",
-    "displayOrder": 4,
-    "evidenceSubdims": [
-      "Creative Expression",
-      "Organisation & Systems Orientation"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Creative Expression",
-      "Organisation & Systems Orientation",
-      "Hands-On Engagement"
-    ],
     "coreSubdimensions": [
+      "Originality",
       "Creative Expression",
-      "Organisation & Systems Orientation",
-      "Hands-On Engagement"
+      "Technical Curiosity",
+      "Analytical Curiosity",
+      "Purpose & Impact",
+      "Mastery"
     ],
     "secondarySubdimensions": [
-      "Attention to Detail",
-      "Purpose & Impact",
-      "Curiosity & Openness"
+      "Achievement",
+      "Precision",
+      "Social Confidence",
+      "Adaptability",
+      "Resilience",
+      "Structure",
+      "Autonomy"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_creative_arts_design_experience",
-      "cw_engineering_manufacturing_infrastructure"
+    "adjacentCareerWorlds": [
+      "Creative Arts",
+      "Design & Experience",
+      "Engineering",
+      "Manufacturing & Infrastructure"
     ]
   },
   {
     "id": "cw_science_research_laboratory_innovation",
     "title": "Science, Research & Laboratory Innovation",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Explorer",
     "archetypes": [
       "Thinker",
+      "Creator",
       "Organizer",
-      "Explorer"
-    ],
-    "description": "For people motivated by discovery, experimentation, evidence, and deep understanding in scientific or laboratory settings.",
-    "displayOrder": 5,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Attention to Detail"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference"
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference"
+      "Analytical Curiosity",
+      "Technical Curiosity",
+      "Mastery",
+      "Precision",
+      "Originality",
+      "Independence"
     ],
     "secondarySubdimensions": [
-      "Reliability & Focus",
-      "Hands-On Engagement",
-      "Independent Working Approach",
-      "Curiosity & Openness"
+      "Data Curiosity",
+      "Reliability",
+      "Purpose & Impact",
+      "Autonomy",
+      "Cultural & Global Curiosity",
+      "Achievement"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_health_care_clinical_practice",
-      "cw_environment_sustainability_planetary_futures",
-      "cw_data_analytics_quantitative_insight"
+    "adjacentCareerWorlds": [
+      "Health Care & Clinical Practice",
+      "Environment",
+      "Sustainability & Planetary Futures",
+      "Data",
+      "Analytics & Quantitative Insight"
     ]
   },
   {
     "id": "cw_health_care_clinical_practice",
-    "title": "Health, Care & Clinical Practice",
-    "primaryArchetype1": "Connector",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Thinker",
+    "title": "Health Care & Clinical Practice",
     "archetypes": [
+      "Thinker",
       "Connector",
       "Organizer",
-      "Thinker"
-    ],
-    "description": "For people who want to support health and wellbeing through compassionate, evidence-informed, and dependable practice.",
-    "displayOrder": 6,
-    "evidenceSubdims": [
-      "Helping Orientation",
-      "Attention to Detail"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Helping Orientation",
-      "Attention to Detail",
-      "Reliability & Focus"
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Helping Orientation",
-      "Attention to Detail",
-      "Reliability & Focus"
+      "Helping & Caring",
+      "Analytical Curiosity",
+      "Empathy",
+      "Purpose & Impact",
+      "Mastery",
+      "Precision"
     ],
     "secondarySubdimensions": [
-      "Emotional Stability",
-      "Team Collaboration",
-      "Hands-On Engagement"
+      "Social Confidence",
+      "Resilience",
+      "Technical Curiosity",
+      "Achievement",
+      "Collaboration",
+      "Pace",
+      "Reliability"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_science_research_laboratory_innovation",
-      "cw_psychology_behaviour_human_insight",
-      "cw_education_coaching_people_development"
+    "adjacentCareerWorlds": [
+      "Science",
+      "Research & Laboratory Innovation",
+      "Psychology",
+      "Behaviour & Human Insight",
+      "Education",
+      "Coaching & People Development"
     ]
   },
   {
     "id": "cw_psychology_behaviour_human_insight",
-    "title": "Psychology, Behaviour & Human Development",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Connector",
-    "secondaryArchetype": "Explorer",
+    "title": "Psychology, Behaviour & Human Insight",
     "archetypes": [
-      "Thinker",
       "Connector",
-      "Explorer"
-    ],
-    "description": "For people interested in understanding how people think, feel, behave, and develop across individual, group, or societal contexts.",
-    "displayOrder": 7,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Curiosity & Openness"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Curiosity & Openness",
-      "Helping Orientation"
+      "Thinker",
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Curiosity & Openness",
-      "Helping Orientation"
-    ],
-    "secondarySubdimensions": [
-      "Emotional Stability",
-      "Belonging & Connection",
-      "Independent Working Approach",
+      "Analytical Curiosity",
+      "Helping & Caring",
+      "Empathy",
+      "Mastery",
       "Purpose & Impact"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_health_care_clinical_practice",
-      "cw_education_coaching_people_development",
-      "cw_marketing_media_communication"
+    "secondarySubdimensions": [
+      "Data Curiosity",
+      "Social Confidence",
+      "Originality",
+      "Autonomy",
+      "Independence",
+      "Belonging",
+      "Collaboration"
+    ],
+    "adjacentCareerWorlds": [
+      "Health Care & Clinical Practice",
+      "Education",
+      "Coaching & People Development",
+      "Marketing",
+      "Media & Communication"
     ]
   },
   {
     "id": "cw_education_coaching_people_development",
-    "title": "Education, Coaching & Learning Development",
-    "primaryArchetype1": "Connector",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Thinker",
+    "title": "Education, Coaching & People Development",
     "archetypes": [
       "Connector",
-      "Organizer",
-      "Thinker"
-    ],
-    "description": "For people who enjoy helping others learn, grow, build confidence, and develop through teaching, coaching, mentoring, or support.",
-    "displayOrder": 8,
-    "evidenceSubdims": [
-      "Helping Orientation",
-      "Organisation & Systems Orientation"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Helping Orientation",
-      "Organisation & Systems Orientation",
-      "Purpose & Impact"
+      "Visionary",
+      "Creator"
     ],
     "coreSubdimensions": [
-      "Helping Orientation",
-      "Organisation & Systems Orientation",
-      "Purpose & Impact"
+      "Helping & Caring",
+      "Purpose & Impact",
+      "Empathy",
+      "Social Confidence",
+      "Creative Expression",
+      "Belonging"
     ],
     "secondarySubdimensions": [
-      "Team Collaboration",
-      "Belonging & Connection",
-      "Reliability & Focus"
+      "Mastery",
+      "Originality",
+      "Analytical Curiosity",
+      "Adaptability",
+      "Autonomy",
+      "Independence",
+      "Collaboration"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_health_care_clinical_practice",
-      "cw_psychology_behaviour_human_insight",
-      "cw_society_culture_languages_global_affairs"
+    "adjacentCareerWorlds": [
+      "Health Care & Clinical Practice",
+      "Psychology",
+      "Behaviour & Human Insight",
+      "Society",
+      "Culture",
+      "Languages & Global Affairs"
     ]
   },
   {
     "id": "cw_law_governance_public_impact",
     "title": "Law, Governance & Public Impact",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Visionary",
     "archetypes": [
       "Thinker",
-      "Organizer",
-      "Visionary"
-    ],
-    "description": "For people drawn to rules, reasoning, fairness, policy, and shaping systems that affect organisations, communities, or society.",
-    "displayOrder": 9,
-    "evidenceSubdims": [
-      "Clarity & Structure Preference",
-      "Investigative Curiosity"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Clarity & Structure Preference",
-      "Investigative Curiosity",
-      "Attention to Detail"
+      "Visionary",
+      "Organizer"
     ],
     "coreSubdimensions": [
-      "Clarity & Structure Preference",
-      "Investigative Curiosity",
-      "Attention to Detail"
+      "Analytical Curiosity",
+      "Mastery",
+      "Precision",
+      "Purpose & Impact",
+      "Autonomy",
+      "Originality",
+      "Reliability"
     ],
     "secondarySubdimensions": [
-      "Reliability & Focus",
-      "Independent Working Approach",
-      "Purpose & Impact"
+      "Achievement",
+      "Security",
+      "Social Confidence",
+      "Structure",
+      "Independence",
+      "Cultural & Global Curiosity"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_society_culture_languages_global_affairs",
-      "cw_business_strategy_commercial_leadership",
-      "cw_environment_sustainability_planetary_futures"
+    "adjacentCareerWorlds": [
+      "Society",
+      "Culture",
+      "Languages & Global Affairs",
+      "Business Strategy",
+      "Commercial & Leadership",
+      "Environment",
+      "Sustainability & Planetary Futures"
     ]
   },
   {
     "id": "cw_business_strategy_commercial_leadership",
-    "title": "Business, Management & Commercial Strategy",
-    "primaryArchetype1": "Achiever",
-    "primaryArchetype2": "Thinker",
-    "secondaryArchetype": "Organizer",
+    "title": "Business Strategy, Commercial & Leadership",
     "archetypes": [
       "Achiever",
-      "Thinker",
-      "Organizer"
-    ],
-    "description": "For people who enjoy commercial decision-making, strategy, leadership, innovation, cross-functional management, and improving business performance.",
-    "displayOrder": 10,
-    "evidenceSubdims": [
-      "Organisation & Systems Orientation",
-      "Investigative Curiosity"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Organisation & Systems Orientation",
-      "Investigative Curiosity",
-      "Entrepreneurial Drive"
+      "Connector",
+      "Explorer",
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Organisation & Systems Orientation",
-      "Investigative Curiosity",
-      "Entrepreneurial Drive"
+      "Achievement",
+      "Analytical Curiosity",
+      "Social Confidence",
+      "Entrepreneurial Drive",
+      "Variety",
+      "Collaboration",
+      "Pace"
     ],
     "secondarySubdimensions": [
-      "Team Collaboration",
-      "Pace & Intensity Preference",
-      "Reliability & Focus",
-      "Financial Ambition",
-      "Recognition & Visibility"
+      "Structure",
+      "Precision",
+      "Adaptability",
+      "Resilience",
+      "Belonging",
+      "Data Curiosity",
+      "Mastery"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_finance_economics_investment",
-      "cw_marketing_media_communication",
-      "cw_entrepreneurship_innovation_venture_building"
+    "adjacentCareerWorlds": [
+      "Finance",
+      "Economics & Investment",
+      "Marketing",
+      "Media & Communication",
+      "Entrepreneurship",
+      "Innovation & Venture Building"
     ]
   },
   {
     "id": "cw_finance_economics_investment",
     "title": "Finance, Economics & Investment",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Organizer",
-    "secondaryArchetype": "Achiever",
     "archetypes": [
       "Thinker",
       "Organizer",
-      "Achiever"
-    ],
-    "description": "For people interested in financial systems, markets, value, risk, incentives, commercial opportunity, and rigorous decision-making with real-world impact.",
-    "displayOrder": 11,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Attention to Detail"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference",
-      "Reliability & Focus"
+      "Achiever",
+      "Visionary"
     ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Attention to Detail",
-      "Clarity & Structure Preference",
-      "Reliability & Focus"
+      "Analytical Curiosity",
+      "Data Curiosity",
+      "Achievement",
+      "Precision",
+      "Security",
+      "Entrepreneurial Drive"
     ],
     "secondarySubdimensions": [
-      "Financial Ambition",
-      "Pace & Intensity Preference",
-      "Independent Working Approach",
-      "Recognition & Visibility"
+      "Reliability",
+      "Structure",
+      "Social Confidence",
+      "Pace",
+      "Mastery",
+      "Variety",
+      "Autonomy",
+      "Cultural & Global Curiosity"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_data_analytics_quantitative_insight",
-      "cw_business_strategy_commercial_leadership"
+    "adjacentCareerWorlds": [
+      "Data",
+      "Analytics & Quantitative Insight",
+      "Business Strategy",
+      "Commercial & Leadership"
     ]
   },
   {
     "id": "cw_entrepreneurship_innovation_venture_building",
-    "title": "Entrepreneurship & Innovation",
-    "primaryArchetype1": "Visionary",
-    "primaryArchetype2": "Achiever",
-    "secondaryArchetype": "Explorer",
+    "title": "Entrepreneurship, Innovation & Venture Building",
     "archetypes": [
       "Visionary",
-      "Achiever",
-      "Explorer"
-    ],
-    "description": "For people who like creating new ideas, launching ventures, building products, and turning opportunities into action.",
-    "displayOrder": 12,
-    "evidenceSubdims": [
-      "Entrepreneurial Drive",
-      "Independence & Autonomy"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Entrepreneurial Drive",
-      "Independence & Autonomy",
-      "Novelty & Variety Seeking"
+      "Thinker",
+      "Explorer",
+      "Creator"
     ],
     "coreSubdimensions": [
       "Entrepreneurial Drive",
-      "Independence & Autonomy",
-      "Novelty & Variety Seeking"
+      "Originality",
+      "Achievement",
+      "Autonomy",
+      "Adaptability",
+      "Analytical Curiosity"
     ],
     "secondarySubdimensions": [
-      "Perseverance",
-      "Curiosity & Openness",
-      "Pace & Intensity Preference",
-      "Purpose & Impact"
+      "Resilience",
+      "Collaboration",
+      "Data Curiosity",
+      "Pace",
+      "Social Confidence",
+      "Independence"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_business_strategy_commercial_leadership",
-      "cw_marketing_media_communication",
-      "cw_software_ai_digital_systems",
-      "cw_creative_arts_design_experience"
+    "adjacentCareerWorlds": [
+      "Business Strategy",
+      "Commercial & Leadership",
+      "Marketing",
+      "Media & Communication",
+      "Software",
+      "AI & Digital Systems",
+      "Creative Arts",
+      "Design & Experience"
     ]
   },
   {
     "id": "cw_marketing_media_communication",
-    "title": "Marketing, Communications & Media",
-    "primaryArchetype1": "Connector",
-    "primaryArchetype2": "Creator",
-    "secondaryArchetype": "Thinker",
+    "title": "Marketing, Media & Communication",
     "archetypes": [
-      "Connector",
+      "Visionary",
       "Creator",
+      "Connector",
       "Thinker"
     ],
-    "description": "For people who enjoy understanding audiences, shaping messages, building brands, and creating content that connects and influences.",
-    "displayOrder": 13,
-    "evidenceSubdims": [
-      "Creative Expression",
-      "Investigative Curiosity"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Creative Expression",
-      "Investigative Curiosity",
-      "Belonging & Connection"
-    ],
     "coreSubdimensions": [
+      "Originality",
+      "Social Confidence",
       "Creative Expression",
-      "Investigative Curiosity",
-      "Belonging & Connection"
+      "Entrepreneurial Drive",
+      "Analytical Curiosity",
+      "Purpose & Impact"
     ],
     "secondarySubdimensions": [
-      "Sociability & Extroversion",
-      "Pace & Intensity Preference",
-      "Recognition & Visibility"
+      "Mastery",
+      "Data Curiosity",
+      "Achievement",
+      "Adaptability",
+      "Autonomy",
+      "Collaboration",
+      "Technical Curiosity"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_business_strategy_commercial_leadership",
-      "cw_creative_arts_design_experience",
-      "cw_entrepreneurship_innovation_venture_building"
+    "adjacentCareerWorlds": [
+      "Business Strategy",
+      "Commercial & Leadership",
+      "Creative Arts",
+      "Design & Experience",
+      "Entrepreneurship",
+      "Innovation & Venture Building"
     ]
   },
   {
     "id": "cw_creative_arts_design_experience",
-    "title": "Creative Design & Experience",
-    "primaryArchetype1": "Creator",
-    "primaryArchetype2": "Explorer",
-    "secondaryArchetype": "Visionary",
+    "title": "Creative Arts, Design & Experience",
     "archetypes": [
       "Creator",
-      "Explorer",
+      "Thinker",
       "Visionary"
     ],
-    "description": "For people drawn to imaginative, expressive, and original work in art, design, storytelling, performance, or experience creation.",
-    "displayOrder": 14,
-    "evidenceSubdims": [
-      "Creative Expression",
-      "Hands-On Engagement"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Creative Expression",
-      "Hands-On Engagement",
-      "Curiosity & Openness"
-    ],
     "coreSubdimensions": [
+      "Originality",
       "Creative Expression",
-      "Hands-On Engagement",
-      "Curiosity & Openness"
+      "Technical Curiosity",
+      "Autonomy",
+      "Mastery"
     ],
     "secondarySubdimensions": [
-      "Attention to Detail",
-      "Perseverance",
-      "Novelty & Variety Seeking",
-      "Independence & Autonomy"
+      "Empathy",
+      "Analytical Curiosity",
+      "Variety",
+      "Collaboration",
+      "Independence",
+      "Belonging",
+      "Adaptability"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_marketing_media_communication",
-      "cw_architecture_built_environment_spatial_design",
-      "cw_entrepreneurship_innovation_venture_building"
+    "adjacentCareerWorlds": [
+      "Marketing",
+      "Media & Communication",
+      "Architecture",
+      "Built Environment & Spatial Design",
+      "Entrepreneurship",
+      "Innovation & Venture Building"
     ]
   },
   {
     "id": "cw_environment_sustainability_planetary_futures",
     "title": "Environment, Sustainability & Planetary Futures",
-    "primaryArchetype1": "Visionary",
-    "primaryArchetype2": "Thinker",
-    "secondaryArchetype": "Organizer",
     "archetypes": [
       "Visionary",
       "Thinker",
-      "Organizer"
-    ],
-    "description": "For people motivated by climate, sustainability, environmental systems, and building a more resilient future.",
-    "displayOrder": 15,
-    "evidenceSubdims": [
-      "Purpose & Impact",
-      "Investigative Curiosity"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Purpose & Impact",
-      "Investigative Curiosity",
-      "Reliability & Focus"
+      "Creator",
+      "Explorer"
     ],
     "coreSubdimensions": [
       "Purpose & Impact",
-      "Investigative Curiosity",
-      "Reliability & Focus"
+      "Analytical Curiosity",
+      "Cultural & Global Curiosity",
+      "Entrepreneurial Drive",
+      "Originality",
+      "Technical Curiosity"
     ],
     "secondarySubdimensions": [
-      "Attention to Detail",
-      "Curiosity & Openness",
-      "Hands-On Engagement"
+      "Data Curiosity",
+      "Reliability",
+      "Collaboration",
+      "Belonging",
+      "Social Confidence",
+      "Mastery",
+      "Resilience"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_science_research_laboratory_innovation",
-      "cw_law_governance_public_impact",
-      "cw_engineering_manufacturing_infrastructure",
-      "cw_society_culture_languages_global_affairs"
+    "adjacentCareerWorlds": [
+      "Science",
+      "Research & Laboratory Innovation",
+      "Law",
+      "Governance & Public Impact",
+      "Engineering",
+      "Manufacturing & Infrastructure",
+      "Society",
+      "Culture",
+      "Languages & Global Affairs"
     ]
   },
   {
     "id": "cw_society_culture_languages_global_affairs",
     "title": "Society, Culture, Languages & Global Affairs",
-    "primaryArchetype1": "Thinker",
-    "primaryArchetype2": "Connector",
-    "secondaryArchetype": "Explorer",
     "archetypes": [
       "Thinker",
-      "Connector",
+      "Visionary",
       "Explorer"
     ],
-    "description": "For people interested in culture, societies, languages, and global issues, and in understanding how people and systems interact across borders.",
-    "displayOrder": 16,
-    "evidenceSubdims": [
-      "Investigative Curiosity",
-      "Curiosity & Openness"
-    ],
-    "careerWorldKeySubdimensions": [
-      "Investigative Curiosity",
-      "Curiosity & Openness",
-      "Belonging & Connection"
-    ],
     "coreSubdimensions": [
-      "Investigative Curiosity",
-      "Curiosity & Openness",
-      "Belonging & Connection"
+      "Cultural & Global Curiosity",
+      "Analytical Curiosity",
+      "Purpose & Impact",
+      "Mastery",
+      "Autonomy",
+      "Originality"
     ],
     "secondarySubdimensions": [
-      "Purpose & Impact",
-      "Independent Working Approach",
-      "Attention to Detail"
+      "Social Confidence",
+      "Collaboration",
+      "Independence",
+      "Belonging",
+      "Empathy",
+      "Resilience",
+      "Adaptability"
     ],
-    "modifierSubdimensions": [],
-    "adjacentCareerWorldIds": [
-      "cw_law_governance_public_impact",
-      "cw_psychology_behaviour_human_insight",
-      "cw_marketing_media_communication"
+    "adjacentCareerWorlds": [
+      "Law",
+      "Governance & Public Impact",
+      "Psychology",
+      "Behaviour & Human Insight",
+      "Marketing",
+      "Media & Communication"
     ]
   }
 ]

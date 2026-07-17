@@ -48,6 +48,8 @@ const CDNA_SCORE_CONFIG = Object.freeze({
     strongBoostMidThresholdPct: parseEnvNumber(process.env.CDNA_SUBDIM_STRONG_BOOST_MID_THRESHOLD_PCT, 72),
     strongBoostHigh: parseEnvNumber(process.env.CDNA_SUBDIM_STRONG_BOOST_HIGH, 0.02),
     strongBoostMid: parseEnvNumber(process.env.CDNA_SUBDIM_STRONG_BOOST_MID, 0.01),
+    coreGroupWeight: parseEnvNumber(process.env.CDNA_SUBDIM_CORE_GROUP_WEIGHT, 0.70),
+    secondaryGroupWeight: parseEnvNumber(process.env.CDNA_SUBDIM_SECONDARY_GROUP_WEIGHT, 0.30),
     coverageGateBase: parseEnvNumber(process.env.CDNA_SUBDIM_COVERAGE_GATE_BASE, 0.2),
     coverageGateWeight: parseEnvNumber(process.env.CDNA_SUBDIM_COVERAGE_GATE_WEIGHT, 0.8),
     combinedCoverageCoreWeight: parseEnvNumber(process.env.CDNA_SUBDIM_COMBINED_COVERAGE_CORE_WEIGHT, 0.70),

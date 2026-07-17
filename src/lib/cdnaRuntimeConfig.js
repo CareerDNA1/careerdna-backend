@@ -33,10 +33,11 @@ const CDNA_RUNTIME_CONFIG = Object.freeze({
 });
 
 const MODEL_CHAIN = Array.from(
-  new Set([process.env.OPENAI_MODEL, "gpt-4o-mini", "gpt-4o"].filter(Boolean))
+  new Set([process.env.OPENAI_MODEL, "gpt-4.1"].filter(Boolean))
 );
 
-const modelSupportsTemperature = (model) => !/^gpt-5($|[-_])/.test(model);
+// gpt-5.x models (gpt-5, gpt-5.5, gpt-5.6-*, etc.) use reasoning_effort, not temperature.
+const modelSupportsTemperature = (model) => !/^gpt-5/.test(model);
 
 module.exports = {
   CDNA_RUNTIME_CONFIG,

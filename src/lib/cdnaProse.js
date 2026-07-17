@@ -230,7 +230,7 @@ Each bullet must stand on its own. Do not refer to other bullets by number or ti
 EVIDENCE RULES
 - Use only the archetypes and traits supplied in META for that specific item.
 - Refer to archetypes as profiles, for example "your Thinker profile" or "your Creator and Visionary profiles".
-- Refer to subdimensions as traits, using the exact supplied names, for example "your Investigative Curiosity" or "your Hands-On Engagement".
+- Refer to subdimensions as traits, using the exact supplied names, for example "your Analytical Curiosity" or "your Technical Curiosity".
 - Use META.allowed.archetype_definitions to understand what each supplied profile means, but do not quote or expose the definitions directly.
 - Use META.allowed.subdimension_definitions to understand what each supplied trait means, but do not quote or expose the definitions directly.
 - Do not define traits in general terms. For every supplied trait, explain how it appears in the specific item being written about.
@@ -255,6 +255,8 @@ STYLE RULES
 - If a paragraph could apply to several different items with only the title changed, make it more specific.
 - Vary sentence openings and rhythm across nearby bullets.
 - Do not repeat the item title immediately after the bullet heading. After "**Title**:" begin naturally with "This strength...", "This environment...", "This world...", "This pathway...", "This degree...", "This role...", or similar.
+- Never attribute internal motivation, desire, or drive to the person. Do not write phrases such as "drives your desire", "drives you to", "motivates you to", "you are motivated to", "pushes you to", "compels you to", or "you are driven to". Use only what can be inferred from the trait: ability ("your X means you can...", "your X allows you to..."), tendency ("you tend to", "you naturally..."), fit ("may suit you", "could feel like a natural fit"), or potential enjoyment ("you may find this rewarding", "you might naturally find engaging").
+- Never open or close a sentence with collective trait summaries such as "Together, these traits enable you to...", "These traits combine to...", or "Together, these profiles...". Each sentence must explain a specific mechanism or connection — not bundle traits into a generic endpoint.
 
 SUMMARY RULES
 - Write exactly 5 sentences in one paragraph.
@@ -277,7 +279,7 @@ Write 5 sentences per item.
 Sentence 1: describe what this person actually tends to do when using this strength in practice (specific actions, not general descriptions)
 Sentence 2: explain what this allows you to do in practice (what improves, what becomes easier, or what you can do that others might struggle with)
 Sentence 3: explain how the supplied profiles make this a natural strength for you, by connecting the nature of the profiles to the specific actions or tendencies described in Sentence 1.
-Sentence 4: explicitly connect every supplied trait in the item's subdims array to how they apply this strength in practice. For example, if the strength is "Creative Problem Solving" and the traits are "Investigative Curiosity" and "Hands-On Engagement", you might say: "Your Investigative Curiosity means you naturally explore problems from multiple angles and enjoy diving into complex challenges, while your Hands-On Engagement means you like to learn by doing and often come up with creative solutions through experimentation."
+Sentence 4: explicitly connect every supplied trait in the item's subdims array to how they apply this strength in practice. Use ability or tendency language — never say a trait "drives you to" or "pushes you to" anything. For example, if the strength is "Creative Problem Solving" and the traits are "Analytical Curiosity" and "Technical Curiosity", you might say: "Your Analytical Curiosity means you naturally explore problems from multiple angles, often approaching complex challenges with a systematic mindset, while your Technical Curiosity means you can find practical solutions by experimenting with tools and methods."
 Sentence 5: provide 2-3 concrete examples the most relevant to this strength work environments or career worlds drawing from section 2 where this strength would be especially useful or energising for you. For example, if the strength is "Creative Problem Solving", you might say: "This strength would be especially useful in work environments that require innovative thinking and tackling complex challenges, such as in technology startups, research and development teams, or strategic roles in dynamic industries.
 Each sentence should feel like a natural continuation of the previous sentence.
 
@@ -302,7 +304,7 @@ Sentence 5: explain how the single most relevant supplied could makes this caree
 Sentence 6: explain how the remaining supplied traits connect to specific aspects of this career world, again preserving each trait’s definition and using reward, preference, interest, or ability language only where appropriate.
 
 Each sentence should feel like a natural continuation of the previous sentence.
-Do not combine Sentence 5 and Sentence 6. Sentence 6 must always be present. 
+Do not combine Sentence 5 and Sentence 6. Sentence 6 must always be present.
 
 
 
@@ -317,7 +319,7 @@ Sentence 4: explain why the supplied profiles suggest the person may be drawn to
 Sentence 5: explain how the most relevant supplied trait could make this pathway rewarding or satisfying, based on the definition in META.allowed.subdimension_definitions. 
 Sentence 6: explain how the remaining supplied traits connect to specific aspects of the pathway, again preserving each trait’s definition and using reward, preference, interest, or ability language only where appropriate.
 Each sentence should feel like a natural continuation of the previous sentence.
-Do not combine Sentence 5 and Sentence 6. Sentence 6 must always be present. 
+Do not combine Sentence 5 and Sentence 6. Sentence 6 must always be present.
 
 
 

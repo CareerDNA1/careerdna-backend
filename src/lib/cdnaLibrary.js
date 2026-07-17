@@ -66,7 +66,7 @@ function flattenRoles(roleWorlds = []) {
   if (!Array.isArray(roleWorlds) || !roleWorlds.length) return [];
 
   // Already flat
-  if (!roleWorlds[0]?.roleFamilies) {
+  if (!roleWorlds[0]?.roleFamilies && !roleWorlds[0]?.families) {
     return roleWorlds
       .filter((x) => x && x.title)
       .map((x) => ({ ...x }));
@@ -82,12 +82,22 @@ function flattenRoles(roleWorlds = []) {
       ? world.archetypes
       : [];
 
-    for (const family of world.roleFamilies || []) {
-      const familyId = family.id || "";
+    for (const family of world.roleFamilies || world.families || []) {
+      const familyId = family.id || family.familyId || "";
       const familyTitle = family.familyTitle || family.title || "";
-      const familyArchetypes = Array.isArray(family.familyArchetypes) ? family.familyArchetypes : [];
+      const familyArchetypes = Array.isArray(family.familyArchetypes)
+        ? family.familyArchetypes
+        : Array.isArray(family.archetypes)
+        ? family.archetypes
+        : [];
       const familyKeySubdimensions = Array.isArray(family.keySubdimensions)
         ? family.keySubdimensions
+        : [];
+      const familyCoreSubdimensions = Array.isArray(family.coreSubdimensions)
+        ? family.coreSubdimensions
+        : [];
+      const familySecondarySubdimensions = Array.isArray(family.secondarySubdimensions)
+        ? family.secondarySubdimensions
         : [];
       const whyBelongs = family.whyBelongs || "";
       const confidence = family.confidence || "";
@@ -104,6 +114,8 @@ function flattenRoles(roleWorlds = []) {
           roleFamilyTitle: familyTitle,
           roleFamilyArchetypes: familyArchetypes,
           roleFamilyKeySubdimensions: familyKeySubdimensions,
+          roleFamilyCoreSubdimensions: familyCoreSubdimensions,
+          roleFamilySecondarySubdimensions: familySecondarySubdimensions,
           whyBelongs,
           confidence,
           sourceUrls,
@@ -161,6 +173,8 @@ function loadCdnaLibrary() {
     ? universityPathwayMatrixRaw
     : [];
 
+  const school_interest_routing = safeReadJson("school_interest_routing.json", []);
+
   return {
     career_worlds,
     strengths,
@@ -171,6 +185,7 @@ function loadCdnaLibrary() {
     rolesFlat,
     universityPathwayMatrixRaw,
     universityPathwayMatrix,
+    school_interest_routing,
   };
 }
 
