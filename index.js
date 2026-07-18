@@ -1192,7 +1192,7 @@ function buildItemEvidenceBundle(recommendations, profile) {
   const environmentsSubdimMeta = buildItemSubdimContextForSection(recommendations.topEnvironments, profile.userSubdimMap);
   const careerWorldsSubdimMeta = buildItemSubdimContextForSection(recommendations.topCareerWorlds, profile.userSubdimMap, 5);
   const subjectsSubdimMeta = buildItemSubdimContextForSection(recommendations.topSubjects, profile.userSubdimMap);
-  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap);
+  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap, 5);
 
   const itemSubdimContext = {
     strengths: strengthsSubdimMeta.context,

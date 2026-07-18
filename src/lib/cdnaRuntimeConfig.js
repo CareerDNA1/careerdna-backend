@@ -17,7 +17,7 @@ const CDNA_RUNTIME_CONFIG = Object.freeze({
   careerWorldLimit: parseEnvNumber(process.env.CDNA_CAREER_WORLD_LIMIT, 5),
   schoolSubjectLimit: parseEnvNumber(process.env.CDNA_SCHOOL_SUBJECT_LIMIT, 10),
   roleLimit: parseEnvNumber(process.env.CDNA_ROLE_LIMIT, 8),
-  environmentLimit: parseEnvNumber(process.env.CDNA_ENVIRONMENT_LIMIT, 6),
+  environmentLimit: parseEnvNumber(process.env.CDNA_ENVIRONMENT_LIMIT, 5),
   strengthLimit: parseEnvNumber(process.env.CDNA_STRENGTH_LIMIT, 5),
   defaultMaxSpillovers: parseEnvNumber(process.env.CDNA_DEFAULT_MAX_SPILLOVERS, 1),
   profileOptions: Object.freeze({

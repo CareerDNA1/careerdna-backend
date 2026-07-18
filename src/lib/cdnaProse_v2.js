@@ -383,17 +383,17 @@ ${isUndergraduate ? `Purpose: Help a university student understand exactly what 
 
 These students are already studying a relevant subject. They know the field at a general level. Go deeper than an introduction. The opening should reveal something about the texture of the work that someone who has attended lectures and read about the field might not yet know from direct experience.
 
-Write 6 sentences per item.
+Write 6-7 sentences per item.
 
-Do not mention archetypes or profiles (Creator, Thinker, Visionary, etc.) anywhere in this section. Every sentence must be grounded in the supplied subdimension traits only.
+Do not mention archetypes or profiles (Creator, Thinker, Visionary, etc.) anywhere in this section except in the FIT CLOSE sentence. The GROUNDING and SUBDIMENSION FIT sentences must be grounded in the supplied subdimension traits only.
 
 Structure each paragraph across three elements, woven naturally rather than in rigid blocks:
 
-1. SPECIALIST GROUNDING (1-2 sentences): What do people in this pathway actually do, day to day? Draw on the supplied description and your knowledge of the field. Be specific: the kinds of decisions made, the outputs produced, the pressures involved, the skills exercised. Do not open with "Professionals in this pathway" or "People in this field". Make it feel like someone inside the field describing the reality of the work, not a course catalogue entry.
+1. SPECIALIST GROUNDING (2-3 sentences): The student already studies this subject area and understands the field at a general level — do not introduce or explain the domain. Use these sentences to do three things, woven naturally: (a) establish what makes this specific pathway distinctive within the broader domain — what sets it apart from adjacent pathways the student might also be considering; (b) name the types of organisations or settings where this work actually happens (e.g. investment banks, asset managers, regulatory bodies, consultancies, start-ups, public bodies — be specific to this pathway, not generic); (c) describe the characteristic tasks, outputs, or decisions that define the role at an early-career level — the things someone in this pathway actually produces or is responsible for week to week. Write from the perspective of an experienced practitioner or adviser who knows this pathway from the inside. The tone should be professional and peer-to-peer: informed, direct, and specific. Do not open with "Professionals in this pathway", "People in this field", or any generic category opener. Do not open with a definition of the field.
 
 2. SUBDIMENSION FIT (3-4 sentences): You have been supplied with subdimensions for this pathway, split into primarySubdims and supportingSubdims. Draw on those most relevant to this pathway — you do not need to feature every one. Do not give each trait its own sentence in sequence. Find combinations that produce real observations: two traits might together explain what makes the intellectual work absorbing, another pair might explain what makes someone effective at the practical side. Primary subdimensions should receive fuller treatment; supporting subdimensions may be woven in where they add something specific. Weave traits as evidence for observations, not as a checklist. Vary which traits you foreground across pathway items.
 
-3. FIT CLOSE (1 sentence): Close with an observation about what kind of thinker or worker this pathway rewards and why this student matches that. The sentence should feel specific to this pathway — not interchangeable with the closer of a different pathway. Do not name archetypes. Do not use verdict phrases like "this is why this could be the right direction for you" or "this pathway suits you". Do not open with "Your ability to..." — this is ability-framing, not trait-framing.
+3. FIT CLOSE (1 sentence): Close by naming what kind of person actually thrives and builds a career in this pathway, expressed in terms of the student's archetype profiles (Creator, Thinker, Visionary, etc.). Connect the archetype(s) to what this specific pathway demands — so the sentence explains why someone with this profile belongs here, not just that they do. This is the only sentence in this section where you may name archetypes. WRONG: "You are likely to find this direction rewarding if you want to create something new" — conditional, says nothing. WRONG: "This pathway suits your profile well" — verdict phrase with no substance. RIGHT: "This pathway is built for Thinkers and Creators — people who need both the rigour to interrogate a problem and the originality to imagine a solution no one has tried before." RIGHT: "Visionaries who also think like Thinkers tend to find this pathway particularly compelling, because it rewards people who can see where a field is going and then do the analytical work to get there." The sentence must feel specific to this pathway — not interchangeable with another pathway's closer. Do not use "this pathway suits you", "this is why this could be the right direction for you", "if you want to", or "if you enjoy".
 
 Do not include a sentence about why this field matters to the world or is important for society. Focus entirely on fit, specifics, and the experience of the work.
 Do not use em-dashes, en-dashes, or hyphens used as dashes anywhere. Use a comma, a colon, or restructure the sentence instead.
@@ -404,8 +404,10 @@ Purpose: Introduce the student to a broader-reach pathway worth considering — 
 
 Write 3–4 sentences per item.
 
+The student already understands the broader subject area — do not introduce or define the field. Focus on what is distinctive about this specific pathway: the types of organisations where this work happens, the characteristic tasks or outputs at an early-career level, and what sets it apart from the aligned pathways they have already read about.
+
 Cover all of the following — weave them naturally:
-- What this pathway involves and what professionals in it actually do: at least one specific task, type of decision, or output. Make it real.
+- What is specific and distinctive about this pathway: at least one concrete task, type of decision, or output that defines it, named with enough precision that a student who knows the field can picture it.
 - At least one specific connection between the supplied profiles or traits and something concrete about this work: there is a genuine reason this pathway appears here, and the student should be able to see exactly what it is.
 - Why this direction may be worth exploring given the student's profile: frame it honestly as a broader reach that has real merit, not a consolation option and not a confident fit-verdict.
 
@@ -419,7 +421,7 @@ SECTION COUNTS
 - Ideal Environments: one paragraph per item, every item provided.
 ${isSchool ? `- Career Worlds: one paragraph per item, every item provided. Every career world paragraph must be exactly 6 sentences — the first world and the last world receive equal depth and detail. Do not compress or shorten later items in the list.` : ""}
 ${isSchoolInterest ? "- Keep Career Worlds Most Aligned With Your Interest Area and Other Career Worlds to Explore as distinct subsections with their own items." : ""}
-${isUndergraduate ? `- Career Pathways: aligned pathways are 6 sentences each; adjacent pathways are 3-4 sentences each.
+${isUndergraduate ? `- Career Pathways: aligned pathways are 6-7 sentences each; adjacent pathways are 3-4 sentences each.
 - Do not add a Career Worlds section for university users.
 - If an Adjacent Career Pathways to Explore section is present in the skeleton, write it. If it is absent, do not create it.
 - Use only META.items.pathways_aligned for the aligned section, and only META.items.pathways_adjacent for the adjacent section. Do not merge, rename, or move items between sections.` : ""}

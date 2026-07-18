@@ -769,10 +769,23 @@ function buildScoredRoleRows(allRoles = [], matchedSubject = null, topCareerWorl
   );
 }
 
-function selectStrengths(strengths = [], ctx = {}, limit = 5) {
-  const scored = buildScoreMap(strengths, ctx).scored;
+function selectStrengths(strengths = [], ctx = {}, limit = 5, maxGood = 2) {
+  const scored = strengths.map((item) => {
+    const breakdown = scoreItemBreakdown(item, ctx);
+    const signal = getItemSignalFromBreakdown(breakdown);
+    return { item, score: breakdown.totalScore, signalLabel: signal.signalLabel };
+  });
   const sorted = sortByScoreDesc(scored);
-  return sorted.slice(0, limit).map((x) => x.item);
+  const selected = [];
+  let goodCount = 0;
+  for (const row of sorted) {
+    if (selected.length >= limit) break;
+    const isGood = row.signalLabel === "Good";
+    if (isGood && goodCount >= maxGood) continue;
+    selected.push(row.item);
+    if (isGood) goodCount++;
+  }
+  return selected;
 }
 
 function selectCareerWorlds(careerWorlds = [], ctx = {}, limit = 5, opts = {}) {
@@ -780,9 +793,23 @@ function selectCareerWorlds(careerWorlds = [], ctx = {}, limit = 5, opts = {}) {
   return scored.slice(0, limit).map((x) => x.item);
 }
 
-function selectEnvironmentsForWorlds(environments = [], topCareerWorlds = [], ctx = {}, limit = 6) {
-  const scored = buildScoredEnvironmentRows(environments, topCareerWorlds, ctx);
-  return scored.slice(0, limit).map((x) => x.item);
+function selectEnvironmentsForWorlds(environments = [], topCareerWorlds = [], ctx = {}, limit = 5, maxGood = 2) {
+  const scored = environments.map((env) => {
+    const breakdown = scoreItemBreakdown(env, ctx);
+    const signal = getItemSignalFromBreakdown(breakdown);
+    return { item: env, score: breakdown.totalScore, signalLabel: signal.signalLabel };
+  });
+  const sorted = sortByScoreDesc(scored);
+  const selected = [];
+  let goodCount = 0;
+  for (const row of sorted) {
+    if (selected.length >= limit) break;
+    const isGood = row.signalLabel === "Good";
+    if (isGood && goodCount >= maxGood) continue;
+    selected.push(row.item);
+    if (isGood) goodCount++;
+  }
+  return selected;
 }
 
 
@@ -1199,8 +1226,23 @@ function rankBank(list = [], ctx = {}, limit = 5) {
   return sorted.slice(0, limit).map((x) => x.item);
 }
 
-function selectEnvironments(environments = [], ctx = {}, limit = 6) {
-  return rankBank(environments, ctx, limit);
+function selectEnvironments(environments = [], ctx = {}, limit = 5, maxGood = 2) {
+  const scored = environments.map((env) => {
+    const breakdown = scoreItemBreakdown(env, ctx);
+    const signal = getItemSignalFromBreakdown(breakdown);
+    return { item: env, score: breakdown.totalScore, signalLabel: signal.signalLabel };
+  });
+  const sorted = sortByScoreDesc(scored);
+  const selected = [];
+  let goodCount = 0;
+  for (const row of sorted) {
+    if (selected.length >= limit) break;
+    const isGood = row.signalLabel === "Good";
+    if (isGood && goodCount >= maxGood) continue;
+    selected.push(row.item);
+    if (isGood) goodCount++;
+  }
+  return selected;
 }
 
 
