@@ -91,10 +91,9 @@ function buildWeightedSubdimEntries(item = {}) {
   ]).filter((x) => !core.includes(x));
 
   if (core.length || secondary.length) {
-    const tierWeights = CDNA_SCORE_CONFIG.subdimension.tierWeights;
     return [
-      ...core.map((name) => ({ name, weight: tierWeights.core, tier: "core" })),
-      ...secondary.map((name) => ({ name, weight: tierWeights.secondary, tier: "secondary" })),
+      ...core.map((name) => ({ name, weight: 1.0, tier: "core" })),
+      ...secondary.map((name) => ({ name, weight: 1.0, tier: "secondary" })),
     ];
   }
 
@@ -200,46 +199,21 @@ function getItemSignalFromBreakdown(breakdown = {}, options = {}) {
   };
 }
 
-function scoreItemByArchetypeOrder(item, userArchetypesArr = [], userArchetypePerc = {}, fullArchetypes = []) {
+function scoreItemByArchetypes(item, includedWeights = {}) {
   const tags = Array.isArray(item?.archetypes) ? item.archetypes : [];
   if (!tags.length) return 0;
 
-  const archetypes = ensureArray(userArchetypesArr).slice(0, 5);
-  const cfg = CDNA_SCORE_CONFIG.archetype;
-  const positionWeights = cfg.positionWeights;
-
-  let score = 0;
-  let matchedCount = 0;
-
-  archetypes.forEach((arch, idx) => {
-    if (!arch) return;
-    const pct = Number(userArchetypePerc?.[arch] ?? 0) || 0;
-    const pctNorm = clamp(0, 1, pct);
-    const w = positionWeights[idx] ?? cfg.fallbackPositionWeight;
-
-    if (tags[0] === arch) {
-      score += w * Math.max(cfg.minPctFloor, pctNorm);
-      matchedCount += 1;
-    } else if (tags.includes(arch)) {
-      score += w * cfg.secondaryTagMultiplier * Math.max(cfg.minPctFloor, pctNorm);
-      matchedCount += 1;
+  let total = 0;
+  let count = 0;
+  for (const tag of tags) {
+    const pct = Number(includedWeights?.[tag]);
+    if (Number.isFinite(pct)) {
+      total += clamp(0, 1, pct / 100);
+      count++;
     }
-  });
-
-  if (matchedCount >= 3) score += cfg.matchedCountBonusThreePlus;
-  else if (matchedCount === 2) score += cfg.matchedCountBonusTwo;
-  else if (matchedCount === 1) score += cfg.matchedCountBonusOne;
-
-  if (Array.isArray(fullArchetypes) && fullArchetypes.length) {
-    const userPctByName = {};
-    for (const a of fullArchetypes) userPctByName[a.name] = Number(a.score) || 0;
-    const primaryTag = tags[0];
-    const primaryPct = primaryTag ? Number(userPctByName[primaryTag] || 0) : 0;
-    if (primaryPct && primaryPct < cfg.primaryPenaltyLowThreshold) score -= cfg.primaryPenaltyLow;
-    else if (primaryPct && primaryPct < cfg.primaryPenaltyMidThreshold) score -= cfg.primaryPenaltyMid;
   }
 
-  return Math.max(0, score);
+  return count > 0 ? total / count : 0;
 }
 
 function scoreItemBySubdimensionProfile(item, ctx = {}) {
@@ -250,12 +224,7 @@ function scoreItemBreakdown(item, ctx = {}) {
   const subdimMap = buildFullSubdimMap(ctx);
   const entries = buildWeightedSubdimEntries(item);
   const cfg = CDNA_SCORE_CONFIG.subdimension;
-  const archetypeScore = scoreItemByArchetypeOrder(
-    item,
-    ctx.includedArchetypes || [],
-    ctx.includedWeights || {},
-    ctx.fullArchetypes || []
-  );
+  const archetypeScore = scoreItemByArchetypes(item, ctx.includedWeights || {});
 
   if (!subdimMap.size || !entries.length) {
     return {
@@ -266,8 +235,6 @@ function scoreItemBreakdown(item, ctx = {}) {
       rawFit: 0,
       coverageRatio: 0,
       coreCoverageRatio: 0,
-      combinedCoverageRatio: 0,
-      coverageGate: 0,
       strongestCorePct: 0,
       absoluteFitPct: 0,
       archetypeScore,
@@ -293,17 +260,12 @@ function scoreItemBreakdown(item, ctx = {}) {
     const pct = Number(subdimMap.get(entry.name));
     if (!Number.isFinite(pct)) continue;
 
-    const normalized = normalizeProfilePct(pct);
-    let boosted = normalized;
-    if (normalized > 0) {
-      if (pct >= cfg.strongBoostHighThresholdPct) boosted += cfg.strongBoostHigh;
-      else if (pct >= cfg.strongBoostMidThresholdPct) boosted += cfg.strongBoostMid;
-      boosted = clamp(0, 1, boosted);
+    const boosted = normalizeProfilePct(pct);
+    if (boosted > 0) {
       weightedSum += entry.weight * boosted;
       matchedWeight += entry.weight;
     }
 
-    // Group averages include all scored entries (boosted=0 when below threshold)
     const isCorelike = entry.tier === "core" || entry.tier === "fallback";
     if (isCorelike) {
       coreSum += boosted;
@@ -329,18 +291,12 @@ function scoreItemBreakdown(item, ctx = {}) {
   const weightedTraitFit = groupFit;
   const coverageRatio = clamp(0, 1, matchedWeight / totalWeight);
   const coreCoverageRatio = coreTotal ? clamp(0, 1, coreMatched / coreTotal) : coverageRatio;
-  const combinedCoverageRatio = clamp(
-    0,
-    1,
-    coreCoverageRatio * cfg.combinedCoverageCoreWeight + coverageRatio * cfg.combinedCoverageAnyWeight
-  );
-  const coverageGate = clamp(0, 1, cfg.coverageGateBase + cfg.coverageGateWeight * combinedCoverageRatio);
   const strongestCorePct = Number(strongestCore) || 0;
 
-  const rawFit = clamp(0, 1, weightedTraitFit * coverageGate);
+  const rawFit = clamp(0, 1, weightedTraitFit);
   const fitStrengthPct = Math.max(0, Math.min(100, Math.round(weightedTraitFit * 100)));
   const absoluteFitPct = fitStrengthPct;
-  const gatedFitPct = Math.max(0, Math.min(100, Math.round(rawFit * 100)));
+  const rawFitPct = Math.max(0, Math.min(100, Math.round(rawFit * 100)));
   const subdimensionScore = rawFit * cfg.totalScoreScale;
   const archetypeContributionWeight = clamp(
     0,
@@ -348,7 +304,7 @@ function scoreItemBreakdown(item, ctx = {}) {
     Number(CDNA_SCORE_CONFIG.total.archetypeContributionWeight) || 0
   );
   const subdimensionContributionWeight = 1 - archetypeContributionWeight;
-  const archetypeContribution = archetypeScore * archetypeContributionWeight;
+  const archetypeContribution = archetypeScore * cfg.totalScoreScale * archetypeContributionWeight;
   const totalScore =
     subdimensionScore * subdimensionContributionWeight + archetypeContribution;
 
@@ -356,12 +312,10 @@ function scoreItemBreakdown(item, ctx = {}) {
     weightedTraitFit,
     subdimensionScore,
     fitStrengthPct,
-    rawFitPct: gatedFitPct,
+    rawFitPct,
     rawFit,
     coverageRatio,
     coreCoverageRatio,
-    combinedCoverageRatio,
-    coverageGate,
     strongestCorePct,
     absoluteFitPct,
     archetypeScore,
@@ -1248,7 +1202,7 @@ function selectEnvironments(environments = [], ctx = {}, limit = 5, maxGood = 2)
 
 
 module.exports = {
-  scoreItemByArchetypeOrder,
+  scoreItemByArchetypes,
   scoreItemBySubdimensionProfile,
   scoreItemBreakdown,
   scoreItemTotal,

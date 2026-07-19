@@ -17,7 +17,7 @@ const {
   selectSegmentedSubjectsForCareerWorlds,
   selectRolesForSubject,
   findBestMatchingSubject,
-  scoreItemByArchetypeOrder,
+  scoreItemByArchetypes,
   scoreItemBySubdimensionProfile,
   scoreItemBreakdown,
   scoreItemTotal,
@@ -1071,7 +1071,7 @@ function printScoredSection(label, items, profile, ctx, recommendations) {
   console.log(`
 === ${label} (total score) ===`);
   items.forEach((it, idx) => {
-    const archetype = scoreItemByArchetypeOrder(it, profile.included, profile.includedWeights, profile.sorted);
+    const archetype = scoreItemByArchetypes(it, profile.includedWeights);
     const subdim = scoreItemBySubdimensionProfile(it, ctx);
     const total = scoreItemTotal(it, ctx);
     const subjectMeta = label === "SUBJECTS" ? recommendations.subjectMetaByKey.get(buildItemLookupKey(it)) || null : null;

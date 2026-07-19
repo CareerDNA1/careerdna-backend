@@ -522,20 +522,19 @@
     ],
     "coreSubdimensions": [
       "Cultural & Global Curiosity",
-      "Analytical Curiosity",
-      "Purpose & Impact",
-      "Mastery",
-      "Autonomy",
-      "Originality"
-    ],
-    "secondarySubdimensions": [
-      "Social Confidence",
-      "Collaboration",
-      "Independence",
       "Belonging",
       "Empathy",
+      "Purpose & Impact",
+      "Collaboration",
+      "Social Confidence"
+    ],
+    "secondarySubdimensions": [
+      "Analytical Curiosity",
+      "Mastery",
+      "Adaptability",
       "Resilience",
-      "Adaptability"
+      "Autonomy",
+      "Originality"
     ],
     "adjacentCareerWorlds": [
       "Law",
