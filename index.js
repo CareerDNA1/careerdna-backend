@@ -1881,7 +1881,11 @@ const deleteAccountRateLimit = makeRateLimiter({
 
 function isUnlimitedPlan(profile = {}) {
   const plan = String(profile?.plan || "").toLowerCase();
-  return ["premium_school", "premium_university", "dev"].includes(plan);
+  // NOTE: "dev" is intentionally NOT unlimited — the developer code now grants a
+  // fixed 200 reports / 200 advisor questions (set on the profile via report_limit
+  // and advisor_questions_limit), so it must be treated as a limited plan for those
+  // numbers to display and be enforced.
+  return ["premium_school", "premium_university"].includes(plan);
 }
 
 function isUnlimitedAdvisorPlan(profile = {}) {
@@ -3423,16 +3427,18 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
     const { archetypes, age, status, subjects, incomingSubdims } = parsed.value;
     const { profile: accountProfile } = await getAuthenticatedUserAndProfile(req);
 
-    const reportCredit = await consumeReportCredit(accountProfile);
-    if (!reportCredit.allowed) {
+    // Check access up front, but do NOT consume the credit yet. We only charge
+    // once the report has actually been generated (see the consume call before
+    // the success response), so a failed generation never costs the user a credit.
+    if (!hasReportAccess(accountProfile)) {
       return res.status(403).json({
         error: "REPORT_LIMIT_REACHED",
         summary: "REPORT_LIMIT_REACHED",
         message: "You have used your available free report generation. Upgrade or apply a coupon code to generate another report.",
-        entitlement: buildEntitlementView(reportCredit.profile || accountProfile),
+        entitlement: buildEntitlementView(accountProfile),
       });
     }
-    const accountProfileAfterCredit = reportCredit.profile || accountProfile;
+    let accountProfileAfterCredit = accountProfile;
 
     const { profile, ctx, allowedSubdimsForPrompt } = buildProfileBundle(archetypes, incomingSubdims);
 
@@ -3528,6 +3534,12 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
       }
     }
   
+
+    // Generation succeeded — NOW charge the report credit. If this races and the
+    // credit is already gone, the atomic RPC just no-ops; we still return the
+    // report the user has already been given.
+    const reportCredit = await consumeReportCredit(accountProfileAfterCredit);
+    accountProfileAfterCredit = reportCredit.profile || accountProfileAfterCredit;
 
     return res.json({
       summary,
@@ -3773,15 +3785,17 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
       return res.status(400).json({ error: "MESSAGE_REQUIRED", message: "Please enter a message." });
     }
 
-    const advisorCredit = await consumeAdvisorCredit(accountProfile);
-    if (!advisorCredit.allowed) {
+    // Check access up front, but do NOT consume the credit yet — only charge
+    // after the advisor reply has been generated and saved, so a failure never
+    // costs the user a question.
+    if (!hasAdvisorAccess(accountProfile)) {
       return res.status(403).json({
         error: "ADVISOR_LIMIT_REACHED",
         message: "You have used all your available AI Advisor questions. You can upgrade or buy extra advisor credits to continue.",
-        entitlement: buildEntitlementView(advisorCredit.profile || accountProfile),
+        entitlement: buildEntitlementView(accountProfile),
       });
     }
-    const accountProfileAfterCredit = advisorCredit.profile || accountProfile;
+    let accountProfileAfterCredit = accountProfile;
 
     const run = await getAssessmentRunForUser(assessmentRunId, user.id);
     let conversation = await getOrCreateAdvisorConversation({
@@ -3848,6 +3862,10 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
 
     if (conversationUpdateError) throw conversationUpdateError;
     conversation = await maybeUpdateAdvisorConversationSummary(updatedConversation || conversation);
+
+    // Reply generated and saved — NOW charge the advisor credit.
+    const advisorCredit = await consumeAdvisorCredit(accountProfileAfterCredit);
+    accountProfileAfterCredit = advisorCredit.profile || accountProfileAfterCredit;
 
     return res.json({
       conversation: {
