@@ -543,6 +543,11 @@ function buildReportPrompt(payload = {}) {
 
   const instructions = getReportInstructions(profileMode, status);
   const meta = buildMeta(payload);
+  // The main report never references META.hidden_selection_groups — only the
+  // separate Discover More (selection-narratives) call does. Drop it here so this
+  // prompt isn't bloated with the entire Discover More dataset it ignores. This is
+  // what was pushing large profiles past OpenAI's per-request token limit.
+  delete meta.hidden_selection_groups;
 
   const header = `
 [META START]
