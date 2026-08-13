@@ -1521,7 +1521,14 @@
       "Risk, Compliance & Controls",
       "Treasury & Liquidity",
       "Accounting, Audit & Assurance",
-      "Occupational & Organisational Psychology"
+      "Occupational & Organisational Psychology",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Customer & Market Insight",
+      "Performance Marketing & Growth",
+      "Start-up Operations",
+      "Real Estate Investment & Finance",
+      "Property Development & Asset Management"
     ],
     "pathways": [
       "Consulting & Strategic Improvement",
@@ -1539,7 +1546,14 @@
       "Risk, Compliance & Controls",
       "Treasury & Liquidity",
       "Accounting, Audit & Assurance",
-      "Occupational & Organisational Psychology"
+      "Occupational & Organisational Psychology",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Customer & Market Insight",
+      "Performance Marketing & Growth",
+      "Start-up Operations",
+      "Real Estate Investment & Finance",
+      "Property Development & Asset Management"
     ]
   },
   {
@@ -1557,7 +1571,12 @@
       "Core Data Analysis & Business Insight",
       "Business Intelligence & Reporting",
       "Financial Analysis & FP&A",
-      "Fintech & Digital Finance"
+      "Fintech & Digital Finance",
+      "Data Science & Advanced Modelling",
+      "Product, Growth & Experimentation Analytics",
+      "Risk & Quantitative Analysis",
+      "Customer & Market Insight",
+      "Data Engineering"
     ],
     "pathways": [
       "Operations & Supply Chain",
@@ -1568,7 +1587,12 @@
       "Core Data Analysis & Business Insight",
       "Business Intelligence & Reporting",
       "Financial Analysis & FP&A",
-      "Fintech & Digital Finance"
+      "Fintech & Digital Finance",
+      "Data Science & Advanced Modelling",
+      "Product, Growth & Experimentation Analytics",
+      "Risk & Quantitative Analysis",
+      "Customer & Market Insight",
+      "Data Engineering"
     ]
   },
   {
@@ -1577,19 +1601,33 @@
     "careerWorldId": "cw_business_strategy_commercial_leadership",
     "primaryPathways": [
       "Generalist Business Programmes",
-      "Commercial Partnerships & Account Growth",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Consulting & Strategic Improvement"
     ],
     "adjacentPathways": [
       "International Relations, Policy & Geopolitical Analysis",
-      "Languages, Translation & Localisation"
+      "Languages, Translation & Localisation",
+      "Commercial & Corporate Banking",
+      "Brand & Marketing Strategy",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "Project, PMO & Transformation",
+      "HR, People & Organisations",
+      "Business Analysis"
     ],
     "pathways": [
       "Generalist Business Programmes",
-      "Commercial Partnerships & Account Growth",
       "Business Development & Commercial Partnerships",
+      "Consulting & Strategic Improvement",
       "International Relations, Policy & Geopolitical Analysis",
-      "Languages, Translation & Localisation"
+      "Languages, Translation & Localisation",
+      "Commercial & Corporate Banking",
+      "Brand & Marketing Strategy",
+      "Operations & Supply Chain",
+      "Business Intelligence & Reporting",
+      "Project, PMO & Transformation",
+      "HR, People & Organisations",
+      "Business Analysis"
     ]
   },
   {
@@ -1598,17 +1636,23 @@
     "careerWorldId": "cw_business_strategy_commercial_leadership",
     "primaryPathways": [
       "HR, People & Organisations",
-      "Consulting & Strategic Improvement"
+      "Consulting & Strategic Improvement",
+      "Training, Learning & Development",
+      "People Analytics & Workplace Behaviour"
     ],
     "adjacentPathways": [
-      "Training, Learning & Development",
-      "Occupational & Organisational Psychology"
+      "Occupational & Organisational Psychology",
+      "Learning, Development & Behaviour Support",
+      "Business Analysis"
     ],
     "pathways": [
       "HR, People & Organisations",
       "Consulting & Strategic Improvement",
       "Training, Learning & Development",
-      "Occupational & Organisational Psychology"
+      "People Analytics & Workplace Behaviour",
+      "Occupational & Organisational Psychology",
+      "Learning, Development & Behaviour Support",
+      "Business Analysis"
     ]
   },
   {
@@ -1622,14 +1666,20 @@
     ],
     "adjacentPathways": [
       "Process & Industrial Engineering",
-      "Manufacturing & Production Engineering"
+      "Manufacturing & Production Engineering",
+      "Circular Economy & Sustainable Supply Chains",
+      "Business Intelligence & Reporting",
+      "Consulting & Strategic Improvement"
     ],
     "pathways": [
       "Operations & Supply Chain",
       "Project, PMO & Transformation",
       "Business Analysis",
       "Process & Industrial Engineering",
-      "Manufacturing & Production Engineering"
+      "Manufacturing & Production Engineering",
+      "Circular Economy & Sustainable Supply Chains",
+      "Business Intelligence & Reporting",
+      "Consulting & Strategic Improvement"
     ]
   },
   {
@@ -1637,23 +1687,40 @@
     "title": "Accounting",
     "careerWorldId": "cw_finance_economics_investment",
     "primaryPathways": [
+      "Financial Analysis & FP&A",
       "Treasury & Liquidity",
       "Risk, Compliance & Controls",
       "Accounting, Audit & Assurance"
     ],
     "adjacentPathways": [
       "Banking Operations & Middle Office",
-      "Financial Analysis & FP&A",
       "Insurance & Actuarial",
-      "Venture Building & Founder"
+      "Venture Building & Founder",
+      "Investment Banking & Corporate Finance",
+      "Commercial & Corporate Banking",
+      "Asset & Wealth Management",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Business Intelligence & Reporting",
+      "Fintech & Digital Finance",
+      "Investigations & Financial Crime"
     ],
     "pathways": [
+      "Financial Analysis & FP&A",
       "Treasury & Liquidity",
       "Risk, Compliance & Controls",
       "Accounting, Audit & Assurance",
       "Banking Operations & Middle Office",
-      "Financial Analysis & FP&A",
-      "Insurance & Actuarial"
+      "Insurance & Actuarial",
+      "Venture Building & Founder",
+      "Investment Banking & Corporate Finance",
+      "Commercial & Corporate Banking",
+      "Asset & Wealth Management",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Business Intelligence & Reporting",
+      "Fintech & Digital Finance",
+      "Investigations & Financial Crime"
     ]
   },
   {
@@ -1686,7 +1753,10 @@
       "Start-up Operations",
       "Product Growth & Business Development in Start-ups",
       "Venture Capital, Accelerators & Innovation Support",
-      "Insurance & Actuarial"
+      "Insurance & Actuarial",
+      "Sustainability & ESG Advisory",
+      "Governance, Risk & Compliance",
+      "Real Estate Investment & Finance"
     ],
     "pathways": [
       "Investment Banking & Corporate Finance",
@@ -1712,7 +1782,10 @@
       "Start-up Operations",
       "Product Growth & Business Development in Start-ups",
       "Venture Capital, Accelerators & Innovation Support",
-      "Insurance & Actuarial"
+      "Insurance & Actuarial",
+      "Sustainability & ESG Advisory",
+      "Governance, Risk & Compliance",
+      "Real Estate Investment & Finance"
     ]
   },
   {
@@ -1731,7 +1804,14 @@
     "adjacentPathways": [
       "Fintech & Digital Finance",
       "Private Equity & Venture Capital",
-      "Venture Building & Founder"
+      "Venture Building & Founder",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Business Intelligence & Reporting",
+      "Markets & Trading",
+      "Equity Research & Investment Research",
+      "Sustainable Finance & Impact Investing",
+      "Real Estate Investment & Finance"
     ],
     "pathways": [
       "Commercial & Corporate Banking",
@@ -1742,7 +1822,15 @@
       "Asset & Wealth Management",
       "Financial Analysis & FP&A",
       "Fintech & Digital Finance",
-      "Private Equity & Venture Capital"
+      "Private Equity & Venture Capital",
+      "Venture Building & Founder",
+      "Consulting & Strategic Improvement",
+      "Business Analysis",
+      "Business Intelligence & Reporting",
+      "Markets & Trading",
+      "Equity Research & Investment Research",
+      "Sustainable Finance & Impact Investing",
+      "Real Estate Investment & Finance"
     ]
   },
   {
@@ -1759,7 +1847,14 @@
     "adjacentPathways": [
       "Core Data Analysis & Business Insight",
       "Financial Analysis & FP&A",
-      "Private Equity & Venture Capital"
+      "Private Equity & Venture Capital",
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Markets & Trading",
+      "Insurance & Actuarial",
+      "Sustainability & ESG Advisory",
+      "Public Affairs & Advocacy",
+      "Real Estate Investment & Finance"
     ],
     "pathways": [
       "Policy & Public Sector Analysis",
@@ -1769,7 +1864,14 @@
       "Business Analysis",
       "Core Data Analysis & Business Insight",
       "Financial Analysis & FP&A",
-      "Private Equity & Venture Capital"
+      "Private Equity & Venture Capital",
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Markets & Trading",
+      "Insurance & Actuarial",
+      "Sustainability & ESG Advisory",
+      "Public Affairs & Advocacy",
+      "Real Estate Investment & Finance"
     ]
   },
   {
@@ -1783,14 +1885,22 @@
     ],
     "adjacentPathways": [
       "Software Engineering",
-      "Backend & Platform Engineering"
+      "Backend & Platform Engineering",
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Financial Analysis & FP&A",
+      "Asset & Wealth Management"
     ],
     "pathways": [
       "Fintech & Digital Finance",
       "Investment Banking & Corporate Finance",
       "Markets & Trading",
       "Software Engineering",
-      "Backend & Platform Engineering"
+      "Backend & Platform Engineering",
+      "Risk & Quantitative Analysis",
+      "Data Science & Advanced Modelling",
+      "Financial Analysis & FP&A",
+      "Asset & Wealth Management"
     ]
   },
   {
@@ -1804,14 +1914,24 @@
     ],
     "adjacentPathways": [
       "Data Science & Advanced Modelling",
-      "Core Data Analysis & Business Insight"
+      "Core Data Analysis & Business Insight",
+      "Risk & Quantitative Analysis",
+      "Machine Learning & Applied AI",
+      "Product, Growth & Experimentation Analytics",
+      "Business Intelligence & Reporting",
+      "Investment Banking & Corporate Finance"
     ],
     "pathways": [
       "Financial Analysis & FP&A",
       "Equity Research & Investment Research",
       "Risk, Compliance & Controls",
       "Data Science & Advanced Modelling",
-      "Core Data Analysis & Business Insight"
+      "Core Data Analysis & Business Insight",
+      "Risk & Quantitative Analysis",
+      "Machine Learning & Applied AI",
+      "Product, Growth & Experimentation Analytics",
+      "Business Intelligence & Reporting",
+      "Investment Banking & Corporate Finance"
     ]
   },
   {
@@ -1825,14 +1945,26 @@
     ],
     "adjacentPathways": [
       "Investment Banking & Corporate Finance",
-      "Markets & Trading"
+      "Markets & Trading",
+      "Risk & Quantitative Analysis",
+      "Sustainable Finance & Impact Investing",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Consulting & Strategic Improvement",
+      "Real Estate Investment & Finance"
     ],
     "pathways": [
       "Asset & Wealth Management",
       "Equity Research & Investment Research",
       "Private Equity & Venture Capital",
       "Investment Banking & Corporate Finance",
-      "Markets & Trading"
+      "Markets & Trading",
+      "Risk & Quantitative Analysis",
+      "Sustainable Finance & Impact Investing",
+      "Financial Analysis & FP&A",
+      "Fintech & Digital Finance",
+      "Consulting & Strategic Improvement",
+      "Real Estate Investment & Finance"
     ]
   },
   {
@@ -1849,7 +1981,11 @@
       "Business Intelligence & Reporting",
       "Brand & Marketing Strategy",
       "Private Equity & Venture Capital",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Consulting & Strategic Improvement",
+      "Product, Growth & Experimentation Analytics",
+      "Performance Marketing & Growth",
+      "Fintech & Digital Finance"
     ],
     "pathways": [
       "Venture Building & Founder",
@@ -1859,7 +1995,11 @@
       "Business Intelligence & Reporting",
       "Brand & Marketing Strategy",
       "Private Equity & Venture Capital",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Consulting & Strategic Improvement",
+      "Product, Growth & Experimentation Analytics",
+      "Performance Marketing & Growth",
+      "Fintech & Digital Finance"
     ]
   },
   {
@@ -1873,14 +2013,24 @@
     ],
     "adjacentPathways": [
       "Generalist Business Programmes",
-      "Consulting & Strategic Improvement"
+      "Consulting & Strategic Improvement",
+      "Venture Capital, Accelerators & Innovation Support",
+      "Brand & Marketing Strategy",
+      "Business Intelligence & Reporting",
+      "Business Development & Commercial Partnerships",
+      "Financial Analysis & FP&A"
     ],
     "pathways": [
       "Start-up Operations",
       "Product Growth & Business Development in Start-ups",
       "Venture Building & Founder",
       "Generalist Business Programmes",
-      "Consulting & Strategic Improvement"
+      "Consulting & Strategic Improvement",
+      "Venture Capital, Accelerators & Innovation Support",
+      "Brand & Marketing Strategy",
+      "Business Intelligence & Reporting",
+      "Business Development & Commercial Partnerships",
+      "Financial Analysis & FP&A"
     ]
   },
   {
@@ -1893,13 +2043,21 @@
     ],
     "adjacentPathways": [
       "International Development & NGO Programmes",
-      "Social Work & Safeguarding"
+      "Social Work & Safeguarding",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Sustainability & ESG Advisory",
+      "Public Affairs & Advocacy",
+      "Consulting & Strategic Improvement"
     ],
     "pathways": [
       "Venture Building & Founder",
       "Start-up Operations",
       "International Development & NGO Programmes",
-      "Social Work & Safeguarding"
+      "Social Work & Safeguarding",
+      "Net Zero, Climate & Sustainability Strategy",
+      "Sustainability & ESG Advisory",
+      "Public Affairs & Advocacy",
+      "Consulting & Strategic Improvement"
     ]
   },
   {
@@ -1913,14 +2071,22 @@
     ],
     "adjacentPathways": [
       "Consulting & Strategic Improvement",
-      "Project, PMO & Transformation"
+      "Project, PMO & Transformation",
+      "Business Analysis",
+      "Product, Growth & Experimentation Analytics",
+      "Software Engineering",
+      "Business Development & Commercial Partnerships"
     ],
     "pathways": [
       "Venture Capital, Accelerators & Innovation Support",
       "Start-up Operations",
       "Product Growth & Business Development in Start-ups",
       "Consulting & Strategic Improvement",
-      "Project, PMO & Transformation"
+      "Project, PMO & Transformation",
+      "Business Analysis",
+      "Product, Growth & Experimentation Analytics",
+      "Software Engineering",
+      "Business Development & Commercial Partnerships"
     ]
   },
   {
@@ -1936,7 +2102,11 @@
     "adjacentPathways": [
       "Business Intelligence & Reporting",
       "Product Growth & Business Development in Start-ups",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Customer & Market Insight",
+      "UX Research & Behavioural Insight",
+      "PR & Communications",
+      "Digital Design & Multimedia"
     ],
     "pathways": [
       "Brand & Marketing Strategy",
@@ -1945,7 +2115,11 @@
       "Content & Social Media",
       "Business Intelligence & Reporting",
       "Product Growth & Business Development in Start-ups",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Customer & Market Insight",
+      "UX Research & Behavioural Insight",
+      "PR & Communications",
+      "Digital Design & Multimedia"
     ]
   },
   {
@@ -2043,14 +2217,22 @@
     ],
     "adjacentPathways": [
       "Market Research & Audience Insight",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Customer & Market Insight",
+      "Content & Social Media",
+      "Digital Design & Multimedia",
+      "Journalism & Editorial"
     ],
     "pathways": [
       "Brand & Marketing Strategy",
       "PR & Communications",
       "Performance Marketing & Growth",
       "Market Research & Audience Insight",
-      "Business Development & Commercial Partnerships"
+      "Business Development & Commercial Partnerships",
+      "Customer & Market Insight",
+      "Content & Social Media",
+      "Digital Design & Multimedia",
+      "Journalism & Editorial"
     ]
   },
   {
@@ -2521,6 +2703,72 @@
       "International Relations, Policy & Geopolitical Analysis",
       "Social Research & Cultural Analysis",
       "Sustainability & ESG Advisory"
+    ]
+  },
+  {
+    "id": "sub_real_estate_and_property",
+    "title": "Real Estate & Property",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Real Estate Investment & Finance",
+      "Property Development & Asset Management",
+      "Commercial Valuation & Surveying",
+      "Property & Facilities Management",
+      "Real Estate Agency & Brokerage"
+    ],
+    "adjacentPathways": [
+      "Asset & Wealth Management",
+      "Investment Banking & Corporate Finance",
+      "Commercial & Corporate Banking",
+      "Surveying & Cost Consultancy",
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Construction Project Delivery"
+    ],
+    "pathways": [
+      "Real Estate Investment & Finance",
+      "Property Development & Asset Management",
+      "Commercial Valuation & Surveying",
+      "Property & Facilities Management",
+      "Real Estate Agency & Brokerage",
+      "Asset & Wealth Management",
+      "Investment Banking & Corporate Finance",
+      "Commercial & Corporate Banking",
+      "Surveying & Cost Consultancy",
+      "Town Planning & Urban Development",
+      "Sustainability & Building Performance",
+      "Construction Project Delivery"
+    ]
+  },
+  {
+    "id": "sub_hospitality_tourism_and_events_management",
+    "title": "Hospitality, Tourism & Events Management",
+    "careerWorldId": "cw_business_strategy_commercial_leadership",
+    "primaryPathways": [
+      "Hospitality & Hotel Management",
+      "Events & Experience Management",
+      "Tourism & Destination Management",
+      "Food & Beverage Operations"
+    ],
+    "adjacentPathways": [
+      "Operations & Supply Chain",
+      "Business Development & Commercial Partnerships",
+      "Brand & Marketing Strategy",
+      "Customer & Market Insight",
+      "Project, PMO & Transformation",
+      "Venture Building & Founder"
+    ],
+    "pathways": [
+      "Hospitality & Hotel Management",
+      "Events & Experience Management",
+      "Tourism & Destination Management",
+      "Food & Beverage Operations",
+      "Operations & Supply Chain",
+      "Business Development & Commercial Partnerships",
+      "Brand & Marketing Strategy",
+      "Customer & Market Insight",
+      "Project, PMO & Transformation",
+      "Venture Building & Founder"
     ]
   }
 ]

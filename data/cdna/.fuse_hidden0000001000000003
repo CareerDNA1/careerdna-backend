@@ -180,6 +180,94 @@
         ]
       },
       {
+        "id": "risk_quantitative_analysis",
+        "familyTitle": "Risk & Quantitative Analysis",
+        "roles": [
+          {
+            "id": "actuarial_analyst",
+            "title": "Actuarial Analyst",
+            "archetypes": [
+              "Thinker",
+              "Creator",
+              "Explorer",
+              "Organizer"
+            ],
+            "coreSubdimensions": [
+              "Data Curiosity",
+              "Analytical Curiosity",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Precision",
+              "Structure",
+              "Independence",
+              "Autonomy"
+            ]
+          },
+          {
+            "id": "quantitative_risk_analyst",
+            "title": "Quantitative Risk Analyst",
+            "archetypes": [
+              "Thinker",
+              "Creator",
+              "Explorer",
+              "Organizer"
+            ],
+            "coreSubdimensions": [
+              "Analytical Curiosity",
+              "Data Curiosity",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Precision",
+              "Autonomy",
+              "Independence"
+            ]
+          },
+          {
+            "id": "pricing_analyst",
+            "title": "Pricing Analyst",
+            "archetypes": [
+              "Thinker",
+              "Explorer",
+              "Organizer",
+              "Achiever"
+            ],
+            "coreSubdimensions": [
+              "Data Curiosity",
+              "Analytical Curiosity"
+            ],
+            "secondarySubdimensions": [
+              "Precision",
+              "Structure",
+              "Autonomy"
+            ]
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Data Curiosity",
+          "Analytical Curiosity",
+          "Mastery",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Technical Curiosity",
+          "Autonomy",
+          "Achievement",
+          "Security",
+          "Structure",
+          "Collaboration",
+          "Independence"
+        ]
+      },
+      {
         "id": "data_science_advanced_modelling",
         "familyTitle": "Data Science & Advanced Modelling",
         "roles": [
@@ -195,8 +283,7 @@
               "Analytical Curiosity",
               "Data Curiosity",
               "Mastery",
-              "Originality",
-              "Technical Curiosity"
+              "Originality"
             ],
             "secondarySubdimensions": [
               "Autonomy",
@@ -242,6 +329,53 @@
           "Collaboration",
           "Independence",
           "Precision",
+          "Variety"
+        ]
+      },
+      {
+        "id": "machine_learning_applied_ai",
+        "familyTitle": "Machine Learning & Applied AI",
+        "roles": [
+          {
+            "id": "applied_ai_analyst",
+            "title": "Applied AI Analyst",
+            "archetypes": [
+              "Thinker",
+              "Creator",
+              "Explorer",
+              "Organizer"
+            ],
+            "coreSubdimensions": [
+              "Analytical Curiosity",
+              "Data Curiosity",
+              "Technical Curiosity",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Autonomy",
+              "Independence",
+              "Originality"
+            ]
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Data Curiosity",
+          "Mastery",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Entrepreneurial Drive",
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Independence",
           "Variety"
         ]
       },
@@ -341,7 +475,26 @@
         "roles": [
           {
             "id": "software_engineer",
-            "title": "Software Engineer / Software Developer",
+            "title": "Software Engineer",
+            "archetypes": [
+              "Thinker",
+              "Creator",
+              "Explorer"
+            ],
+            "coreSubdimensions": [
+              "Analytical Curiosity",
+              "Technical Curiosity",
+              "Autonomy",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Independence",
+              "Precision"
+            ]
+          },
+          {
+            "id": "software_developer",
+            "title": "Software Developer",
             "archetypes": [
               "Thinker",
               "Creator",
@@ -494,7 +647,26 @@
         "roles": [
           {
             "id": "frontend_developer",
-            "title": "Frontend / Web Developer",
+            "title": "Frontend Developer",
+            "archetypes": [
+              "Creator",
+              "Visionary",
+              "Thinker"
+            ],
+            "coreSubdimensions": [
+              "Originality",
+              "Creative Expression",
+              "Technical Curiosity"
+            ],
+            "secondarySubdimensions": [
+              "Autonomy",
+              "Mastery",
+              "Precision"
+            ]
+          },
+          {
+            "id": "web_developer",
+            "title": "Web Developer",
             "archetypes": [
               "Creator",
               "Visionary",
@@ -605,7 +777,28 @@
         "roles": [
           {
             "id": "software_tester",
-            "title": "Software Tester / QA Analyst",
+            "title": "Software Tester",
+            "archetypes": [
+              "Thinker",
+              "Organizer",
+              "Creator",
+              "Explorer"
+            ],
+            "coreSubdimensions": [
+              "Analytical Curiosity",
+              "Technical Curiosity",
+              "Precision"
+            ],
+            "secondarySubdimensions": [
+              "Data Curiosity",
+              "Autonomy",
+              "Structure",
+              "Independence"
+            ]
+          },
+          {
+            "id": "qa_analyst",
+            "title": "QA Analyst",
             "archetypes": [
               "Thinker",
               "Organizer",
@@ -717,7 +910,27 @@
         "roles": [
           {
             "id": "machine_learning_engineer",
-            "title": "Machine Learning / AI Engineer",
+            "title": "Machine Learning Engineer",
+            "archetypes": [
+              "Thinker",
+              "Creator",
+              "Visionary"
+            ],
+            "coreSubdimensions": [
+              "Originality",
+              "Analytical Curiosity",
+              "Technical Curiosity",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Data Curiosity",
+              "Autonomy",
+              "Independence"
+            ]
+          },
+          {
+            "id": "ai_engineer",
+            "title": "AI Engineer",
             "archetypes": [
               "Thinker",
               "Creator",
@@ -750,53 +963,6 @@
         "secondarySubdimensions": [
           "Entrepreneurial Drive",
           "Data Curiosity",
-          "Purpose & Impact",
-          "Autonomy",
-          "Collaboration",
-          "Independence",
-          "Variety"
-        ]
-      },
-      {
-        "id": "machine_learning_applied_ai",
-        "familyTitle": "Machine Learning & Applied AI",
-        "roles": [
-          {
-            "id": "applied_ai_analyst",
-            "title": "Applied AI Analyst",
-            "archetypes": [
-              "Thinker",
-              "Creator",
-              "Explorer",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Data Curiosity",
-              "Technical Curiosity",
-              "Mastery"
-            ],
-            "secondarySubdimensions": [
-              "Autonomy",
-              "Independence",
-              "Originality"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Thinker",
-          "Creator",
-          "Visionary"
-        ],
-        "coreSubdimensions": [
-          "Analytical Curiosity",
-          "Technical Curiosity",
-          "Data Curiosity",
-          "Mastery",
-          "Originality"
-        ],
-        "secondarySubdimensions": [
-          "Entrepreneurial Drive",
           "Purpose & Impact",
           "Autonomy",
           "Collaboration",
@@ -1073,8 +1239,7 @@
               "Mastery",
               "Precision",
               "Structure",
-              "Achievement",
-              "Data Curiosity"
+              "Achievement"
             ]
           },
           {
@@ -1146,18 +1311,16 @@
             "archetypes": [
               "Thinker",
               "Creator",
-              "Explorer",
-              "Organizer"
+              "Explorer"
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
-              "Analytical Curiosity",
-              "Mastery"
+              "Analytical Curiosity"
             ],
             "secondarySubdimensions": [
+              "Mastery",
               "Precision",
               "Structure",
-              "Collaboration",
               "Data Curiosity"
             ]
           },
@@ -1300,14 +1463,13 @@
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
-              "Analytical Curiosity",
-              "Precision"
+              "Analytical Curiosity"
             ],
             "secondarySubdimensions": [
               "Mastery",
+              "Precision",
               "Structure",
-              "Reliability",
-              "Data Curiosity"
+              "Reliability"
             ]
           },
           {
@@ -1369,13 +1531,13 @@
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
-              "Analytical Curiosity",
-              "Reliability"
+              "Analytical Curiosity"
             ],
             "secondarySubdimensions": [
               "Mastery",
               "Precision",
               "Structure",
+              "Reliability",
               "Data Curiosity",
               "Achievement"
             ]
@@ -1411,13 +1573,13 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Technical Curiosity",
-              "Reliability"
+              "Technical Curiosity"
             ],
             "secondarySubdimensions": [
               "Mastery",
               "Precision",
               "Structure",
+              "Reliability",
               "Data Curiosity",
               "Achievement"
             ]
@@ -1473,9 +1635,9 @@
             "title": "Systems Engineer",
             "archetypes": [
               "Thinker",
+              "Organizer",
               "Creator",
-              "Explorer",
-              "Organizer"
+              "Connector"
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
@@ -1485,6 +1647,7 @@
             "secondarySubdimensions": [
               "Precision",
               "Structure",
+              "Reliability",
               "Collaboration",
               "Data Curiosity"
             ]
@@ -1494,8 +1657,9 @@
             "title": "Structural Engineer",
             "archetypes": [
               "Thinker",
-              "Creator",
-              "Explorer"
+              "Organizer",
+              "Achiever",
+              "Creator"
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
@@ -1504,8 +1668,9 @@
             ],
             "secondarySubdimensions": [
               "Mastery",
-              "Structure",
               "Reliability",
+              "Structure",
+              "Achievement",
               "Data Curiosity"
             ]
           }
@@ -1580,19 +1745,21 @@
             "title": "Process Engineer",
             "archetypes": [
               "Thinker",
-              "Creator",
-              "Explorer"
+              "Organizer",
+              "Achiever",
+              "Creator"
             ],
             "coreSubdimensions": [
               "Technical Curiosity",
-              "Analytical Curiosity"
+              "Analytical Curiosity",
+              "Mastery"
             ],
             "secondarySubdimensions": [
-              "Mastery",
               "Precision",
               "Structure",
-              "Achievement",
-              "Data Curiosity"
+              "Reliability",
+              "Data Curiosity",
+              "Achievement"
             ]
           }
         ],
@@ -1854,8 +2021,7 @@
               "Structure",
               "Collaboration",
               "Pace",
-              "Reliability",
-              "Social Confidence"
+              "Reliability"
             ]
           }
         ],
@@ -2015,7 +2181,7 @@
   },
   {
     "careerWorldId": "science_research_laboratory_innovation",
-    "careerWorldTitle": "Scientific Discovery & Innovation",
+    "careerWorldTitle": "Science, Research & Laboratory Innovation",
     "roleFamilies": [
       {
         "id": "laboratory_science",
@@ -2059,7 +2225,7 @@
               "Precision",
               "Reliability",
               "Collaboration",
-              "Independence"
+              "Technical Curiosity"
             ]
           }
         ],
@@ -2239,20 +2405,19 @@
             "title": "Clinical Research Associate",
             "archetypes": [
               "Thinker",
-              "Organizer",
-              "Connector",
-              "Achiever"
+              "Creator",
+              "Explorer"
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Mastery",
-              "Reliability"
+              "Mastery"
             ],
             "secondarySubdimensions": [
               "Precision",
-              "Structure",
+              "Data Curiosity",
+              "Reliability",
               "Collaboration",
-              "Data Curiosity"
+              "Structure"
             ]
           },
           {
@@ -2310,10 +2475,10 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Data Curiosity",
-              "Technical Curiosity"
+              "Data Curiosity"
             ],
             "secondarySubdimensions": [
+              "Technical Curiosity",
               "Mastery",
               "Precision",
               "Autonomy",
@@ -2481,8 +2646,7 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Precision",
-              "Resilience"
+              "Precision"
             ],
             "secondarySubdimensions": [
               "Technical Curiosity",
@@ -3599,7 +3763,27 @@
         "roles": [
           {
             "id": "clinical_research_nurse",
-            "title": "Clinical Research Nurse / Research Nurse",
+            "title": "Clinical Research Nurse",
+            "archetypes": [
+              "Connector",
+              "Thinker",
+              "Creator"
+            ],
+            "coreSubdimensions": [
+              "Helping & Caring",
+              "Mastery"
+            ],
+            "secondarySubdimensions": [
+              "Precision",
+              "Reliability",
+              "Analytical Curiosity",
+              "Collaboration",
+              "Data Curiosity"
+            ]
+          },
+          {
+            "id": "research_nurse",
+            "title": "Research Nurse",
             "archetypes": [
               "Connector",
               "Thinker",
@@ -5024,10 +5208,10 @@
             ],
             "coreSubdimensions": [
               "Helping & Caring",
-              "Empathy",
-              "Analytical Curiosity"
+              "Empathy"
             ],
             "secondarySubdimensions": [
+              "Analytical Curiosity",
               "Mastery",
               "Autonomy",
               "Purpose & Impact",
@@ -5219,7 +5403,7 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Empathy"
+              "Helping & Caring"
             ],
             "secondarySubdimensions": [
               "Mastery",
@@ -5525,8 +5709,8 @@
             "archetypes": [
               "Connector",
               "Visionary",
-              "Creator",
-              "Achiever"
+              "Achiever",
+              "Creator"
             ],
             "coreSubdimensions": [
               "Helping & Caring",
@@ -5784,19 +5968,18 @@
               "Connector",
               "Visionary",
               "Creator",
-              "Achiever"
+              "Thinker"
             ],
             "coreSubdimensions": [
               "Helping & Caring",
-              "Empathy",
               "Purpose & Impact"
             ],
             "secondarySubdimensions": [
+              "Empathy",
               "Resilience",
-              "Mastery",
-              "Adaptability",
-              "Social Confidence",
-              "Collaboration"
+              "Collaboration",
+              "Originality",
+              "Mastery"
             ]
           }
         ],
@@ -5837,11 +6020,9 @@
               "Mastery"
             ],
             "secondarySubdimensions": [
-              "Data Curiosity",
+              "Independence",
               "Precision",
-              "Reliability",
-              "Collaboration",
-              "Independence"
+              "Data Curiosity"
             ]
           },
           {
@@ -6186,10 +6367,10 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Purpose & Impact",
-              "Data Curiosity"
+              "Purpose & Impact"
             ],
             "secondarySubdimensions": [
+              "Data Curiosity",
               "Mastery",
               "Collaboration",
               "Cultural & Global Curiosity",
@@ -6513,11 +6694,11 @@
               "Connector"
             ],
             "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Structure",
-              "Collaboration"
+              "Analytical Curiosity"
             ],
             "secondarySubdimensions": [
+              "Structure",
+              "Collaboration",
               "Precision",
               "Autonomy",
               "Adaptability"
@@ -6533,11 +6714,11 @@
               "Connector"
             ],
             "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Structure",
-              "Precision"
+              "Analytical Curiosity"
             ],
             "secondarySubdimensions": [
+              "Structure",
+              "Precision",
               "Achievement",
               "Mastery"
             ]
@@ -6710,6 +6891,27 @@
             ]
           },
           {
+            "id": "commercial_partnerships_executive",
+            "title": "Commercial Partnerships Executive",
+            "archetypes": [
+              "Visionary",
+              "Connector",
+              "Achiever",
+              "Creator"
+            ],
+            "coreSubdimensions": [
+              "Social Confidence",
+              "Entrepreneurial Drive"
+            ],
+            "secondarySubdimensions": [
+              "Achievement",
+              "Adaptability",
+              "Collaboration",
+              "Variety",
+              "Resilience"
+            ]
+          },
+          {
             "id": "business_development_executive",
             "title": "Business Development Executive",
             "archetypes": [
@@ -6857,551 +7059,6 @@
           "Precision",
           "Purpose & Impact"
         ]
-      },
-      {
-        "id": "real_estate_investment_finance",
-        "familyTitle": "Real Estate Investment & Finance",
-        "roles": [
-          {
-            "id": "real_estate_investment_analyst",
-            "title": "Real Estate Investment Analyst",
-            "archetypes": [
-              "Thinker",
-              "Achiever",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Data Curiosity",
-              "Achievement"
-            ],
-            "secondarySubdimensions": [
-              "Precision",
-              "Structure",
-              "Security",
-              "Reliability"
-            ]
-          },
-          {
-            "id": "real_estate_finance_associate",
-            "title": "Real Estate Finance Associate",
-            "archetypes": [
-              "Thinker",
-              "Achiever",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Data Curiosity",
-              "Precision"
-            ],
-            "secondarySubdimensions": [
-              "Achievement",
-              "Structure",
-              "Security",
-              "Reliability"
-            ]
-          },
-          {
-            "id": "property_fund_analyst",
-            "title": "Property Fund Analyst",
-            "archetypes": [
-              "Thinker",
-              "Organizer",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Data Curiosity",
-              "Analytical Curiosity",
-              "Achievement"
-            ],
-            "secondarySubdimensions": [
-              "Precision",
-              "Security",
-              "Structure",
-              "Autonomy"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Thinker",
-          "Achiever",
-          "Organizer"
-        ],
-        "coreSubdimensions": [
-          "Analytical Curiosity",
-          "Data Curiosity",
-          "Achievement"
-        ],
-        "secondarySubdimensions": [
-          "Precision",
-          "Structure",
-          "Security",
-          "Entrepreneurial Drive",
-          "Reliability"
-        ]
-      },
-      {
-        "id": "property_development_asset_management",
-        "familyTitle": "Property Development & Asset Management",
-        "roles": [
-          {
-            "id": "property_development_manager",
-            "title": "Property Development Manager",
-            "archetypes": [
-              "Achiever",
-              "Visionary",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Achievement",
-              "Entrepreneurial Drive",
-              "Structure"
-            ],
-            "secondarySubdimensions": [
-              "Analytical Curiosity",
-              "Adaptability",
-              "Resilience",
-              "Autonomy"
-            ]
-          },
-          {
-            "id": "real_estate_asset_manager",
-            "title": "Real Estate Asset Manager",
-            "archetypes": [
-              "Achiever",
-              "Organizer",
-              "Thinker"
-            ],
-            "coreSubdimensions": [
-              "Achievement",
-              "Analytical Curiosity",
-              "Structure"
-            ],
-            "secondarySubdimensions": [
-              "Data Curiosity",
-              "Precision",
-              "Autonomy",
-              "Reliability"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Achiever",
-          "Visionary",
-          "Organizer"
-        ],
-        "coreSubdimensions": [
-          "Achievement",
-          "Entrepreneurial Drive",
-          "Analytical Curiosity"
-        ],
-        "secondarySubdimensions": [
-          "Structure",
-          "Adaptability",
-          "Resilience",
-          "Autonomy",
-          "Pace"
-        ]
-      },
-      {
-        "id": "commercial_valuation_surveying",
-        "familyTitle": "Commercial Valuation & Surveying",
-        "roles": [
-          {
-            "id": "commercial_valuation_surveyor",
-            "title": "Commercial Valuation Surveyor / Valuer",
-            "archetypes": [
-              "Organizer",
-              "Thinker",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Precision",
-              "Analytical Curiosity",
-              "Structure"
-            ],
-            "secondarySubdimensions": [
-              "Data Curiosity",
-              "Reliability",
-              "Mastery",
-              "Security"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Organizer",
-          "Thinker",
-          "Achiever"
-        ],
-        "coreSubdimensions": [
-          "Precision",
-          "Analytical Curiosity",
-          "Structure"
-        ],
-        "secondarySubdimensions": [
-          "Data Curiosity",
-          "Reliability",
-          "Mastery",
-          "Achievement",
-          "Security"
-        ]
-      },
-      {
-        "id": "property_facilities_management",
-        "familyTitle": "Property & Facilities Management",
-        "roles": [
-          {
-            "id": "property_manager",
-            "title": "Property Manager",
-            "archetypes": [
-              "Organizer",
-              "Connector",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Structure",
-              "Reliability",
-              "Social Confidence"
-            ],
-            "secondarySubdimensions": [
-              "Achievement",
-              "Collaboration",
-              "Adaptability",
-              "Precision"
-            ]
-          },
-          {
-            "id": "facilities_manager",
-            "title": "Facilities Manager",
-            "archetypes": [
-              "Organizer",
-              "Achiever",
-              "Connector"
-            ],
-            "coreSubdimensions": [
-              "Structure",
-              "Reliability",
-              "Achievement"
-            ],
-            "secondarySubdimensions": [
-              "Collaboration",
-              "Adaptability",
-              "Pace",
-              "Precision"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Organizer",
-          "Achiever",
-          "Connector"
-        ],
-        "coreSubdimensions": [
-          "Structure",
-          "Reliability",
-          "Achievement"
-        ],
-        "secondarySubdimensions": [
-          "Collaboration",
-          "Adaptability",
-          "Social Confidence",
-          "Precision",
-          "Pace"
-        ]
-      },
-      {
-        "id": "real_estate_agency_brokerage",
-        "familyTitle": "Real Estate Agency & Brokerage",
-        "roles": [
-          {
-            "id": "commercial_real_estate_agent",
-            "title": "Commercial Real Estate Agent / Broker",
-            "archetypes": [
-              "Achiever",
-              "Connector",
-              "Visionary"
-            ],
-            "coreSubdimensions": [
-              "Social Confidence",
-              "Achievement",
-              "Entrepreneurial Drive"
-            ],
-            "secondarySubdimensions": [
-              "Resilience",
-              "Adaptability",
-              "Pace",
-              "Autonomy"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Achiever",
-          "Connector",
-          "Visionary"
-        ],
-        "coreSubdimensions": [
-          "Social Confidence",
-          "Achievement",
-          "Entrepreneurial Drive"
-        ],
-        "secondarySubdimensions": [
-          "Resilience",
-          "Adaptability",
-          "Variety",
-          "Pace",
-          "Autonomy"
-        ]
-      },
-      {
-        "id": "hospitality_hotel_management",
-        "familyTitle": "Hospitality & Hotel Management",
-        "roles": [
-          {
-            "id": "hotel_manager",
-            "title": "Hotel Manager",
-            "archetypes": [
-              "Connector",
-              "Achiever",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Social Confidence",
-              "Achievement",
-              "Structure"
-            ],
-            "secondarySubdimensions": [
-              "Helping & Caring",
-              "Collaboration",
-              "Pace",
-              "Adaptability"
-            ]
-          },
-          {
-            "id": "guest_experience_manager",
-            "title": "Guest Experience Manager",
-            "archetypes": [
-              "Connector",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Helping & Caring",
-              "Social Confidence",
-              "Empathy"
-            ],
-            "secondarySubdimensions": [
-              "Collaboration",
-              "Adaptability",
-              "Pace",
-              "Achievement"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Connector",
-          "Achiever",
-          "Organizer"
-        ],
-        "coreSubdimensions": [
-          "Social Confidence",
-          "Helping & Caring",
-          "Achievement"
-        ],
-        "secondarySubdimensions": [
-          "Collaboration",
-          "Adaptability",
-          "Pace",
-          "Structure",
-          "Resilience"
-        ]
-      },
-      {
-        "id": "events_experience_management",
-        "familyTitle": "Events & Experience Management",
-        "roles": [
-          {
-            "id": "events_manager",
-            "title": "Events Manager",
-            "archetypes": [
-              "Creator",
-              "Connector",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Creative Expression",
-              "Social Confidence",
-              "Achievement"
-            ],
-            "secondarySubdimensions": [
-              "Adaptability",
-              "Pace",
-              "Structure",
-              "Collaboration"
-            ]
-          },
-          {
-            "id": "experience_producer",
-            "title": "Experience Producer",
-            "archetypes": [
-              "Creator",
-              "Connector",
-              "Visionary"
-            ],
-            "coreSubdimensions": [
-              "Creative Expression",
-              "Social Confidence",
-              "Variety"
-            ],
-            "secondarySubdimensions": [
-              "Adaptability",
-              "Pace",
-              "Collaboration",
-              "Achievement"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Creator",
-          "Connector",
-          "Achiever"
-        ],
-        "coreSubdimensions": [
-          "Creative Expression",
-          "Social Confidence",
-          "Achievement"
-        ],
-        "secondarySubdimensions": [
-          "Adaptability",
-          "Pace",
-          "Collaboration",
-          "Variety",
-          "Structure"
-        ]
-      },
-      {
-        "id": "tourism_destination_management",
-        "familyTitle": "Tourism & Destination Management",
-        "roles": [
-          {
-            "id": "destination_manager",
-            "title": "Destination Manager",
-            "archetypes": [
-              "Explorer",
-              "Connector",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Cultural & Global Curiosity",
-              "Social Confidence",
-              "Achievement"
-            ],
-            "secondarySubdimensions": [
-              "Adaptability",
-              "Variety",
-              "Collaboration",
-              "Purpose & Impact"
-            ]
-          },
-          {
-            "id": "tourism_development_officer",
-            "title": "Tourism Development Officer",
-            "archetypes": [
-              "Explorer",
-              "Connector",
-              "Visionary"
-            ],
-            "coreSubdimensions": [
-              "Cultural & Global Curiosity",
-              "Purpose & Impact",
-              "Social Confidence"
-            ],
-            "secondarySubdimensions": [
-              "Adaptability",
-              "Variety",
-              "Collaboration",
-              "Achievement"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Explorer",
-          "Connector",
-          "Achiever"
-        ],
-        "coreSubdimensions": [
-          "Cultural & Global Curiosity",
-          "Social Confidence",
-          "Achievement"
-        ],
-        "secondarySubdimensions": [
-          "Adaptability",
-          "Variety",
-          "Collaboration",
-          "Purpose & Impact",
-          "Pace"
-        ]
-      },
-      {
-        "id": "food_beverage_operations",
-        "familyTitle": "Food & Beverage Operations",
-        "roles": [
-          {
-            "id": "food_beverage_manager",
-            "title": "Food & Beverage Manager",
-            "archetypes": [
-              "Organizer",
-              "Achiever",
-              "Connector"
-            ],
-            "coreSubdimensions": [
-              "Structure",
-              "Achievement",
-              "Pace"
-            ],
-            "secondarySubdimensions": [
-              "Reliability",
-              "Collaboration",
-              "Adaptability",
-              "Social Confidence"
-            ]
-          },
-          {
-            "id": "restaurant_operations_manager",
-            "title": "Restaurant Operations Manager",
-            "archetypes": [
-              "Organizer",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Structure",
-              "Achievement",
-              "Reliability"
-            ],
-            "secondarySubdimensions": [
-              "Pace",
-              "Collaboration",
-              "Adaptability",
-              "Precision"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Organizer",
-          "Achiever",
-          "Connector"
-        ],
-        "coreSubdimensions": [
-          "Structure",
-          "Achievement",
-          "Pace"
-        ],
-        "secondarySubdimensions": [
-          "Reliability",
-          "Collaboration",
-          "Adaptability",
-          "Precision",
-          "Social Confidence"
-        ]
       }
     ]
   },
@@ -7437,8 +7094,8 @@
             "id": "corporate_finance_analyst",
             "title": "Corporate Finance Analyst",
             "archetypes": [
-              "Thinker",
               "Achiever",
+              "Thinker",
               "Explorer"
             ],
             "coreSubdimensions": [
@@ -7507,11 +7164,11 @@
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Data Curiosity"
+              "Entrepreneurial Drive"
             ],
             "secondarySubdimensions": [
+              "Data Curiosity",
               "Mastery",
-              "Originality",
               "Autonomy",
               "Precision",
               "Achievement"
@@ -7527,13 +7184,14 @@
         "coreSubdimensions": [
           "Analytical Curiosity",
           "Mastery",
-          "Data Curiosity",
-          "Originality"
+          "Entrepreneurial Drive"
         ],
         "secondarySubdimensions": [
-          "Precision",
+          "Data Curiosity",
           "Autonomy",
+          "Precision",
           "Independence",
+          "Originality",
           "Achievement"
         ]
       },
@@ -8076,19 +7734,21 @@
             "title": "Portfolio Analyst",
             "archetypes": [
               "Thinker",
-              "Explorer",
-              "Organizer",
-              "Achiever"
+              "Visionary",
+              "Creator",
+              "Organizer"
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
-              "Data Curiosity"
+              "Entrepreneurial Drive",
+              "Achievement"
             ],
             "secondarySubdimensions": [
-              "Precision",
-              "Structure",
+              "Data Curiosity",
               "Mastery",
-              "Autonomy"
+              "Precision",
+              "Autonomy",
+              "Originality"
             ]
           }
         ],
@@ -8163,8 +7823,9 @@
             "title": "Corporate Finance Analyst",
             "archetypes": [
               "Thinker",
-              "Achiever",
-              "Explorer"
+              "Organizer",
+              "Creator",
+              "Achiever"
             ],
             "coreSubdimensions": [
               "Analytical Curiosity",
@@ -8368,94 +8029,6 @@
           "Structure",
           "Achievement",
           "Reliability",
-          "Independence"
-        ]
-      },
-      {
-        "id": "risk_quantitative_analysis",
-        "familyTitle": "Risk & Quantitative Analysis",
-        "roles": [
-          {
-            "id": "actuarial_analyst",
-            "title": "Actuarial Analyst",
-            "archetypes": [
-              "Thinker",
-              "Organizer",
-              "Explorer"
-            ],
-            "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Data Curiosity",
-              "Security"
-            ],
-            "secondarySubdimensions": [
-              "Precision",
-              "Mastery",
-              "Structure",
-              "Independence",
-              "Achievement"
-            ]
-          },
-          {
-            "id": "quantitative_risk_analyst",
-            "title": "Quantitative Risk Analyst",
-            "archetypes": [
-              "Thinker",
-              "Creator",
-              "Explorer",
-              "Organizer"
-            ],
-            "coreSubdimensions": [
-              "Analytical Curiosity",
-              "Data Curiosity",
-              "Mastery"
-            ],
-            "secondarySubdimensions": [
-              "Precision",
-              "Autonomy",
-              "Independence"
-            ]
-          },
-          {
-            "id": "pricing_analyst",
-            "title": "Pricing Analyst",
-            "archetypes": [
-              "Thinker",
-              "Explorer",
-              "Organizer",
-              "Achiever"
-            ],
-            "coreSubdimensions": [
-              "Data Curiosity",
-              "Analytical Curiosity"
-            ],
-            "secondarySubdimensions": [
-              "Precision",
-              "Structure",
-              "Autonomy"
-            ]
-          }
-        ],
-        "archetypes": [
-          "Thinker",
-          "Organizer",
-          "Creator",
-          "Explorer"
-        ],
-        "coreSubdimensions": [
-          "Data Curiosity",
-          "Analytical Curiosity",
-          "Mastery",
-          "Precision"
-        ],
-        "secondarySubdimensions": [
-          "Reliability",
-          "Technical Curiosity",
-          "Autonomy",
-          "Achievement",
-          "Security",
-          "Structure",
-          "Collaboration",
           "Independence"
         ]
       }
@@ -9224,8 +8797,27 @@
         "familyTitle": "Digital Design & Multimedia",
         "roles": [
           {
+            "id": "multimedia_designer",
+            "title": "Multimedia Designer",
+            "archetypes": [
+              "Creator",
+              "Visionary",
+              "Thinker"
+            ],
+            "coreSubdimensions": [
+              "Originality",
+              "Creative Expression",
+              "Technical Curiosity"
+            ],
+            "secondarySubdimensions": [
+              "Mastery",
+              "Autonomy",
+              "Variety"
+            ]
+          },
+          {
             "id": "digital_designer",
-            "title": "Multimedia / Digital Designer",
+            "title": "Digital Designer",
             "archetypes": [
               "Creator",
               "Visionary",
@@ -9316,10 +8908,9 @@
               "Empathy"
             ],
             "secondarySubdimensions": [
+              "Autonomy",
               "Mastery",
-              "Originality",
-              "Technical Curiosity",
-              "Collaboration",
+              "Independence",
               "Data Curiosity"
             ]
           }

@@ -1,5 +1,6 @@
 const { scoreItemTotal, scoreItemBreakdown } = require('./cdnaSelect');
 const { CDNA_SCORE_CONFIG } = require('./cdnaScoreConfig');
+const { ROLE_DESCRIPTIONS } = require('./roleDescriptions');
 
 function norm(value = '') {
   return String(value || '')
@@ -161,11 +162,15 @@ function roleFamilyItemsFromFlatRoles(allRoles = []) {
       title: role?.title || '',
       archetypes: Array.isArray(role?.archetypes) ? role.archetypes : [],
       keySubdimensions: Array.isArray(role?.keySubdimensions) ? role.keySubdimensions : [],
+      coreSubdimensions: Array.isArray(role?.coreSubdimensions) ? role.coreSubdimensions : [],
+      secondarySubdimensions: Array.isArray(role?.secondarySubdimensions) ? role.secondarySubdimensions : [],
       entryLevelFit: role?.entryLevelFit || '',
       fullSummary: roleSummary,
       summary: roleSummary,
       fallbackSummary: roleSummary,
-      description: roleSummary,
+      // Rich six-field Role Explorer definition (keyed by role id); fall back to
+      // the short summary if a role has no long-form definition yet.
+      description: (role?.id && ROLE_DESCRIPTIONS[role.id]) || roleSummary,
     });
 
     if (!family.archetypes.length && Array.isArray(role?.archetypes)) {
@@ -549,18 +554,29 @@ function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {},
       };
     });
 
-  const subdimensions = (Array.isArray(libraryItem.signatureSubdimensions)
+  // Career worlds carry `signatureSubdimensions` ({name, tier}); pathways and
+  // roles carry plain `coreSubdimensions` / `secondarySubdimensions` string
+  // arrays instead. Fall back to those so pathways also get their trait pills.
+  const rawSignatureSubdims = Array.isArray(libraryItem.signatureSubdimensions) && libraryItem.signatureSubdimensions.length
     ? libraryItem.signatureSubdimensions
-    : []
-  ).map((entry) => {
-    const userScore = getSubdimensionScore(profile, entry?.name);
-    return {
-      name: entry?.name || '',
-      tier: entry?.tier || 'signature',
-      userScore,
-      state: stateFromScore(userScore),
-    };
-  });
+    : [
+        ...(Array.isArray(libraryItem.coreSubdimensions) ? libraryItem.coreSubdimensions : [])
+          .map((name) => (typeof name === 'string' ? { name, tier: 'core' } : { name: name?.name || '', tier: name?.tier || 'core' })),
+        ...(Array.isArray(libraryItem.secondarySubdimensions) ? libraryItem.secondarySubdimensions : [])
+          .map((name) => (typeof name === 'string' ? { name, tier: 'secondary' } : { name: name?.name || '', tier: name?.tier || 'secondary' })),
+      ];
+
+  const subdimensions = rawSignatureSubdims
+    .filter((entry) => entry && entry.name)
+    .map((entry) => {
+      const userScore = getSubdimensionScore(profile, entry?.name);
+      return {
+        name: entry?.name || '',
+        tier: entry?.tier || 'signature',
+        userScore,
+        state: stateFromScore(userScore),
+      };
+    });
 
   const strongSubdimensionCount = subdimensions.filter((x) => x.state === 'full').length;
   const roles = Array.isArray(libraryItem?.roles) ? libraryItem.roles : [];
@@ -569,6 +585,35 @@ function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {},
   const isCareerWorld = type === 'career_world';
   const linkedSubjects = isCareerWorld ? scoreLinkedSubjects(libraryItem, profile, 5, subjectPopulationScoreMap) : [];
   const canonicalSignal = options?.canonicalSignal || extractCanonicalSignal(requestItem);
+
+  // Roles within a pathway. Each role now carries its own core/secondary
+  // subdimensions and archetypes, so score it with the same matrix scorer, keep
+  // Good-or-better (drop Lower), and rank by match — with a safety net so the list
+  // never ends up empty.
+  const buildRole = (role) => {
+    const roleSummary = pickRoleSummary(role);
+    const base = {
+      id: role?.id || '',
+      title: role?.title || '',
+      entryLevelFit: role?.entryLevelFit || '',
+      fullSummary: roleSummary,
+      summary: roleSummary,
+      fallbackSummary: roleSummary,
+      // Long-form six-field definition for the Role Explorer card, injected in index.js.
+      description: role?.description || '',
+    };
+    if (!options?.ctx) return base;
+    const breakdown = scoreItemBreakdown(role, options.ctx);
+    const fitPct = Number(breakdown?.fitStrengthPct || breakdown?.absoluteFitPct || 0);
+    const { signalLabel, signalBlocks } = getLabelFromFixedThresholds(fitPct);
+    return { ...base, signalLabel, signalBlocks, signalPct: Math.round(fitPct) };
+  };
+  let scoredRoles = roles.map(buildRole);
+  if (options?.ctx) {
+    scoredRoles = scoredRoles.sort((a, b) => Number(b.signalPct) - Number(a.signalPct));
+    const good = scoredRoles.filter((r) => Number(r.signalBlocks) >= 2);
+    if (good.length) scoredRoles = good;
+  }
 
   return {
     id: requestItem?.id || libraryItem?.id || libraryItem?.title,
@@ -587,17 +632,7 @@ function buildSelectionInsight(libraryItem = {}, profile = {}, requestItem = {},
     confidence: libraryItem?.confidence || '',
     isPathway,
     isCareerWorld,
-    roles: roles.map((role) => {
-      const roleSummary = pickRoleSummary(role);
-      return {
-        id: role?.id || '',
-        title: role?.title || '',
-        entryLevelFit: role?.entryLevelFit || '',
-        fullSummary: roleSummary,
-        summary: roleSummary,
-        fallbackSummary: roleSummary,
-      };
-    }),
+    roles: scoredRoles,
     linkedSubjects,
     signalLabel: canonicalSignal.signalLabel || requestItem?.signalLabel || '',
     signalBlocks: Number(canonicalSignal.signalBlocks || requestItem?.signalBlocks || 0),

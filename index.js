@@ -18,6 +18,7 @@ const {
   selectRolesForSubject,
   findBestMatchingSubject,
   scoreItemByArchetypes,
+  buildArchetypeWeightMap,
   scoreItemBySubdimensionProfile,
   scoreItemBreakdown,
   scoreItemTotal,
@@ -45,6 +46,8 @@ const {
   buildSelectionInsight,
   extractCanonicalSignal,
 } = require("./src/lib/cdnaSelectionInsights");
+const { SUBJECT_DESCRIPTIONS } = require("./src/lib/subjectDescriptions");
+const { ROLE_DESCRIPTIONS } = require("./src/lib/roleDescriptions");
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -326,48 +329,16 @@ function getLabelFromFixedThresholds(fitPct = 0) {
   return { signalLabel: "Lower", signalBlocks: 1 };
 }
 
-function buildRelativeSignal(score = 0, populationScoreMap = new Map(), fallbackSignal = {}) {
-  const populationScores = Array.from((populationScoreMap || new Map()).values())
-    .map((row) => Number(row?.score))
-    .filter((value) => Number.isFinite(value))
-    .sort((a, b) => b - a);
-
-  const currentScore = Number(score);
-  const safeScore = Number.isFinite(currentScore) ? currentScore : 0;
-
-  const total = populationScores.length;
-  const higherCount = populationScores.filter((value) => value > safeScore).length;
-  const equalCount = populationScores.filter((value) => value === safeScore).length || 1;
-  const avgRank = higherCount + ((equalCount + 1) / 2);
-
-  let relativePct = 0;
-  if (total <= 1) {
-    relativePct = safeScore > 0 ? 100 : 0;
-  } else {
-    relativePct = 100 * (1 - ((avgRank - 1) / (total - 1)));
-  }
-
-  relativePct = clampNumber(0, 100, relativePct);
-
-  return {
-    signalPct: Number(relativePct.toFixed(1)),
-    fitPct: Number(fallbackSignal?.fitPct || 0),
-    coveragePct: Number(fallbackSignal?.coveragePct || 0),
-    coverageRatio: Number(fallbackSignal?.coverageRatio || 0),
-    ...getLabelFromFixedThresholds(fallbackSignal?.fitPct || 0),
-  };
-}
-
-function buildSectionSignals(items = [], scoreMap = new Map(), breakdownMap = new Map(), itemType = "", populationScoreMap = scoreMap) {
+function buildSectionSignals(items = [], scoreMap = new Map(), breakdownMap = new Map(), itemType = "") {
   const rows = (items || [])
     .map((item) => {
       const row = scoreMap.get(buildItemLookupKey(item));
       const breakdown = breakdownMap.get(buildItemLookupKey(item)) || null;
       const score = Number(row?.score);
-      const baseSignal = getItemSignalFromBreakdown(
+      // Bands come purely from absolute fit — no population-relative percentile.
+      const signal = getItemSignalFromBreakdown(
         breakdown || { totalScore: score, absoluteFitPct: normalizeItemScoreToPct(score) }
       );
-      const signal = buildRelativeSignal(score, populationScoreMap, baseSignal);
 
       return {
         id: item?.id || null,
@@ -454,7 +425,9 @@ function getExplicitItemSubdimensionPool(item = {}) {
   ]);
 }
 
-function pickProseSubdimensionsForItem(item = {}, userSubdimMap = new Map(), { maxCount = 3, minPct = MIN_PROSE_SUBDIM_SCORE } = {}) {
+const PROSE_STANDOUT_PCT = 80;
+
+function pickProseSubdimensionsForItem(item = {}, userSubdimMap = new Map(), { maxCount = 3, minPct = MIN_PROSE_SUBDIM_SCORE, capped = false } = {}) {
   const explicitPool = getExplicitItemSubdimensionPool(item);
   const poolOrder = new Map(explicitPool.map((name, index) => [canonSubdimName(name), index]));
 
@@ -466,20 +439,37 @@ function pickProseSubdimensionsForItem(item = {}, userSubdimMap = new Map(), { m
       return a.order - b.order;
     });
 
-  const strong = scored.filter((row) => row.pct >= minPct).map((row) => row.name).slice(0, maxCount);
-  const fallback = !strong.length && scored.length ? scored.slice(0, 1).map((row) => row.name) : [];
-  const picked = strong.length ? strong : fallback;
+  // Eligible = the item's own designed traits the user rates Strong or above.
+  const eligible = scored.filter((row) => row.pct >= minPct);
+  // Every designed trait the user rates Standout MUST be featured, regardless of maxCount.
+  const standoutRows = eligible.filter((row) => row.pct >= PROSE_STANDOUT_PCT);
+  // Feature all standouts, then top up to at least maxCount with the next strongest eligible traits.
+  // Because `eligible` is sorted highest-first, slicing the top N always contains every standout.
+  // capped = hard upper limit of maxCount (used for strengths / environments / subjects,
+  // whose paragraphs should stay tight). Uncapped = at least maxCount PLUS every standout
+  // (used for career worlds / pathways / roles, which must showcase the full match).
+  const target = capped
+    ? (Number(maxCount) || 0)
+    : Math.max(Number(maxCount) || 0, standoutRows.length);
+  const pickedRows = eligible.slice(0, Math.min(target, eligible.length));
+  // Fallback: if nothing clears the Strong floor, feature the single best trait so the paragraph is not empty.
+  const finalRows = pickedRows.length ? pickedRows : (scored.length ? scored.slice(0, 1) : []);
+
+  const picked = finalRows.map((row) => row.name);
+  const standout = standoutRows.map((row) => row.name);
 
   return {
     picked,
-    strong,
+    // strong_user_subdims downstream === the full featured set (all standouts + top-up to the minimum).
+    strong: picked,
+    standout,
     allDesigned: explicitPool,
     minPct,
     maxCount,
   };
 }
 
-function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(), maxCount = 3, minPct = MIN_PROSE_SUBDIM_SCORE) {
+function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(), maxCount = 3, minPct = MIN_PROSE_SUBDIM_SCORE, capped = false) {
   const context = {};
   const hints = {};
   const evidence = {};
@@ -488,7 +478,7 @@ function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(),
     const title = String(item?.title || "").trim();
     if (!title) continue;
 
-    const pickedView = pickProseSubdimensionsForItem(item, userSubdimMap, { maxCount, minPct });
+    const pickedView = pickProseSubdimensionsForItem(item, userSubdimMap, { maxCount, minPct, capped });
     const subdims = pickedView.picked || [];
 
     context[title] = {
@@ -496,6 +486,7 @@ function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(),
       matched_user_subdims: subdims,
       item_relevant_subdims: subdims,
       strong_user_subdims: pickedView.strong || [],
+      standout_user_subdims: pickedView.standout || [],
       all_designed_subdims: pickedView.allDesigned || [],
     };
 
@@ -503,6 +494,7 @@ function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(),
     evidence[title] = {
       subdimensions: subdims,
       strong_user_subdims: pickedView.strong || [],
+      standout_user_subdims: pickedView.standout || [],
       all_designed_subdims: pickedView.allDesigned || [],
       minPct: pickedView.minPct,
       maxCount: pickedView.maxCount,
@@ -510,38 +502,138 @@ function buildItemSubdimContextForSection(items = [], userSubdimMap = new Map(),
   }
 
   // Post-process: when two items in the same section share an identical picked set,
-  // rotate which traits are foregrounded as primary so the LLM produces distinct paragraphs.
-  const seenPickKeys = new Map(); // sorted-key → title of first item with that set
+  // rotate the ORDER so the LLM foregrounds different traits first and the paragraphs
+  // read differently. This only reorders — it never drops a trait (dropping traits was
+  // the old bug that starved later items of the user's strongest, most relevant traits).
+  const rotate = (arr, shift) => (Array.isArray(arr) && arr.length > 1
+    ? [...arr.slice(shift), ...arr.slice(0, shift)]
+    : arr);
+  const seenPickKeys = new Map(); // sorted-key → count of items already seen with that set
   for (const item of items || []) {
     const title = String(item?.title || "").trim();
     if (!title || !context[title]) continue;
 
     const pickKey = [...(context[title].prose_subdims)].sort().join("|");
+    const seen = seenPickKeys.get(pickKey) || 0;
 
-    if (seenPickKeys.has(pickKey)) {
-      // Rotate the strong_user_subdims: shift by half so the second item foregrounds
-      // different traits as primary than the first item did.
-      const originalStrong = [...context[title].strong_user_subdims];
-      if (originalStrong.length >= 2) {
-        const shift = Math.max(1, Math.floor(originalStrong.length / 2));
-        const newStrong = originalStrong.slice(shift);
-        const demoted = originalStrong.slice(0, shift);
-        const rotated = [...newStrong, ...demoted];
-
-        context[title].prose_subdims = rotated;
-        context[title].matched_user_subdims = rotated;
-        context[title].item_relevant_subdims = rotated;
-        context[title].strong_user_subdims = newStrong;
-        hints[title] = rotated;
-        evidence[title].subdimensions = rotated;
-        evidence[title].strong_user_subdims = newStrong;
-      }
-    } else {
-      seenPickKeys.set(pickKey, title);
+    if (seen > 0) {
+      const shift = Math.max(1, Math.floor((context[title].strong_user_subdims.length || 2) / 2));
+      const rotated = rotate([...context[title].prose_subdims], shift);
+      const rotatedStrong = rotate([...context[title].strong_user_subdims], shift);
+      context[title].prose_subdims = rotated;
+      context[title].matched_user_subdims = rotated;
+      context[title].item_relevant_subdims = rotated;
+      context[title].strong_user_subdims = rotatedStrong;
+      hints[title] = rotated;
+      evidence[title].subdimensions = rotated;
+      evidence[title].strong_user_subdims = rotatedStrong;
     }
+    seenPickKeys.set(pickKey, seen + 1);
   }
 
   return { context, hints, pairs: evidence };
+}
+
+function escapeRegExpLiteral(s = "") {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Find items in a report section whose paragraph fails to name every required
+// trait from that item's strong_user_subdims list. Returns [{ title, missing:[] }].
+function findMissingTraitsInSection(summary = "", sectionHeading = "", contextByTitle = {}) {
+  const out = [];
+  if (!summary || !contextByTitle) return out;
+  const secRe = new RegExp("(?:^|\\n)##\\s*" + escapeRegExpLiteral(sectionHeading) + "[^\\n]*\\n([\\s\\S]*?)(?=\\n##\\s|$)");
+  const secMatch = summary.match(secRe);
+  if (!secMatch) return out;
+  const sectionText = secMatch[1] || "";
+  const itemRe = /\n?\s*\d+\)\s*\*\*(.+?)\*\*\s*:?\s*([\s\S]*?)(?=\n\s*\d+\)\s*\*\*|$)/g;
+  let m;
+  while ((m = itemRe.exec(sectionText))) {
+    const title = (m[1] || "").trim();
+    const paragraph = m[2] || "";
+    const ctx = contextByTitle[title];
+    const required = ctx && Array.isArray(ctx.strong_user_subdims) ? ctx.strong_user_subdims : [];
+    if (!required.length) continue;
+    const paraCanon = canonSubdimName(paragraph);
+    const missing = required.filter((t) => !paraCanon.includes(canonSubdimName(t)));
+    if (missing.length) out.push({ title, missing });
+  }
+  return out;
+}
+
+// Deterministic safety net: after the LLM writes the report, verify each career
+// world / pathway paragraph actually names every trait it was required to feature.
+// If any are missing, run ONE targeted repair call. Always falls back to the
+// original report if the repair looks malformed, so it can only improve output.
+async function enforceReportTraitCoverage(summary, itemEvidence, rid = "") {
+  try {
+    if (!summary || !itemEvidence?.itemSubdimContext) return summary;
+    // University "Career Pathways" (aligned + adjacent) are the role families, so
+    // enforce them against the roles context. School "Career Worlds" uses the worlds context.
+    const cwCtx = itemEvidence.itemSubdimContext.career_worlds;
+    const roleCtx = itemEvidence.itemSubdimContext.roles;
+    const sections = [
+      { heading: "Career Worlds", ctx: cwCtx }, // matches "## Career Worlds" and "## Career Worlds Most Aligned With Your Interest Area"
+      { heading: "Other Career Worlds to Explore", ctx: cwCtx }, // school-interest "explore" subsection
+      { heading: "Career Pathways Most Aligned With Your Subject Area", ctx: roleCtx },
+      { heading: "Adjacent Career Pathways to Explore", ctx: roleCtx },
+    ];
+    const deficiencies = [];
+    for (const s of sections) {
+      if (!s.ctx) continue;
+      for (const d of findMissingTraitsInSection(summary, s.heading, s.ctx)) {
+        deficiencies.push(d);
+      }
+    }
+    if (!deficiencies.length) return summary;
+
+    console.log(`[${rid}] trait-coverage repair: ${deficiencies.map((d) => `${d.title} -> ${d.missing.join(", ")}`).join(" | ")}`);
+
+    const deficiencyLines = deficiencies
+      .map((d) => `- "${d.title}": weave in ${d.missing.join(", ")}`)
+      .join("\n");
+
+    const repairPrompt = `Some paragraphs in the report below are each missing one or more traits that must be present. For each listed item, add exactly ONE new sentence per missing trait, written in the SAME voice and style as the sentences already there (for example "Your Autonomy means you would set your own research agenda and pursue lines of inquiry independently"). Tie each added sentence to something concrete and specific about that item.
+
+Hard rules for the added sentences:
+- Add exactly one sentence per missing trait — never two. Do NOT follow it with a justification sentence.
+- NEVER use the constructions "X is important in this pathway because...", "X is important here because...", "X matters here because...", or any similar meta-explanation. These are banned.
+- Do not restate a trait that is already mentioned in that paragraph, and do not repeat any trait.
+- Keep it specific to this item, not generic careers filler. One idea per sentence. No dashes.
+- Change nothing else: keep every other paragraph, every heading, the numbering, and the item order exactly as they are.
+
+Return the COMPLETE report.
+
+ITEMS TO FIX (add the listed traits, woven naturally):
+${deficiencyLines}
+
+REPORT:
+${summary}`;
+
+    const repaired = await callModels([{ role: "user", content: repairPrompt }]);
+    const cleaned = extractSelectionNarrativesFromCombinedOutput(repaired)?.summary || repaired;
+
+    // Validate: must keep the Summary heading and not have collapsed in size.
+    if (
+      typeof cleaned === "string" &&
+      /##\s*Summary/i.test(cleaned) &&
+      cleaned.length >= summary.length * 0.7
+    ) {
+      const stillMissing = [];
+      for (const s of sections) {
+        if (!s.ctx) continue;
+        for (const d of findMissingTraitsInSection(cleaned, s.heading, s.ctx)) stillMissing.push(d);
+      }
+      const before = deficiencies.reduce((n, d) => n + d.missing.length, 0);
+      const after = stillMissing.reduce((n, d) => n + d.missing.length, 0);
+      if (after < before) return cleaned; // improved
+    }
+    return summary; // fall back, never worse
+  } catch (err) {
+    console.log(`[${rid}] trait-coverage repair skipped: ${err?.message || err}`);
+    return summary;
+  }
 }
 
 function parseSummaryRequest(body = {}) {
@@ -692,10 +784,53 @@ function buildRoleFamilyItemsFromRoles(allRoles = []) {
       title: role?.title || "",
       archetypes: Array.isArray(role?.archetypes) ? role.archetypes : [],
       keySubdimensions: Array.isArray(role?.keySubdimensions) ? role.keySubdimensions : [],
+      coreSubdimensions: Array.isArray(role?.coreSubdimensions) ? role.coreSubdimensions : [],
+      secondarySubdimensions: Array.isArray(role?.secondarySubdimensions) ? role.secondarySubdimensions : [],
       entryLevelFit: role?.entryLevelFit || "",
+      // Long-form six-field definition for the Role Explorer card (keyed by role id).
+      description: (role?.id && ROLE_DESCRIPTIONS[role.id]) || "",
     });
   }
   return Array.from(groups.values());
+}
+
+// Pathways (role families) grouped by career world, computed once and cached.
+// World ids carry a "cw_" prefix that pathway careerWorldId does not, so normalise.
+let _pathwaysByWorldCache = null;
+function getPathwaysByWorld() {
+  if (_pathwaysByWorldCache) return _pathwaysByWorldCache;
+  const normWorld = (v) => String(v || "").replace(/^cw_/, "").toLowerCase();
+  const map = new Map();
+  for (const item of buildRoleFamilyItemsFromRoles(CDNA_LIBRARY.rolesFlat)) {
+    const key = normWorld(item.careerWorldId);
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(item);
+  }
+  _pathwaysByWorldCache = map;
+  return map;
+}
+
+// The pathways within one career world, each scored with the same matrix scorer
+// the report uses (so they carry signalLabel / signalPct) and ranked by match.
+function buildScoredPathwaysForWorld(world, profile, ctx) {
+  const normWorld = (v) => String(v || "").replace(/^cw_/, "").toLowerCase();
+  const worldId = String(world?.id || world?.careerWorldId || "");
+  const worldTitle = world?.title || world?.careerWorldTitle || "";
+  const list = getPathwaysByWorld().get(normWorld(worldId)) || [];
+  const built = list
+    .map((item) => {
+      const pathwaySignal = getItemSignalFromBreakdown(scoreItemBreakdown(item, ctx));
+      return buildSelectionInsight(
+        item,
+        profile,
+        { id: item.id, title: item.title, type: "pathway", careerWorldId: worldId, careerWorldTitle: worldTitle },
+        { canonicalSignal: pathwaySignal, ctx }
+      );
+    })
+    .sort((a, b) => Number(b.signalPct || 0) - Number(a.signalPct || 0));
+  // Prefer Good or better (drop Lower), but never empty the list.
+  const good = built.filter((p) => Number(p.signalBlocks || 0) >= 2);
+  return good.length ? good : built;
 }
 
 function scoreRoleFamiliesByIds(roleFamilies = [], ids = [], ctx = {}) {
@@ -722,12 +857,8 @@ function buildRoleFamilyPopulationScoreMap(roleFamilies = [], ctx = {}) {
 
 function getRoleFamilySignalLabel(family = {}, score = 0, populationScoreMap = new Map(), ctx = {}) {
   const breakdown = scoreItemBreakdown(family, ctx);
-  const signal = buildRelativeSignal(Number(score || 0), populationScoreMap, {
-    fitPct: Number(breakdown.fitStrengthPct || normalizeItemScoreToPct(Number(score || 0))),
-    coveragePct: Number(breakdown.rawFitPct || 0),
-    coverageRatio: Number(breakdown.coverageRatio || 0),
-  });
-  return signal?.signalLabel || "Lower";
+  const fitPct = Number(breakdown.fitStrengthPct || normalizeItemScoreToPct(Number(score || 0)));
+  return getLabelFromFixedThresholds(fitPct).signalLabel || "Lower";
 }
 
 function pickMatrixRoleFamilyRows(rows = [], roleFamilies = [], ctx = {}, {
@@ -814,20 +945,20 @@ function selectUniversityPathwaysFromMatrix({ matchedSubject = null, subjectLabe
 
   const alignedTitleSet = new Set(aligned.map((family) => String(family?.title || family?.familyTitle || "").trim().toLowerCase()));
 
-  // Adjacent: pre-compute signal labels so we can filter to Strong/Standout only (>70%).
+  // Adjacent: pre-compute signal labels so we can filter to Good or better (>=60%).
   // scoreRoleFamiliesByTitles returns { family, score } with no signalLabel — must add it here.
   const populationScoreMap = buildRoleFamilyPopulationScoreMap(roleFamilies, ctx);
   const adjacentWithSignal = adjacentRows.map((row) => ({
     ...row,
     signalLabel: getRoleFamilySignalLabel(row.family, row.score, populationScoreMap, ctx),
   }));
-  const strongOrBetterAdjacentRows = adjacentWithSignal.filter((row) =>
-    ["standout", "strong"].includes(String(row.signalLabel || "").trim().toLowerCase()) &&
+  const goodOrBetterAdjacentRows = adjacentWithSignal.filter((row) =>
+    ["standout", "strong", "good"].includes(String(row.signalLabel || "").trim().toLowerCase()) &&
     !alignedTitleSet.has(String(row?.family?.title || row?.family?.familyTitle || "").trim().toLowerCase())
   );
 
-  // Adjacent section shown only if at least one Strong/Standout adjacent path qualifies. Max 5.
-  const adjacent = pickMatrixRoleFamilyRows(strongOrBetterAdjacentRows, roleFamilies, ctx, {
+  // Adjacent section shows adjacent pathways that score Good or better, best first, up to 5.
+  const adjacent = pickMatrixRoleFamilyRows(goodOrBetterAdjacentRows, roleFamilies, ctx, {
     limit: 5,
     minimum: 0,
     requireGoodFit: false,
@@ -950,6 +1081,14 @@ function selectRecommendations({ status, subjects, ctx, lib }) {
     }
   }
 
+  // Every career world beyond the selected top set, kept in ranked order so the
+  // report can show an "Other worlds" section (mostly lower matches) after the
+  // main worlds. Their bands come through unchanged (Good/Lower as scored).
+  const _topWorldTitleSet = new Set((topCareerWorlds || []).map((w) => String(w?.title || "").trim().toLowerCase()));
+  const topCareerWorldsLower = (worldDebugRows || [])
+    .filter((r) => !_topWorldTitleSet.has(String(r?.item?.title || "").trim().toLowerCase()))
+    .map((r) => stripInternalMeta(r.item));
+
   return {
     matchedSubject,
     matchedPathwayMatrixEntry,
@@ -961,6 +1100,7 @@ function selectRecommendations({ status, subjects, ctx, lib }) {
     topCareerWorlds,
     topCareerWorldsAligned,
     topCareerWorldsOther,
+    topCareerWorldsLower,
     topStrengths,
     topEnvironments,
     topSubjects,
@@ -981,7 +1121,7 @@ function buildScoreMaps(recommendations, ctx) {
     strengthScoreMap: buildSimpleScoreMap(recommendations.topStrengths, (item) => scoreItemTotal(item, ctx)),
     environmentScoreMap: buildSimpleScoreMap(recommendations.topEnvironments, (item) => scoreItemTotal(item, ctx)),
     careerWorldScoreMap: buildSimpleScoreMap(
-      recommendations.topCareerWorlds,
+      uniqByIdOrTitle([...(recommendations.topCareerWorlds || []), ...(recommendations.topCareerWorldsLower || [])]),
       (item) => Number(recommendations.careerWorldMetaById.get(String(item?.id || ""))?.finalScore || scoreItemTotal(item, ctx))
     ),
     subjectScoreMap: buildSubjectScoreMap(recommendations.topSubjects, recommendations.subjectMetaByKey, (item) => scoreItemTotal(item, ctx)),
@@ -989,41 +1129,6 @@ function buildScoreMaps(recommendations, ctx) {
   };
 }
 
-function buildPopulationScoreMaps(recommendations, ctx, lib, subjects = [], status = "") {
-  const strengthPopulationScoreMap = buildSimpleScoreMap(lib.strengths, (item) => scoreItemTotal(item, ctx));
-
-  const environmentPopulationRows = buildScoredEnvironmentRows(lib.environments, recommendations.topCareerWorlds, ctx);
-  const environmentPopulationScoreMap = new Map(
-    environmentPopulationRows.map((row) => [buildItemLookupKey(row?.item), { item: row?.item, score: Number(row?.score || 0) }])
-  );
-
-  const careerWorldPopulationScoreMap = new Map(
-    (recommendations.worldDebugRows || []).map((row) => [
-      buildItemLookupKey(row?.item),
-      { item: row?.item, score: Number(row?.score || 0) },
-    ])
-  );
-
-  const subjectPopulationRows = buildScoredSubjectRows(lib.subjects, recommendations.topCareerWorlds, ctx, subjects);
-  const subjectPopulationScoreMap = new Map(
-    subjectPopulationRows.map((row) => [buildItemLookupKey(row?.item), { item: row?.item, score: Number(row?.finalScore || row?.score || 0) }])
-  );
-
-  const rolePopulationRows = status === "school"
-    ? []
-    : buildScoredRoleRows(lib.rolesFlat, recommendations.matchedSubject, recommendations.topCareerWorlds, ctx);
-  const rolePopulationScoreMap = new Map(
-    rolePopulationRows.map((row) => [buildItemLookupKey(row?.item), { item: row?.item, score: Number(row?.score || 0) }])
-  );
-
-  return {
-    strengthPopulationScoreMap,
-    environmentPopulationScoreMap,
-    careerWorldPopulationScoreMap,
-    subjectPopulationScoreMap,
-    rolePopulationScoreMap,
-  };
-}
 
 function roundBreakdownValue(value) {
   const n = Number(value);
@@ -1071,7 +1176,7 @@ function printScoredSection(label, items, profile, ctx, recommendations) {
   console.log(`
 === ${label} (total score) ===`);
   items.forEach((it, idx) => {
-    const archetype = scoreItemByArchetypes(it, profile.includedWeights);
+    const archetype = scoreItemByArchetypes(it, buildArchetypeWeightMap(ctx));
     const subdim = scoreItemBySubdimensionProfile(it, ctx);
     const total = scoreItemTotal(it, ctx);
     const subjectMeta = label === "SUBJECTS" ? recommendations.subjectMetaByKey.get(buildItemLookupKey(it)) || null : null;
@@ -1188,11 +1293,11 @@ function buildItemEvidenceBundle(recommendations, profile) {
     roles: buildItemArchetypeMap(recommendations.topRoles, profile.included),
   };
 
-  const strengthsSubdimMeta = buildItemSubdimContextForSection(recommendations.topStrengths, profile.userSubdimMap);
-  const environmentsSubdimMeta = buildItemSubdimContextForSection(recommendations.topEnvironments, profile.userSubdimMap);
-  const careerWorldsSubdimMeta = buildItemSubdimContextForSection(recommendations.topCareerWorlds, profile.userSubdimMap, 5);
-  const subjectsSubdimMeta = buildItemSubdimContextForSection(recommendations.topSubjects, profile.userSubdimMap);
-  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap, 5);
+  const strengthsSubdimMeta = buildItemSubdimContextForSection(recommendations.topStrengths, profile.userSubdimMap, 3, MIN_PROSE_SUBDIM_SCORE, true);
+  const environmentsSubdimMeta = buildItemSubdimContextForSection(recommendations.topEnvironments, profile.userSubdimMap, 3, MIN_PROSE_SUBDIM_SCORE, true);
+  const careerWorldsSubdimMeta = buildItemSubdimContextForSection(recommendations.topCareerWorlds, profile.userSubdimMap, 6);
+  const subjectsSubdimMeta = buildItemSubdimContextForSection(recommendations.topSubjects, profile.userSubdimMap, 3, MIN_PROSE_SUBDIM_SCORE, true);
+  const rolesSubdimMeta = buildItemSubdimContextForSection(recommendations.topRoles, profile.userSubdimMap, 6);
 
   const itemSubdimContext = {
     strengths: strengthsSubdimMeta.context,
@@ -1471,7 +1576,7 @@ function buildHiddenNarrativeItem(item = {}, profile = {}, kind = "subject", par
 
   const archetypes = sourceArchetypes.filter((name) => included.has(name)).slice(0, 3);
   const subdimPick = pickProseSubdimensionsForItem(libraryItem, profile.userSubdimMap, {
-    maxCount: 3,
+    maxCount: 6,
     minPct: MIN_PROSE_SUBDIM_SCORE,
   });
   const subdimensions = subdimPick.picked || [];
@@ -1550,7 +1655,7 @@ function extractSelectionNarrativesFromCombinedOutput(content = "") {
   };
 }
 
-function buildPrecomputedSelectionInsights(status, recommendations, profile, sectionSignalMap = new Map()) {
+function buildPrecomputedSelectionInsights(status, recommendations, profile, sectionSignalMap = new Map(), ctx = null) {
   const baseItems = status === "school"
     ? (recommendations.topCareerWorlds || []).map((item) => ({ item, type: "career_world" }))
     : (recommendations.topRoles || []).map((item) => ({ item, type: "pathway" }));
@@ -1567,26 +1672,33 @@ function buildPrecomputedSelectionInsights(status, recommendations, profile, sec
       };
       const enrichedItem = getSelectionLibraryItem(requestItem, CDNA_SELECTION_INDEXES) || item;
       const signal = sectionSignalMap.get(buildItemLookupKey(item)) || null;
-      return buildSelectionInsight(enrichedItem, profile, requestItem, { canonicalSignal: signal });
+      const insight = buildSelectionInsight(enrichedItem, profile, requestItem, { canonicalSignal: signal, ctx });
+      // For career worlds, attach the pathways inside that world, each scored with
+      // the same matrix scorer so Discover More can show their bands.
+      if (insight && type === "career_world" && ctx) {
+        const world = {
+          id: enrichedItem?.id || requestItem.careerWorldId || requestItem.id,
+          title: enrichedItem?.title || requestItem.title,
+        };
+        insight.pathways = buildScoredPathwaysForWorld(world, profile, ctx);
+      }
+      return insight;
     })
     .filter(Boolean);
 }
 
-function buildCanonicalSectionSignalMap(status, recommendations, scoreMaps, breakdownMaps, populationScoreMaps = {}) {
+function buildCanonicalSectionSignalMap(status, recommendations, scoreMaps, breakdownMaps) {
   const baseItems = status === "school" ? recommendations.topCareerWorlds : recommendations.topRoles;
   const baseScoreMap = status === "school" ? scoreMaps.careerWorldScoreMap : scoreMaps.roleScoreMap;
   const baseBreakdownMap = status === "school" ? breakdownMaps.careerWorldBreakdownMap : breakdownMaps.roleBreakdownMap;
-  const basePopulationScoreMap = status === "school"
-    ? populationScoreMaps.careerWorldPopulationScoreMap || baseScoreMap
-    : populationScoreMaps.rolePopulationScoreMap || baseScoreMap;
 
   return new Map(
     (baseItems || []).map((item) => {
       const key = buildItemLookupKey(item);
       const score = Number(baseScoreMap.get(key)?.score || 0);
       const breakdown = baseBreakdownMap.get(key) || { totalScore: score, absoluteFitPct: normalizeItemScoreToPct(score) };
-      const fallbackSignal = getItemSignalFromBreakdown(breakdown);
-      return [key, buildRelativeSignal(score, basePopulationScoreMap, fallbackSignal)];
+      // Absolute fit only — no population-relative percentile.
+      return [key, getItemSignalFromBreakdown(breakdown)];
     })
   );
 }
@@ -1597,6 +1709,7 @@ function buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, population
   const careerWorlds = buildSectionSignals(recommendations.topCareerWorlds, scoreMaps.careerWorldScoreMap, breakdownMaps.careerWorldBreakdownMap, "career_world", populationScoreMaps.careerWorldPopulationScoreMap || scoreMaps.careerWorldScoreMap);
   const careerWorldsAligned = buildSectionSignals(recommendations.topCareerWorldsAligned || [], scoreMaps.careerWorldScoreMap, breakdownMaps.careerWorldBreakdownMap, "career_world", populationScoreMaps.careerWorldPopulationScoreMap || scoreMaps.careerWorldScoreMap);
   const careerWorldsOther = buildSectionSignals(recommendations.topCareerWorldsOther || [], scoreMaps.careerWorldScoreMap, breakdownMaps.careerWorldBreakdownMap, "career_world", populationScoreMaps.careerWorldPopulationScoreMap || scoreMaps.careerWorldScoreMap);
+  const careerWorldsLower = buildSectionSignals(recommendations.topCareerWorldsLower || [], scoreMaps.careerWorldScoreMap, breakdownMaps.careerWorldBreakdownMap, "career_world", populationScoreMaps.careerWorldPopulationScoreMap || scoreMaps.careerWorldScoreMap);
   const subjects = buildSectionSignals(recommendations.topSubjects, scoreMaps.subjectScoreMap, breakdownMaps.subjectBreakdownMap, "subject", populationScoreMaps.subjectPopulationScoreMap || scoreMaps.subjectScoreMap);
   const broadSubjects = buildSectionSignals(recommendations.topBroadSubjects, scoreMaps.subjectScoreMap, breakdownMaps.subjectBreakdownMap, "subject", populationScoreMaps.subjectPopulationScoreMap || scoreMaps.subjectScoreMap);
   const specialistSubjects = buildSectionSignals(recommendations.topSpecialistSubjects, scoreMaps.subjectScoreMap, breakdownMaps.subjectBreakdownMap, "subject", populationScoreMaps.subjectPopulationScoreMap || scoreMaps.subjectScoreMap);
@@ -1615,8 +1728,10 @@ function buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, population
       careerWorlds,
       careerWorldsAligned,
       careerWorldsOther,
+      careerWorldsLower,
       career_worlds_aligned: careerWorldsAligned,
       career_worlds_other: careerWorldsOther,
+      career_worlds_lower: careerWorldsLower,
       subjects,
       broad_subjects: broadSubjects,
       specialist_subjects: specialistSubjects,
@@ -1754,6 +1869,22 @@ app.use((req, res, next) => {
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+// GPT models routinely ignore a "no dashes" instruction in the prompt, so we
+// strip long dashes deterministically from EVERY model response here (report,
+// Discover More narratives, advisor replies all pass through callModels). Long
+// dashes = em/en/figure/horizontal bar. Number ranges keep a short hyphen; other
+// long dashes become commas. Short hyphens are left alone (they're not "long").
+function stripLongDashes(text) {
+  if (typeof text !== "string" || !text) return text;
+  return text
+    .replace(/(\d)\s*[‒–—―]\s*(\d)/g, "$1-$2")
+    .replace(/[ \t]*[‒–—―][ \t]*/g, ", ")
+    .replace(/,\s*,/g, ",")
+    .replace(/\s+,/g, ",")
+    .replace(/,(\s*[.!?;:])/g, "$1")
+    .replace(/[ \t]{2,}/g, " ");
+}
+
 async function callModels(messages) {
   if (!process.env.OPENAI_API_KEY) {
     console.warn("OPENAI_API_KEY missing — returning placeholder summary.");
@@ -1776,7 +1907,7 @@ async function callModels(messages) {
       const content = resp?.choices?.[0]?.message?.content?.trim();
 
       if (!content) throw new Error("Empty content from model");
-      return content;
+      return stripLongDashes(content);
     } catch (err) {
       lastErr = err;
       console.error(`⚠️ Model failed: ${model}`, err?.status || "", err?.message || err);
@@ -3453,11 +3584,10 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
     const fixedLists = buildFixedLists(recommendations);
     const itemEvidence = buildItemEvidenceBundle(recommendations, profile);
     const breakdownMaps = buildBreakdownMaps(recommendations, ctx, scoreMaps);
-    const populationScoreMaps = buildPopulationScoreMaps(recommendations, ctx, CDNA_LIBRARY, subjects, status);
-    const canonicalSectionSignalMap = buildCanonicalSectionSignalMap(status, recommendations, scoreMaps, breakdownMaps, populationScoreMaps);
-    let precomputedSelectionInsights = buildPrecomputedSelectionInsights(status, recommendations, profile, canonicalSectionSignalMap);
+    const canonicalSectionSignalMap = buildCanonicalSectionSignalMap(status, recommendations, scoreMaps, breakdownMaps);
+    let precomputedSelectionInsights = buildPrecomputedSelectionInsights(status, recommendations, profile, canonicalSectionSignalMap, ctx);
     const hiddenSelectionGroups = buildExplorerNarrativeGroups(status, precomputedSelectionInsights, profile);
-    let analysisMeta = buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, populationScoreMaps, precomputedSelectionInsights);
+    let analysisMeta = buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, {}, precomputedSelectionInsights);
 
     const recommendationPayload = buildInternalRecommendationPayload({
       profile,
@@ -3484,7 +3614,7 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
       });
     }
 
-    // rolesContextFixed: aligned pathways filtered to Good or better (>50 fitPct).
+    // rolesContextFixed: aligned pathways filtered to Good or better (>=60 fitPct).
     // Used by the LLM for summary, strengths, and environments — so those sections
     // only reference pathways the student genuinely scores well on.
     const rolesContextFixed = (analysisMeta.sections.rolesAligned || [])
@@ -3507,24 +3637,23 @@ app.post("/api/summary", summaryRateLimit, async (req, res) => {
     });
 
     const prompt = buildReportPrompt(promptPayload);
-    const combinedOutput = await callModels([{ role: "user", content: prompt }]);
-    const { summary } = extractSelectionNarrativesFromCombinedOutput(combinedOutput);
 
-    let explorerNarratives = null;
-    if (hiddenSelectionGroups.length) {
-      try {
-        const selectionPrompt = buildSelectionNarrativesPrompt(promptPayload);
-        const selectionOutput = await callModels([{ role: "user", content: selectionPrompt }]);
-        explorerNarratives = parseJsonFromModelOutput(selectionOutput);
-      } catch (selectionErr) {
-        console.error(`⚠️ [${rid}] Selection narrative generation failed; using fallback summaries.`, selectionErr?.message || selectionErr);
-        explorerNarratives = null;
-      }
-    }
+    // Only the main report prose is generated here now. The Discover-More
+    // selection narratives (previously ~52 pre-written in a second big LLM call)
+    // are NOT pre-generated — they are produced on demand for the pathways a
+    // student actually likes (see /api/selection-insights). This removes the
+    // second giant generation from the report path and cuts report time sharply.
+    const combinedOutput = await callModels([{ role: "user", content: prompt }]);
+    let { summary } = extractSelectionNarrativesFromCombinedOutput(combinedOutput);
+    // Deterministic safety net: ensure every required trait actually appears in
+    // each career world / pathway paragraph; repair once if the model dropped any.
+    summary = await enforceReportTraitCoverage(summary, itemEvidence, rid);
+
+    const explorerNarratives = null;
 
     if (explorerNarratives) {
       precomputedSelectionInsights = applyPrewrittenNarratives(precomputedSelectionInsights, explorerNarratives);
-      analysisMeta = buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, populationScoreMaps, precomputedSelectionInsights);
+      analysisMeta = buildAnalysisMeta(recommendations, scoreMaps, breakdownMaps, {}, precomputedSelectionInsights);
     }
 
       if (LOG_SUMMARY) {
@@ -3991,14 +4120,24 @@ app.post("/api/selection-insights", selectionInsightsRateLimit, async (req, res)
     }
 
     const { archetypes, likedItems, incomingSubdims } = parsed.value;
-    const { profile } = buildProfileBundle(archetypes, incomingSubdims);
+    const { profile, ctx } = buildProfileBundle(archetypes, incomingSubdims);
 
     const selectionInsights = (likedItems || [])
       .map((requestItem) => {
         const libItem = getSelectionLibraryItem(requestItem, CDNA_SELECTION_INDEXES);
         if (!libItem) return null;
         const canonicalSignal = extractCanonicalSignal(requestItem);
-        return buildSelectionInsight(libItem, profile, requestItem, { canonicalSignal });
+        const insight = buildSelectionInsight(libItem, profile, requestItem, { canonicalSignal, ctx });
+        // For liked career worlds, attach the pathways inside that world, each
+        // scored with the same matrix scorer so Discover More can show bands.
+        if (insight && String(requestItem?.type || "") === "career_world") {
+          const world = {
+            id: libItem.id || requestItem.careerWorldId || requestItem.id,
+            title: libItem.title || requestItem.title,
+          };
+          insight.pathways = buildScoredPathwaysForWorld(world, profile, ctx);
+        }
+        return insight;
       })
       .filter(Boolean);
 
@@ -4011,6 +4150,215 @@ app.post("/api/selection-insights", selectionInsightsRateLimit, async (req, res)
     return res.status(status).json({
       error: "SELECTION_INSIGHTS_FAILED",
       message: "We could not load deeper insights right now.",
+      requestId: req._rid,
+    });
+  }
+});
+
+
+// Explore Pathways: the career pathways within the user's matched career worlds,
+// each scored with the same matrix scorer the report uses and returned grouped
+// by world, ranked by match. Additive — does not touch report generation.
+app.post("/api/explore-pathways", selectionInsightsRateLimit, async (req, res) => {
+  const rid = req._rid;
+
+  try {
+    await getAuthenticatedUserAndProfile(req);
+
+    const parsed = parseSelectionInsightsRequest(req.body);
+    if (parsed.error) {
+      return res.status(parsed.error.status).json({ error: parsed.error.message });
+    }
+
+    const { archetypes, incomingSubdims } = parsed.value;
+    const { profile, ctx } = buildProfileBundle(archetypes, incomingSubdims);
+
+    // Score every career world for this profile and return them all (sorted),
+    // so the frontend can show scored pathways for whichever worlds the user
+    // liked, not only the top-matched ones.
+    const topWorlds = (CDNA_LIBRARY.career_worlds || [])
+      .map((world) => ({ world, signal: getItemSignalFromBreakdown(scoreItemBreakdown(world, ctx)) }))
+      .sort((a, b) => Number(b.signal.signalPct || 0) - Number(a.signal.signalPct || 0));
+
+    // Group all pathways (role families) by their career world. World ids are
+    // prefixed with "cw_" but pathway careerWorldId is not, so normalise both.
+    const normWorld = (v) => String(v || "").replace(/^cw_/, "").toLowerCase();
+    const pathwaysByWorld = new Map();
+    for (const item of buildRoleFamilyItemsFromRoles(CDNA_LIBRARY.rolesFlat)) {
+      const key = normWorld(item.careerWorldId);
+      if (!pathwaysByWorld.has(key)) pathwaysByWorld.set(key, []);
+      pathwaysByWorld.get(key).push(item);
+    }
+
+    const worlds = topWorlds.map(({ world, signal }) => {
+      const worldId = String(world.id || "");
+      const pathways = (pathwaysByWorld.get(normWorld(worldId)) || [])
+        .map((item) => {
+          const pathwaySignal = getItemSignalFromBreakdown(scoreItemBreakdown(item, ctx));
+          return buildSelectionInsight(
+            item,
+            profile,
+            { id: item.id, title: item.title, type: "pathway", careerWorldId: worldId, careerWorldTitle: world.title },
+            { canonicalSignal: pathwaySignal, ctx }
+          );
+        })
+        .sort((a, b) => Number(b.signalPct || 0) - Number(a.signalPct || 0));
+
+      return {
+        id: worldId,
+        title: world.title,
+        signalLabel: signal.signalLabel,
+        signalPct: signal.signalPct,
+        pathways,
+      };
+    });
+
+    return res.json({ worlds });
+  } catch (err) {
+    const status = err.status || err.response?.status || 500;
+    const data = err.response?.data || err.message || String(err);
+    console.error(`❌ [${rid}] Explore pathways error:`, status, data, err.stack);
+
+    return res.status(status).json({
+      error: "EXPLORE_PATHWAYS_FAILED",
+      message: "We could not load your pathways right now.",
+      requestId: req._rid,
+    });
+  }
+});
+
+
+// ── Further Study ──────────────────────────────────────────────────────────
+// For a student's LIKED pathways, list the university subjects/degrees that lead
+// to each (later: apprenticeships/training too), scored against their profile.
+// On demand (button-triggered in the "Further Study" tab), not in the report.
+const FS_NORM = (s) => String(s || "").trim().toLowerCase();
+
+// pathway title -> [{ subjectTitle, subjectId, tier }] (built once at boot).
+const FURTHER_STUDY_PATHWAY_TO_SUBJECTS = (() => {
+  const map = new Map();
+  for (const subj of (CDNA_LIBRARY.universityPathwayMatrix || [])) {
+    const add = (pathwayTitle, tier) => {
+      const key = FS_NORM(pathwayTitle);
+      if (!key) return;
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push({ subjectTitle: subj.title, subjectId: subj.id || null, tier });
+    };
+    (subj.primaryPathways || []).forEach((p) => add(p, "primary"));
+    (subj.adjacentPathways || []).forEach((p) => add(p, "adjacent"));
+  }
+  return map;
+})();
+
+// scorable subject objects keyed by normalised title.
+const FURTHER_STUDY_SUBJECT_BY_TITLE = (() => {
+  const m = new Map();
+  for (const s of (CDNA_LIBRARY.subjects || [])) m.set(FS_NORM(s.title), s);
+  return m;
+})();
+
+// careerWorldId -> [{ subjectTitle, subjectId }] (built once at boot). Further
+// Study is driven by the career worlds the student liked: each world offers a
+// consolidated, de-duplicated range of degrees. Pathway likes stay stored for
+// exploration but do not shape this list.
+const FURTHER_STUDY_WORLD_TO_SUBJECTS = (() => {
+  const map = new Map();
+  for (const subj of (CDNA_LIBRARY.universityPathwayMatrix || [])) {
+    const key = FS_NORM(subj.careerWorldId);
+    if (!key) continue;
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push({ subjectTitle: subj.title, subjectId: subj.id || null });
+  }
+  return map;
+})();
+
+app.post("/api/further-study", selectionInsightsRateLimit, async (req, res) => {
+  const rid = req._rid;
+  try {
+    await getAuthenticatedUserAndProfile(req);
+
+    const parsed = parseSelectionInsightsRequest(req.body);
+    if (parsed.error) {
+      return res.status(parsed.error.status).json({ error: parsed.error.message });
+    }
+
+    const { archetypes, likedItems, incomingSubdims } = parsed.value;
+    const { profile, ctx } = buildProfileBundle(archetypes, incomingSubdims);
+
+    // Further Study is driven by the liked CAREER WORLDS: one consolidated,
+    // de-duplicated, scored range of degrees per world. The degrees are split into
+    // those relevant to the pathways the student liked vs the rest of the world.
+    const likedWorlds = (likedItems || []).filter((it) => String(it?.type || "") === "career_world");
+
+    // Subjects tied (primary or adjacent) to any pathway the student liked.
+    const likedPathwayTitles = Array.isArray(req.body?.likedPathwayTitles) ? req.body.likedPathwayTitles : [];
+    const relevantSubjectSet = new Set();
+    likedPathwayTitles.forEach((t) => {
+      (FURTHER_STUDY_PATHWAY_TO_SUBJECTS.get(FS_NORM(t)) || []).forEach((r) => {
+        if (r?.subjectTitle) relevantSubjectSet.add(FS_NORM(r.subjectTitle));
+      });
+    });
+
+    const groups = likedWorlds.map((world) => {
+      const worldKey = FS_NORM(world.careerWorldId || world.id);
+      const subjectsRaw = FURTHER_STUDY_WORLD_TO_SUBJECTS.get(worldKey) || [];
+
+      // Score the career world itself so the panel header can show its tier badge.
+      const worldLib = getSelectionLibraryItem(
+        { id: world.careerWorldId || world.id, title: world.title, type: "career_world" },
+        CDNA_SELECTION_INDEXES
+      );
+      const worldSignalLabel = worldLib
+        ? getItemSignalFromBreakdown(scoreItemBreakdown(worldLib, ctx)).signalLabel
+        : (world.signalLabel || "");
+
+      const seen = new Set();
+      const routes = subjectsRaw
+        .map((r) => {
+          const subj = FURTHER_STUDY_SUBJECT_BY_TITLE.get(FS_NORM(r.subjectTitle));
+          if (!subj) return null;
+          const key = FS_NORM(subj.title);
+          if (seen.has(key)) return null;
+          seen.add(key);
+          // Score only to rank the degrees within the world (fast). Further Study
+          // is exploratory, so degrees show no per-item tier/pills.
+          const signal = getItemSignalFromBreakdown(scoreItemBreakdown(subj, ctx));
+          return {
+            title: subj.title,
+            id: subj.id || null,
+            routeType: "University degree",
+            relevant: relevantSubjectSet.has(key),
+            signalPct: signal.signalPct,
+            signalLabel: signal.signalLabel,
+            description: SUBJECT_DESCRIPTIONS[subj.id] || subj.description || subj.summary || "",
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => Number(b.signalPct || 0) - Number(a.signalPct || 0));
+
+      const relevantRoutes = routes.filter((r) => r.relevant);
+      const otherRoutes = routes.filter((r) => !r.relevant);
+
+      return {
+        // Response keeps the same shape the panel already reads; here the "pathway"
+        // slot carries the career world.
+        pathwayTitle: world.title,
+        pathwayId: world.careerWorldId || world.id || null,
+        careerWorldTitle: "",
+        signalLabel: worldSignalLabel,
+        routes,
+        relevantRoutes,
+        otherRoutes,
+      };
+    });
+
+    return res.json({ groups });
+  } catch (err) {
+    const status = err.status || err.response?.status || 500;
+    console.error(`❌ [${rid}] Further study error:`, status, err?.message || err);
+    return res.status(status).json({
+      error: "FURTHER_STUDY_FAILED",
+      message: "We could not load your study routes right now.",
       requestId: req._rid,
     });
   }

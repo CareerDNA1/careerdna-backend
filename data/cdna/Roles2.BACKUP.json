@@ -1,0 +1,4655 @@
+[
+  {
+    "careerWorldId": "data_analytics_quantitative_insight",
+    "careerWorldTitle": "Data, Analytics & Quantitative Insight",
+    "roleFamilies": [
+      {
+        "id": "core_data_analysis_business_insight",
+        "familyTitle": "Core Data Analysis & Business Insight",
+        "roles": [
+          {
+            "id": "operational_research_analyst",
+            "title": "Operational Research Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Mastery",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Technical Curiosity",
+          "Autonomy",
+          "Achievement",
+          "Structure",
+          "Independence",
+          "Variety"
+        ]
+      },
+      {
+        "id": "business_intelligence_reporting",
+        "familyTitle": "Business Intelligence & Reporting",
+        "roles": [
+          {
+            "id": "business_intelligence_analyst",
+            "title": "Business Intelligence Analyst"
+          },
+          {
+            "id": "reporting_analyst",
+            "title": "Reporting Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Data Curiosity",
+          "Analytical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Technical Curiosity",
+          "Autonomy",
+          "Achievement",
+          "Structure",
+          "Collaboration",
+          "Independence"
+        ]
+      },
+      {
+        "id": "customer_market_insight",
+        "familyTitle": "Customer & Market Insight",
+        "roles": [
+          {
+            "id": "insight_analyst",
+            "title": "Insight Analyst"
+          },
+          {
+            "id": "customer_insight_analyst",
+            "title": "Customer Insight Analyst"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Explorer",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Empathy",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Originality",
+          "Adaptability",
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Variety"
+        ]
+      },
+      {
+        "id": "risk_quantitative_analysis",
+        "familyTitle": "Risk & Quantitative Analysis",
+        "roles": [
+          {
+            "id": "actuarial_analyst",
+            "title": "Actuarial Analyst"
+          },
+          {
+            "id": "quantitative_risk_analyst",
+            "title": "Quantitative Risk Analyst"
+          },
+          {
+            "id": "pricing_analyst",
+            "title": "Pricing Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Data Curiosity",
+          "Analytical Curiosity",
+          "Mastery",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Technical Curiosity",
+          "Autonomy",
+          "Achievement",
+          "Security",
+          "Structure",
+          "Collaboration",
+          "Independence"
+        ]
+      },
+      {
+        "id": "data_science_advanced_modelling",
+        "familyTitle": "Data Science & Advanced Modelling",
+        "roles": [
+          {
+            "id": "data_scientist",
+            "title": "Data Scientist"
+          },
+          {
+            "id": "statistician",
+            "title": "Statistician"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Mastery",
+          "Originality",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Independence",
+          "Precision",
+          "Variety"
+        ]
+      },
+      {
+        "id": "machine_learning_applied_ai",
+        "familyTitle": "Machine Learning & Applied AI",
+        "roles": [
+          {
+            "id": "applied_ai_analyst",
+            "title": "Applied AI Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Data Curiosity",
+          "Mastery",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Entrepreneurial Drive",
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Independence",
+          "Variety"
+        ]
+      },
+      {
+        "id": "product_growth_experimentation_analytics",
+        "familyTitle": "Product, Growth & Experimentation Analytics",
+        "roles": [
+          {
+            "id": "product_analyst",
+            "title": "Product Analyst"
+          },
+          {
+            "id": "growth_analyst",
+            "title": "Growth Analyst"
+          },
+          {
+            "id": "experimentation_analyst",
+            "title": "Experimentation Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Entrepreneurial Drive",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Originality",
+          "Adaptability",
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Pace",
+          "Variety"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "software_ai_digital_systems",
+    "careerWorldTitle": "Software, AI & Digital Systems",
+    "roleFamilies": [
+      {
+        "id": "software_engineering",
+        "familyTitle": "Software Engineering",
+        "roles": [
+          {
+            "id": "software_engineer",
+            "title": "Software Engineer"
+          },
+          {
+            "id": "software_developer",
+            "title": "Software Developer"
+          },
+          {
+            "id": "systems_analyst",
+            "title": "Systems Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Autonomy",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Originality",
+          "Adaptability",
+          "Data Curiosity",
+          "Achievement",
+          "Structure",
+          "Collaboration",
+          "Independence",
+          "Precision"
+        ]
+      },
+      {
+        "id": "backend_platform_engineering",
+        "familyTitle": "Backend & Platform Engineering",
+        "roles": [
+          {
+            "id": "backend_developer",
+            "title": "Backend Developer"
+          },
+          {
+            "id": "platform_engineer",
+            "title": "Platform Engineer"
+          },
+          {
+            "id": "devops_engineer",
+            "title": "DevOps Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Adaptability",
+          "Data Curiosity",
+          "Autonomy",
+          "Structure",
+          "Collaboration",
+          "Independence",
+          "Precision"
+        ]
+      },
+      {
+        "id": "frontend_web_development",
+        "familyTitle": "Frontend & Web Development",
+        "roles": [
+          {
+            "id": "frontend_developer",
+            "title": "Frontend Developer"
+          },
+          {
+            "id": "web_developer",
+            "title": "Web Developer"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Purpose & Impact",
+          "Autonomy",
+          "Mastery",
+          "Precision",
+          "Variety"
+        ]
+      },
+      {
+        "id": "data_engineering",
+        "familyTitle": "Data Engineering",
+        "roles": [
+          {
+            "id": "data_engineer",
+            "title": "Data Engineer"
+          },
+          {
+            "id": "database_developer",
+            "title": "Database Developer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Technical Curiosity",
+          "Analytical Curiosity",
+          "Data Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Autonomy",
+          "Mastery",
+          "Structure",
+          "Collaboration",
+          "Independence",
+          "Precision"
+        ]
+      },
+      {
+        "id": "quality_assurance_test_engineering",
+        "familyTitle": "Quality Assurance & Test Engineering",
+        "roles": [
+          {
+            "id": "software_tester",
+            "title": "Software Tester"
+          },
+          {
+            "id": "qa_analyst",
+            "title": "QA Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Reliability",
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Originality",
+          "Data Curiosity",
+          "Autonomy",
+          "Achievement",
+          "Mastery",
+          "Structure",
+          "Independence"
+        ]
+      },
+      {
+        "id": "cyber_security",
+        "familyTitle": "Cyber Security",
+        "roles": [
+          {
+            "id": "cyber_security_analyst",
+            "title": "Cyber Security Analyst"
+          },
+          {
+            "id": "soc_analyst",
+            "title": "SOC Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Adaptability",
+          "Analytical Curiosity",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Originality",
+          "Resilience",
+          "Purpose & Impact",
+          "Autonomy",
+          "Achievement",
+          "Mastery",
+          "Independence",
+          "Precision"
+        ]
+      },
+      {
+        "id": "ai_machine_learning_engineering",
+        "familyTitle": "AI & Machine Learning Engineering",
+        "roles": [
+          {
+            "id": "machine_learning_engineer",
+            "title": "Machine Learning Engineer"
+          },
+          {
+            "id": "ai_engineer",
+            "title": "AI Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Entrepreneurial Drive",
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Autonomy",
+          "Collaboration",
+          "Independence",
+          "Variety"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "engineering_manufacturing_infrastructure",
+    "careerWorldTitle": "Engineering, Manufacturing & Infrastructure",
+    "roleFamilies": [
+      {
+        "id": "mechanical_design_development_engineering",
+        "familyTitle": "Mechanical Design & Development Engineering",
+        "roles": [
+          {
+            "id": "mechanical_engineer",
+            "title": "Mechanical Engineer"
+          },
+          {
+            "id": "design_engineer",
+            "title": "Design Engineer"
+          },
+          {
+            "id": "product_engineer",
+            "title": "Product Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Analytical Curiosity",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Creative Expression",
+          "Autonomy",
+          "Achievement",
+          "Mastery",
+          "Structure",
+          "Precision"
+        ]
+      },
+      {
+        "id": "electrical_electronic_engineering",
+        "familyTitle": "Electrical & Electronic Engineering",
+        "roles": [
+          {
+            "id": "electrical_engineer",
+            "title": "Electrical Engineer"
+          },
+          {
+            "id": "electronics_engineer",
+            "title": "Electronics Engineer"
+          },
+          {
+            "id": "control_engineer",
+            "title": "Control Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Data Curiosity",
+          "Autonomy",
+          "Structure",
+          "Independence",
+          "Precision"
+        ]
+      },
+      {
+        "id": "manufacturing_production_engineering",
+        "familyTitle": "Manufacturing & Production Engineering",
+        "roles": [
+          {
+            "id": "manufacturing_engineer",
+            "title": "Manufacturing Engineer"
+          },
+          {
+            "id": "production_engineer",
+            "title": "Production Engineer"
+          },
+          {
+            "id": "quality_engineer",
+            "title": "Quality Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Mastery",
+          "Structure",
+          "Collaboration",
+          "Precision",
+          "Pace"
+        ]
+      },
+      {
+        "id": "process_industrial_engineering",
+        "familyTitle": "Process & Industrial Engineering",
+        "roles": [
+          {
+            "id": "process_engineer",
+            "title": "Process Engineer"
+          },
+          {
+            "id": "industrial_engineer",
+            "title": "Industrial Engineer"
+          },
+          {
+            "id": "continuous_improvement_engineer",
+            "title": "Continuous Improvement Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Purpose & Impact",
+          "Mastery",
+          "Structure",
+          "Collaboration",
+          "Precision"
+        ]
+      },
+      {
+        "id": "systems_engineering",
+        "familyTitle": "Systems Engineering",
+        "roles": [
+          {
+            "id": "systems_engineer",
+            "title": "Systems Engineer"
+          },
+          {
+            "id": "integration_engineer",
+            "title": "Integration Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Structure",
+          "Collaboration",
+          "Precision"
+        ]
+      },
+      {
+        "id": "robotics_automation_engineering",
+        "familyTitle": "Robotics & Automation Engineering",
+        "roles": [
+          {
+            "id": "robotics_engineer",
+            "title": "Robotics Engineer"
+          },
+          {
+            "id": "automation_engineer",
+            "title": "Automation Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Analytical Curiosity",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Autonomy",
+          "Achievement",
+          "Mastery",
+          "Structure",
+          "Precision"
+        ]
+      },
+      {
+        "id": "civil_structural_engineering",
+        "familyTitle": "Civil & Structural Engineering",
+        "roles": [
+          {
+            "id": "civil_engineer",
+            "title": "Civil Engineer"
+          },
+          {
+            "id": "structural_engineer",
+            "title": "Structural Engineer"
+          },
+          {
+            "id": "site_engineer",
+            "title": "Site Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Creator",
+          "Connector"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Resilience",
+          "Adaptability",
+          "Achievement",
+          "Mastery",
+          "Structure",
+          "Collaboration",
+          "Precision"
+        ]
+      },
+      {
+        "id": "infrastructure_maintenance_asset_engineering",
+        "familyTitle": "Infrastructure, Maintenance & Asset Engineering",
+        "roles": [
+          {
+            "id": "asset_engineer",
+            "title": "Asset Engineer"
+          },
+          {
+            "id": "maintenance_engineer",
+            "title": "Maintenance Engineer"
+          },
+          {
+            "id": "reliability_engineer",
+            "title": "Reliability Engineer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Reliability",
+          "Analytical Curiosity",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Data Curiosity",
+          "Achievement",
+          "Security",
+          "Mastery",
+          "Structure",
+          "Precision"
+        ]
+      },
+      {
+        "id": "aerospace_defence_engineering",
+        "familyTitle": "Aerospace & Defence Engineering",
+        "roles": [
+          {
+            "id": "aerospace_engineer",
+            "title": "Aerospace Engineer"
+          },
+          {
+            "id": "systems_engineer",
+            "title": "Systems Engineer"
+          },
+          {
+            "id": "structural_engineer",
+            "title": "Structural Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Achievement",
+          "Structure",
+          "Precision"
+        ]
+      },
+      {
+        "id": "chemical_process_engineering",
+        "familyTitle": "Chemical & Process Engineering",
+        "roles": [
+          {
+            "id": "chemical_engineer",
+            "title": "Chemical Engineer"
+          },
+          {
+            "id": "process_safety_engineer",
+            "title": "Process Safety Engineer"
+          },
+          {
+            "id": "process_engineer",
+            "title": "Process Engineer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Resilience",
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Structure",
+          "Precision"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "architecture_built_environment_spatial_design",
+    "careerWorldTitle": "Architecture, Built Environment & Spatial Design",
+    "roleFamilies": [
+      {
+        "id": "architecture",
+        "familyTitle": "Architecture",
+        "roles": [
+          {
+            "id": "architect",
+            "title": "Architect"
+          },
+          {
+            "id": "architectural_assistant",
+            "title": "Architectural Assistant"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Technical Curiosity",
+          "Autonomy",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Structure",
+          "Collaboration",
+          "Variety"
+        ]
+      },
+      {
+        "id": "town_planning_urban_development",
+        "familyTitle": "Town Planning & Urban Development",
+        "roles": [
+          {
+            "id": "town_planner",
+            "title": "Town Planner"
+          },
+          {
+            "id": "planning_consultant",
+            "title": "Planning Consultant"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Purpose & Impact",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Empathy",
+          "Originality",
+          "Autonomy",
+          "Achievement",
+          "Structure",
+          "Collaboration",
+          "Precision"
+        ]
+      },
+      {
+        "id": "architectural_technology_bim",
+        "familyTitle": "Architectural Technology & BIM",
+        "roles": [
+          {
+            "id": "architectural_technologist",
+            "title": "Architectural Technologist"
+          },
+          {
+            "id": "bim_coordinator",
+            "title": "BIM Coordinator"
+          },
+          {
+            "id": "architectural_technician",
+            "title": "Architectural Technician"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Technical Curiosity",
+          "Analytical Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Precision",
+          "Structure",
+          "Autonomy",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "construction_project_delivery",
+        "familyTitle": "Construction Project Delivery",
+        "roles": [
+          {
+            "id": "site_manager",
+            "title": "Site Manager"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Visionary",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Achievement",
+          "Resilience",
+          "Adaptability",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Collaboration",
+          "Pace",
+          "Reliability",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "surveying_cost_consultancy",
+        "familyTitle": "Surveying & Cost Consultancy",
+        "roles": [
+          {
+            "id": "quantity_surveyor",
+            "title": "Quantity Surveyor"
+          },
+          {
+            "id": "building_surveyor",
+            "title": "Building Surveyor"
+          },
+          {
+            "id": "estimator",
+            "title": "Estimator"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Technical Curiosity",
+          "Precision",
+          "Structure",
+          "Reliability",
+          "Mastery",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "sustainability_building_performance",
+        "familyTitle": "Sustainability & Building Performance",
+        "roles": [
+          {
+            "id": "building_sustainability_consultant",
+            "title": "Building Sustainability Consultant"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Precision",
+          "Entrepreneurial Drive",
+          "Collaboration"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "science_research_laboratory_innovation",
+    "careerWorldTitle": "Science, Research & Laboratory Innovation",
+    "roleFamilies": [
+      {
+        "id": "laboratory_science",
+        "familyTitle": "Laboratory Science",
+        "roles": [
+          {
+            "id": "laboratory_technician",
+            "title": "Laboratory Technician"
+          },
+          {
+            "id": "research_assistant",
+            "title": "Research Assistant"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Technical Curiosity",
+          "Analytical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Data Curiosity",
+          "Structure",
+          "Collaboration",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "r_d_science",
+        "familyTitle": "R&D Science",
+        "roles": [
+          {
+            "id": "research_scientist",
+            "title": "Research Scientist"
+          },
+          {
+            "id": "r_d_scientist",
+            "title": "R&D Scientist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Technical Curiosity",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Precision",
+          "Autonomy",
+          "Independence",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "materials_chemical_analysis",
+        "familyTitle": "Materials & Chemical Analysis",
+        "roles": [
+          {
+            "id": "analytical_chemist",
+            "title": "Analytical Chemist"
+          },
+          {
+            "id": "materials_scientist",
+            "title": "Materials Scientist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Precision",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Autonomy",
+          "Reliability",
+          "Originality"
+        ]
+      },
+      {
+        "id": "biomedical_clinical_research",
+        "familyTitle": "Biomedical & Clinical Research",
+        "roles": [
+          {
+            "id": "biomedical_scientist",
+            "title": "Biomedical Scientist"
+          },
+          {
+            "id": "clinical_research_associate",
+            "title": "Clinical Research Associate"
+          },
+          {
+            "id": "clinical_scientist",
+            "title": "Clinical Scientist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Purpose & Impact",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Data Curiosity",
+          "Reliability",
+          "Collaboration",
+          "Structure"
+        ]
+      },
+      {
+        "id": "scientific_data_bioinformatics",
+        "familyTitle": "Scientific Data & Bioinformatics",
+        "roles": [
+          {
+            "id": "bioinformatics_scientist",
+            "title": "Bioinformatics Scientist"
+          },
+          {
+            "id": "scientific_data_analyst",
+            "title": "Scientific Data Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Autonomy",
+          "Independence",
+          "Originality",
+          "Structure"
+        ]
+      },
+      {
+        "id": "clinical_trials_translational_research",
+        "familyTitle": "Clinical Trials & Translational Research",
+        "roles": [
+          {
+            "id": "clinical_data_manager",
+            "title": "Clinical Data Manager"
+          },
+          {
+            "id": "regulatory_affairs_scientist",
+            "title": "Regulatory Affairs Scientist"
+          },
+          {
+            "id": "clinical_research_associate",
+            "title": "Clinical Research Associate"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Reliability"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Structure",
+          "Mastery",
+          "Achievement",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "forensic_science",
+        "familyTitle": "Forensic Science",
+        "roles": [
+          {
+            "id": "forensic_scientist",
+            "title": "Forensic Scientist"
+          },
+          {
+            "id": "crime_scene_investigator",
+            "title": "Crime Scene Investigator"
+          },
+          {
+            "id": "forensic_toxicologist",
+            "title": "Forensic Toxicologist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Precision",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Technical Curiosity",
+          "Reliability",
+          "Data Curiosity",
+          "Purpose & Impact",
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "health_care_clinical_practice",
+    "careerWorldTitle": "Health Care & Clinical Practice",
+    "roleFamilies": [
+      {
+        "id": "clinical_medicine_doctor",
+        "familyTitle": "Clinical Medicine / Doctor",
+        "roles": [
+          {
+            "id": "foundation_doctor",
+            "title": "Foundation Doctor"
+          },
+          {
+            "id": "general_practitioner",
+            "title": "General Practitioner"
+          },
+          {
+            "id": "hospital_doctor",
+            "title": "Hospital Doctor"
+          },
+          {
+            "id": "consultant_physician",
+            "title": "Consultant Physician"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Empathy",
+          "Resilience",
+          "Collaboration",
+          "Achievement",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "surgery_procedural_medicine",
+        "familyTitle": "Surgery & Procedural Medicine",
+        "roles": [
+          {
+            "id": "surgeon",
+            "title": "Surgeon"
+          },
+          {
+            "id": "surgical_trainee",
+            "title": "Surgical Trainee"
+          },
+          {
+            "id": "consultant_surgeon",
+            "title": "Consultant Surgeon"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Precision",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Autonomy",
+          "Technical Curiosity",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "acute_emergency_critical_care",
+        "familyTitle": "Acute, Emergency & Critical Care",
+        "roles": [
+          {
+            "id": "emergency_medicine_doctor",
+            "title": "Emergency Medicine Doctor"
+          },
+          {
+            "id": "anaesthetist",
+            "title": "Anaesthetist"
+          },
+          {
+            "id": "intensive_care_doctor",
+            "title": "Intensive Care Doctor"
+          },
+          {
+            "id": "acute_medicine_doctor",
+            "title": "Acute Medicine Doctor"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Resilience",
+          "Analytical Curiosity",
+          "Pace"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Achievement",
+          "Precision",
+          "Adaptability",
+          "Variety",
+          "Social Confidence",
+          "Mastery"
+        ]
+      },
+      {
+        "id": "mental_health_behavioural_medicine",
+        "familyTitle": "Mental Health & Behavioural Medicine",
+        "roles": [
+          {
+            "id": "psychiatrist",
+            "title": "Psychiatrist"
+          },
+          {
+            "id": "child_adolescent_psychiatrist",
+            "title": "Child & Adolescent Psychiatrist"
+          },
+          {
+            "id": "forensic_psychiatrist",
+            "title": "Forensic Psychiatrist"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Empathy",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Resilience",
+          "Autonomy",
+          "Precision",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "diagnostic_investigative_medicine",
+        "familyTitle": "Diagnostic & Investigative Medicine",
+        "roles": [
+          {
+            "id": "clinical_radiologist",
+            "title": "Clinical Radiologist"
+          },
+          {
+            "id": "pathologist",
+            "title": "Pathologist"
+          },
+          {
+            "id": "clinical_geneticist",
+            "title": "Clinical Geneticist"
+          },
+          {
+            "id": "medical_microbiologist",
+            "title": "Medical Microbiologist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Technical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Autonomy",
+          "Independence",
+          "Collaboration",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "public_health_medicine_epidemiology_health_policy",
+        "familyTitle": "Public Health Medicine, Epidemiology & Health Policy",
+        "roles": [
+          {
+            "id": "public_health_doctor",
+            "title": "Public Health Doctor"
+          },
+          {
+            "id": "health_protection_specialist",
+            "title": "Health Protection Specialist"
+          },
+          {
+            "id": "health_policy_doctor",
+            "title": "Health Policy Doctor"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Collaboration",
+          "Autonomy",
+          "Originality",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "academic_medicine_clinical_research",
+        "familyTitle": "Academic Medicine & Clinical Research",
+        "roles": [
+          {
+            "id": "clinical_research_fellow",
+            "title": "Clinical Research Fellow"
+          },
+          {
+            "id": "academic_doctor",
+            "title": "Academic Doctor"
+          },
+          {
+            "id": "clinical_trials_doctor",
+            "title": "Clinical Trials Doctor"
+          },
+          {
+            "id": "medical_educator",
+            "title": "Medical Educator"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Analytical Curiosity",
+          "Independence"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Autonomy",
+          "Collaboration",
+          "Precision",
+          "Originality",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "healthcare_leadership_service_improvement",
+        "familyTitle": "Healthcare Leadership & Service Improvement",
+        "roles": [
+          {
+            "id": "clinical_leadership_fellow",
+            "title": "Clinical Leadership Fellow"
+          },
+          {
+            "id": "medical_manager",
+            "title": "Medical Manager"
+          },
+          {
+            "id": "quality_improvement_lead",
+            "title": "Quality Improvement Lead"
+          },
+          {
+            "id": "healthcare_strategy_consultant",
+            "title": "Healthcare Strategy Consultant"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Social Confidence",
+          "Mastery",
+          "Structure",
+          "Entrepreneurial Drive",
+          "Data Curiosity"
+        ]
+      },
+      {
+        "id": "digital_health_healthtech_medical_innovation",
+        "familyTitle": "Digital Health, Healthtech & Medical Innovation",
+        "roles": [
+          {
+            "id": "digital_health_doctor",
+            "title": "Digital Health Doctor"
+          },
+          {
+            "id": "clinical_ai_advisor",
+            "title": "Clinical AI Advisor"
+          },
+          {
+            "id": "healthtech_founder",
+            "title": "Healthtech Founder"
+          },
+          {
+            "id": "medical_innovation_lead",
+            "title": "Medical Innovation Lead"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Thinker",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Entrepreneurial Drive",
+          "Originality",
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Social Confidence",
+          "Collaboration",
+          "Resilience",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "nursing",
+        "familyTitle": "Nursing",
+        "roles": [
+          {
+            "id": "adult_nurse",
+            "title": "Adult Nurse"
+          },
+          {
+            "id": "children_s_nurse",
+            "title": "Children\u2019s Nurse"
+          },
+          {
+            "id": "mental_health_nurse",
+            "title": "Mental Health Nurse"
+          },
+          {
+            "id": "learning_disability_nurse",
+            "title": "Learning Disability Nurse"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Purpose & Impact",
+          "Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Resilience",
+          "Belonging",
+          "Social Confidence",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "public_health_nursing_health_visiting",
+        "familyTitle": "Public Health Nursing & Health Visiting",
+        "roles": [
+          {
+            "id": "health_visitor",
+            "title": "Health Visitor"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Purpose & Impact",
+          "Social Confidence",
+          "Empathy",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Autonomy",
+          "Collaboration",
+          "Cultural & Global Curiosity",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "clinical_research_nursing",
+        "familyTitle": "Clinical Research Nursing",
+        "roles": [
+          {
+            "id": "clinical_research_nurse",
+            "title": "Clinical Research Nurse"
+          },
+          {
+            "id": "research_nurse",
+            "title": "Research Nurse"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Mastery",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Reliability",
+          "Analytical Curiosity",
+          "Collaboration",
+          "Data Curiosity",
+          "Autonomy",
+          "Structure"
+        ]
+      },
+      {
+        "id": "nurse_education_leadership",
+        "familyTitle": "Nurse Education & Leadership",
+        "roles": [
+          {
+            "id": "nurse_educator",
+            "title": "Nurse Educator"
+          },
+          {
+            "id": "nurse_manager",
+            "title": "Nurse Manager"
+          },
+          {
+            "id": "advanced_clinical_practitioner",
+            "title": "Advanced Clinical Practitioner"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Achievement",
+          "Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Helping & Caring",
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Social Confidence",
+          "Structure",
+          "Reliability",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "midwifery",
+        "familyTitle": "Midwifery",
+        "roles": [
+          {
+            "id": "midwife",
+            "title": "Midwife"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Mastery",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Autonomy",
+          "Resilience",
+          "Collaboration",
+          "Social Confidence"
+        ]
+      },
+      {
+        "id": "rehabilitation_functional_independence",
+        "familyTitle": "Rehabilitation & Functional Independence",
+        "roles": [
+          {
+            "id": "physiotherapist",
+            "title": "Physiotherapist"
+          },
+          {
+            "id": "occupational_therapist",
+            "title": "Occupational Therapist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Mastery",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Collaboration",
+          "Resilience",
+          "Achievement",
+          "Originality",
+          "Purpose & Impact",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "clinical_science_laboratory_diagnostics",
+        "familyTitle": "Clinical Science & Laboratory Diagnostics",
+        "roles": [
+          {
+            "id": "healthcare_scientist",
+            "title": "Healthcare Scientist"
+          },
+          {
+            "id": "clinical_diagnostic_scientist",
+            "title": "Clinical Diagnostic Scientist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Autonomy",
+          "Reliability",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "diagnostics_imaging_clinical_support",
+        "familyTitle": "Diagnostics, Imaging & Clinical Support",
+        "roles": [
+          {
+            "id": "clinical_physiologist",
+            "title": "Clinical Physiologist"
+          },
+          {
+            "id": "medical_laboratory_scientist",
+            "title": "Medical Laboratory Scientist"
+          },
+          {
+            "id": "diagnostic_radiographer",
+            "title": "Diagnostic Radiographer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Data Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Autonomy",
+          "Reliability",
+          "Independence"
+        ]
+      },
+      {
+        "id": "paramedic_practice_emergency_care",
+        "familyTitle": "Paramedic Practice & Emergency Care",
+        "roles": [
+          {
+            "id": "paramedic",
+            "title": "Paramedic"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Pace",
+          "Resilience",
+          "Adaptability"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Precision",
+          "Achievement",
+          "Variety",
+          "Collaboration",
+          "Independence"
+        ]
+      },
+      {
+        "id": "emergency_planning_ambulance_service_leadership",
+        "familyTitle": "Emergency Planning & Ambulance Service Leadership",
+        "roles": [
+          {
+            "id": "ambulance_service_lead",
+            "title": "Ambulance Service Lead"
+          },
+          {
+            "id": "emergency_planning_officer",
+            "title": "Emergency Planning Officer"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Achievement",
+          "Reliability"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Collaboration",
+          "Resilience",
+          "Precision"
+        ]
+      },
+      {
+        "id": "public_health_health_improvement",
+        "familyTitle": "Public Health & Health Improvement",
+        "roles": [
+          {
+            "id": "public_health_practitioner",
+            "title": "Public Health Practitioner"
+          },
+          {
+            "id": "health_improvement_practitioner",
+            "title": "Health Improvement Practitioner"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Helping & Caring"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Collaboration",
+          "Data Curiosity",
+          "Cultural & Global Curiosity",
+          "Social Confidence",
+          "Structure",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "healthcare_operations_service_improvement",
+        "familyTitle": "Healthcare Operations & Service Improvement",
+        "roles": [
+          {
+            "id": "healthcare_management_associate",
+            "title": "Healthcare Management Associate"
+          },
+          {
+            "id": "service_improvement_analyst",
+            "title": "Service Improvement Analyst"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Achievement",
+          "Structure"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Data Curiosity",
+          "Reliability",
+          "Mastery",
+          "Precision"
+        ]
+      },
+      {
+        "id": "social_work_safeguarding",
+        "familyTitle": "Social Work & Safeguarding",
+        "roles": [
+          {
+            "id": "social_worker",
+            "title": "Social Worker"
+          },
+          {
+            "id": "safeguarding_officer",
+            "title": "Safeguarding Officer"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Purpose & Impact",
+          "Empathy",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Collaboration",
+          "Autonomy",
+          "Precision",
+          "Structure"
+        ]
+      },
+      {
+        "id": "dentistry_dentist",
+        "familyTitle": "Dentistry / Dentist",
+        "roles": [
+          {
+            "id": "dentist",
+            "title": "Dentist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Precision",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Helping & Caring",
+          "Achievement",
+          "Analytical Curiosity",
+          "Autonomy",
+          "Reliability"
+        ]
+      },
+      {
+        "id": "specialist_dentistry",
+        "familyTitle": "Specialist Dentistry",
+        "roles": [
+          {
+            "id": "orthodontist",
+            "title": "Orthodontist"
+          },
+          {
+            "id": "oral_surgeon",
+            "title": "Oral Surgeon"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Precision",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Autonomy",
+          "Technical Curiosity",
+          "Originality",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "dental_research_academic_dentistry",
+        "familyTitle": "Dental Research & Academic Dentistry",
+        "roles": [
+          {
+            "id": "dental_researcher",
+            "title": "Dental Researcher"
+          },
+          {
+            "id": "academic_dentist",
+            "title": "Academic Dentist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Independence"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Autonomy",
+          "Precision",
+          "Technical Curiosity",
+          "Originality",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "oral_health_policy_dental_public_health",
+        "familyTitle": "Oral Health Policy & Dental Public Health",
+        "roles": [
+          {
+            "id": "dental_public_health_specialist",
+            "title": "Dental Public Health Specialist"
+          },
+          {
+            "id": "oral_health_policy_lead",
+            "title": "Oral Health Policy Lead"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Collaboration",
+          "Autonomy",
+          "Originality",
+          "Structure"
+        ]
+      },
+      {
+        "id": "clinical_pharmacy",
+        "familyTitle": "Clinical Pharmacy",
+        "roles": [
+          {
+            "id": "pharmacist",
+            "title": "Pharmacist"
+          },
+          {
+            "id": "clinical_pharmacist",
+            "title": "Clinical Pharmacist"
+          },
+          {
+            "id": "hospital_pharmacist",
+            "title": "Hospital Pharmacist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Mastery",
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Reliability",
+          "Achievement",
+          "Purpose & Impact",
+          "Autonomy",
+          "Data Curiosity"
+        ]
+      },
+      {
+        "id": "community_pharmacy",
+        "familyTitle": "Community Pharmacy",
+        "roles": [
+          {
+            "id": "community_pharmacist",
+            "title": "Community Pharmacist"
+          },
+          {
+            "id": "pharmacy_manager",
+            "title": "Pharmacy Manager"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Achiever",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Social Confidence",
+          "Mastery",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Reliability",
+          "Precision",
+          "Collaboration",
+          "Structure",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "pharmaceutical_industry_drug_development",
+        "familyTitle": "Pharmaceutical Industry & Drug Development",
+        "roles": [
+          {
+            "id": "pharmaceutical_scientist",
+            "title": "Pharmaceutical Scientist"
+          },
+          {
+            "id": "drug_development_associate",
+            "title": "Drug Development Associate"
+          },
+          {
+            "id": "medical_affairs_associate",
+            "title": "Medical Affairs Associate"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Technical Curiosity",
+          "Mastery",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Precision",
+          "Collaboration",
+          "Autonomy",
+          "Independence",
+          "Reliability"
+        ]
+      },
+      {
+        "id": "regulatory_affairs_medicines_safety",
+        "familyTitle": "Regulatory Affairs & Medicines Safety",
+        "roles": [
+          {
+            "id": "regulatory_affairs_associate",
+            "title": "Regulatory Affairs Associate"
+          },
+          {
+            "id": "pharmacovigilance_associate",
+            "title": "Pharmacovigilance Associate"
+          },
+          {
+            "id": "medicines_safety_officer",
+            "title": "Medicines Safety Officer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Visionary",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Purpose & Impact",
+          "Reliability"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Structure",
+          "Mastery",
+          "Data Curiosity",
+          "Achievement"
+        ]
+      },
+      {
+        "id": "medicines_policy_public_health_pharmacy",
+        "familyTitle": "Medicines Policy & Public Health Pharmacy",
+        "roles": [
+          {
+            "id": "medicines_policy_officer",
+            "title": "Medicines Policy Officer"
+          },
+          {
+            "id": "public_health_pharmacist",
+            "title": "Public Health Pharmacist"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Collaboration",
+          "Autonomy",
+          "Originality",
+          "Helping & Caring"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "psychology_behaviour_human_insight",
+    "careerWorldTitle": "Psychology, Behaviour & Human Insight",
+    "roleFamilies": [
+      {
+        "id": "clinical_psychology_mental_health_support",
+        "familyTitle": "Clinical Psychology & Mental Health Support",
+        "roles": [
+          {
+            "id": "assistant_psychologist",
+            "title": "Assistant Psychologist"
+          },
+          {
+            "id": "psychological_wellbeing_practitioner",
+            "title": "Psychological Wellbeing Practitioner"
+          },
+          {
+            "id": "clinical_psychologist",
+            "title": "Clinical Psychologist"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Analytical Curiosity",
+          "Empathy"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Purpose & Impact",
+          "Resilience",
+          "Collaboration",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "counselling_psychotherapy_therapeutic_practice",
+        "familyTitle": "Counselling, Psychotherapy & Therapeutic Practice",
+        "roles": [
+          {
+            "id": "counselling_psychologist",
+            "title": "Counselling Psychologist"
+          },
+          {
+            "id": "counsellor",
+            "title": "Counsellor"
+          },
+          {
+            "id": "psychotherapist",
+            "title": "Psychotherapist"
+          },
+          {
+            "id": "cbt_therapist",
+            "title": "CBT Therapist"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Purpose & Impact",
+          "Autonomy",
+          "Resilience",
+          "Analytical Curiosity",
+          "Belonging"
+        ]
+      },
+      {
+        "id": "learning_development_behaviour_support",
+        "familyTitle": "Learning, Development & Behaviour Support",
+        "roles": [
+          {
+            "id": "learning_mentor",
+            "title": "Learning Mentor"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Social Confidence",
+          "Purpose & Impact",
+          "Empathy",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Collaboration",
+          "Belonging"
+        ]
+      },
+      {
+        "id": "people_analytics_workplace_behaviour",
+        "familyTitle": "People Analytics & Workplace Behaviour",
+        "roles": [
+          {
+            "id": "people_analyst",
+            "title": "People Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Collaboration",
+          "Purpose & Impact",
+          "Autonomy",
+          "Technical Curiosity",
+          "Originality"
+        ]
+      },
+      {
+        "id": "ux_research_behavioural_insight",
+        "familyTitle": "UX Research & Behavioural Insight",
+        "roles": [
+          {
+            "id": "ux_researcher",
+            "title": "UX Researcher"
+          },
+          {
+            "id": "behavioural_insight_analyst",
+            "title": "Behavioural Insight Analyst"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Originality",
+          "Helping & Caring"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Technical Curiosity",
+          "Collaboration",
+          "Autonomy",
+          "Purpose & Impact"
+        ]
+      },
+      {
+        "id": "justice_rehabilitation_behaviour_change",
+        "familyTitle": "Justice, Rehabilitation & Behaviour Change",
+        "roles": [
+          {
+            "id": "probation_officer",
+            "title": "Probation Officer"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Purpose & Impact",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Collaboration",
+          "Mastery",
+          "Structure",
+          "Empathy"
+        ]
+      },
+      {
+        "id": "occupational_organisational_psychology",
+        "familyTitle": "Occupational & Organisational Psychology",
+        "roles": [
+          {
+            "id": "occupational_psychologist",
+            "title": "Occupational Psychologist"
+          },
+          {
+            "id": "talent_assessment_consultant",
+            "title": "Talent Assessment Consultant"
+          },
+          {
+            "id": "people_scientist",
+            "title": "People Scientist"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Helping & Caring",
+          "Data Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Collaboration",
+          "Autonomy",
+          "Originality",
+          "Social Confidence"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "education_coaching_people_development",
+    "careerWorldTitle": "Education, Coaching & People Development",
+    "roleFamilies": [
+      {
+        "id": "primary_teaching_classroom_practice",
+        "familyTitle": "Primary Teaching & Classroom Practice",
+        "roles": [
+          {
+            "id": "primary_school_teacher",
+            "title": "Primary School Teacher"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Purpose & Impact",
+          "Social Confidence",
+          "Creative Expression"
+        ],
+        "secondarySubdimensions": [
+          "Belonging",
+          "Collaboration",
+          "Adaptability",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "early_years_family_support",
+        "familyTitle": "Early Years & Family Support",
+        "roles": [
+          {
+            "id": "early_years_teacher",
+            "title": "Early Years Teacher"
+          },
+          {
+            "id": "family_support_worker",
+            "title": "Family Support Worker"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Purpose & Impact",
+          "Belonging",
+          "Creative Expression"
+        ],
+        "secondarySubdimensions": [
+          "Social Confidence",
+          "Collaboration",
+          "Adaptability"
+        ]
+      },
+      {
+        "id": "send_inclusion_support",
+        "familyTitle": "SEND & Inclusion Support",
+        "roles": [
+          {
+            "id": "sen_teacher",
+            "title": "SEN Teacher"
+          },
+          {
+            "id": "learning_support_assistant",
+            "title": "Learning Support Assistant"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Explorer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Purpose & Impact",
+          "Belonging",
+          "Adaptability"
+        ],
+        "secondarySubdimensions": [
+          "Social Confidence",
+          "Resilience",
+          "Mastery",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "learning_design_educational_technology",
+        "familyTitle": "Learning Design & Educational Technology",
+        "roles": [
+          {
+            "id": "learning_designer",
+            "title": "Learning Designer"
+          },
+          {
+            "id": "edtech_specialist",
+            "title": "EdTech Specialist"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Creative Expression",
+          "Originality",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Entrepreneurial Drive",
+          "Mastery",
+          "Autonomy",
+          "Purpose & Impact",
+          "Adaptability"
+        ]
+      },
+      {
+        "id": "training_learning_development",
+        "familyTitle": "Training, Learning & Development",
+        "roles": [
+          {
+            "id": "training_and_development_officer",
+            "title": "Training and Development Officer"
+          },
+          {
+            "id": "learning_and_development_coordinator",
+            "title": "Learning and Development Coordinator"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Social Confidence",
+          "Purpose & Impact",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Creative Expression",
+          "Belonging",
+          "Structure",
+          "Empathy",
+          "Reliability"
+        ]
+      },
+      {
+        "id": "education_support_outreach_student_services",
+        "familyTitle": "Education Support, Outreach & Student Services",
+        "roles": [
+          {
+            "id": "student_services_officer",
+            "title": "Student Services Officer"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Empathy",
+          "Belonging",
+          "Purpose & Impact",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Social Confidence",
+          "Adaptability",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "secondary_teaching",
+        "familyTitle": "Secondary Teaching",
+        "roles": [
+          {
+            "id": "secondary_school_teacher",
+            "title": "Secondary School Teacher"
+          },
+          {
+            "id": "sen_teacher",
+            "title": "SEN Teacher"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Purpose & Impact",
+          "Mastery",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Empathy",
+          "Belonging",
+          "Resilience",
+          "Creative Expression",
+          "Adaptability",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "higher_education_academic_research",
+        "familyTitle": "Higher Education & Academic Research",
+        "roles": [
+          {
+            "id": "research_assistant",
+            "title": "Research Assistant"
+          },
+          {
+            "id": "postdoctoral_researcher",
+            "title": "Postdoctoral Researcher"
+          },
+          {
+            "id": "university_lecturer",
+            "title": "University Lecturer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Autonomy",
+          "Independence"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Data Curiosity",
+          "Originality",
+          "Social Confidence",
+          "Creative Expression",
+          "Purpose & Impact"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "law_governance_public_impact",
+    "careerWorldTitle": "Law, Governance & Public Impact",
+    "roleFamilies": [
+      {
+        "id": "legal_support_casework",
+        "familyTitle": "Legal Support & Casework",
+        "roles": [
+          {
+            "id": "paralegal",
+            "title": "Paralegal"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Reliability",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Mastery",
+          "Achievement",
+          "Data Curiosity"
+        ]
+      },
+      {
+        "id": "governance_risk_compliance",
+        "familyTitle": "Governance, Risk & Compliance",
+        "roles": [
+          {
+            "id": "compliance_officer",
+            "title": "Compliance Officer"
+          },
+          {
+            "id": "governance_officer",
+            "title": "Governance Officer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Security",
+          "Reliability",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Structure",
+          "Mastery",
+          "Achievement",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "public_affairs_advocacy",
+        "familyTitle": "Public Affairs & Advocacy",
+        "roles": [
+          {
+            "id": "public_affairs_officer",
+            "title": "Public Affairs Officer"
+          },
+          {
+            "id": "campaigns_officer",
+            "title": "Campaigns Officer"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Social Confidence",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Collaboration",
+          "Mastery",
+          "Cultural & Global Curiosity",
+          "Variety",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "investigations_financial_crime",
+        "familyTitle": "Investigations & Financial Crime",
+        "roles": [
+          {
+            "id": "financial_crime_analyst",
+            "title": "Financial Crime Analyst"
+          },
+          {
+            "id": "investigation_officer",
+            "title": "Investigation Officer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Purpose & Impact",
+          "Security"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Data Curiosity",
+          "Mastery",
+          "Structure",
+          "Achievement",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "policy_public_sector_analysis",
+        "familyTitle": "Policy & Public Sector Analysis",
+        "roles": [
+          {
+            "id": "policy_officer",
+            "title": "Policy Officer"
+          },
+          {
+            "id": "government_social_research_officer",
+            "title": "Government Social Research Officer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Structure"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Mastery",
+          "Collaboration",
+          "Autonomy",
+          "Cultural & Global Curiosity",
+          "Precision"
+        ]
+      },
+      {
+        "id": "solicitor_practice",
+        "familyTitle": "Solicitor Practice",
+        "roles": [
+          {
+            "id": "trainee_solicitor",
+            "title": "Trainee Solicitor"
+          },
+          {
+            "id": "solicitor",
+            "title": "Solicitor"
+          },
+          {
+            "id": "in_house_legal_counsel",
+            "title": "In-house Legal Counsel"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Achievement",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Social Confidence",
+          "Autonomy",
+          "Reliability",
+          "Structure",
+          "Collaboration",
+          "Security"
+        ]
+      },
+      {
+        "id": "barrister_advocacy",
+        "familyTitle": "Barrister & Advocacy",
+        "roles": [
+          {
+            "id": "barrister",
+            "title": "Barrister"
+          },
+          {
+            "id": "judicial_clerk",
+            "title": "Judicial Clerk"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Explorer",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Achievement",
+          "Autonomy"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Social Confidence",
+          "Independence",
+          "Originality",
+          "Structure"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "business_strategy_commercial_leadership",
+    "careerWorldTitle": "Business Strategy, Commercial & Leadership",
+    "roleFamilies": [
+      {
+        "id": "generalist_business_programmes",
+        "familyTitle": "Generalist Business Programmes",
+        "roles": [
+          {
+            "id": "management_trainee",
+            "title": "Management Trainee"
+          },
+          {
+            "id": "business_operations_analyst",
+            "title": "Business Operations Analyst"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Achiever",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Achievement",
+          "Adaptability"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Social Confidence",
+          "Collaboration",
+          "Variety",
+          "Resilience",
+          "Pace"
+        ]
+      },
+      {
+        "id": "operations_supply_chain",
+        "familyTitle": "Operations & Supply Chain",
+        "roles": [
+          {
+            "id": "operations_analyst",
+            "title": "Operations Analyst"
+          },
+          {
+            "id": "supply_chain_analyst",
+            "title": "Supply Chain Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Achievement",
+          "Structure"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Reliability",
+          "Adaptability",
+          "Mastery"
+        ]
+      },
+      {
+        "id": "business_analysis",
+        "familyTitle": "Business Analysis",
+        "roles": [
+          {
+            "id": "business_analyst",
+            "title": "Business Analyst"
+          },
+          {
+            "id": "process_analyst",
+            "title": "Process Analyst"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Structure",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Autonomy",
+          "Adaptability",
+          "Achievement",
+          "Mastery"
+        ]
+      },
+      {
+        "id": "project_pmo_transformation",
+        "familyTitle": "Project, PMO & Transformation",
+        "roles": [
+          {
+            "id": "pmo_analyst",
+            "title": "PMO Analyst"
+          },
+          {
+            "id": "project_coordinator",
+            "title": "Project Coordinator"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Achievement",
+          "Analytical Curiosity",
+          "Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Precision",
+          "Reliability",
+          "Pace",
+          "Adaptability"
+        ]
+      },
+      {
+        "id": "consulting_strategic_improvement",
+        "familyTitle": "Consulting & Strategic Improvement",
+        "roles": [
+          {
+            "id": "management_consultant",
+            "title": "Management Consultant"
+          },
+          {
+            "id": "strategy_analyst",
+            "title": "Strategy Analyst"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Achievement",
+          "Social Confidence",
+          "Variety"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Adaptability",
+          "Data Curiosity",
+          "Resilience",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "business_development_commercial_partnerships",
+        "familyTitle": "Business Development & Commercial Partnerships",
+        "roles": [
+          {
+            "id": "account_executive",
+            "title": "Account Executive"
+          },
+          {
+            "id": "commercial_partnerships_executive",
+            "title": "Commercial Partnerships Executive"
+          },
+          {
+            "id": "business_development_executive",
+            "title": "Business Development Executive"
+          },
+          {
+            "id": "partnerships_executive",
+            "title": "Partnerships Executive"
+          },
+          {
+            "id": "business_development_manager",
+            "title": "Business Development Manager"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Achiever",
+          "Connector"
+        ],
+        "coreSubdimensions": [
+          "Entrepreneurial Drive",
+          "Social Confidence",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Adaptability",
+          "Resilience",
+          "Variety",
+          "Pace",
+          "Collaboration",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "hr_people_organisations",
+        "familyTitle": "HR, People & Organisations",
+        "roles": [
+          {
+            "id": "hr_officer",
+            "title": "HR Officer"
+          },
+          {
+            "id": "people_operations_associate",
+            "title": "People Operations Associate"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Organizer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Helping & Caring",
+          "Belonging",
+          "Empathy",
+          "Social Confidence",
+          "Structure"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Achievement",
+          "Reliability",
+          "Precision",
+          "Purpose & Impact"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "finance_economics_investment",
+    "careerWorldTitle": "Finance, Economics & Investment",
+    "roleFamilies": [
+      {
+        "id": "investment_banking_corporate_finance",
+        "familyTitle": "Investment Banking & Corporate Finance",
+        "roles": [
+          {
+            "id": "investment_banking_analyst",
+            "title": "Investment Banking Analyst"
+          },
+          {
+            "id": "corporate_finance_analyst",
+            "title": "Corporate Finance Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Achievement",
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Pace",
+          "Resilience",
+          "Structure",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "equity_research_investment_research",
+        "familyTitle": "Equity Research & Investment Research",
+        "roles": [
+          {
+            "id": "equity_research_analyst",
+            "title": "Equity Research Analyst"
+          },
+          {
+            "id": "investment_analyst",
+            "title": "Investment Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Visionary",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Entrepreneurial Drive"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Autonomy",
+          "Precision",
+          "Independence",
+          "Originality",
+          "Achievement"
+        ]
+      },
+      {
+        "id": "asset_wealth_management",
+        "familyTitle": "Asset & Wealth Management",
+        "roles": [
+          {
+            "id": "wealth_management_associate",
+            "title": "Wealth Management Associate"
+          },
+          {
+            "id": "portfolio_analyst",
+            "title": "Portfolio Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Connector",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Social Confidence",
+          "Data Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Helping & Caring",
+          "Structure",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "commercial_corporate_banking",
+        "familyTitle": "Commercial & Corporate Banking",
+        "roles": [
+          {
+            "id": "corporate_banking_analyst",
+            "title": "Corporate Banking Analyst"
+          },
+          {
+            "id": "commercial_banking_associate",
+            "title": "Commercial Banking Associate"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Achievement",
+          "Analytical Curiosity",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Reliability",
+          "Precision",
+          "Structure",
+          "Collaboration",
+          "Helping & Caring"
+        ]
+      },
+      {
+        "id": "markets_trading",
+        "familyTitle": "Markets & Trading",
+        "roles": [
+          {
+            "id": "trading_analyst",
+            "title": "Trading Analyst"
+          },
+          {
+            "id": "sales_trading_analyst",
+            "title": "Sales & Trading Analyst"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Achiever",
+          "Connector",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Pace",
+          "Social Confidence",
+          "Variety"
+        ],
+        "secondarySubdimensions": [
+          "Achievement",
+          "Data Curiosity",
+          "Autonomy",
+          "Resilience",
+          "Collaboration",
+          "Adaptability"
+        ]
+      },
+      {
+        "id": "treasury_liquidity",
+        "familyTitle": "Treasury & Liquidity",
+        "roles": [
+          {
+            "id": "treasury_analyst",
+            "title": "Treasury Analyst"
+          },
+          {
+            "id": "liquidity_analyst",
+            "title": "Liquidity Analyst"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Security",
+          "Precision"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Data Curiosity",
+          "Reliability",
+          "Achievement"
+        ]
+      },
+      {
+        "id": "risk_compliance_controls",
+        "familyTitle": "Risk, Compliance & Controls",
+        "roles": [
+          {
+            "id": "risk_analyst",
+            "title": "Risk Analyst"
+          },
+          {
+            "id": "compliance_analyst",
+            "title": "Compliance Analyst"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Security",
+          "Reliability",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Structure",
+          "Mastery",
+          "Achievement",
+          "Data Curiosity"
+        ]
+      },
+      {
+        "id": "banking_operations_middle_office",
+        "familyTitle": "Banking Operations & Middle Office",
+        "roles": [
+          {
+            "id": "middle_office_analyst",
+            "title": "Middle Office Analyst"
+          },
+          {
+            "id": "banking_operations_officer",
+            "title": "Banking Operations Officer"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Thinker",
+          "Achiever"
+        ],
+        "coreSubdimensions": [
+          "Structure",
+          "Reliability",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Data Curiosity",
+          "Achievement",
+          "Security",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "accounting_audit_assurance",
+        "familyTitle": "Accounting, Audit & Assurance",
+        "roles": [
+          {
+            "id": "assistant_accountant",
+            "title": "Assistant Accountant"
+          }
+        ],
+        "archetypes": [
+          "Organizer",
+          "Achiever",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Reliability",
+          "Precision",
+          "Structure"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Mastery",
+          "Achievement",
+          "Analytical Curiosity"
+        ]
+      },
+      {
+        "id": "sustainable_finance_impact_investing",
+        "familyTitle": "Sustainable Finance & Impact Investing",
+        "roles": [
+          {
+            "id": "esg_analyst",
+            "title": "ESG Analyst"
+          },
+          {
+            "id": "impact_investment_analyst",
+            "title": "Impact Investment Analyst"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Explorer",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Purpose & Impact",
+          "Entrepreneurial Drive",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Mastery",
+          "Originality",
+          "Precision"
+        ]
+      },
+      {
+        "id": "private_equity_venture_capital",
+        "familyTitle": "Private Equity & Venture Capital",
+        "roles": [
+          {
+            "id": "private_equity_analyst",
+            "title": "Private Equity Analyst"
+          },
+          {
+            "id": "venture_capital_analyst",
+            "title": "Venture Capital Analyst"
+          },
+          {
+            "id": "portfolio_analyst",
+            "title": "Portfolio Analyst"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Entrepreneurial Drive",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Autonomy",
+          "Mastery",
+          "Pace",
+          "Precision",
+          "Variety"
+        ]
+      },
+      {
+        "id": "financial_analysis_fp_a",
+        "familyTitle": "Financial Analysis & FP&A",
+        "roles": [
+          {
+            "id": "financial_analyst",
+            "title": "Financial Analyst"
+          },
+          {
+            "id": "fp_a_analyst",
+            "title": "FP&A Analyst"
+          },
+          {
+            "id": "corporate_finance_analyst",
+            "title": "Corporate Finance Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Structure",
+          "Mastery",
+          "Autonomy",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "fintech_digital_finance",
+        "familyTitle": "Fintech & Digital Finance",
+        "roles": [
+          {
+            "id": "fintech_analyst",
+            "title": "Fintech Analyst"
+          },
+          {
+            "id": "product_manager",
+            "title": "Product Manager"
+          },
+          {
+            "id": "digital_payments_analyst",
+            "title": "Digital Payments Analyst"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Thinker",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Entrepreneurial Drive",
+          "Technical Curiosity",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Variety",
+          "Adaptability",
+          "Mastery",
+          "Social Confidence",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "insurance_actuarial",
+        "familyTitle": "Insurance & Actuarial",
+        "roles": [
+          {
+            "id": "actuarial_analyst",
+            "title": "Actuarial Analyst"
+          },
+          {
+            "id": "underwriter",
+            "title": "Underwriter"
+          },
+          {
+            "id": "claims_analyst",
+            "title": "Claims Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Organizer",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Security",
+          "Data Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Mastery",
+          "Structure",
+          "Achievement",
+          "Reliability",
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "entrepreneurship_innovation_venture_building",
+    "careerWorldTitle": "Entrepreneurship, Innovation & Venture Building",
+    "roleFamilies": [
+      {
+        "id": "venture_building_founder",
+        "familyTitle": "Venture Building & Founder",
+        "roles": [
+          {
+            "id": "founder",
+            "title": "Founder"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Creator",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Entrepreneurial Drive",
+          "Originality",
+          "Autonomy"
+        ],
+        "secondarySubdimensions": [
+          "Resilience",
+          "Social Confidence",
+          "Purpose & Impact",
+          "Pace"
+        ]
+      },
+      {
+        "id": "start_up_operations",
+        "familyTitle": "Start-up Operations",
+        "roles": [
+          {
+            "id": "operations_associate",
+            "title": "Operations Associate"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Connector",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Achievement",
+          "Collaboration",
+          "Adaptability"
+        ],
+        "secondarySubdimensions": [
+          "Structure",
+          "Reliability",
+          "Precision",
+          "Pace",
+          "Resilience"
+        ]
+      },
+      {
+        "id": "product_growth_business_development_in_start_ups",
+        "familyTitle": "Product Growth & Business Development in Start-ups",
+        "roles": [
+          {
+            "id": "growth_executive",
+            "title": "Growth Executive"
+          }
+        ],
+        "archetypes": [
+          "Achiever",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Entrepreneurial Drive",
+          "Achievement",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Pace",
+          "Variety",
+          "Adaptability",
+          "Data Curiosity",
+          "Social Confidence"
+        ]
+      },
+      {
+        "id": "venture_capital_accelerators_innovation_support",
+        "familyTitle": "Venture Capital, Accelerators & Innovation Support",
+        "roles": [
+          {
+            "id": "venture_capital_analyst",
+            "title": "Venture Capital Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Entrepreneurial Drive",
+          "Data Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Variety",
+          "Autonomy",
+          "Mastery",
+          "Originality",
+          "Social Confidence"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "marketing_media_communication",
+    "careerWorldTitle": "Marketing, Media & Communication",
+    "roleFamilies": [
+      {
+        "id": "brand_marketing_strategy",
+        "familyTitle": "Brand & Marketing Strategy",
+        "roles": [
+          {
+            "id": "brand_executive",
+            "title": "Brand Executive"
+          },
+          {
+            "id": "marketing_executive",
+            "title": "Marketing Executive"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Social Confidence",
+          "Entrepreneurial Drive"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Collaboration",
+          "Variety",
+          "Data Curiosity",
+          "Achievement"
+        ]
+      },
+      {
+        "id": "performance_marketing_growth",
+        "familyTitle": "Performance Marketing & Growth",
+        "roles": [
+          {
+            "id": "performance_marketing_executive",
+            "title": "Performance Marketing Executive"
+          },
+          {
+            "id": "crm_executive",
+            "title": "CRM Executive"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Achiever",
+          "Explorer",
+          "Organizer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Achievement"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Variety",
+          "Structure",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "pr_communications",
+        "familyTitle": "PR & Communications",
+        "roles": [
+          {
+            "id": "pr_executive",
+            "title": "PR Executive"
+          },
+          {
+            "id": "communications_officer",
+            "title": "Communications Officer"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Connector",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Social Confidence",
+          "Purpose & Impact",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Collaboration",
+          "Mastery",
+          "Analytical Curiosity",
+          "Variety",
+          "Structure"
+        ]
+      },
+      {
+        "id": "market_research_audience_insight",
+        "familyTitle": "Market Research & Audience Insight",
+        "roles": [
+          {
+            "id": "market_research_analyst",
+            "title": "Market Research Analyst"
+          },
+          {
+            "id": "audience_insight_analyst",
+            "title": "Audience Insight Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Originality"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Autonomy",
+          "Cultural & Global Curiosity",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "content_social_media",
+        "familyTitle": "Content & Social Media",
+        "roles": [
+          {
+            "id": "content_creator",
+            "title": "Content Creator"
+          },
+          {
+            "id": "social_media_executive",
+            "title": "Social Media Executive"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Connector"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Social Confidence"
+        ],
+        "secondarySubdimensions": [
+          "Variety",
+          "Mastery",
+          "Autonomy",
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Pace",
+          "Entrepreneurial Drive"
+        ]
+      },
+      {
+        "id": "journalism_editorial",
+        "familyTitle": "Journalism & Editorial",
+        "roles": [
+          {
+            "id": "journalist",
+            "title": "Journalist"
+          },
+          {
+            "id": "reporter",
+            "title": "Reporter"
+          },
+          {
+            "id": "editorial_assistant",
+            "title": "Editorial Assistant"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Visionary",
+          "Connector"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Originality",
+          "Social Confidence",
+          "Mastery"
+        ],
+        "secondarySubdimensions": [
+          "Autonomy",
+          "Variety",
+          "Purpose & Impact",
+          "Pace",
+          "Precision",
+          "Collaboration"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "creative_arts_design_experience",
+    "careerWorldTitle": "Creative Arts, Design & Experience",
+    "roleFamilies": [
+      {
+        "id": "product_industrial_design",
+        "familyTitle": "Product & Industrial Design",
+        "roles": [
+          {
+            "id": "product_designer",
+            "title": "Product Designer"
+          },
+          {
+            "id": "industrial_designer",
+            "title": "Industrial Designer"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Precision"
+        ]
+      },
+      {
+        "id": "graphic_design_visual_communication",
+        "familyTitle": "Graphic Design & Visual Communication",
+        "roles": [
+          {
+            "id": "visual_designer",
+            "title": "Visual Designer"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Autonomy"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Precision",
+          "Technical Curiosity",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "animation_motion_design",
+        "familyTitle": "Animation & Motion Design",
+        "roles": [
+          {
+            "id": "animator",
+            "title": "Animator"
+          },
+          {
+            "id": "motion_designer",
+            "title": "Motion Designer"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Visionary",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Technical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Precision"
+        ]
+      },
+      {
+        "id": "digital_design_multimedia",
+        "familyTitle": "Digital Design & Multimedia",
+        "roles": [
+          {
+            "id": "multimedia_designer",
+            "title": "Multimedia Designer"
+          },
+          {
+            "id": "digital_designer",
+            "title": "Digital Designer"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Explorer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Technical Curiosity",
+          "Variety"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Precision",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "ux_ui_design",
+        "familyTitle": "UX/UI Design",
+        "roles": [
+          {
+            "id": "ux_designer",
+            "title": "UX Designer"
+          },
+          {
+            "id": "ui_designer",
+            "title": "UI Designer"
+          },
+          {
+            "id": "ux_researcher",
+            "title": "UX Researcher"
+          }
+        ],
+        "archetypes": [
+          "Creator",
+          "Connector",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Originality",
+          "Creative Expression",
+          "Analytical Curiosity",
+          "Empathy"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Technical Curiosity",
+          "Precision",
+          "Independence",
+          "Data Curiosity"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "environment_sustainability_planetary_futures",
+    "careerWorldTitle": "Environment, Sustainability & Planetary Futures",
+    "roleFamilies": [
+      {
+        "id": "environmental_science_monitoring",
+        "familyTitle": "Environmental Science & Monitoring",
+        "roles": [
+          {
+            "id": "environmental_consultant",
+            "title": "Environmental Consultant"
+          },
+          {
+            "id": "environmental_monitoring_officer",
+            "title": "Environmental Monitoring Officer"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Technical Curiosity",
+          "Autonomy",
+          "Precision",
+          "Data Curiosity",
+          "Structure"
+        ]
+      },
+      {
+        "id": "sustainability_esg_advisory",
+        "familyTitle": "Sustainability & ESG Advisory",
+        "roles": [
+          {
+            "id": "sustainability_consultant",
+            "title": "Sustainability Consultant"
+          },
+          {
+            "id": "sustainability_reporting_analyst",
+            "title": "Sustainability Reporting Analyst"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Explorer",
+          "Thinker"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Entrepreneurial Drive",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Mastery",
+          "Autonomy",
+          "Originality",
+          "Social Confidence",
+          "Precision",
+          "Structure"
+        ]
+      },
+      {
+        "id": "circular_economy_sustainable_supply_chains",
+        "familyTitle": "Circular Economy & Sustainable Supply Chains",
+        "roles": [
+          {
+            "id": "supply_chain_sustainability_analyst",
+            "title": "Supply Chain Sustainability Analyst"
+          },
+          {
+            "id": "circular_economy_analyst",
+            "title": "Circular Economy Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Data Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Originality",
+          "Precision",
+          "Structure",
+          "Autonomy"
+        ]
+      },
+      {
+        "id": "environmental_policy_impact_assessment",
+        "familyTitle": "Environmental Policy & Impact Assessment",
+        "roles": [
+          {
+            "id": "environmental_policy_officer",
+            "title": "Environmental Policy Officer"
+          },
+          {
+            "id": "environmental_impact_assessment_consultant",
+            "title": "Environmental Impact Assessment Consultant"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Technical Curiosity",
+          "Structure",
+          "Mastery",
+          "Autonomy",
+          "Precision",
+          "Collaboration",
+          "Data Curiosity"
+        ]
+      },
+      {
+        "id": "net_zero_climate_sustainability_strategy",
+        "familyTitle": "Net Zero, Climate & Sustainability Strategy",
+        "roles": [
+          {
+            "id": "climate_strategy_analyst",
+            "title": "Climate Strategy Analyst"
+          },
+          {
+            "id": "net_zero_consultant",
+            "title": "Net Zero Consultant"
+          }
+        ],
+        "archetypes": [
+          "Visionary",
+          "Thinker",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Analytical Curiosity",
+          "Originality",
+          "Entrepreneurial Drive"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Cultural & Global Curiosity",
+          "Autonomy",
+          "Data Curiosity",
+          "Social Confidence"
+        ]
+      },
+      {
+        "id": "conservation_land_management",
+        "familyTitle": "Conservation & Land Management",
+        "roles": [
+          {
+            "id": "conservation_officer",
+            "title": "Conservation Officer"
+          },
+          {
+            "id": "ecologist",
+            "title": "Ecologist"
+          },
+          {
+            "id": "countryside_officer",
+            "title": "Countryside Officer"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Technical Curiosity",
+          "Cultural & Global Curiosity",
+          "Analytical Curiosity"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Resilience",
+          "Collaboration",
+          "Data Curiosity",
+          "Precision",
+          "Adaptability"
+        ]
+      }
+    ]
+  },
+  {
+    "careerWorldId": "society_culture_languages_global_affairs",
+    "careerWorldTitle": "Society, Culture, Languages & Global Affairs",
+    "roleFamilies": [
+      {
+        "id": "international_relations_policy_geopolitical_analysis",
+        "familyTitle": "International Relations, Policy & Geopolitical Analysis",
+        "roles": [
+          {
+            "id": "policy_analyst",
+            "title": "Policy Analyst"
+          },
+          {
+            "id": "political_risk_analyst",
+            "title": "Political Risk Analyst"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Data Curiosity",
+          "Autonomy",
+          "Collaboration",
+          "Precision"
+        ]
+      },
+      {
+        "id": "languages_translation_localisation",
+        "familyTitle": "Languages, Translation & Localisation",
+        "roles": [
+          {
+            "id": "translator",
+            "title": "Translator"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Explorer",
+          "Creator"
+        ],
+        "coreSubdimensions": [
+          "Cultural & Global Curiosity",
+          "Mastery",
+          "Autonomy"
+        ],
+        "secondarySubdimensions": [
+          "Precision",
+          "Analytical Curiosity",
+          "Variety",
+          "Originality",
+          "Collaboration"
+        ]
+      },
+      {
+        "id": "international_development_ngo_programmes",
+        "familyTitle": "International Development & NGO Programmes",
+        "roles": [
+          {
+            "id": "international_development_officer",
+            "title": "International Development Officer"
+          },
+          {
+            "id": "programme_officer",
+            "title": "Programme Officer"
+          }
+        ],
+        "archetypes": [
+          "Connector",
+          "Explorer",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Purpose & Impact",
+          "Cultural & Global Curiosity",
+          "Collaboration"
+        ],
+        "secondarySubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Adaptability",
+          "Variety",
+          "Structure"
+        ]
+      },
+      {
+        "id": "social_research_cultural_analysis",
+        "familyTitle": "Social Research & Cultural Analysis",
+        "roles": [
+          {
+            "id": "social_researcher",
+            "title": "Social Researcher"
+          },
+          {
+            "id": "cultural_researcher",
+            "title": "Cultural Researcher"
+          }
+        ],
+        "archetypes": [
+          "Explorer",
+          "Thinker",
+          "Visionary"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Cultural & Global Curiosity",
+          "Purpose & Impact"
+        ],
+        "secondarySubdimensions": [
+          "Mastery",
+          "Autonomy",
+          "Data Curiosity",
+          "Originality",
+          "Collaboration",
+          "Variety"
+        ]
+      },
+      {
+        "id": "intelligence_public_service_security_analysis",
+        "familyTitle": "Intelligence, Public Service & Security Analysis",
+        "roles": [
+          {
+            "id": "intelligence_analyst",
+            "title": "Intelligence Analyst"
+          }
+        ],
+        "archetypes": [
+          "Thinker",
+          "Creator",
+          "Explorer"
+        ],
+        "coreSubdimensions": [
+          "Analytical Curiosity",
+          "Mastery",
+          "Independence"
+        ],
+        "secondarySubdimensions": [
+          "Data Curiosity",
+          "Precision",
+          "Autonomy",
+          "Cultural & Global Curiosity",
+          "Structure"
+        ]
+      }
+    ]
+  }
+]

@@ -199,14 +199,33 @@ function getItemSignalFromBreakdown(breakdown = {}, options = {}) {
   };
 }
 
-function scoreItemByArchetypes(item, includedWeights = {}) {
+// Build a name -> percentile (0-100) map covering the user's FULL archetype
+// profile, so every tag an item lists can be scored — a tag the user rates low
+// still counts and pulls the score down, mirroring how subdimensions are scored
+// against the full subdimension profile. Falls back to includedWeights (top
+// archetypes only) if the full profile is not present on the context.
+function buildArchetypeWeightMap(ctx = {}) {
+  const full = Array.isArray(ctx?.fullArchetypes) ? ctx.fullArchetypes : null;
+  if (full && full.length) {
+    const out = {};
+    for (const a of full) {
+      if (!a || a.name == null) continue;
+      const v = Number(a.score);
+      if (Number.isFinite(v)) out[a.name] = v > 1 ? v : v * 100;
+    }
+    if (Object.keys(out).length) return out;
+  }
+  return ctx?.includedWeights || {};
+}
+
+function scoreItemByArchetypes(item, weights = {}) {
   const tags = Array.isArray(item?.archetypes) ? item.archetypes : [];
   if (!tags.length) return 0;
 
   let total = 0;
   let count = 0;
   for (const tag of tags) {
-    const pct = Number(includedWeights?.[tag]);
+    const pct = Number(weights?.[tag]);
     if (Number.isFinite(pct)) {
       total += clamp(0, 1, pct / 100);
       count++;
@@ -214,6 +233,36 @@ function scoreItemByArchetypes(item, includedWeights = {}) {
   }
 
   return count > 0 ? total / count : 0;
+}
+
+// Harmonic mean (F-score) of two 0..1 quantities. Used to combine STRENGTH
+// (how well you match) with COVERAGE (how many of the item's traits you match):
+// both must be high to score well; a high one cannot fully paper over a low one.
+function harmonicMean(a, b) {
+  const x = clamp(0, 1, Number(a) || 0);
+  const y = clamp(0, 1, Number(b) || 0);
+  return x + y > 0 ? (2 * x * y) / (x + y) : 0;
+}
+
+// Archetype fit as STRENGTH (average match across the item's tags) and COVERAGE
+// (share of the item's tags the user rates at/above the match threshold).
+function scoreItemArchetypeFit(item, weights = {}, thresholdPct = 60) {
+  const tags = Array.isArray(item?.archetypes) ? item.archetypes : [];
+  if (!tags.length) return { strength: 0, coverage: 0 };
+  let total = 0;
+  let count = 0;
+  let matched = 0;
+  for (const tag of tags) {
+    const pct = Number(weights?.[tag]);
+    if (!Number.isFinite(pct)) continue;
+    total += clamp(0, 1, pct / 100);
+    count++;
+    if (pct >= thresholdPct) matched++;
+  }
+  return {
+    strength: count > 0 ? total / count : 0,
+    coverage: tags.length > 0 ? matched / tags.length : 0,
+  };
 }
 
 function scoreItemBySubdimensionProfile(item, ctx = {}) {
@@ -224,7 +273,9 @@ function scoreItemBreakdown(item, ctx = {}) {
   const subdimMap = buildFullSubdimMap(ctx);
   const entries = buildWeightedSubdimEntries(item);
   const cfg = CDNA_SCORE_CONFIG.subdimension;
-  const archetypeScore = scoreItemByArchetypes(item, ctx.includedWeights || {});
+  const archFit = scoreItemArchetypeFit(item, buildArchetypeWeightMap(ctx), cfg.coreMatchThresholdPct);
+  const archetypeScore = archFit.strength;
+  const archCoverage = archFit.coverage;
 
   if (!subdimMap.size || !entries.length) {
     return {
@@ -248,6 +299,7 @@ function scoreItemBreakdown(item, ctx = {}) {
   let matchedWeight = 0;
   let coreMatched = 0;
   let coreTotal = 0;
+  let secondaryMatched = 0;
   let strongestCore = 0;
 
   // Group-based tracking: core and secondary averages computed independently
@@ -276,6 +328,7 @@ function scoreItemBreakdown(item, ctx = {}) {
     } else {
       secondarySum += boosted;
       secondaryCount++;
+      if (pct >= cfg.coreMatchThresholdPct) secondaryMatched++;
     }
   }
 
@@ -293,32 +346,76 @@ function scoreItemBreakdown(item, ctx = {}) {
   const coreCoverageRatio = coreTotal ? clamp(0, 1, coreMatched / coreTotal) : coverageRatio;
   const strongestCorePct = Number(strongestCore) || 0;
 
-  const rawFit = clamp(0, 1, weightedTraitFit);
-  const fitStrengthPct = Math.max(0, Math.min(100, Math.round(weightedTraitFit * 100)));
-  const absoluteFitPct = fitStrengthPct;
-  const rawFitPct = Math.max(0, Math.min(100, Math.round(rawFit * 100)));
-  const subdimensionScore = rawFit * cfg.totalScoreScale;
+  // ---- STRENGTH (how well you match) ----
+  const rawFit = clamp(0, 1, weightedTraitFit); // subdimension strength, 0..1
+
+  // ---- COVERAGE (how many of the item's designed traits you match at Strong+) ----
+  // Core/secondary weighted the same 70/30 as strength, so a missed CORE trait costs
+  // far more than a missed secondary one (protects items with long secondary lists).
+  const coreCov = coreTotal > 0 ? coreMatched / coreTotal : 0;
+  const secCov = secondaryCount > 0 ? secondaryMatched / secondaryCount : 0;
+  const subCoverage = clamp(
+    0,
+    1,
+    coreTotal > 0 && secondaryCount > 0
+      ? coreCov * cfg.coreGroupWeight + secCov * cfg.secondaryGroupWeight
+      : coreTotal > 0 ? coreCov : secCov
+  );
+
+  // ---- Combine STRENGTH and COVERAGE via harmonic mean (F-score), per dimension ----
+  const subdimF1 = harmonicMean(rawFit, subCoverage);
+  const archetypeF1 = harmonicMean(archetypeScore, archCoverage);
+
+  const subdimFitPct = Math.max(0, Math.min(100, Math.round(subdimF1 * 100)));
+  const subdimensionScore = subdimF1 * cfg.totalScoreScale;
+
+  // Per-item-type archetype weight. Strengths (id prefix "str_") are scored on
+  // subdimensions alone; everything else uses the default archetype weight.
+  const totalCfg = CDNA_SCORE_CONFIG.total || {};
+  const isStrengthItem = String(item?.id || "").startsWith("str_");
+  const rawArchetypeWeight = isStrengthItem
+    ? Number(totalCfg.archetypeContributionWeightStrengths)
+    : Number(totalCfg.archetypeContributionWeight);
   const archetypeContributionWeight = clamp(
     0,
     1,
-    Number(CDNA_SCORE_CONFIG.total.archetypeContributionWeight) || 0
+    Number.isFinite(rawArchetypeWeight) ? rawArchetypeWeight : 0
   );
   const subdimensionContributionWeight = 1 - archetypeContributionWeight;
-  const archetypeContribution = archetypeScore * cfg.totalScoreScale * archetypeContributionWeight;
-  const totalScore =
-    subdimensionScore * subdimensionContributionWeight + archetypeContribution;
+
+  // Overall fit = weighted blend of the two per-dimension F-scores. Drives the
+  // displayed %, the band label, and ordering.
+  const blendedFit = clamp(
+    0,
+    1,
+    subdimF1 * subdimensionContributionWeight + archetypeF1 * archetypeContributionWeight
+  );
+  const blendedFitPct = Math.max(0, Math.min(100, Math.round(blendedFit * 100)));
+  const fitStrengthPct = blendedFitPct;
+  const absoluteFitPct = blendedFitPct;
+  const rawFitPct = blendedFitPct;
+  const archetypeContribution = archetypeF1 * cfg.totalScoreScale * archetypeContributionWeight;
+  const totalScore = blendedFit * cfg.totalScoreScale;
 
   return {
     weightedTraitFit,
+    subdimensionStrength: rawFit,
+    subdimensionCoverage: subCoverage,
+    subdimF1,
     subdimensionScore,
+    subdimFitPct,
     fitStrengthPct,
     rawFitPct,
     rawFit,
+    blendedFit,
+    blendedFitPct,
     coverageRatio,
     coreCoverageRatio,
     strongestCorePct,
     absoluteFitPct,
     archetypeScore,
+    archetypeCoverage: archCoverage,
+    archetypeF1,
     archetypeContribution,
     totalScore,
   };
@@ -1205,6 +1302,7 @@ module.exports = {
   scoreItemByArchetypes,
   scoreItemBySubdimensionProfile,
   scoreItemBreakdown,
+  buildArchetypeWeightMap,
   scoreItemTotal,
   buildScoredCareerWorldRows,
   buildScoredEnvironmentRows,

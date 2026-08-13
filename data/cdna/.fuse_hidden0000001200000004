@@ -1166,13 +1166,13 @@
   },
   {
     "careerWorldId": "cw_science_research_laboratory_innovation",
-    "careerWorld": "Scientific Discovery & Innovation",
+    "careerWorld": "Science, Research & Laboratory Innovation",
     "subjects": [
       {
         "id": "sub_biomedical_science",
         "title": "Biomedical Science",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1213,7 +1213,7 @@
         "id": "sub_biochemistry",
         "title": "Biochemistry",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1252,7 +1252,7 @@
         "id": "sub_chemistry",
         "title": "Chemistry",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1294,7 +1294,7 @@
         "id": "sub_biology",
         "title": "Biology",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1336,7 +1336,7 @@
         "id": "sub_physics",
         "title": "Physics",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1377,7 +1377,7 @@
         "id": "sub_neuroscience",
         "title": "Neuroscience",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1416,7 +1416,7 @@
         "id": "sub_biotechnology",
         "title": "Biotechnology",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1453,7 +1453,7 @@
         "id": "sub_natural_sciences",
         "title": "Natural Sciences",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -1490,7 +1490,7 @@
         "id": "sub_pharmacology",
         "title": "Pharmacology",
         "careerWorldId": "cw_science_research_laboratory_innovation",
-        "careerWorld": "Scientific Discovery & Innovation",
+        "careerWorld": "Science, Research & Laboratory Innovation",
         "archetypes": [
           "Thinker",
           "Creator",
@@ -2867,52 +2867,6 @@
         "adjacentPathwayFamilies": [
           "Process & Industrial Engineering",
           "Manufacturing & Production Engineering"
-        ]
-      },
-      {
-        "id": "sub_real_estate_and_property",
-        "title": "Real Estate & Property",
-        "careerWorldId": "cw_business_strategy_commercial_leadership",
-        "careerWorld": "Business Strategy, Commercial & Leadership",
-        "archetypes": [
-          "Thinker",
-          "Achiever",
-          "Organizer"
-        ],
-        "coreSubdimensions": [
-          "Analytical Curiosity",
-          "Achievement",
-          "Structure"
-        ],
-        "secondarySubdimensions": [
-          "Data Curiosity",
-          "Precision",
-          "Entrepreneurial Drive",
-          "Reliability",
-          "Security"
-        ]
-      },
-      {
-        "id": "sub_hospitality_tourism_and_events_management",
-        "title": "Hospitality, Tourism & Events Management",
-        "careerWorldId": "cw_business_strategy_commercial_leadership",
-        "careerWorld": "Business Strategy, Commercial & Leadership",
-        "archetypes": [
-          "Connector",
-          "Achiever",
-          "Organizer"
-        ],
-        "coreSubdimensions": [
-          "Social Confidence",
-          "Achievement",
-          "Adaptability"
-        ],
-        "secondarySubdimensions": [
-          "Helping & Caring",
-          "Collaboration",
-          "Pace",
-          "Structure",
-          "Variety"
         ]
       }
     ]

@@ -21,7 +21,11 @@ const CDNA_SCORE_CONFIG = Object.freeze({
   }),
 
   total: Object.freeze({
-    archetypeContributionWeight: parseEnvNumber(process.env.CDNA_TOTAL_ARCHETYPE_CONTRIBUTION_WEIGHT, 0.20),
+    // Default archetype share of an item's total score (rest is subdimensions).
+    archetypeContributionWeight: parseEnvNumber(process.env.CDNA_TOTAL_ARCHETYPE_CONTRIBUTION_WEIGHT, 0.30),
+    // Strengths are measured directly from the user's own answers about what they
+    // are good at, so they are scored on subdimensions alone (no archetype dilution).
+    archetypeContributionWeightStrengths: parseEnvNumber(process.env.CDNA_TOTAL_ARCHETYPE_CONTRIBUTION_WEIGHT_STRENGTHS, 0),
   }),
 });
 
