@@ -47,6 +47,7 @@ const {
   extractCanonicalSignal,
 } = require("./src/lib/cdnaSelectionInsights");
 const { SUBJECT_DESCRIPTIONS } = require("./src/lib/subjectDescriptions");
+const { SUBJECT_ENTRY_SUBJECTS } = require("./src/lib/subjectEntrySubjects");
 const { ROLE_DESCRIPTIONS } = require("./src/lib/roleDescriptions");
 
 const app = express();
@@ -3704,6 +3705,10 @@ function serializeAdvisorMessage(row = {}) {
     conversationId: row.conversation_id,
     role: normalizeAdvisorRole(row.role),
     content: row.content || "",
+    // Section the message was asked from (strengths, environments, careerworlds,
+    // pathways, roles) so the in-section advisor panels can filter to their own
+    // thread. null/undefined for messages asked from the full Advisor tab.
+    section: row.section || null,
     createdAt: row.created_at || null,
   };
 }
@@ -3909,6 +3914,11 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
     const assessmentRunId = String(req.body?.assessmentRunId || "").trim();
     const conversationId = String(req.body?.conversationId || "").trim();
     const userMessage = String(req.body?.message || "").trim();
+    // Optional: which section the question was asked from. Only attached to the
+    // stored rows when present, so the full Advisor tab (no section) is unaffected
+    // and the DB column is only required once this feature is used.
+    const section = String(req.body?.section || "").trim().slice(0, 40);
+    const sectionField = section ? { section } : {};
 
     if (!userMessage) {
       return res.status(400).json({ error: "MESSAGE_REQUIRED", message: "Please enter a message." });
@@ -3949,6 +3959,7 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
         user_id: user.id,
         role: "user",
         content: userMessage,
+        ...sectionField,
       })
       .select("*")
       .single();
@@ -3972,6 +3983,7 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
         user_id: user.id,
         role: "assistant",
         content: reply,
+        ...sectionField,
       })
       .select("*")
       .single();
@@ -3995,6 +4007,19 @@ app.post("/api/career-advisor", advisorRateLimit, async (req, res) => {
     // Reply generated and saved — NOW charge the advisor credit.
     const advisorCredit = await consumeAdvisorCredit(accountProfileAfterCredit);
     accountProfileAfterCredit = advisorCredit.profile || accountProfileAfterCredit;
+
+    // Re-read the profile so the returned credit count reflects the database
+    // exactly, even if the consume function hands back a pre-update snapshot.
+    try {
+      const { data: freshProfile } = await supabaseAdmin
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+      if (freshProfile) accountProfileAfterCredit = freshProfile;
+    } catch (_) {
+      /* keep the value returned by consumeAdvisorCredit */
+    }
 
     return res.json({
       conversation: {
@@ -4330,7 +4355,10 @@ app.post("/api/further-study", selectionInsightsRateLimit, async (req, res) => {
             relevant: relevantSubjectSet.has(key),
             signalPct: signal.signalPct,
             signalLabel: signal.signalLabel,
-            description: SUBJECT_DESCRIPTIONS[subj.id] || subj.description || subj.summary || "",
+            description: [
+              SUBJECT_DESCRIPTIONS[subj.id] || subj.description || subj.summary || "",
+              SUBJECT_ENTRY_SUBJECTS[subj.id] || "",
+            ].filter(Boolean).join("\n\n"),
           };
         })
         .filter(Boolean)
@@ -4398,6 +4426,62 @@ app.post("/api/analytics/event", async (req, res) => {
   }
 });
 
+// Report a problem — accepts a short free-text description of an issue from any
+// page (footer link). Auth is optional: if a valid session token is present we
+// attach the user id + email, otherwise the report is stored anonymously. The
+// row is written with the service-role client, so it lands regardless of RLS.
+const reportProblemRateLimit = makeRateLimiter({
+  name: "report-problem",
+  windowMs: 10 * 60 * 1000,
+  max: 20,
+});
+
+app.post("/api/report-problem", reportProblemRateLimit, async (req, res) => {
+  try {
+    const message = String(req.body?.message || "").trim().slice(0, 2000);
+    if (!message) {
+      return res.status(400).json({ error: "MESSAGE_REQUIRED", message: "Please describe the problem." });
+    }
+
+    const pageUrl = String(req.body?.pageUrl || "").trim().slice(0, 500) || null;
+    const rawRunId = String(req.body?.assessmentRunId || "").trim();
+    const assessmentRunId = /^[0-9a-f-]{36}$/i.test(rawRunId) ? rawRunId : null;
+    const userAgent = String(req.headers["user-agent"] || "").slice(0, 500) || null;
+
+    // Optional auth — never block an anonymous report (e.g. a user who can't log in).
+    let userId = null;
+    let email = null;
+    try {
+      const { user, profile } = await getAuthenticatedUserAndProfile(req);
+      userId = user?.id || null;
+      email = profile?.email || user?.email || null;
+    } catch (_) {
+      // anonymous report — leave userId/email null
+    }
+
+    const { error } = await supabaseAdmin
+      .from("problem_reports")
+      .insert({
+        user_id: userId,
+        email,
+        message,
+        page_url: pageUrl,
+        assessment_run_id: assessmentRunId,
+        user_agent: userAgent,
+      });
+
+    if (error) throw error;
+
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error("Report problem error:", err?.message || err);
+    return res.status(err.status || 500).json({
+      error: "REPORT_PROBLEM_FAILED",
+      message: err.message || "Could not submit your report.",
+    });
+  }
+});
+
 app.get("/api/admin/dashboard", async (req, res) => {
   try {
     await requireAdmin(req);
@@ -4444,15 +4528,46 @@ app.get("/api/admin/dashboard", async (req, res) => {
 
     if (feedbackError && feedbackError.code !== "42P01") throw feedbackError;
 
+    // Wrapped in its own try/catch so a missing table (migration not yet run)
+    // can never take down the whole admin dashboard.
+    let problemReportsRaw = [];
+    try {
+      const { data, error: problemReportsError } = await supabaseAdmin
+        .from("problem_reports")
+        .select("*")
+        .order("created_at", { ascending: false })
+        .limit(1000);
+      // 42P01 = table missing (Postgres); PGRST205 = table not in PostgREST
+      // schema cache. Either just means "no problem_reports table yet".
+      const missingTable =
+        problemReportsError &&
+        (problemReportsError.code === "42P01" ||
+          problemReportsError.code === "PGRST205" ||
+          /could not find the table/i.test(problemReportsError.message || ""));
+      if (problemReportsError && !missingTable) throw problemReportsError;
+      problemReportsRaw = Array.isArray(data) ? data : [];
+    } catch (probErr) {
+      const msg = probErr?.message || "";
+      if (!/could not find the table/i.test(msg) && probErr?.code !== "42P01" && probErr?.code !== "PGRST205") {
+        throw probErr;
+      }
+      problemReportsRaw = [];
+    }
+
     const events = (eventsRaw || []).filter((event) => includedUserIds.has(event.user_id));
     const runs = (runsRaw || []).filter((run) => includedUserIds.has(run.user_id));
     const feedback = (feedbackRaw || []).filter((row) => includedUserIds.has(row.user_id));
+    // Problem reports include anonymous ones (null user_id) — keep those too.
+    const problemReports = (problemReportsRaw || []).filter(
+      (row) => !row.user_id || includedUserIds.has(row.user_id)
+    );
 
     return res.json({
       users: profiles,
       events,
       runs,
       feedback,
+      problemReports,
     });
   } catch (err) {
     console.error("Admin dashboard error:", err?.message || err);
