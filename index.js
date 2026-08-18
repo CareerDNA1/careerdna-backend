@@ -4578,6 +4578,46 @@ app.get("/api/admin/dashboard", async (req, res) => {
   }
 });
 
+// ---- CareerDNA University Rankings (built from official Discover Uni data) ----
+let UNIVERSITY_RANKINGS = {};
+try {
+  UNIVERSITY_RANKINGS = require("./data/cdna/university_rankings.json");
+  logVerbose("[rankings] loaded subjects:", Object.keys(UNIVERSITY_RANKINGS).length);
+} catch (err) {
+  console.error("Could not load university_rankings.json:", err?.message || err);
+}
+
+// List the subjects that have a ranking (for a browse view).
+app.get("/api/rankings/subjects", (_req, res) => {
+  const subjects = Object.entries(UNIVERSITY_RANKINGS)
+    .filter(([, v]) => v && v.count > 0)
+    .map(([id, v]) => ({ id, subject: v.subject, cahName: v.cahName, count: v.count }))
+    .sort((a, b) => a.subject.localeCompare(b.subject));
+  res.json({ subjects });
+});
+
+// Full ranking for one subject. The client does its own sorting/filtering, so we
+// return the complete ranked array plus metadata (incl. the honest "ranked using
+// <official subject> outcomes" label).
+app.get("/api/rankings/:subjectId", (req, res) => {
+  const r = UNIVERSITY_RANKINGS[req.params.subjectId];
+  if (!r || !r.count) {
+    return res.status(404).json({
+      error: "NO_RANKING",
+      message: "No national ranking is available for this subject yet.",
+    });
+  }
+  return res.json({
+    subject: r.subject,
+    cahName: r.cahName,
+    rankedBy: r.rankedBy,
+    count: r.count,
+    titleFiltered: !!r.titleFiltered,
+    source: "Discover Uni (Office for Students / HESA)",
+    universities: r.universities,
+  });
+});
+
 app.listen(port, () => {
   console.log(`🚀 CareerDNA backend running at http://localhost:${port}`);
   logVerbose("[library counts]", CDNA_LIBRARY_COUNTS);
